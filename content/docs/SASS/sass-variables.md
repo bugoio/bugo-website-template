@@ -12,7 +12,9 @@ pageOptions:
   showSidebar: true
   hideMarketingBlock: false
   excludeFromSitemap: false
-tags: []
+tags:
+- configuration
+- setup
 layout: page
 title: Variables
 expiryDate: ''

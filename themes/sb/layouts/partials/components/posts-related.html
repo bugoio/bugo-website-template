@@ -3,9 +3,8 @@
 {{ $thumbnail := .thumbnail }}
 
 
-{{ $news := where $context.Site.RegularPages "Section" "blog" }}
-
-{{ $related := $context.Site.RegularPages.Related $context }}
+{{ $news := where $context.Site.RegularPages "Section" $.context.Site.Params.blogSlug }}
+{{ $related := $news.Related $context }}
 
 {{ with $related }}
 <div class="posts-latest">
@@ -33,4 +32,3 @@
 {{ else }}
   {{ partial "components/posts-latest" . }}
 {{ end }}
-????

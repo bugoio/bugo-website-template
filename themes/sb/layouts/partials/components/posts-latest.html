@@ -1,5 +1,5 @@
 {{ $context := .context }}
-{{ $posts := sort ( where $context.Site.Pages "Section" .section) "Date" "desc" }}
+{{ $posts := where $context.Site.RegularPages "Section" $.context.Site.Params.blogSlug }}
 {{ $qty := .qty }}
 {{ with $posts }}
 <div class="posts-latest">
