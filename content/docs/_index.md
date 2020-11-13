@@ -24,18 +24,18 @@ categories: []
 cascade:
   hero:
     useDefaultImage: false
-    heroImage: ''
+    heroImage: "/uploads/marek-piwnicki-c7knzwxyyl4-unsplash.jpg"
     heroCaption: ''
     heroImageAltText: ''
     displayPageTitle: false
     heroCustomText: ''
   showSidebar: false
 menu:
-  mobile:
+  main:
     weight: 3
   footer:
     weight: 2
-  main:
+  mobile:
     weight: 3
 draft: true
 
