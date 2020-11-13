@@ -1,0 +1,51 @@
+---
+label: Attorney Profile Fields
+hide_body: true
+fields:
+- name: attorneyFields
+  type: field_group
+  config: {}
+  fields:
+  - type: textarea
+    name: education
+    label: Education
+    config:
+      wysiwyg: true
+      schema:
+        format: markdown
+  - type: textarea
+    name: admittedToPractice
+    label: Admitted To Practice
+    config:
+      wysiwyg: true
+      schema:
+        format: markdown
+  - type: textarea
+    name: experience
+    label: Experience
+    config:
+      wysiwyg: true
+      schema:
+        format: markdown
+  - type: textarea
+    name: publications
+    label: publications
+    config:
+      wysiwyg: true
+      schema:
+        format: markdown
+  - type: textarea
+    name: publishedDecisions
+    label: Published Decisions
+    config:
+      wysiwyg: true
+      schema:
+        format: markdown
+  - type: textarea
+    name: professionalActivities
+    label: Professional Activities
+    config:
+      wysiwyg: true
+      schema:
+        format: markdown
+  label: Attorney Fields

@@ -1,0 +1,9 @@
+# sample dev block in the toml
+# note: each of these fields are OPTIONAL and should only be used if you need an override
+[dev]
+  command = "hugo server -w -p 1313 -d public -D -F --baseUrl=localhost:8888 --appendPort=false" # Command to start your dev server
+  port = 8888 # Port that the dev server will be accessible on
+  targetPort = 1313 # Port of target app server
+  publish = "public" # If you use a _redirect file, provide the path to your static content folder
+  framework = "#custom" # or "#static" to force a static server
+  autoLaunch = true # a Boolean value that determines if Netlify Dev launches the local server address in your browser

@@ -1,0 +1,19 @@
+<footer id="site-footer" tabindex="0">
+  {{ if .Site.Params.showWCAG }}
+  <div id="wcag-commitment">
+    <div class="container">
+      <div class="flex two">
+        <div id="copyright" class="text-left">
+          <span tabindex="0">
+            ©{{ dateFormat "2006" now }} {{ with .Site.Data.organization.companyName }}{{.}}{{else}}{{ .Site.Title | title }}{{ end }} &nbsp;<span class="">•</span>&nbsp;
+            All rights reserved. Committed to WCAG 2.1 AA Accessibility Compliance.
+          </span>
+        </div>   
+        <div id="footer-nav" class="">
+          {{ partial "components/menubar" (dict "context" . "location" "footer" "menu" .Site.Menus.footer ) }}
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ end }}
+</footer>

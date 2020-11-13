@@ -1,0 +1,8 @@
+{{ $bg := .block.bgColor }}
+{{ $page := .page }}
+{{ .block }}
+<div id="block-{{ .block.title }}" {{partial "block-class" . | safeHTMLAttr }}>
+  <div class="wrapper container">
+    {{ .block.content | .page.RenderString | markdownify }}
+  </div>
+</div>

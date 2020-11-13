@@ -1,0 +1,85 @@
+{{ $scratch := newScratch }}
+{{ $scratch.Set "menuLevel" 1 }}
+{{ $currentPage := .currentPage }}
+{{ $location := .location }}
+{{ $menuItem := .menuItem }}
+
+<div id="{{ .menuItem.Name | anchorize }}-menu" class="menu-level-{{ $scratch.Get "menuLevel" }} default" role="menu" aria-label="{{ .menuItem.Name | title }}">
+  <div class="container">
+    <!-- First Level uses Hugo menu system -->
+    <ul class="menu-list-level-{{ $scratch.Get "menuLevel" }}">
+      {{ $scratch.Set "menuLevel" ( add ( $scratch.Get "menuLevel" ) 1 ) }}
+      <!-- Loop through menu items -->
+      {{ range $menuItem.Page.Pages.ByWeight }}
+      {{ $hasCurrent := partial "menu-has-current" (dict "menuItem" . "currentPage" $currentPage) }}
+      <li class="menu-list-item level-{{ $scratch.Get "menuLevel" }}" role="none">
+        <a
+          role="menuitem"
+          href="{{ partial "menuItemURL" . }}"
+          tabindex="0"
+          {{ if and .Params.includeChildrenInMenu .Pages }}
+          aria-haspopup="true"
+          aria-expanded="false"
+          {{ end }}
+          class="menu-item {{ if $hasCurrent }}has-current{{end}}"
+        >
+          {{ .Title | title }}
+          {{ if .Params.includeChildrenInMenu }}
+          {{/*  {{ partial "icon" (slice "angle-right" "icon-small")}}  */}}
+          {{ end }}
+        </a>
+        <!-- loop through section -->
+        {{ if .Params.includeChildrenInMenu }}
+          <div class="menu-level-{{ $scratch.Get "menuLevel" }} default" role="menu" aria-label="{{ .Title | title }}" data-mouseout="false">
+            <div class="container">
+              <ul>
+                {{ range .Pages.ByWeight }}
+                  {{ template "listItem" (dict "currentPage" $currentPage "page" . "menuLevel" ($scratch.Get "menuLevel") ) }}
+                {{ end }}
+              </ul>  
+            </div>
+          </div>
+        {{ end }}
+      </li>
+      {{ end }}
+    </ul>
+    {{ with $menuItem.Page.Description }}
+    <div class="description">{{ . }}</div>
+    {{ end }}  
+  </div>
+</div>
+
+
+{{ define "listItem" }}
+{{ $scratch := newScratch }}
+{{ $scratch.Set "menuLevel" .menuLevel }}
+{{ $hasCurrent := partial "menu-has-current" (dict "menuItem" .page "currentPage " .currentPage) }}
+<li role="none">
+  <a
+    role="menuitem"
+    href="{{ partial "menuItemURL" .page }}"
+    tabindex="0"
+    {{ if .page.Pages  }}
+    aria-haspopup="true"
+    aria-expanded="false"
+    {{ end }}
+    class="{{ if or $hasCurrent (eq .page .currentPage )}}current{{ end }}"
+  >
+    {{ .page.Title | title }} 
+    {{ if .page.Pages }}
+      {{/*  {{ partial "icon" (slice "angle-down" "icon-small")}}  */}}
+    {{ end }}
+  </a>
+  {{ if .page.Params.includeChildrenInMenu }}
+    {{ $scratch.Set "menuLevel" ( add ( $scratch.Get "menuLevel" ) 1 ) }}
+    <div class="menu-level-{{ $scratch.Get "menuLevel" }} leftRight" role="menu" aria-label="{{ .Title | title }}">
+      <ul>
+        <li>Sortby title</li>
+        {{ range .Pages.ByWeight }}
+          {{ template "listItem" (dict "page" . "menuLevel" ($scratch.Get "menuLevel") ) }}
+        {{ end }}
+      </ul>
+    </div>
+  {{ end }}
+</li>
+{{ end }}

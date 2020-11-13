@@ -1,0 +1,41 @@
+---
+label: Block - Logos
+hide_body: true
+display_field: title
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+- name: showTitle
+  type: boolean
+  label: Show Title
+- name: bgColor
+  type: include
+  config: {}
+  template: fields-colors
+  label: Background Color
+- name: content
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Content
+- name: fullWidth
+  type: boolean
+  label: Full Width
+- name: logos
+  type: image_gallery
+  config: {}
+  label: Logos
+- name: layout
+  type: text
+  config:
+    required: false
+  label: layout
+  hidden: true
+  default: block-logos

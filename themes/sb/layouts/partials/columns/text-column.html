@@ -1,0 +1,4 @@
+<div  {{partial "getColumnClass" . | safeHTMLAttr }}>
+  {{ partial "columns/column-title" . }}
+  {{ .columnContent | markdownify }}
+</div>

@@ -1,0 +1,30 @@
+---
+label: Blocks
+hide_body: true
+fields:
+- name: contentBlocks
+  type: field_group
+  config: {}
+  fields:
+  - name: blocks
+    type: blocks
+    template_types:
+    - block-animation
+    - block-logos
+    - block-logos-right
+    - block-random-profiles
+    - block-section-overview
+    - block-slideshow
+    - block-testimonials
+    - block-stats
+    - block-columns
+    - block-random-posts
+    - block-latest-posts
+    - block-profile
+    config:
+      min: 
+      max: 
+    label: Blocks
+  label: Content Blocks
+  description: This page does not have a content editor. Instead you add content blocks
+    to it.

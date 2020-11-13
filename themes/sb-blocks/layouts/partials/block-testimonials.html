@@ -1,0 +1,23 @@
+{{ $headless := .page.GetPage "/testimonials/index.md" }}
+{{ $reusablePages := $headless.Resources | shuffle }}
+{{ $block := .block }}
+{{ $page := .page }}
+{{ with $reusablePages }}
+{{ $id := partial "get-block-id" . }}
+<div id="block-{{ $id }}" {{partial "block-class" . | safeHTMLAttr }}>
+{{/*<div id="block-{{ $id }}" class="block testimonials full-width  {{ with $block.bgColor }}bg-{{ . }}{{ end }}  {{ $block.contrast | anchorize }} {{ if $block.fullWidth }}full-width{{end}}" {{ with $block.bgImage }}style="background-image: url({{.}})"{{end}}>*/}}
+  <div class="wrapper text-white">
+    {{ partial "blocks/block-title" .block }}
+    {{ range first 1 . }}
+      <div>
+        <blockquote class="d1">
+            <div class="quote full three-fourth-600 two-third-800 d1">
+              {{ .Content }}
+              <cite>{{ .Params.name }}</cite>
+            </div>  
+        </blockquote>
+      </div>
+    {{ end}}
+  </div>
+</div>
+{{ end }}

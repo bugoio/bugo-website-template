@@ -1,0 +1,18 @@
+// Spacing
+  // creates CSS variables in :root
+  $space:        0;
+  $space-min:    $space - 8;
+  $space-least:  $space - 2;
+  $space-less:   $space - 1;
+  $space-more:   $space + 1;
+  $space-most:   $space + 2;
+  $space-max:    $space + 4;
+
+  // using CSS variables from above. Use these for spacing.
+  $spacing: var(--space);
+  $spacing-min: var(--space-min);
+  $spacing-least: var(--space-least);
+  $spacing-less: var(--space-less);
+  $spacing-more: var(--space-more);
+  $spacing-most: var(--space-most);
+  $spacing-max: var(--space-max);

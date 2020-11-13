@@ -1,0 +1,85 @@
+{{ $scratch := newScratch }}
+{{ $scratch.Set "menuLevel" 1 }}
+{{ $currentPage := .currentPage }}
+{{ $location := .location }}
+{{ $menuItem := .menuItem }}
+
+<div id="{{ .menuItem.Name | anchorize }}-menu" class="menu-level-{{ $scratch.Get "menuLevel" }} default" role="menu" aria-label="{{ .menuItem.Name | title }}">
+  <!-- First Level uses Hugo menu system -->
+  <ul class="menu-list-level-{{ $scratch.Get "menuLevel" }}">
+  {{ $scratch.Set "menuLevel" ( add ( $scratch.Get "menuLevel" ) 1 ) }}
+  <!-- Loop through menu items -->
+  {{ range $menuItem.Page.Pages }}
+  <li class="menu-list-item level-{{ $scratch.Get "menuLevel" }}" role="none">
+    <a
+      role="menuitem"
+      href="{{ partial "menuItemURL" . }}"
+      tabindex="0"
+      {{ if and .Params.includeChildrenInMenu .Pages }}
+      aria-haspopup="true"
+      aria-expanded="false"
+      {{ end }}
+      class="menu-item"
+    >
+      {{ .Title | title }}
+      {{ if .Params.includeChildrenInMenu }}
+        {{ partial "icon" (slice "angle-right" "icon-small")}}
+      {{ end }}
+    </a>
+    <!-- loop through section -->
+    {{ if .Params.includeChildrenInMenu }}
+      <div class="menu-level-{{ $scratch.Get "menuLevel" }} default" role="menu" aria-label="{{ .Title | title }}" data-mouseout="false">
+        <button tabindex="-1">
+          {{ partial "icon-from-right" . }}
+        </button>  
+        <ul>
+          {{ range .Pages.ByTitle }}
+            {{ template "listItem" (dict "page" . "menuLevel" ($scratch.Get "menuLevel") ) }}
+          {{ end }}
+        </ul>
+      </div>
+    {{ end }}
+  </li>
+  {{ end }}
+</ul>
+{{ with $menuItem.Page.Description }}
+<div class="description">{{ . }}</div>
+{{ end }}    
+</div>
+
+
+{{ define "listItem" }}
+{{ $scratch := newScratch }}
+{{ $scratch.Set "menuLevel" .menuLevel }}
+<li role="none">
+  <a
+    role="menuitem"
+    href="{{ partial "menuItemURL" .page }}"
+    tabindex="0"
+    {{ if .page.Pages  }}
+    aria-haspopup="true"
+    aria-expanded="false"
+    {{ end }}
+    class=""
+  >
+    {{ .page.Title | title }}
+    {{ if .page.Pages }}
+      {{ partial "icon" (slice "angle-down" "icon-small")}}
+    {{ end }}
+  </a>
+  {{ if .page.Params.includeChildrenInMenu }}
+    {{ $scratch.Set "menuLevel" ( add ( $scratch.Get "menuLevel" ) 1 ) }}
+    <div class="menu-level-{{ $scratch.Get "menuLevel" }} leftRight" role="menu" aria-label="{{ .Title | title }}">
+      <button tabindex="-1">
+        {{ partial "icon-from-right" . }}
+      </button>  
+      <ul>
+        <li>Sortby title</li>
+        {{ range .Pages.ByTitleReverse }}
+          {{ template "listItem" (dict "page" . "menuLevel" ($scratch.Get "menuLevel") ) }}
+        {{ end }}
+      </ul>
+    </div>
+  {{ end }}
+</li>
+{{ end }}

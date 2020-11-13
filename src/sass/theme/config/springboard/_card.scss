@@ -1,0 +1,10 @@
+@use './global' as *;
+@use './spacing' as *;
+
+// Card
+$card-shadow: none;
+$card-border: none;
+$card-radius: $radius;
+$card-margin-bottom: $spacing;
+$card-p-padding: $spacing-less $spacing-least;
+$card-header-border-bottom: 1px solid #333;

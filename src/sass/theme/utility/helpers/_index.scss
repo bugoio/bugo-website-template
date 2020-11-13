@@ -1,0 +1,194 @@
+@use "../../config";
+@use "../ms";
+@use './colors';
+@use './line-clamp';
+@use './flex';
+@use './lists';
+@use './responsive-components';
+
+.sr-only {
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  text-indent: 1000px;
+}
+
+.dnone,
+.hide {
+  display: none !important;
+}
+
+// Grid
+.break-container {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.unstyled-list {
+  padding: 0;
+  
+  li {
+    display: block;
+    list-style-type: none;
+    margin-bottom: var(--space-min);
+    text-align: left;
+  }
+}
+
+.video-embed {
+  padding-bottom: 56.2%;
+  position: relative;
+
+  iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+
+// Flex
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-baseline {
+  align-items: baseline;
+}
+
+.align-stretch {
+  align-items: stretch;
+}
+
+// Flex list
+.flex-list {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+  align-items: center;
+  li {
+    list-style-type: none;
+    > * {
+      display: block;
+      margin-right: var(--space-less);
+    }
+  }
+}
+
+
+
+// Elements with focusable items
+.focusables {
+  outline-color: transparent;
+  a,button {
+    &:focus,
+    &:hover {
+      // background-color: darken($primary,20%);
+      // color: white;
+      outline-offset: 0;
+      outline-color: transparentize(config.$white,.5);
+      outline-width: 0.125rem;
+      outline-style: solid;
+      animation-name: focusItem;
+      animation-duration: .3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }  
+  }
+}
+
+@keyframes focusItem {
+  0% {
+    outline-color: transparent;
+    outline-offset: -5px;
+  }
+  100% {
+    outline-color: config.$primary;
+    outline-offset: 5px;
+  }
+}
+
+// Background Color
+.bg-primary {
+  background-color: config.$primary;
+}
+
+.bg-blue {
+  background-color: config.$blue;
+}
+
+.bg-red {
+  background-color: config.$red;
+}
+
+// .bg-dark {
+//   background-color: config.$dark;
+// }
+
+.bg-gray {
+  background-color: config.$gray;
+}
+
+.bg-white {
+  background-color: config.$white;
+}
+
+.bg-black {
+  background-color: config.$black;
+}
+
+
+// Text color
+.text-white {
+  color: config.$white;
+}
+
+.text-black {
+  color: config.$black;
+}
+
+// Spacing
+.m-none {
+  margin: 0 !important;
+}
+
+.p-none {
+  padding: 0 !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}

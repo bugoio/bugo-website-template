@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>//localhost:1313/</loc>
+    <lastmod>2020-05-01T08:02:55-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/privacy-policy/</loc>
+    <lastmod>2020-06-01T11:45:58-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/categories/</loc>
+    <lastmod>2020-06-01T15:44:31-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/tags/margarine/</loc>
+    <lastmod>2020-06-01T15:44:31-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/categories/news/</loc>
+    <lastmod>2020-06-01T15:44:31-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/posts/test-post-15/</loc>
+    <lastmod>2020-06-01T15:44:31-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/tags/</loc>
+    <lastmod>2020-06-01T15:44:31-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/tags/test/</loc>
+    <lastmod>2020-06-01T15:44:31-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/categories/updates/</loc>
+    <lastmod>2020-06-01T15:44:31-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/posts/test-post-14/</loc>
+    <lastmod>2020-06-01T15:44:28-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/posts/test-post-13/</loc>
+    <lastmod>2020-06-01T15:44:25-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/posts/test-post-12/</loc>
+    <lastmod>2020-06-01T15:44:22-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/posts/test-post-11/</loc>
+    <lastmod>2020-06-01T15:44:19-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/posts/test-post-10/</loc>
+    <lastmod>2020-06-01T15:44:15-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/posts/test-post-9/</loc>
+    <lastmod>2020-06-01T15:44:11-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/posts/test-post-8/</loc>
+    <lastmod>2020-06-01T15:44:06-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/posts/test-post-7/</loc>
+    <lastmod>2020-06-01T15:44:02-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/posts/test-post-6/</loc>
+    <lastmod>2020-06-01T15:43:59-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/posts/test-post-5/</loc>
+    <lastmod>2020-06-01T15:43:55-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/posts/test-post-4/</loc>
+    <lastmod>2020-06-01T15:43:51-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/posts/test-post-3/</loc>
+    <lastmod>2020-06-01T15:43:48-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/posts/test-post-2/</loc>
+    <lastmod>2020-06-01T15:43:45-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/posts/</loc>
+    <lastmod>2020-06-01T15:40:31-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/posts/test-post-1/</loc>
+    <lastmod>2020-06-01T15:38:03-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/components/</loc>
+    <lastmod>2020-05-27T14:35:00-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/components/component-test/</loc>
+    <lastmod>2020-05-27T13:58:20-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//localhost:1313/components/kitchen-sink/</loc>
+    <lastmod>2020-05-01T18:18:41+00:00</lastmod>
+  </url>
+  
+</urlset>

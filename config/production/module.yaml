@@ -1,0 +1,4 @@
+imports:
+  # - disable: false
+  #   ignoreConfig: false
+  #   path: github.com/springboardcss/springboard-hugo-theme

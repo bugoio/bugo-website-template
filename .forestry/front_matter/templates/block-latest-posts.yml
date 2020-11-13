@@ -1,0 +1,35 @@
+---
+label: Block - Latest Posts
+hide_body: true
+display_field: title
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+- name: displayTitle
+  type: boolean
+  label: Display Title
+- name: qty
+  type: number
+  label: Quantity
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+  description: Number of posts to show.
+- name: layout
+  type: text
+  config:
+    required: false
+  label: layout
+  hidden: true
+  default: block-latest-posts
+- name: blockOptions
+  type: include
+  config: {}
+  template: block-options
+  label: Block Options

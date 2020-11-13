@@ -1,0 +1,30 @@
+{{/* 
+  
+  
+<div class="tree widget">
+  <h3 id="tree-{{ .Title | urlize }}" tabindex="-1">{{ with .Site.GetPage "section" .Section }}{{ .Title }} Section{{ end }}</h3>
+  <ul role="tree" aria-labelledby="tree-{{ .Title | urlize }}">
+    {{ $page := .Page }}
+    {{ range sort .FirstSection.Pages "Weight" "asc" }}
+      {{ if .Pages }}
+      {{ partial "nav-tree-group" (dict "page" $page "group" .) }}
+      {{ else }}
+      {{ partial "nav-tree-item" (dict "page" $page "item" .) }}
+      {{ end }}
+    {{ end }}
+  </ul>
+</div>
+{{ define nav }}
+
+<li
+  role="none"
+  class="{{ if eq .page.Title .item.Title }}current{{ end }}"
+>
+  <a role="treeitem" href="{{ .item.Permalink }}">
+    {{ .item.Title }}
+  </a>
+</li>
+
+{{ end }}  
+  */}}
+

@@ -1,0 +1,62 @@
+---
+title: Bugo
+baseURL: "/"
+languageCode: en
+summaryLength: 25
+googleAnalytics: ''
+paginate: 10
+enableEmoji: false
+outputs:
+  home:
+  - html
+  - rss
+  term:
+  - html
+  - rss
+minify:
+  disableCSS: false
+  disableHTML: false
+  disableJS: false
+  disableJSON: false
+  disableSVG: false
+  disableXML: false
+  minifyOutput: false
+  tdewolff:
+    css:
+      decimals: -1
+      keepCSS2: true
+    html:
+      keepConditionalComments: true
+      keepDefaultAttrVals: true
+      keepDocumentTags: true
+      keepEndTags: true
+      keepWhitespace: false
+    js: {}
+    json: {}
+    svg:
+      decimals: -1
+    xml:
+      keepWhitespace: false
+metaDataFormat: yaml
+related:
+  threshold: 80
+  includeNewer: true
+  toLower: true
+  indices:
+  - name: categories
+    weight: 100
+  - name: tags
+    weight: 10
+theme:
+# Image Handling
+# - sb-cloudinary
+- sb-netlify-large-media
+# Layouts
+- sb-search
+- sb-section
+- sb-sidebar
+- sb-utilities
+- custom
+# Base Theme and API
+- sb
+- sb-api

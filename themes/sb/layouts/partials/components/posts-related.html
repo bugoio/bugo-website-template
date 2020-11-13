@@ -1,0 +1,35 @@
+{{ $context := .context }}
+{{ $qty := .qty }}
+{{ $thumbnail := .thumbnail }}
+
+
+{{ $news := where $context.Site.RegularPages "Section" "news" }}
+
+{{ $related := $context.Site.RegularPages.Related $context }}
+
+{{ with $related }}
+<div class="posts-latest">
+  <h3>Related News</h3>
+  <ul class="unstyled-list">
+    {{ range first $qty . }}
+    <li>
+      <a href="{{ .Permalink }}">
+        <article>
+          {{ if $thumbnail }}
+            {{ with .Params.images }}
+              {{ partial "components/thumbnail" (index . 0) }}        
+            {{ end }}            
+          {{ end }}
+          <time><span>{{ dateFormat "January 2, 2006" .Date }}</span></time> - 
+          <span class="category">{{ with .Params.categories }}{{ index . 0 }}{{ else }}&nbsp;{{ end }}</span>
+          <header>
+            {{ .Title | title }}
+          </header>
+        </article>
+      </a></li>
+    {{ end }}  
+  </ul>
+</div>
+{{ else }}
+  {{ partial "components/posts-latest" . }}
+{{ end }}

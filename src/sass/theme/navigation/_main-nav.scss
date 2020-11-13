@@ -1,0 +1,58 @@
+@use "../config";
+@use "../utility";
+@use "../typography";
+
+#main-menubar {
+  margin: config.$main-menu-margin;
+  justify-content: flex-end;
+}
+
+#main-nav {
+  --brand-w: #{config.$header-brand-w-sm};  
+  @include utility.respond-to(md){
+    --brand-w: #{config.$header-brand-w-md};  
+  }
+  @include utility.respond-to(lg){
+    --brand-w: #{config.$header-brand-w-lg};  
+  }
+  @include utility.respond-to(xl){
+    --brand-w: #{config.$header-brand-w-xl};  
+  }
+  @include utility.respond-to(xxl){
+    --brand-w: #{config.$header-brand-w-xxl};  
+  }
+  @include utility.respond-to(xxxl){
+    --brand-w: #{config.$header-brand-w-xxxl};  
+  }
+  flex: 0 0 calc(100% - var(--brand-w)) !important;
+  width: calc(100% - var(--brand-w));
+  justify-content: config.$main-menu-justify;
+
+  @include utility.respond-to(config.$mobile-hamburger-bp){
+    display: block;
+  }
+
+  .menubar-list-item {
+    display: block;
+  }
+
+  [role=menu]{
+    a {
+      margin: var(--space-less) var(--space-min);
+    }
+  }
+}
+
+#menubar-main {
+  justify-content: flex-end;
+
+  a {
+    font-weight: 600;
+    padding: config.$main-menu-link-padding;
+    @include utility.mod(font-size,config.$main-menu-link-size);
+    color: config.$header-color;
+    background-color: config.$main-menu-link-bgColor;
+    margin: config.$main-menu-link-margin;
+    // margin: 0 0 var(--space-min) 0;
+  }
+}

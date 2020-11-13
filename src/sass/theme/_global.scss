@@ -1,0 +1,35 @@
+@use "config";
+@use "utility";
+
+html {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  @include utility.mod(font-size,0);
+  background-color: config.$footer-bg;
+  height: 100vh;
+  max-width: 100%; 
+}
+
+body {
+  height: auto;
+  font-family: config.$font-family;
+  line-height: config.$line-height;
+  &:focus {
+    outline: none !important;
+    border: none !important;
+  }
+}
+
+.loading {
+  max-width: 30%;
+  margin: 0 auto;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    animation:spin 4s linear infinite;
+  }
+}
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+

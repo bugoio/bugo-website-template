@@ -1,0 +1,19 @@
+{{ $id := partial "get-block-id" . }}
+<div id="block-{{ $id }}" {{partial "block-class" . | safeHTMLAttr }}>
+ <div class="container wrapper">
+    <div class="flex two align-center">
+      <div>
+        {{ .block.content | markdownify }}
+      </div>
+      <div>
+        <div class="flex two align-center">
+          {{ range .block.logos }}
+          {{ $alt := humanize (index (split (path.Base .) ".") 0) }}
+          {{ $imgSrc := partial "imgSrc" . }}
+          {{ partial "components/picture" (dict "imgSrc" $imgSrc "alt" $alt) }}
+          {{ end }}  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+---
+label: Block - Options
+hide_body: false
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: showTitle
+  type: boolean
+  label: Show Title
+- name: colors
+  type: include
+  config: {}
+  template: fields-colors
+  label: Colors
+- name: textAlign
+  type: include
+  config: {}
+  template: field-text-align
+  label: Text Align

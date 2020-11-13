@@ -1,0 +1,5 @@
+{{ range . }}
+  {{ if .template }}
+    {{ partial ( printf "columns/%s" .template) . }}
+  {{ end }}
+{{ end }}

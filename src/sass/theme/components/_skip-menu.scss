@@ -1,0 +1,27 @@
+@use '../config/theme-vars' as *;
+@use '../config/colors' as *;
+@use '../config/plugins' as *;
+
+#skip-menu {
+  position: fixed;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  transform: translateY(0);
+  transition: all 0.3s;
+  box-shadow: $shadow;
+  z-index: 40000;
+
+  &:focus-within {
+    transform: translateY(100%);
+  }
+
+  .container a {
+    display: inline-block;
+    padding: var(--space-least) var(--space-less);
+    // background-color: $primary;
+    // color: $white;
+    font-weight: bold;
+  }
+}

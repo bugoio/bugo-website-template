@@ -1,0 +1,35 @@
+{{ $scratch := newScratch }}
+{{ $site := $.Site }}
+{{ $section := .Site.GetPage .Page.Section }}
+{{ $page := .Page }}
+{{ with .Page.Parent.Pages }}
+  {{ if gt (len .) 5 }}
+  <div class="flex three">
+    {{ range .ByWeight }}
+    {{ if ne $page .}}
+    {{ with .Params.heroImage }}
+        {{ $scratch.Set "image" . }}
+      {{ else }}
+        {{ $scratch.Set "image" $site.Data.organization.defaultHeroImage }}
+      {{ end }}
+      {{ $img := partial "imgSrc" ($scratch.Get "image") }}
+      <div>
+        <a href="{{ .Permalink }}">
+          <article class="card">
+            {{ partial "components/thumbnail" ($scratch.Get "image") }}
+            <header>
+              {{ .Title | title }}
+            </header>
+            {{ with .Description }}
+              <footer>
+                <p>{{ . }}</p>
+              </footer>
+            {{ end }}
+          </article>
+        </a>  
+      </div>
+    {{ end }}
+    {{ end }}
+    {{ end }}
+    </div>
+{{ end }}

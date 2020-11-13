@@ -1,0 +1,65 @@
+---
+label: Organization
+hide_body: true
+fields:
+- type: text
+  name: companyName
+  label: Company Name
+- type: textarea
+  name: companyDescription
+  label: Company Description
+- name: headerLogo
+  type: file
+  config:
+    maxSize: 64
+  label: Header Logo
+- name: footerLogo
+  type: file
+  config:
+    maxSize: 64
+  label: Footer Logo
+- name: defaultHeroImage
+  type: file
+  config:
+    maxSize: 64
+  label: Default Hero Image
+- name: defaultHeroAlt
+  type: text
+  config:
+    required: false
+  label: Default Hero Alt Text
+- type: text
+  name: messageInfo
+  label: Info Message
+  description: Add an informational message to the top of the website.
+- type: text
+  name: messageWarning
+  label: Warning Message
+  description: Add a warning message to the top of the website.
+- type: text
+  name: messageDanger
+  label: Danger Message
+  description: Add a danger message to the site.
+- type: text
+  name: messageSuccess
+  label: Success Message
+  description: Add a success message to the top of the website.
+- name: marketingBlocks
+  type: blocks
+  template_types:
+  - block-columns
+  config:
+    min: 
+    max: 
+  label: Bottom Marketing Blocks
+- name: signUpText
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Sign Up Text
+pages:
+- data/organization.yaml

@@ -1,0 +1,8 @@
+{{ if .Site.Menus.mobile }}
+<div id="mobile-nav" class="">
+  {{ partial "components/menuTree" (dict "context" . "location" "mobile" "menu" .Site.Menus.mobile ) }}
+  <div class="container">
+    {{ partial "forms/search-form-inline" . }}
+  </div>
+</div>
+{{ end }}

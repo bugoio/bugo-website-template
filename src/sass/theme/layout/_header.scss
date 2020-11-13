@@ -1,0 +1,62 @@
+
+@use "../config";
+@use "../utility";
+@use "../typography";
+
+#site-header {
+  background-color: config.$header-bg;
+  z-index: 10000;
+  position: relative;
+  justify-content: center;
+  align-items: stretch;
+  padding: config.$header-padding;
+
+  .container {
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin: 0 auto;
+  }
+
+  .flex > * {
+    padding-bottom: 0;
+  }
+
+
+  #brand-header {
+    flex: 0 0 config.$header-brand-w-xs;
+    display: flex;
+    align-items: center;
+
+    @include utility.respond-to(sm) {
+      flex: 0 0 config.$header-brand-w-sm;
+    }
+
+    @include utility.respond-to(md) {
+      flex: 0 0 config.$header-brand-w-md;
+    }
+
+    @include utility.respond-to(lg) {
+      flex: 0 0 config.$header-brand-w-lg;
+    }
+
+    @include utility.respond-to(xl) {
+      flex: 0 0 config.$header-brand-w-xl;
+    }
+
+    @include utility.respond-to(xxl) {
+      flex: 0 0 config.$header-brand-w-xxl;
+    }
+
+    @include utility.respond-to(xxxl) {
+      flex: 0 0 config.$header-brand-w-xxxl;
+    }
+
+
+    a {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+//custom 

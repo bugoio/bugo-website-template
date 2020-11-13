@@ -1,0 +1,44 @@
+---
+label: Location
+hide_body: true
+fields:
+- type: field_group_list
+  name: locations
+  label: locations
+  fields:
+  - type: text
+    name: name
+    label: name
+  - type: text
+    name: address1
+    label: address1
+  - type: text
+    name: address2
+    label: address2
+  - type: text
+    name: city
+    label: city
+  - type: text
+    name: state
+    label: state
+  - type: text
+    name: zip
+    label: zip
+  - type: field_group_list
+    name: phones
+    label: phones
+    fields:
+    - type: text
+      name: label
+      label: label
+    - type: text
+      name: phone
+      label: phone
+- type: list
+  name: select
+  label: select
+- name: locationImage
+  type: file
+  config:
+    maxSize: 64
+  label: Location Image

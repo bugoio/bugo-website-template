@@ -1,0 +1,12 @@
+{{ define "hero" }}
+  {{ partial "components/hero" . }}
+{{ end }}
+{{ define "main" }}
+<main id="main" aria-label="Main Content" tabindex="0">
+  {{ .Content }}
+</main>
+{{ end }}
+
+{{ define "sidebar" }}
+  {{ partial "aside" . }}
+{{ end }}

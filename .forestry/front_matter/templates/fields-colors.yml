@@ -1,0 +1,43 @@
+---
+label: Colors
+hide_body: false
+display_field: bgColor
+fields:
+- name: bgColor
+  type: select
+  default: ''
+  config:
+    required: false
+    options:
+    - Primary
+    - Secondary
+    - Light
+    - dark
+    - Black
+    - White
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Background Color
+  description: Select a color.
+- name: textColor
+  type: select
+  default: ''
+  config:
+    required: false
+    options:
+    - Primary
+    - Secondary
+    - Light
+    - dark
+    - Black
+    - White
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Text Color
+  description: Select a color.

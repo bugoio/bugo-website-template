@@ -1,0 +1,14 @@
+{{ with .Params.contact }}
+  <ul class="unstyled-list contact-info">
+    {{ range $index,$contact := . }}
+      <li>
+        <span class="contact-label">{{ $index | title}}:</span>
+        {{ if eq $index "email" }}
+          <a href="mailto:{{ . }}">{{ . }}</a>
+        {{ else }}
+        {{ . }}
+        {{ end }}
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}

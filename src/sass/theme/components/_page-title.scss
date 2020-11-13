@@ -1,0 +1,15 @@
+@use '../config';
+@use '../utility';
+.page-title {
+  h1 {
+    @include utility.mod(font-size,4);
+    line-height: 1;
+    font-weight: 800;
+  }
+  .thumbnail {
+    margin-right: var(--space-most) !important;
+  }
+  line-height: 1.2;
+  color: config.$secondary;
+}
+//test

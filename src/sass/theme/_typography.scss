@@ -1,0 +1,65 @@
+@use "config";
+@use "utility";
+
+%d1,%d2,%d3,%d4,%d5,%d6 {
+  line-height: 1.1;
+}
+
+%d1 {
+  @include utility.mod(font-size,config.$d1);
+}
+
+%d2 {
+  @include utility.mod(font-size,config.$d2);
+}
+
+%d3 {
+  @include utility.mod(font-size,config.$d3);
+}
+
+%d4 {
+  @include utility.mod(font-size,config.$d4);
+}
+
+%d5 {
+  @include utility.mod(font-size,config.$d5);
+}
+
+%d6 {
+  @include utility.mod(font-size,config.$d6);
+}
+
+h1,h2,h3,h4,h5,h6,
+.h1,.h2,.h3,.h4,.h5,.h6 {
+  color: config.$heading-color;
+  font-weight: 800;
+
+  small {
+    display: block;
+    font-size: 85%;
+  }
+}
+
+.d1 {
+  @extend %d1;
+}
+
+.d2 {
+  @extend %d2;  
+}
+
+.d3 {
+  @extend %d3;
+}
+
+.d4 {
+  @extend %d4;
+}
+
+.d5 {
+  @extend %d5;
+}
+
+.d6 {  
+  @extend %d6;
+}

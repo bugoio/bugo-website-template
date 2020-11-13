@@ -1,0 +1,5 @@
+<div class="thumbnail">
+  {{ $alt := humanize (index (split (path.Base .) ".") 0) }}
+  {{ $imgSrc := partial "getImgSrc" . }}
+  {{ partial "picture" (dict "imgSrc" $imgSrc "alt" $alt) }}
+</div>

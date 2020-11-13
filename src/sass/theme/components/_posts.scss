@@ -1,0 +1,34 @@
+@use "../config";
+@use "../utility";
+
+.posts-latest,
+.posts-related {
+  // article {
+  //   text-align: left;
+  //   color: config.$black;
+  //   // margin-right: var(--space-less);
+  //   // margin-left: var(--space-less);
+    
+  //   header {
+  //     color: config.$primary;
+  //   }
+  // }
+  .description,.summary {
+    margin: var(--space-less);
+  }
+}
+
+aside .posts-latest,
+aside .posts-related {
+  li {
+    margin-bottom: var(--space-most);
+  }
+
+  article {
+    margin: 0;
+  }
+
+  header {
+    font-size: 80%;
+  }
+}

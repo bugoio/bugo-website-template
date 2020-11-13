@@ -1,0 +1,7 @@
+{{ with .Site.Data.locations }}
+<div class="locations">
+  {{ range $index,$location := .locations }}
+    {{ partial "components/location" . }}
+  {{ end }}
+</div>
+{{ end }}

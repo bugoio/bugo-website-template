@@ -1,0 +1,58 @@
+defaultMarkdownHandler: goldmark
+
+# Goldmark
+goldmark:
+  extensions:
+    definitionList: true
+    footnote: true
+    linkify: true
+    strikethrough: true
+    table: true
+    taskList: true
+    typographer: true
+    emoji: true
+  parser:
+    attribute: true
+    autoHeadingID: true
+    autoHeadingIDType: github
+  renderer:
+    hardWraps: false
+    unsafe: true # Used for shortcodes with HTML. False if you don't use shortcodes with HTML.
+    xHTML: false
+
+# Highlight
+highlight:
+  codeFences: true
+  guessSyntax: false
+  hl_Lines: ""
+  lineNoStart: 1
+  lineNos: false
+  lineNumbersInTable: true
+  noClasses: true
+  style: monokai
+  tabWidth: 4
+
+# Table of Contents
+tableOfContents:
+  endLevel: 3
+  ordered: false
+  startLevel: 2
+
+# Black Friday - deprecated
+blackFriday:
+  angledQuotes: false
+  extensions: null
+  extensionsMask: null
+  footnoteAnchorPrefix: ""
+  footnoteReturnLinkContents: ""
+  fractions: true
+  hrefTargetBlank: false
+  latexDashes: true
+  nofollowLinks: false
+  noreferrerLinks: false
+  plainIDAnchors: true
+  skipHTML: false
+  smartDashes: true
+  smartypants: true
+  smartypantsQuotesNBSP: false
+  taskLists: true

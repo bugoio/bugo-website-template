@@ -1,0 +1,19 @@
+---
+label: Field - Text Align
+hide_body: false
+fields:
+- name: textAlign
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - Left
+    - Center
+    - Right
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Text Align

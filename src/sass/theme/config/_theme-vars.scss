@@ -1,0 +1,304 @@
+@use 'colors' as *;
+@use './springboard' as *;
+@forward './springboard';
+
+$ms: (
+  base: 16px, 
+  ratio: 1.0,
+  600px: ( 
+    base: 16px,
+  ), 
+  800px: ( 
+    base: 16px, 
+  ), 
+  1000px: ( 
+    base: 16px, 
+  ), 
+  1200px: ( 
+    base: 18px, 
+  ), 
+  1400px: ( 
+    base: 20px,
+  ), 
+  2200px: ( 
+    base: 22px, 
+  )
+);
+
+$breakpoints: (
+  xs: (
+    breakpoint: 0,
+    base: 16px,
+  ),
+  sm: (
+    breakpoint: 600px,
+    base: 16px,
+  ),
+  md: (
+    breakpoint: 768px,
+    base: 16px,
+  ),
+  lg: (
+    breakpoint: 1000px,
+    base: 16px,
+  ),
+  xl: (
+    breakpoint: 1200px,
+    base: 16px,
+  ),
+  xxl: (
+    breakpoint: 1400px,
+    base: 24px,
+  ),
+  xxxl: (
+    breakpoint: 2200px,
+    base: 28px,
+  ),
+);
+
+// Global Plugin Variables
+$border: 1px solid #ccc;
+$class-name: "";
+$radius: 0;
+$font-family: 'Roboto', sans-serif;
+$transition: all 0.3s ease;
+$breakpoint: 60rem;
+$shadow: 0 0 .2em rgba($black, $transparency);
+$hr-color: $gray;
+$line-height: 1.7;
+
+$container-w-xs: 90%;
+$container-w-sm: 80%;
+$container-w-md: 80%;
+$container-w-lg: 75%;
+$container-w-xl: 60%;
+$container-w-xxl: 55%;
+$container-w-xxxl: 50%;
+
+
+// Spacing
+// creates CSS variables in :root
+$space:        0;
+$space-min:    $space - 8;
+$space-least:  $space - 2;
+$space-less:   $space - 1;
+$space-more:   $space + 1;
+$space-most:   $space + 2;
+$space-max:    $space + 7;
+
+// using CSS variables from above. Use these for spacing.
+$spacing: var(--space);
+$spacing-min: var(--space-min);
+$spacing-least: var(--space-least);
+$spacing-less: var(--space-less);
+$spacing-more: var(--space-more);
+$spacing-most: var(--space-most);
+$spacing-max: var(--space-max);
+
+// Grid
+$grid-space: var(--space-max);
+$vertical: $grid-space;
+$horizontal: $grid-space;
+
+// Button
+$button-radius: $radius;
+$button-margin: $spacing-least $spacing-less;
+$button-hover-shadow: inset 0 0 0 99em rgba($white, $transparency);
+$button-click: inset 0 0 0 99em rgba($black, $transparency);
+$button-pseudo-hover-shadow: inset 0 0 0 99em rgba($black, $transparency / 2);
+$button-bg: $secondary;
+$button-color: $black;
+$button-disabled-bg: #bbb;
+$button-weight: bold;
+
+// Card
+$card-shadow: 0;
+$card-border: $border;
+$card-radius: $radius;
+$card-shadow: $shadow;
+$card-margin-bottom: $spacing;
+$card-p-padding: $spacing-less $spacing-least;
+$card-header-border-bottom: 1px solid #333;
+
+// Checkbox
+$checkbox-character: '\2714';
+$checkbox-radius: $radius;
+$checkbox-radius: $radius;
+
+
+// Drop Immage
+// The ratio for the images (responsive by default)
+$dropimage-ratio: 16 / 9;
+
+// The percentage of height (respect of width)
+$dropimage-height: percentage(1 / $dropimage-ratio);
+
+$dropimage-background-color: #ddd;
+
+// This comes from camera.svg. Converted with:
+// http://dopiaza.org/tools/datauri/index.php
+$dropimage-background-image: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NDAiIGhlaWdodD0iNjQwIiB2ZXJzaW9uPSIxLjEiPjxnIHN0eWxlPSJmaWxsOiMzMzMiPjxwYXRoIGQ9Ik0gMTg3IDIzMCBDIDE3NSAyMzAgMTY1IDI0MCAxNjUgMjUyIEwgMTY1IDMwMCBMIDE2NSA0MDggQyAxNjUgNDIwIDE3NSA0MzAgMTg3IDQzMCBMIDQ2MyA0MzAgQyA0NzUgNDMwIDQ4NSA0MjAgNDg1IDQwOCBMIDQ4NSAzMDAgTCA0ODUgMjUyIEMgNDg1IDI0MCA0NzUgMjMwIDQ2MyAyMzAgTCAxODcgMjMwIHogTSAzNjAgMjU2IEEgNzAgNzIgMCAwIDEgNDMwIDMyOCBBIDcwIDcyIDAgMCAxIDM2MCA0MDAgQSA3MCA3MiAwIDAgMSAyOTAgMzI4IEEgNzAgNzIgMCAwIDEgMzYwIDI1NiB6Ii8+PGNpcmNsZSBjeD0iMzYwIiBjeT0iMzMwIiByPSI0MSIvPjxwYXRoIGQ9Im0yMDUgMjI1IDUtMTAgMjAgMCA1IDEwLTMwIDAiLz48cGF0aCBkPSJNMjg1IDIwMEwyNzAgMjI1IDM3NiAyMjUgMzYxIDIwMCAyODUgMjAwek0zMTAgMjA1TDMzNyAyMDUgMzM3IDIxOCAzMTAgMjE4IDMxMCAyMDV6Ii8+PHBhdGggZD0ibTQwNSAyMjUgNS0xMCAyMCAwIDUgMTAtMzAgMCIvPjwvZz48L3N2Zz4=';
+$dropimage-radius: $button-radius;
+$dropimage-margin: $button-margin;
+
+// Generic
+$generic-color: #000;
+$generic-link-color: inherit;
+$generic-shadow-color: #000;
+$generic-bg: #fff;
+$class-name: "";
+
+
+// Input
+$input-height: var(--space-most);
+$input-bg: #fff;
+
+// Label
+$label-font-size: -1;
+
+// ! Modal - has no variables right now
+
+// Nav
+$nav-height: 3em;
+$nav-shadow: $shadow;
+$nav-position: fixed;
+$nav-sides: .6em;
+$nav-responsive: true;
+$nav-open-left: false;
+$nav-timing: .5s;
+
+// Normalize
+$normalize-display: true;
+$normalize-ie: true;
+
+// Radio
+$radio-size: 1em;
+$radio-border: $border;
+
+// Select
+$select-height: 0;
+$margin: var(--space-least);
+$padding: var(--space-least) var(--space-less);
+
+// ! Stack has no variables right now
+
+// Table
+$table-stripe: rgba(0, 0, 0, .05);
+
+// Tooltip  
+$tooltip-background: $black;
+$tooltip-size: .8em;
+
+// Offcanvas
+$offcanvas-bg: $light;
+$canvas-bg: $white;
+$offcanvasMobileHeight: 600px;
+
+// Header
+$header-bg: $white; 
+$header-color: $white;
+$header-brand-w-xs: 50%; 
+$header-brand-w-sm: 40%; 
+$header-brand-w-md: 35%; // Main Navigation will fill the remaining space
+$header-brand-w-lg: 40%; // Main Navigation will fill the remaining space
+$header-brand-w-xl: 35%; // Main Navigation will fill the remaining space
+$header-brand-w-xxl: 35%; // Main Navigation will fill the remaining space
+$header-brand-w-xxxl: 35%; // Main Navigation will fill the remaining space
+
+$header-padding: var(--space) 0;
+
+// Mobile Nav
+$mobile-hamburger-color: $black;
+$mobile-hamburger-bp: lg;
+$mobile-hamburger-w: 9%;
+$mobile-link-color: $primary;
+$mobile-bg-color: transparent;
+$mobile-close-color: $primary;
+$mobile-link-margin: var(--space);
+$mobile-link-padding:  var(--space-least) var(--space-more);
+
+// Menubar
+$menubar-menu1-bg: $white;
+$menubar-menu1-color: $primary;
+$menubar-menu2-bg: $primary;
+$menubar-menu2-color: $white;
+
+// Main Nav
+$main-menu-link-bgColor: $primary;
+$main-menu-link-color: $white;
+$main-menu-link-size: -0.25;
+$main-menu-link-margin: 0 var(--space-less) 0 0;
+$main-menu-margin: 0;
+$main-menu-link-padding: var(--space-min);
+$main-menu-width: 80%;
+$main-menu-justify: flex-end;
+
+// Hero
+$hero-height-sm: 100%;
+$hero-height-md: 38%;
+$hero-height-lg: 33%; // percent relative to the container width
+$hero-height-xl: 33%; // percent relative to the container width
+$hero-height-xxl: 25%; // percent relative to the container width
+$hero-color: $white;
+$hero-align: left;
+$hero-max: 100%; // max width
+$hero-h1: 9; // modular scale ratio font size
+$hero-h1-max-char: 18ch;
+$hero-heading-color: $white;
+$hero-shadow: false;
+$hero-margin: 0 auto;
+$hero-line-height: 1.3;
+$hero-text-bg: $primary;
+
+$home-hero-height-sm: 60%;
+$home-hero-height-md: 55%;
+$home-hero-height-lg: 45%; // percent relative to the container width
+
+// Bread crumbs
+$breadcrumbSpacing: var(--space-max) 0;
+
+
+// Thumbnails
+$thumb-padding: 40%;
+
+// Headings
+$h1-font-size: 3 !default;
+$h2-font-size: 2;
+$h3-font-size: 1;
+$h4-font-size: 0.75;
+$h5-font-size: 0.5;
+$h6-font-size: 0.25;
+$heading-color: $primary;
+$heading-padding-top: $spacing-less;
+$heading-padding-bottom: 0;
+$heading-margin-bottom: $spacing-less;
+$heading-line-height: 1.3;
+$heading-font: "Roboto Slab", serif;
+
+// Display Font Sizes
+$d1: 16;
+$d2: 12;
+$d3: 10;
+$d4: 8;
+$d5: 6;
+$d6: 5;
+
+$block-padding: var(--space-most) 0;
+$block-text-align: left;
+
+//Sharing
+$share-modal-bg: $white;
+
+//Footer
+$footer-bg: $primary;
+$footer-color: $white;
+$footer-p: var(--space-more);
+$footer-link: $white;
+$footer-brand-width: 15%;
+$footer-locations-width: 85%;
+
+$copyright-font-size: -1.5;
+
+// Columns
+$columns-gap: 1;
+$columns-margin-bottom: 1;

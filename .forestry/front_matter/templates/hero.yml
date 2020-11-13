@@ -1,0 +1,55 @@
+---
+label: Hero
+hide_body: true
+fields:
+- name: hero
+  type: field_group
+  config: {}
+  fields:
+  - name: useDefaultImage
+    type: boolean
+    label: Use Default Hero Image
+    description: Use this site's default Hero Image.
+    default: true
+  - name: heroImage
+    type: file
+    config:
+      maxSize: 10
+    label: Hero Image
+    description: Select an image to use in the hero. If you do not supply one a default
+      image will be used if set under the Organization tab.
+    showOnly:
+      field: useDefaultImage
+  - name: heroCaption
+    type: text
+    config:
+      required: false
+    label: Hero Caption
+  - name: heroImageAltText
+    type: text
+    config:
+      required: false
+    label: Hero Image Alternative Text
+    description: Add alternate text for ADA compliance.
+    showOnly:
+      field: useDefaultImage
+  - name: displayPageTitle
+    type: boolean
+    label: Display Page Title in Hero
+    default: true
+  - name: heroCustomText
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: true
+      schema:
+        format: markdown
+    label: Hero Custom Text
+    description: Add custom text for the header. If left blank the page's title will
+      display instead.
+    showOnly:
+      field: displayPageTitle
+      value: false
+  label: Hero
+  description: Change this page's Hero text or image.

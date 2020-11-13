@@ -1,0 +1,27 @@
+{{ define "hero" }}
+  {{ partial "components/hero" . }}
+{{ end }}
+
+{{ define "main" }}
+  <main id="main" aria-label="Main Content" tabindex="0">
+    {{ .Content }}
+    <div class="flex one two-800">
+      {{ with .Site.Data.locations }}
+        {{ range $index,$location := .locations }}
+        <div>
+          <div>
+            {{ partial "components/location-map" . }}
+          </div>  
+          <div>
+            {{ partial "components/location" . }}
+          </div>
+        </div>
+        {{ end }}
+      {{ end }}
+    </div>
+  </main>
+{{ end }}
+
+{{ define "sidebar" }}
+  {{ partial "aside" . }}
+{{ end }}

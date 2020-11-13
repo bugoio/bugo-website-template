@@ -1,0 +1,66 @@
+@use '../config/theme-vars' as *;
+@use '../config/colors' as *;
+@use '../config/plugins' as *;
+
+// .share-buttons {
+//   @include set-margin($share-margin-top, $share-margin-right, $share-margin-bottom, $share-margin-left);
+//   @include set-padding($share-padding-top, $share-padding-right, $share-padding-bottom, $share-padding-left);
+//   display: flex;
+//   align-content: center;
+
+//   .share-button {
+//     background-color: transparent;
+//     text-decoration: none;
+//     // @include ms-respond(font-size,0);
+
+//     // @include set-margin($share-link-margin-top, $share-link-margin-right, $share-link-margin-bottom, $share-link-margin-left);
+//     // @include set-padding($share-link-padding-top, $share-link-padding-right, $share-link-padding-bottom, $share-link-padding-left);
+
+//     // svg {
+//     //   @include ms-respond(width, $share-icon-width);
+//     //   height: auto;
+//     //   fill: $share-icon-fill;
+//     // }
+//   }
+// }
+
+
+.share-buttons {
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "Share: ";
+    display: block;
+  }
+}
+.share-button {
+  background-color: transparent;
+  color: $primary;
+  border-color: transparent;
+}
+
+.share-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3000;
+  background-color: $share-modal-bg;
+
+  &.open {
+    display: block;
+  }
+
+  .share-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90vw;
+    height: 50vw;
+    transform: translateX(-50%) translateY(-50%);
+    background: $white;
+  }
+}

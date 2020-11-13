@@ -1,0 +1,68 @@
+@use '../../config';
+@use '../../utility';
+
+.block-slideshow {
+  text-align: center;
+
+  h2 {
+    margin-bottom: var(--space-more);
+  }
+
+  .carousel {
+    button {
+      position: absolute;
+      z-index: 100;
+      top: 50%;
+      color: config.$primary;
+      background-color: transparent;
+      border: 0 !important;
+
+      &:focus,
+      &:hover,
+      &:active {
+        background-color: transparent;
+        border: 0 !important;
+      }
+
+      &.slick-prev {
+        left: 0;
+      }
+
+      &.slick-next {
+        right: 0;
+      }
+
+      svg {
+        display: block;
+        width: var(--space-more);
+        height: auto;
+      }
+    }
+
+    .slick-slide {
+      padding: 0 var(--space-max);
+    }
+  }
+
+  .slick-list {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .flex {
+    text-align: center;
+    align-items: stretch;
+
+    > * {
+      position: relative;
+      padding-bottom: 0;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{{ define "hero" }}
+  {{ partial "components/hero" . }}
+{{ end}}
+
+{{ define "main" }}
+  <main id="main" aria-label="Main Content" tabindex="0">
+    {{ .Content }}
+    {{ partial "components/share-buttons.html" . }}
+  </main>
+{{ end }}
+
+{{ define "sidebar" }}
+  {{ partial "aside" . }}
+{{ end }}
+
+{{ define "structuredData" }}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://google.com/article"
+      },
+      "headline": "{{ .Title }}",
+      {{ with .Params.images }}
+        "image": [
+          {{ range first 1 . }}
+            {{ . | absURL }}
+          {{ end }}
+        ],
+      {{ end }}
+      "datePublished": "2015-02-05T08:00:00+08:00",
+      "dateModified": "2015-02-05T09:20:00+08:00",
+      "author": {
+        "@type": "Organization",
+        "name": "{{ .Site.Title }}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "/uploads/rldqp4lna4rbp12ivn7o.png"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{ .Site.Title }}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "/uploads/rldqp4lna4rbp12ivn7o.png"
+        }
+      }
+    }
+  </script>
+{{ end }}

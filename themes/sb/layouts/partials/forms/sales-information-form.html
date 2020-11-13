@@ -1,0 +1,60 @@
+<form 
+  id="netlify-sales-information"
+  class="bg-light"
+  labelled-by="sales-form-heading" 
+  method="post" 
+  name="sales-information" 
+  role="form" 
+  data-netlify="true"
+  x-data-netlify-recaptcha="true"
+  netlify-honeypot="dl-number">
+    <input class="dl-number" name="dl-number"/>
+    <h2 id="sales-form-heading">Sales Information</h2>
+    <p>Contact our Sales Department for information about all our 100% post-consumer RPET products.</p>
+    <div class="messages"></div>
+    <div class="controls flex two">
+        <div class="form-group">
+            <label for="form_name">First Name *</label>
+            <input autocomplete="given-name" id="form_name" type="text" name="name" class="form-control"
+                required="required" aria-required="true" data-error="First name is required.">
+            <div class="help-block with-errors"></div>
+        </div>
+        <div class="form-group">
+            <label for="form_lastname">Last Name *</label>
+            <input autocomplete="family-name" id="form_lastname" type="text" name="lastname" class="form-control"
+                required="required" aria-required="true" data-error="Last name is required.">
+            <div class="help-block with-errors"></div>
+        </div>
+        <div class="form-group">
+            <label for="form_email">Email *</label>
+            <input autocomplete="email" id="form_email" type="email" name="email" class="form-control"
+                required="required" aria-required="true" data-error="Valid email is required.">
+            <div class="help-block with-errors"></div>
+        </div>
+        <div class="form-group">
+            <label for="form_phone">Phone</label>
+            <input autocomplete="tel" id="form_phone" type="text" name="phone" class="form-control">
+            <div class="help-block with-errors"></div>
+        </div>
+        <div class="form-group full">
+            <label for="form_message">Message *</label>
+            <textarea id="form_message" class="w-100" name="message" class="form-control" rows="4" data-error="Please, leave us a message."></textarea>
+            <div class="help-block with-errors"></div>
+        </div>
+        <div class="form-footer full text-center">
+            <!-- <div data-netlify-recaptcha="true"></div> -->
+            <input type="submit" class="button" value="Send" aria-label="Send" tabindex="0">
+        </div>
+    </div>
+    <div class="row">
+        <p class="text-muted mt-4">
+            <strong>*</strong> These fields are required.
+        </p>
+    </div>
+</form>
+<script>
+  var els = document.querySelectorAll('.dl-number')
+  for(i=0;i<els.length;i++){
+    els[i].classList.add('dnone');
+  }
+</script>

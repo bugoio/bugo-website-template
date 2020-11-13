@@ -1,0 +1,16 @@
+{{ $scratch := newScratch }}
+{{ if eq (len .) 1 }}
+  {{ $scratch.Set "class" "one" }}
+{{ else if eq (len .) 2 }}
+  {{ $scratch.Set "class" "two" }}
+{{ else if eq (len .) 3 }}
+  {{ $scratch.Set "class" "three" }}
+{{ else if eq (len .) 4 }}
+  {{ $scratch.Set "class" "four" }}
+{{ else if eq (len .) 5 }}
+    {{ $scratch.Set "class" "five" }}
+{{ else if eq (len .) 6 }}
+  {{ $scratch.Set "class" "six" }}
+{{ end }}
+
+{{ return $scratch.Get "class" }}

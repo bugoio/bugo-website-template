@@ -1,0 +1,45 @@
+<footer id="site-footer" tabindex="0">
+  <div class="container flex one five-800">
+    <div class="half fifth-800">
+      {{ partial "components/brand-footer" . }}
+      {{ $scratch := newScratch }}
+      {{ with .Site.Data.organization.socialAccounts }}
+        {{ partial "components/social-account-list" . }}
+      {{ end }}
+    </div>
+    <div class="half fifth-800">
+      {{ partial "components/site-locations" . }}
+    </div>
+    {{ if .Site.Menus.footerabout }}
+      <div id="footer-nav-about" class="footer-menu third fifth-800">
+        <span class="name">About Us</span>
+        {{ partial "components/menuTree" (dict "context" . "location" "footerabout" "menu" .Site.Menus.footerabout ) }}
+      </div>
+    {{ end }}
+    {{ if .Site.Menus.newsroom }}
+      <div id="footer-nav-newsroom" class="footer-menu third fifth-800">
+        <span class="name">Newsroom</span>
+        {{ partial "components/menuTree" (dict "context" . "location" "footerabout" "menu" .Site.Menus.newsroom ) }}
+      </div>
+    {{ end }}
+    {{ if .Site.Menus.allies }}
+      <div id="footer-nav-allies" class="footer-menu third fifth-800">
+        <span class="name">Allies</span>
+        {{ partial "components/menuTree" (dict "context" . "location" "footerabout" "menu" .Site.Menus.allies ) }}
+      </div>
+    {{ end }}
+    </div>
+  <div id="copyright">
+    <span tabindex="0">
+      ©{{ dateFormat "2006" now }} {{ .Site.Title | title }} &nbsp;<span class="">•</span>&nbsp;
+      All rights reserved.
+    </span>
+    {{ if .Site.Params.showWCAG }}
+    <span id="wcag-commitment">
+      <small>
+        Committed to WCAG 2.1 AA Accessibility Compliance.
+      </small>
+    </span>
+    {{ end }}
+  </div>
+</footer>

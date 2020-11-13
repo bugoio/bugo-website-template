@@ -1,0 +1,100 @@
+{{ $scratch := newScratch }}
+{{ $scratch.Set "query" "" }}
+{{ $page := .}}
+<!-- Name -->
+{{ with .Params.name }}
+  {{ with .firstName }}
+    {{ $query := $scratch.Get "query" }}
+    {{ $scratch.Set "query" (printf "%s%s&" $query (querify "firstName" .)) }}
+  {{ end }}
+  {{ with .middleName }}
+    {{ $query := $scratch.Get "query" }}
+    {{ $scratch.Set "query" (printf "%s%s&" $query (querify "middleName" .)) }}
+  {{ end }}
+  {{ with .lastName }}
+    {{ $query := $scratch.Get "query" }}
+    {{ $scratch.Set "query" (printf "%s%s&" $query (querify "lastName" .)) }}
+  {{ end }}
+  {{ with .position }}
+    {{ $query := $scratch.Get "query" }}
+    {{ $scratch.Set "query" (printf "%s%s&" $query (querify "position" .)) }}
+  {{ end }}
+{{ end }}
+<!-- Contact Info -->
+{{ with .Params.contactInfo }}
+  {{ with .email }}
+    {{ $query := $scratch.Get "query" }}
+    {{ $scratch.Set "query" (printf "%s%s&" $query (querify "email" .)) }}
+  {{ end }}
+  {{ with .phone }}
+    {{ $query := $scratch.Get "query" }}
+    {{ $scratch.Set "query" (printf "%s%s&" $query (querify "phone" .)) }}
+  {{ end }}
+  {{ with .mobile }}
+    {{ $query := $scratch.Get "query" }}
+    {{ $scratch.Set "query" (printf "%s%s&" $query (querify "mobile" .)) }}
+  {{ end }}
+  {{ with .socialaccounts }}
+    {{ range . }}
+      {{ $url := split (urls.Parse .).Host "." }}
+      {{ $account := index $url (sub (len $url) 2) }}
+      {{ if $account }}
+        {{ $query := $scratch.Get "query" }}
+        {{ $scratch.Set "query" (printf "%s%s&" $query (querify $account .)) }}        
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+<!-- Location -->
+{{ with .Params.location }}
+  {{with where $page.Site.Data.locations.locations ".name" "==" . }}
+    {{ range . }}
+      {{ with .address1 }}
+        {{ $query := $scratch.Get "query" }}
+        {{ $scratch.Set "query" (printf "%s%s&" $query (querify "address1" .)) }}
+      {{ end }}
+      {{ with .address2 }}
+        {{ $query := $scratch.Get "query" }}
+        {{ $scratch.Set "query" (printf "%s%s&" $query (querify "address2" .)) }}
+      {{ end }}
+
+      {{ with .city }}
+        {{ $query := $scratch.Get "query" }}
+        {{ $scratch.Set "query" (printf "%s%s&" $query (querify "city" .)) }}
+      {{ end }}
+
+      {{ with .state }}
+        {{ $query := $scratch.Get "query" }}
+        {{ $scratch.Set "query" (printf "%s%s&" $query (querify "state" .)) }}
+      {{ end }}
+
+      {{ with .zip }}
+        {{ $query := $scratch.Get "query" }}
+        {{ $scratch.Set "query" (printf "%s%s&" $query (querify "zip" .)) }}
+      {{ end }}
+      {{ $query := $scratch.Get "query" }}
+      {{ $scratch.Set "query" (printf "%s%s&" $query (querify "country" "United States of America" )) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+<!-- image -->
+{{ with .Params.images }}
+  {{ $image := index . 0 }}
+  {{ $transform := partial "cloudinary-transform" (dict "image" $image "transform" "c_fill,w_300,f_auto")}} 
+  {{ with $transform }}
+    {{ $query := $scratch.Get "query" }}
+    {{ $scratch.Set "query" (printf "%s%s&" $query (querify "image" .)) }}
+  {{ end }}
+{{ end }}
+
+{{ with $page.Site.Title }}
+  {{ $query := $scratch.Get "query" }}
+  {{ $scratch.Set "query" (printf "%s%s&" $query (querify "company" .)) }}
+{{ end }}
+
+{{ with $page.Permalink }}
+  {{ $query := $scratch.Get "query" }}
+  {{ $scratch.Set "query" (printf "%s%s&" $query (querify "permalink" . )) }}
+{{ end }}  
+{{ return $scratch.Get "query" }} 

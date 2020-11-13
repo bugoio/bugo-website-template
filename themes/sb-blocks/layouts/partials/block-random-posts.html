@@ -1,0 +1,21 @@
+{{ $id := partial "get-block-id" . }}
+<div id="block-{{ $id }}" {{partial "block-class" . | safeHTMLAttr }}>
+  <div class="container">
+    <h2 class="h1">Knowledge. Experience. Passion.<br/>
+      Meet the reasons why our clients sleep better at night.</h2>
+    <div class="flex three"></div>
+    <div>
+      {{ if .block.url }}
+      <a href="{{ .block.url }}" class="button-outline">
+        See All {{ .block.title | title }}
+      </a>
+      {{ end }}
+    </div>
+  </div>
+  <template id="random-post-template">
+    <div class="post">
+      <a class="post-thumbnail rounded"></a>
+      <h3 class="h4 post-title no-text-decoration"><a class="search_link search_title" href=""><span class="name"></span><small class="position"></small></a></h2>
+    </div>
+  </template>
+</div>

@@ -1,0 +1,20 @@
+<li
+  role="treeitem"
+  aria-expanded="false"
+  class="{{ if or (.group.IsAncestor .page) (eq .group.Title .page.Title)}}current{{ end }}"
+>
+  <span>
+    {{ .group.Title }}
+    {{ partial "icons/caret-right" . }}
+  </span>
+  <ul role="group">
+    {{ $page := .page }}
+    {{ range sort .group.Pages "Weight" "asc" }}
+      {{ if .Pages }}
+      {{ partial "nav-tree-group" (dict "page" $page "group" .)  }}
+      {{ else }}
+      {{ partial "nav-tree-item" (dict "page" $page "item" .)  }}
+      {{ end }}
+    {{ end }}
+  </ul>
+</li>

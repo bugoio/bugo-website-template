@@ -1,0 +1,33 @@
+{{ $scratch := newScratch }}
+{{ $scratch.Set "class" ( anchorize .block.template ) }}
+
+{{ $bg := .block.bgColor | anchorize }}
+{{ $textColor := .block.textColor | anchorize }}
+{{ $textAlign := .block.textAlign | anchorize }}
+{{ $full := .block.fullWidth | anchorize }}
+{{ $layout := .block.template | anchorize }}
+{{ $title := .block.title | anchorize }}
+
+{{/* with .block.bgColor }}
+  {{ $scratch.Set "class" (printf `%s bg-%s` ($scratch.Get "class") ( anchorize . ))}}
+{{ end }}
+
+{{ with .block.textAlign }}
+  {{ $scratch.Set "class" (printf `%s text-%s` ($scratch.Get "class") ( anchorize . ))}}
+{{ end }}
+
+{{ with .block.textColor }}
+  {{ $scratch.Set "class" (printf `%s text-%s` ($scratch.Get "class") ( anchorize . ))}}
+{{ end }}
+
+{{ with .block.fullWidth }}
+  {{ $scratch.Set "class" (printf `%s text-%s` ($scratch.Get "class") ( anchorize . ))}}
+{{ end }}
+
+{{ with .block.title }}
+  {{ $scratch.Set "class" (printf "%s block-%s" ($scratch.Get "class") ( anchorize . ))}}
+{{ end }}
+
+{{ return printf `class="block %s"` ($scratch.Get "class") */}}
+
+{{ return printf `class="block %s bg-%s text-%s text-%s %s block-%s"` $layout $bg $textAlign $textColor $full $title}}

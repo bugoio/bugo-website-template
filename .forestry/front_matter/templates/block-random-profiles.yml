@@ -1,0 +1,38 @@
+---
+label: Block - Random Profiles
+hide_body: true
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: content
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Content
+- name: qty
+  type: number
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+  label: Quantity
+- name: apiUrl
+  type: text
+  config:
+    required: false
+  label: API URL
+- name: buttonText
+  type: text
+  config:
+    required: false
+  label: Button Text

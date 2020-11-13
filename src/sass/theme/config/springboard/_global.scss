@@ -1,0 +1,11 @@
+@use '../colors' as *;
+
+// Global Plugin Variables
+$border: 1px solid #ccc;
+$class-name: "";
+$radius: 0;
+$font-family: Arial, Helvetica, sans-serif;
+$transition: all 0.3s ease;
+$breakpoint: 60rem;
+$shadow: 0 0 .2em rgba($black, $transparency);
+$hr-color: $gray;

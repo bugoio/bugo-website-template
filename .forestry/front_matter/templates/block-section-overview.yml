@@ -1,0 +1,35 @@
+---
+label: Block - Section Overview
+hide_body: true
+display_field: title
+fields:
+- name: blockOptions
+  type: include
+  config: {}
+  template: block-options
+  label: Block Options
+- name: section
+  type: text
+  config:
+    required: false
+  label: Section
+- name: blockContent
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Block Content
+  description: "<br>Add the content to be displayed above the section list."
+- name: fullWidth
+  type: boolean
+  label: Full Width
+- name: layout
+  type: text
+  config:
+    required: false
+  label: layout
+  default: block-section
+  hidden: true

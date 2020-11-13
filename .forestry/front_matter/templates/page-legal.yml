@@ -1,0 +1,33 @@
+---
+label: Legal Page
+hide_body: false
+fields:
+- name: page_meta
+  type: include
+  config: {}
+  template: page-meta
+  label: Page Meta
+- name: hero
+  type: include
+  config: {}
+  template: hero
+  label: Hero
+- name: page_options
+  type: include
+  config: {}
+  template: page-options
+  label: Page Options
+- name: url_mangement
+  type: include
+  config: {}
+  template: permalinks
+  label: URL Mangement
+- name: layout
+  type: text
+  config:
+    required: false
+  label: Layout
+  default: legal
+  hidden: true
+pages:
+- content/terms-of-use.md

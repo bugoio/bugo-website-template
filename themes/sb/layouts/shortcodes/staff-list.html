@@ -1,0 +1,19 @@
+<h2>
+  {{ with .Get "label" }}
+    {{ . }}
+  {{ else }}
+    Staff
+  {{ end }}
+</h2>
+{{ with $.Site.Page.Pages }}
+<ul class="unstyled-list flex">
+  {{ range . }}
+    <li class="card third-600">
+      {{ with .Params.image }}
+        {{ partial "components/thumbnail" . }}
+      {{ end }}
+      <h3>{{ .Title| title }}</h3>
+    </li>
+{{ end }}
+</ul>  
+{{ end }}

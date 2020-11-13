@@ -1,0 +1,5 @@
+{{ $kind := anchorize .Page.Kind -}} 
+{{ $layout := anchorize .Params.layout }}
+{{ $title := anchorize .Title }}  
+{{ $section := anchorize .Section }}
+{{ return printf "%s %s %s %s" $kind $layout $title $section }}

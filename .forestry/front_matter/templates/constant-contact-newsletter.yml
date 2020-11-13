@@ -1,0 +1,51 @@
+---
+label: Constant Contact Newsletter
+hide_body: true
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: date
+  type: datetime
+  label: Date
+  description: ''
+  config:
+    required: true
+    date_format: 
+    time_format: 
+    display_utc: false
+  default: now
+- name: showFlag
+  type: boolean
+  label: Show Flag
+- name: flagText
+  type: text
+  config:
+    required: false
+  label: Flag Text
+  showOnly:
+    field: showFlag
+    value: true
+- name: content
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Content
+- name: constantContactURL
+  type: text
+  config:
+    required: false
+  label: Constant Contact URL
+- name: layout
+  type: text
+  config:
+    required: false
+  label: layout
+  hidden: true
+  default: newsletter

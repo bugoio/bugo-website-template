@@ -1,0 +1,65 @@
+<footer id="site-footer" tabindex="0">
+  <div class="container">
+    <div class="flex twelve">
+        {{ partial "components/brand-footer" . }}
+        {{ with .Site.Data.locations }}
+        {{ $columnsClass := partial "getColumnsClass" .locations }}
+        <div id="footer-locations" class="flex {{ $columnsClass }}">
+              {{ range $index,$location := .locations }}
+              <div class="location">
+                <span class="name">
+                  {{ .name | title }}
+                </span>
+                <span class="street">
+                  <span class="address1">{{ .address1 }}</span>{{ with .address2 }} <span class="address2">{{ . }}</span>
+                </span>
+                {{ end }}
+                <span class="region">
+                  {{ with .city }}
+                  <span class="city">{{ . }}</span>,
+                  {{ end }}
+                  {{ with .state }}
+                  <span class="state"></span>
+                  {{ end }}
+                  {{ with .zip }}
+                  <span class="zip">{{ . }}</span>
+                  {{ end }}  
+                </span>
+                {{ with .phones }}
+                <ul class="phones">
+                  {{ range $index,$phone := . }}
+                  <li>
+                    <!-- {{ with .label }}
+                    <span class="phone-label">{{ . }}: </span>
+                    {{ end }} -->
+                    {{ .phone }}
+                  </li>              
+                  {{ end }}
+                </ul>            
+                {{ end }}
+              </div>
+            {{ end }}
+        </div>
+          {{ end }}
+          <!-- <div id="footer-menus">
+            {{ if .Site.Menus.footer }}
+              <div id="footer-nav" class="none full-600">
+                {{ partial "components/menuTree" (dict "context" . "location" "footer" "menu" .Site.Menus.footer ) }}
+              </div>
+            {{ end }}
+          </div>   -->
+      </div>
+      </div>
+  {{ if .Site.Params.showWCAG }}
+  <div id="wcag-commitment">
+    <div class="container">
+      <div id="copyright" class="text-left">
+        <span tabindex="0">
+          ©{{ dateFormat "2006" now }} {{ with .Site.Data.organization.companyName }}{{.}}{{else}}{{ .Site.Title | title }}{{ end }} &nbsp;<span class="">•</span>&nbsp;
+          All rights reserved. Committed to WCAG 2.1 AA Accessibility Compliance.
+        </span>
+      </div>   
+    </div>
+  </div>
+  {{ end }}
+  </footer>

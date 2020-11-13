@@ -1,0 +1,38 @@
+---
+label: URL Management
+hide_body: true
+display_field: slug
+fields:
+- name: slug
+  type: text
+  config:
+    required: false
+  label: Slug
+  description: The slug is the user friendly and URL valid name of this page.
+- name: aliases
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: Aliases
+  description: Aliases can be used to create redirects to your page from other URLs.
+    This should be a relative link from the root of the site. Like /alias-to-be-used.
+    You can add as many as you like.
+- name: categories
+  type: list
+  config:
+    use_select: true
+    min: 
+    max: 
+    source:
+      type: documents
+      section: categories
+      file: data/categories.yaml
+      path: categories
+  label: Categories
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
+  description: Add more specific taxonomy to the page.

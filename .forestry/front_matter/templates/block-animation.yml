@@ -1,0 +1,17 @@
+---
+label: Block - Animated Hero
+hide_body: true
+display_field: title
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+- name: classList
+  type: text
+  config:
+    required: false
+  default: animation
+  hidden: false
+  label: Classes

@@ -1,0 +1,19 @@
+---
+label: Section Options
+hide_body: true
+fields:
+- name: cascade
+  type: field_group
+  config: {}
+  fields:
+  - name: hero
+    type: include
+    config: {}
+    template: hero
+    label: Hero
+  - name: showSidebar
+    type: boolean
+    label: Show Sidebar
+  label: Section Options
+  description: Edit settings for the entire section including this page. Heros, Sidebars
+    and others.

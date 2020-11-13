@@ -1,0 +1,54 @@
+@use '../config';
+@use '../utility';
+
+#breadcrumbs {
+  padding: 0;
+  display: none;
+
+  .container {
+    flex: 100% !important;
+    max-width: 100% !important;
+  }
+
+  ol.breadcrumb {
+    margin: 0 !important;
+    justify-content: left;
+    align-items: center;
+  }
+
+  li {
+    display: flex;
+    a {
+      color: config.$primary;
+      display: block;
+    }
+
+    &:nth-child(n+2){
+      &::before {
+        content: "/";
+        color: config.$black;
+        font-weight: normal;
+        margin-left: 0.5rem;
+        display: flex;
+        align-items: center;
+      }
+
+      a {
+        margin-left: var(--space-least);     
+      }  
+    }
+
+    &:last-child {
+      font-weight: bold;
+
+      a {
+        color: config.$black;
+        max-width: 22ch;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        cursor: default;
+      }
+    }
+  }
+}
