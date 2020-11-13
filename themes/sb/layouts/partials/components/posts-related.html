@@ -3,7 +3,7 @@
 {{ $thumbnail := .thumbnail }}
 
 
-{{ $news := where $context.Site.RegularPages "Section" "news" }}
+{{ $news := where $context.Site.RegularPages "Section" "blog" }}
 
 {{ $related := $context.Site.RegularPages.Related $context }}
 
@@ -33,3 +33,4 @@
 {{ else }}
   {{ partial "components/posts-latest" . }}
 {{ end }}
+????
