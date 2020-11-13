@@ -56,8 +56,8 @@ sections:
   label: Categories
 upload_dir: static/uploads
 public_path: "/uploads"
-front_matter_path: https://determined-ptolemy-0bed14.netlify.app/.netlify/large-media
-use_front_matter_path: false
+front_matter_path: ''
+use_front_matter_path: 
 file_template: ":filename:"
 build:
   preview_env:
