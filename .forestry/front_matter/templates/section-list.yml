@@ -30,7 +30,6 @@ fields:
   hidden: true
   default: section
 pages:
-- content/docs/SASS/styles.md
 - content/docs/_index.md
 - content/docs/configuration/_index.md
 - content/docs/templates/themes.md
