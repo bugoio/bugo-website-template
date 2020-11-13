@@ -1,6 +1,6 @@
 ---
 title: Blog
-date: 2020-11-11T21:00:41+00:00
+date: 2020-11-11T21:00:41.000+00:00
 weight: 3
 pageOptions:
   showSidebar: true
@@ -8,9 +8,9 @@ pageOptions:
   excludeFromSitemap: false
 cascade:
   hero:
-    useDefaultImage: true
+    useDefaultImage: false
     displayPageTitle: true
-    heroImage: ''
+    heroImage: "/uploads/jonathan-cooper-ptvpw6h9rpo-unsplash.jpg"
     heroCaption: ''
     heroImageAltText: ''
     heroCustomText: ''
@@ -24,12 +24,12 @@ slug: ''
 aliases: []
 categories: []
 menu:
-  main:
-    weight: 4
-  mobile:
-    weight: 4
   footer:
     weight: 3
+  mobile:
+    weight: 4
+  main:
+    weight: 4
 draft: true
 
 ---
