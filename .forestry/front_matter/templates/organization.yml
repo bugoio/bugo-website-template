@@ -36,6 +36,9 @@ fields:
 - name: showArticleThumbnails
   type: boolean
   label: Show Article Thumbnails
+- name: showSidebarThumbnails
+  type: boolean
+  label: Show Sidebar Thumbnails
 - type: text
   name: messageInfo
   label: Info Message
