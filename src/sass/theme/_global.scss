@@ -33,3 +33,27 @@ body {
 }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
+:root {
+  // @include mod(--space--10,$space--10);
+  // @include mod(--space--9,$space--9);
+  // @include mod(--space--8,$space--8);
+  // @include mod(--space--7,$space--7);
+  // @include mod(--space--6,$space--6);
+  // @include mod(--space--5,$space--5);
+  // @include mod(--space--4,$space--4);
+  // @include mod(--space--3,$space--3);
+  // @include mod(--space--2,$space--2);
+
+
+  // @include mod(--space-1,$space-1);
+  // @include mod(--space-2,$space-2);
+  // @include mod(--space-3,$space-3);
+  // @include mod(--space-4,$space-4);
+  // @include mod(--space-5,$space-5);
+  // @include mod(--space-6,$space-6);
+  // @include mod(--space-7,$space-7);
+  // @include mod(--space-8,$space-8);
+  // @include mod(--space-9,$space-9);
+  // @include mod(--space-10,$space-10);
+
+}

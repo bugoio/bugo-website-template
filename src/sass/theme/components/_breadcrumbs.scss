@@ -2,12 +2,9 @@
 @use '../utility';
 
 #breadcrumbs {
-  padding: 0;
-  display: none;
-
-  .container {
-    flex: 100% !important;
-    max-width: 100% !important;
+  padding: config.$breadcrumbPadding;
+  @if config.$breadcrumbsShow == 'false' {
+    display: none;
   }
 
   ol.breadcrumb {

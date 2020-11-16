@@ -1,5 +1,5 @@
 <div id="hero" class="full">
-    <div id="hero-image">
+  <div id="hero-image">
       {{ with .Params.hero.heroImage }}
         {{ $alt := humanize (index (split (path.Base . ) ".") 0) }}
         {{ $imgSrc := partial "getImgSrcHero" . }}

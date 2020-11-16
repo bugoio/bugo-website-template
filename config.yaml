@@ -53,8 +53,8 @@ theme:
 - sb-netlify-large-media
 # Layouts
 - sb-search
-- sb-section
-- sb-sidebar
+# - sb-section
+# - sb-sidebar
 - sb-utilities
 - custom
 # Base Theme and API

@@ -3,7 +3,6 @@
   {{- $page := . -}}
   {{- $site := .Site -}}
   {{- $env := getenv "HUGO_ENV" -}}
-  
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -115,6 +114,7 @@
         {{ end }}    
 
         {{- block "hero" . -}}{{- end -}}
+        {{ partial "components/breadcrumbs" . }}
         {{/*  {{ partial "components/breadcrumbs" . }}  */}}
         {{ if (or .Page.Params.pageOptions.showSidebar (eq .Page.Type "post") (eq .Page.Type "term")) }}
         <!-- Layout with sidebar -->

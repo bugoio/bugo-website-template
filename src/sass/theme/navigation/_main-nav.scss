@@ -27,9 +27,10 @@
   flex: 0 0 calc(100% - var(--brand-w)) !important;
   width: calc(100% - var(--brand-w));
   justify-content: config.$main-menu-justify;
+  align-items: config.$main-menu-align;
 
   @include utility.respond-to(config.$mobile-hamburger-bp){
-    display: block;
+    display: flex;
   }
 
   .menubar-list-item {
@@ -50,9 +51,8 @@
     font-weight: 600;
     padding: config.$main-menu-link-padding;
     @include utility.mod(font-size,config.$main-menu-link-size);
-    color: config.$header-color;
+    color: config.$main-menu-link-color;
     background-color: config.$main-menu-link-bgColor;
     margin: config.$main-menu-link-margin;
-    // margin: 0 0 var(--space-min) 0;
   }
 }

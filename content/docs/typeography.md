@@ -1,13 +1,6 @@
 ---
 date: '2020-11-16T22:02:15+00:00'
 weight: 0
-hero:
-  useDefaultImage: false
-  displayPageTitle: true
-  heroImage: ''
-  heroCaption: ''
-  heroImageAltText: ''
-  heroCustomText: ''
 pageOptions:
   showSidebar: true
   hideMarketingBlock: false

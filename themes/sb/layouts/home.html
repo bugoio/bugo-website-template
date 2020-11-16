@@ -17,19 +17,7 @@
         {{ end }}
         <li>
           <a href="{{ .Permalink }}" class="">
-            <article class="bg-light">
-              {{ with  ($scratch.Get "image") }}
-                {{ if gt (len .) 1}}
-                  {{ partial "components/thumbnail" . }}
-                {{ end }}
-              {{ end }}
-              <header>{{ .Title | title }}</header>
-              <footer class="summary">
-                {{ with .Summary }}
-                <p>{{ . }}</p>
-                {{ end }}
-              </footer>
-            </article>  
+            {{ partial "article" . }}
           </a>  
         </li>
       {{ end }}

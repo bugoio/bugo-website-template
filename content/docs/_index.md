@@ -2,13 +2,6 @@
 title: Docs
 date: '2020-11-10T19:47:56.000+00:00'
 weight: 2
-hero:
-  useDefaultImage: true
-  displayPageTitle: true
-  heroImage: ''
-  heroCaption: ''
-  heroImageAltText: ''
-  heroCustomText: ''
 pageOptions:
   showSidebar: true
   hideMarketingBlock: false

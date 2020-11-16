@@ -6,10 +6,10 @@ $ms: (
   base: 16px, 
   ratio: 1.0,
   600px: ( 
-    base: 16px,
+    base: 18px,
   ), 
   800px: ( 
-    base: 16px, 
+    base: 18px, 
   ), 
   1000px: ( 
     base: 16px, 
@@ -68,12 +68,12 @@ $hr-color: $gray;
 $line-height: 1.7;
 
 $container-w-xs: 90%;
-$container-w-sm: 80%;
-$container-w-md: 80%;
-$container-w-lg: 75%;
-$container-w-xl: 60%;
-$container-w-xxl: 55%;
-$container-w-xxxl: 50%;
+$container-w-sm: 90%;
+$container-w-md: 90%;
+$container-w-lg: 90%;
+$container-w-xl: 80%;
+$container-w-xxl: 70%;
+$container-w-xxxl: 60%;
 
 
 // Spacing
@@ -85,6 +85,31 @@ $space-less:   $space - 1;
 $space-more:   $space + 1;
 $space-most:   $space + 2;
 $space-max:    $space + 7;
+
+
+// Smaller Space
+$space--10: $space - 10; 
+$space--9: $space - -9; 
+$space--8: $space - -8; 
+$space--7: $space - 7; 
+$space--6: $space - 6; 
+$space--5: $space - 5; 
+$space--4: $space - 4; 
+$space--3: $space - 3; 
+$space--2: $space - 2;
+$space--1: $space - 1; 
+
+// Larger Space
+$space-1: 1;
+$space-2: 2;
+$space-3: 3;
+$space-4: 4;
+$space-5: 5;
+$space-6: 6;
+$space-7: 7;
+$space-8: 8;
+$space-9: 9;
+$space-10: 10;
 
 // using CSS variables from above. Use these for spacing.
 $spacing: var(--space);
@@ -224,14 +249,15 @@ $menubar-menu2-bg: $primary;
 $menubar-menu2-color: $white;
 
 // Main Nav
-$main-menu-link-bgColor: $primary;
-$main-menu-link-color: $white;
+$main-menu-link-bgColor: transparent;
+$main-menu-link-color: $primary;
 $main-menu-link-size: -0.25;
 $main-menu-link-margin: 0 var(--space-less) 0 0;
 $main-menu-margin: 0;
 $main-menu-link-padding: var(--space-min);
 $main-menu-width: 80%;
 $main-menu-justify: flex-end;
+$main-menu-align: center;
 
 // Hero
 $hero-height-sm: 100%;
@@ -255,19 +281,33 @@ $home-hero-height-md: 55%;
 $home-hero-height-lg: 45%; // percent relative to the container width
 
 // Bread crumbs
-$breadcrumbSpacing: var(--space-max) 0;
+$breadcrumbsShow: true;
+$breadcrumbPadding: var(--space-max) 0 0;
 
+// Content Wrapper
+$contentPadding: var(--space-max) 0 0;
+
+// Main Element
+$mainThumbnailShow: true;
+$mainSummaryShow: true;
+$mainArticleHeadingSize: var(--space-2);
+
+// Aside Elementf
+$asideThumbnailShow: true;
+$asideSummaryShow: true;
+$asideCategoriesShow: true;
+$asideArticleHeadingSize: var(--space-2);
 
 // Thumbnails
 $thumb-padding: 40%;
 
 // Headings
-$h1-font-size: 3 !default;
-$h2-font-size: 2;
-$h3-font-size: 1;
-$h4-font-size: 0.75;
-$h5-font-size: 0.5;
-$h6-font-size: 0.25;
+$h1-font-size: var(--space-5);
+$h2-font-size: var(--space-4);
+$h3-font-size: var(--space-3);
+$h4-font-size: var(--space-2);
+$h5-font-size: var(--space-1);
+$h6-font-size: var(--space);
 $heading-color: $primary;
 $heading-padding-top: $spacing-less;
 $heading-padding-bottom: 0;

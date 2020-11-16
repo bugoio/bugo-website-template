@@ -5716,10 +5716,24 @@ split-string@^3.0.1, split-string@^3.0.2:
   dependencies:
     extend-shallow "^3.0.0"
 
-springboard-css@^0.4.33, springboard-css@^0.4.44:
+springboard-css@^0.4.33:
   version "0.4.44"
   resolved "https://registry.yarnpkg.com/springboard-css/-/springboard-css-0.4.44.tgz#b2c6e1624f483e2360d8c4a1989b131fe456319d"
   integrity sha512-+LfoD1C8vhvQvdQ/PYszXQAZI03673FHHnYizVxVWdiy9QZFp38b99uRFVPgvjBbtaHMiXWfsCHCBym6CM9nQA==
+  dependencies:
+    breakpoint-sass "^2.7.1"
+    caniuse-lite "^1.0.30001050"
+    chokidar "^3.4.0"
+    core-js "^3.6.5"
+    mathsass "^0.11.0"
+    modularscale-sass "^3.0.10"
+    normalize.css "^8.0.1"
+    springboard-css "^0.4.33"
+
+springboard-css@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/springboard-css/-/springboard-css-0.5.1.tgz#09535ab81fa60e84b42ba561afd6def674215a97"
+  integrity sha512-8mvpD+37oEzDQgr8v8MEus/S1V+V6RCX3P8XgRrJrMwN8Qdf/rP7LhD9PAgzfA/cP6qhDn3/vkqo50RJtO7sbQ==
   dependencies:
     breakpoint-sass "^2.7.1"
     caniuse-lite "^1.0.30001050"

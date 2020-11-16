@@ -8,14 +8,7 @@
     {{ range first $qty . }}
     <li>
       <a href="{{ .Permalink }}">
-        <article class="card">
-          {{ with .Params.Images }}
-            {{ with index . 0 }}
-              {{ partial "components/thumbnail" . }}        
-            {{ end }}            
-          {{ end }}
-          <header>{{ .Title | title }}</header>
-        </article>
+        {{ partial "article" . }}
       </a></li>
     {{ end }}  
   </ul>

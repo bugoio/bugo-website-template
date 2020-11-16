@@ -3,33 +3,14 @@
 {{ end }}
 
 {{ define "main" }}
-{{ $scratch := newScratch }}
-{{ $site := .Site }}
-<main id="main" aria-label="Main Content" tabindex="0">
+<main id="main" class="main-list" aria-label="Main Content" tabindex="0">
   {{ .Content }}
   <ul class="unstyled-list flex one">
     {{ range .Pages }}
       {{ if ne .Params.layout "overview" }}
-        {{ with .Params.heroImage }}
-          {{ $scratch.Set "image" . }}
-        {{ else }}
-          {{ $scratch.Set "image" $site.Data.organization.defaultHeroImage }}
-        {{ end }}
         <li>
           <a href="{{ .Permalink }}" class="">
-            <article class="bg-light">
-              {{ with  ($scratch.Get "image") }}
-                {{ if gt (len .) 1}}
-                  {{ partial "components/thumbnail" . }}
-                {{ end }}
-              {{ end }}
-              <header>{{ .Title | title }}</header>
-              <footer class="summary">
-                {{ with .Summary }}
-                <p>{{ . }}</p>
-                {{ end }}
-              </footer>
-            </article>  
+            {{ partial "article" . }}
           </a>  
         </li>
       {{ end }}

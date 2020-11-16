@@ -1,0 +1,25 @@
+{{ $scratch := newScratch }}
+{{ with .Params.images }}
+{{ $scratch.Set "image" (index . 0)}}
+{{ else }}
+{{ $scratch.Set "image" .Site.Data.organization.defaultFeaturedImage }}
+{{ end }}
+
+<article class="card bg-light">
+  {{ with  ($scratch.Get "image") }}
+    {{ if gt (len .) 1}}
+      {{ partial "components/thumbnail" . }}
+    {{ end }}
+  {{ end }}
+  <header>
+    {{ with .Date }}
+      {{ .Format "January 2, 2006" }}<br/>
+    {{ end }}
+    <span class="title">{{ .Title | title }}</span><br/>
+  </header>
+  <footer>
+    {{ with .Summary }}
+    <p class="summary">{{ . }}</p>
+    {{ end }}
+  </footer>
+</article>
