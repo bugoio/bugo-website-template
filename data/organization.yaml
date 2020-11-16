@@ -13,3 +13,4 @@ marketingBlocks: []
 signUpText: ''
 blogName: "/blog"
 defaultFeaturedImage: "/uploads/vivek-kumar-jkbyacntvue-unsplash.jpg"
+showArticleThumbnails: false
