@@ -24,8 +24,8 @@
   @include utility.respond-to(xxxl){
     --brand-w: #{config.$header-brand-w-xxxl};  
   }
-  flex: 0 0 calc(100% - var(--brand-w)) !important;
-  width: calc(100% - var(--brand-w));
+  // flex: 0 1 auto !important;
+  // width: calc(100% - var(--brand-w));
   justify-content: config.$main-menu-justify;
   align-items: config.$main-menu-align;
 
