@@ -14,7 +14,7 @@ pageOptions:
   excludeFromSitemap: false
 tags: []
 layout: page
-title: Typeography
+title: Typography
 expiryDate: ''
 description: ''
 images: []
