@@ -30,4 +30,5 @@ fields:
   default: page
   hidden: true
 pages:
+- content/docs/typeography.md
 - content/getting-started/requirements.md
