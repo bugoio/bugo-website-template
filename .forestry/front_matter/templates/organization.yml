@@ -28,6 +28,11 @@ fields:
   config:
     required: false
   label: Default Hero Alt Text
+- name: defaultFeaturedImage
+  type: file
+  config:
+    maxSize: 64
+  label: Default Featured Image
 - type: text
   name: messageInfo
   label: Info Message
