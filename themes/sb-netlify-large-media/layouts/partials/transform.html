@@ -5,4 +5,9 @@
 {{- else -}}
   {{- .image -}}
 {{- end -*/}}
-{{ return printf "%s?%s" .image .transform }}
+{{ $scratch := newScratch }}
+{{ $scratch.Set "transform" "" }}
+{{ with .transform }}
+  {{ $scratch.Set "transform" . }}
+{{ end }}
+{{ return printf "%s?%s" .image ($scratch.Get "transform") }}
