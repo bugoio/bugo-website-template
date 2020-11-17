@@ -57,6 +57,9 @@ contentBlocks:
     - image: "/uploads/jonathan-cooper-ptvpw6h9rpo-unsplash.jpg"
       content: Cuz ocean.
       imageAlt: Turbulent ocean water with swirling sea foam
+    - image: "/uploads/donnie-ray-crisp-66zrt0dj7mc-unsplash.jpg"
+      imageAlt: Face of a tiger looking to the right.
+      content: Winning and drinking tiger's blood.
     showTitle: true
     bgColor: ''
     textColor: ''
