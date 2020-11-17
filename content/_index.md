@@ -50,6 +50,16 @@ contentBlocks:
     textColor: ''
     content: ''
     fullWidth: false
+  - template: block-slideshow
+    layout: slideshow
+    title: Why JAMstack?
+    slides:
+    - image: "/uploads/jonathan-cooper-ptvpw6h9rpo-unsplash.jpg"
+      content: Cuz ocean.
+      imageAlt: Turbulent ocean water with swirling sea foam
+    showTitle: false
+    bgColor: ''
+    textColor: ''
 pageOptions:
   showSidebar: false
   hideMarketingBlock: false
