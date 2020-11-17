@@ -6,7 +6,7 @@ messageSuccess: ''
 companyName: Bugo
 companyDescription: ''
 headerLogo: "/uploads/bugo-logo-200.svg"
-footerLogo: ''
+footerLogo: "/uploads/bugo-logo-200.svg"
 defaultHeroImage: "/uploads/daniel-sessler-vfoqbct962o-unsplash.jpg"
 defaultHeroAlt: ''
 marketingBlocks: []
