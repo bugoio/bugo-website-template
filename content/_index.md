@@ -30,8 +30,14 @@ contentBlocks:
     textColor: dark
     useBgImage: false
     bgImage: ''
-    textAlign: ''
-    columns: []
+    textAlign: Center
+    columns:
+    - template: text-column
+      content: Does everybody know that pig named Lorem Ipsum? She’s a disgusting
+        pig, right? Some people have an ability to write placeholder text… It’s an
+        art you’re basically born with. You either have it or you don’t. You know,
+        it really doesn’t matter what you write as long as you’ve got a young, and
+        beautiful, piece of text.
 pageOptions:
   showSidebar: false
   hideMarketingBlock: false
