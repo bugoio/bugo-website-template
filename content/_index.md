@@ -25,7 +25,7 @@ contentBlocks:
     layout: block-columns
     title: Intro Block
     showTitle: true
-    fullWidth: false
+    fullWidth: true
     bgColor: Light
     textColor: dark
     useBgImage: false
