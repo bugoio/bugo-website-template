@@ -57,7 +57,7 @@ contentBlocks:
     - image: "/uploads/jonathan-cooper-ptvpw6h9rpo-unsplash.jpg"
       content: Cuz ocean.
       imageAlt: Turbulent ocean water with swirling sea foam
-    showTitle: false
+    showTitle: true
     bgColor: ''
     textColor: ''
 pageOptions:
