@@ -10,4 +10,5 @@
 {{ with .transform }}
   {{ $scratch.Set "transform" . }}
 {{ end }}
-{{ return printf "%s?%s" .image ($scratch.Get "transform") }}
+{{ $url := printf "%s?%s" .image ($scratch.Get "transform") }}
+{{ return absURL $url }}

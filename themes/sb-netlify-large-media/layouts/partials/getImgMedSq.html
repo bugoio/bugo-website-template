@@ -7,12 +7,12 @@
 {{ $xxxlOptions := dict "image" . }}
 
 {{ if ne $imageExt ".svg" }}
-  {{ $smOptions = $smOptions | merge (dict "transform" "nf_resize=fit&w=200&h=200") }}
-  {{ $mdOptions = $mdOptions | merge (dict "transform" "nf_resize=fit&w=300&h=300") }}
-  {{ $lgOptions = $lgOptions | merge (dict "transform" "nf_resize=fit&w=640&h=640") }}
-  {{ $xlOptions = $xlOptions | merge (dict "transform" "nf_resize=fit&w=720&h=720") }}
-  {{ $xxlOptions = $xxlOptions | merge (dict "transform" "nf_resize=fit&w=862&h=862") }}
-  {{ $xxxlOptions = $xxxlOptions | merge (dict "transform" "nf_resize=fit&w=1024&h=1024") }}  
+  {{ $smOptions = $smOptions | merge (dict "transform" "nf_resize=smartcrop&w=200&h=200") }}
+  {{ $mdOptions = $mdOptions | merge (dict "transform" "nf_resize=smartcrop&w=300&h=300") }}
+  {{ $lgOptions = $lgOptions | merge (dict "transform" "nf_resize=smartcrop&w=640&h=640") }}
+  {{ $xlOptions = $xlOptions | merge (dict "transform" "nf_resize=smartcrop&w=720&h=720") }}
+  {{ $xxlOptions = $xxlOptions | merge (dict "transform" "nf_resize=smartcrop&w=862&h=862") }}
+  {{ $xxxlOptions = $xxxlOptions | merge (dict "transform" "nf_resize=smartcrop&w=1024&h=1024") }}  
 {{ end }}
 
 
