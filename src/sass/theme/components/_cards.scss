@@ -22,4 +22,14 @@
     padding-bottom: 0;
     margin-bottom: var(--space-less);
   }
+
+  &:hover {
+    background-color: config.$card-hover-bg;
+    border-color: config.$card-hover-border-color;
+
+    @if config.$card-hover-scale-image == true {
+      img {
+      }
+    }
+  }
 }

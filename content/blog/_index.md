@@ -10,7 +10,7 @@ cascade:
   hero:
     useDefaultImage: false
     displayPageTitle: true
-    heroImage: "/uploads/jonathan-cooper-ptvpw6h9rpo-unsplash.jpg"
+    heroImage: ""
     heroCaption: ''
     heroImageAltText: ''
     heroCustomText: ''

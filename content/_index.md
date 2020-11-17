@@ -11,7 +11,7 @@ description: Some people have an ability to write placeholder text… It’s an 
 images: []
 hero:
   useDefaultImage: false
-  heroImage: "/uploads/vlad-zaytsev-34uterzwbei-unsplash.jpg"
+  heroImage: 
   heroCaption: ''
   heroImageAltText: ''
   displayPageTitle: false

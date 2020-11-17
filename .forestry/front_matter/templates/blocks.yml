@@ -9,15 +9,13 @@ fields:
   - name: blocks
     type: blocks
     template_types:
-    - block-animation
+    - block-columns
     - block-logos
-    - block-logos-right
+    - block-stats
     - block-random-profiles
     - block-section-overview
     - block-slideshow
     - block-testimonials
-    - block-stats
-    - block-columns
     - block-random-posts
     - block-latest-posts
     - block-profile

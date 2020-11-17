@@ -50,7 +50,8 @@ $breakpoints: (
 );
 
 // Global Plugin Variables
-$border: none;
+$border: 0.25rem solid; 
+$border-color: transparent;
 $class-name: "";
 $radius: 0;
 $font-family: 'Roboto', sans-serif;
@@ -122,13 +123,16 @@ $button-weight: bold;
 
 // Card
 $card-shadow: 0;
-$card-border: $border;
+$card-border: $border $border-color;
 $card-radius: $radius;
 $card-shadow: $shadow;
 $card-margin-bottom: var(--space);
 $card-p-padding: var(--space-less) var(--space-least);
 $card-header-border-bottom: 1px solid #333;
 $card-bg: transparent;
+$card-hover-bg: $light;
+$card-hover-scale-image: true;
+$card-hover-border-color: transparent;
 
 // Checkbox
 $checkbox-character: '\2714';
@@ -269,7 +273,7 @@ $breadcrumbsShow: true;
 $breadcrumbPadding: var(--space-max) 0 0;
 
 // Content Wrapper
-$contentPadding: var(--space-max) 0 0;
+$contentPadding: var(--space-max) 0;
 
 // Main Element
 $mainThumbnailShow: true;
