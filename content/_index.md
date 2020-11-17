@@ -7,25 +7,34 @@ categories:
 - news
 - updates
 expiryDate: ''
-description: Some people have an ability to write placeholder text… It’s an art you’re basically born with. You either have it or you don’t. 
+description: Some people have an ability to write placeholder text… It’s an art you’re
+  basically born with. You either have it or you don’t.
 images: []
 hero:
   useDefaultImage: false
-  heroImage: 
+  heroImage: ''
   heroCaption: ''
   heroImageAltText: ''
   displayPageTitle: false
   heroCustomText: ''
 contentBlocks:
-  blocks: []
+  blocks:
+  - template: block-columns
+    contrast: Lighten
+    classList: columns
+    layout: block-columns
+    title: Intro Block
+    showTitle: true
+    fullWidth: false
+    bgColor: Light
+    textColor: dark
+    useBgImage: false
+    bgImage: ''
+    textAlign: ''
+    columns: []
 pageOptions:
   showSidebar: false
   hideMarketingBlock: false
   excludeFromSitemap: false
-# menu:
-#   mobile:
-#     weight: 1
-#   main:
-#     weight: 1
 
 ---
