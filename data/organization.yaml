@@ -7,11 +7,11 @@ companyName: Bugo
 companyDescription: ''
 headerLogo: "/uploads/bugo-logo-200.svg"
 footerLogo: "/uploads/bugo-logo-200.svg"
-defaultHeroImage: "/uploads/daniel-sessler-vfoqbct962o-unsplash.jpg"
+defaultHeroImage: "/uploads/main-background-image.png"
 defaultHeroAlt: ''
 marketingBlocks: []
 signUpText: ''
 blogName: "/blog"
-defaultFeaturedImage: "/uploads/vivek-kumar-jkbyacntvue-unsplash.jpg"
+defaultFeaturedImage: "/uploads/main-background-image.png"
 showArticleThumbnails: true
 showSidebarThumbnails: true
