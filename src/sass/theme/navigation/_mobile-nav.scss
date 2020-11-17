@@ -37,16 +37,7 @@
 }
 
 #mobile-button {
-  --mb-width: #{config.$header-brand-w-xs};
-  @include utility.respond-to(sm){
-    --mb-width: #{config.$header-brand-w-sm};  
-  }
-  @include utility.respond-to(md){
-    --mb-width: #{config.$header-brand-w-md};  
-  }
-  @include utility.respond-to(lg){
-    --mb-width: #{config.$header-brand-w-lg};  
-  }
+  --mb-width: #{config.$header-brand-w};
 
   flex: 0 0 calc(100% - var(--mb-width));
   padding-left: 0 !important;

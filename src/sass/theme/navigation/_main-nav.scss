@@ -8,24 +8,7 @@
 }
 
 #main-nav {
-  --brand-w: #{config.$header-brand-w-sm};  
-  @include utility.respond-to(md){
-    --brand-w: #{config.$header-brand-w-md};  
-  }
-  @include utility.respond-to(lg){
-    --brand-w: #{config.$header-brand-w-lg};  
-  }
-  @include utility.respond-to(xl){
-    --brand-w: #{config.$header-brand-w-xl};  
-  }
-  @include utility.respond-to(xxl){
-    --brand-w: #{config.$header-brand-w-xxl};  
-  }
-  @include utility.respond-to(xxxl){
-    --brand-w: #{config.$header-brand-w-xxxl};  
-  }
-  // flex: 0 1 auto !important;
-  // width: calc(100% - var(--brand-w));
+  display: none;
   justify-content: config.$main-menu-justify;
   align-items: config.$main-menu-align;
 

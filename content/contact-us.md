@@ -16,7 +16,7 @@ tags: []
 layout: contact
 title: Contact Us
 expiryDate: ''
-description: ''
+description: An ‘extremely credible source’ has called my office and told me that Barack Obama’s placeholder text is a fraud.
 images: []
 slug: ''
 aliases: []

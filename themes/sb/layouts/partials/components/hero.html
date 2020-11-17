@@ -15,14 +15,17 @@
     {{ with .Params.hero.heroCustomText }}
     <div id="hero-container" class="container">
       <div id="hero-text">
-        {{ . | markdownify }} 
+          {{ . | markdownify }}
       </div>
     </div>
     {{ else }}
     <div id="hero-container" class="container">
       <div id="hero-text">
         <h1>{{ .Title | title }}</h1>
-      </div>
+        {{ with .Description }}
+        <p>{{ . }}</p>
+        {{ end }}
+    </div>
     </div>
     {{ end }}
 </div>

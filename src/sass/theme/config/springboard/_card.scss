@@ -5,6 +5,6 @@
 $card-shadow: none;
 $card-border: none;
 $card-radius: $radius;
-$card-margin-bottom: $spacing;
-$card-p-padding: $spacing-less $spacing-least;
+$card-margin-bottom: var(--space);
+$card-p-padding: var(--space-less) var(--space-least);
 $card-header-border-bottom: 1px solid #333;

@@ -49,10 +49,6 @@
   }
 }
 
-#footer-site-title {
-  @extend %d5;
-}
-
 #brand-footer {
   flex: 0 0 config.$footer-brand-width;
 }

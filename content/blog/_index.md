@@ -18,7 +18,7 @@ cascade:
 tags: []
 layout: blog
 expiryDate: 
-description: ''
+description: The best taco bowls are made in Trump Tower Grill. I love Hispanics!
 images: []
 slug: ''
 aliases: []

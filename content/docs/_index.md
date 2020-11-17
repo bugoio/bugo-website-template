@@ -9,7 +9,7 @@ pageOptions:
 tags: []
 layout: section
 expiryDate: ''
-description: ''
+description: Lorem Ipsum is the single greatest threat. We are not – we are not keeping up with other websites.
 images: []
 slug: ''
 aliases: []

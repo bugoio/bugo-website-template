@@ -23,44 +23,17 @@
 
 
   #brand-header {
-    flex: 0 0 auto;
-    // display: flex;
-    // align-items: center;
-    // justify-content: flex-start;
+    flex: 0 0 config.$header-brand-w;
+    width: fit-content;
 
-    // @include utility.respond-to(sm) {
-    //   flex: 0 0 config.$header-brand-w-sm;
-    // }
-
-    // @include utility.respond-to(md) {
-    //   flex: 0 0 config.$header-brand-w-md;
-    // }
-
-    // @include utility.respond-to(lg) {
-    //   flex: 0 0 config.$header-brand-w-lg;
-    // }
-
-    // @include utility.respond-to(xl) {
-    //   flex: 0 0 config.$header-brand-w-xl;
-    // }
-
-    // @include utility.respond-to(xxl) {
-    //   flex: 0 0 config.$header-brand-w-xxl;
-    // }
-
-    // @include utility.respond-to(xxxl) {
-    //   flex: 0 0 config.$header-brand-w-xxxl;
-    // }
-
+    @include utility.respond-to(config.$desktop-bp){
+      flex-basis: config.$header-brand-w-desktop;
+    }
 
     a {
       flex: 0 0 auto;
       width: auto;
       text-align: left;
-    }
-
-    img {
-      max-width: 30%;
     }
   }
 }

@@ -5,7 +5,7 @@
 {{ $scratch.Set "image" .Site.Data.organization.defaultFeaturedImage }}
 {{ end }}
 
-<article class="card bg-light">
+<article class="card">
   {{ with  ($scratch.Get "image") }}
     {{ if gt (len .) 1}}
       {{ partial "components/thumbnail" . }}

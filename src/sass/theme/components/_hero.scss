@@ -91,6 +91,12 @@
   text-align: config.$hero-align;
   font-weight: 600;
   line-height: config.$hero-line-height;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  max-width: config.$hero-text-max-char;
+  flex-direction: column;
+  justify-content: center;
 
   h1 {
     padding-top: 0;

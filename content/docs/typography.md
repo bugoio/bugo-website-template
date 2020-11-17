@@ -9,7 +9,7 @@ tags: []
 layout: page
 title: Typography
 expiryDate: ''
-description: ''
+description: Bugo uses Forestry.io to manage content. These are examples of how this theme renders the formatting that is possible from withing the CMS.
 images: []
 slug: ''
 aliases: []
@@ -24,6 +24,7 @@ hero:
 draft: true
 
 ---
+
 # Heading 1
 
 ## Heading 2
