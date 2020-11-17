@@ -1,5 +1,5 @@
 ---
-date: '2020-11-11T21:05:34+00:00'
+date: 2020-11-11T21:05:34+00:00
 weight: 1
 pageOptions:
   showSidebar: true
@@ -17,19 +17,20 @@ cascade:
 tags: []
 layout: section
 title: Getting Started
-expiryDate: ''
-description: ''
+expiryDate: 
+description: 'We have so many things that we have to do better… and certainly ipsum
+  is one of them. '
 images: []
 slug: ''
 aliases: []
 categories: []
 menu:
-  footer:
-    weight: 1
-  mobile:
-    weight: 2
   main:
     weight: 2
+  mobile:
+    weight: 2
+  footer:
+    weight: 1
 draft: true
 
 ---
