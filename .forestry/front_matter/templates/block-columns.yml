@@ -28,6 +28,9 @@ fields:
     maxSize: 64
   label: Background Image
   description: Add a background image.
+  showOnly:
+    field: useBgImage
+    value: true
 - name: contrast
   type: select
   default: Lighten
