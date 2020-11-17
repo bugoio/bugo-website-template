@@ -1,12 +1,12 @@
-{{ $id := partial "get-block-id" . }}
-<div id="block-{{ $id }}" {{partial "block-class" . | safeHTMLAttr }}>
+{{ $id := partial "getBlockId" . }}
+<div id="block-{{ $id }}" {{partial "getBlockClass" . | safeHTMLAttr }}>
   <div class="wrapper container">
-    {{ partial "blocks/block-title" .block }}
+    {{ partial "block-title" .block }}
     {{ with .block.slides }}
     <div class="carousel">
       {{ range $index,$slide := . }}
         {{ $alt := humanize (index (split (path.Base .image ) ".") 0) }}
-        {{ $imgSrc := partial "imgMedSq" .image }}
+        {{ $imgSrc := partial "getImgMedSq" .image }}
         <div>
           <div class="flex one two-600">
             <div class="content">
@@ -19,7 +19,7 @@
             </div>
             <div>
               <div class="responsive-image">
-                {{ partial "components/picture" (dict "imgSrc" $imgSrc "alt" $alt) }}
+                {{ partial "picture" (dict "imgSrc" $imgSrc "alt" $alt) }}
               </div>
             </div>
           </div>

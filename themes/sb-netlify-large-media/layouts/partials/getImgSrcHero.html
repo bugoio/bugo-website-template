@@ -15,12 +15,12 @@
   {{ $xxxlOptions = $xxxlOptions | merge (dict "image" . "transform" "nf_resize=fit&w=2000") }}  
 {{ end }}
 
-{{ $smURL := partial "netlify-transform" $smOptions }}
-{{ $mdURL := partial "netlify-transform" $mdOptions }}
-{{ $lgURL := partial "netlify-transform" $lgOptions }}
-{{ $xlURL := partial "netlify-transform" $xlOptions }}
-{{ $xxlURL := partial "netlify-transform" $xxlOptions }}
-{{ $xxxlURL := partial "netlify-transform" $xxxlOptions }}
+{{ $smURL := partial "transform" $smOptions }}
+{{ $mdURL := partial "transform" $mdOptions }}
+{{ $lgURL := partial "transform" $lgOptions }}
+{{ $xlURL := partial "transform" $xlOptions }}
+{{ $xxlURL := partial "transform" $xxlOptions }}
+{{ $xxxlURL := partial "transform" $xxxlOptions }}
 
 {{ $src := printf "src='%s'" $smURL | safeHTMLAttr }}
 {{ $srcset := printf "srcset='%s 400w,%s 500w,%s 1200w,%s 1400w,%s 1600w,%s 2000w'" $smURL $mdURL $lgURL $xlURL $xxlURL $xxxlURL | safeHTMLAttr }}

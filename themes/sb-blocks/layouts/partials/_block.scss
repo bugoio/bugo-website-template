@@ -47,21 +47,21 @@
     }
   }
 
-  &.full-width {
+  &.block-title {
     width: 100vw;
     max-width:100vw; 
     left: 50%;
     transform: translateX(-50%);
 
-    // .wrapper {
-    //   flex: 90%;
-    //   max-width: 90%;
-    //   margin: 0 auto;
+    .wrapper {
+      flex: 90%;
+      max-width: 90%;
+      margin: 0 auto;
 
-    //   @include utility.respond-to(xxl){
-    //     max-width: 80%;
-    //   }
-    // }
+      @include utility.respond-to(xxl){
+        max-width: 80%;
+      }
+    }
   }
 
   .wrapper,

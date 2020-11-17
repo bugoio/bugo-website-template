@@ -1,14 +1,14 @@
 {{ $seq := seq 3 }}
 
-{{ $id := partial "get-block-id" . }}
-<div id="block-{{ $id }}" {{partial "block-class" . | safeHTMLAttr }}>
+{{ $id := partial "getBlockId" . }}
+<div id="block-{{ $id }}" {{partial "getBlockClass" . | safeHTMLAttr }}>
 
 {{/*<div id="block-{{ $id }}" class="block latest-posts bg-{{ $bg }} {{ if .block.fullWidth }}full-width{{end}}">*/}}
   <div class="wrapper container">
     {{ $posts := sort ( where .page.Site.Pages "Section" "blog") "Date" "desc" }}
     posts:{{ $posts }}
     {{ $qty := .block.qty }}
-    {{ partial "blocks/block-title" .block }}
+    {{ partial "block-title" .block }}
     {{ with $posts }}
     {{ $columnsClass := partial "getColumnsClass" $seq }}
     <div class="posts-latest flex one {{ $columnsClass }}-600">

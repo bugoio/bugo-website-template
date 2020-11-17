@@ -1,5 +1,5 @@
-{{ $id := partial "get-block-id" . }}
-<div id="block-{{ $id }}" {{partial "block-class" . | safeHTMLAttr }}>
+{{ $id := partial "getBlockId" . }}
+<div id="block-{{ $id }}" {{partial "getBlockClass" . | safeHTMLAttr }}>
   <div class="container">
     <h2 class="h1">Knowledge. Experience. Passion.<br/>
       Meet the reasons why our clients sleep better at night.</h2>

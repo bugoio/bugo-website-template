@@ -56,10 +56,10 @@
 
   </style>
 {{end}}
-<div id="block-{{ $id }}" {{partial "block-class" . | safeHTMLAttr }}>
+<div id="block-{{ $id }}" {{partial "getBlockClass" . | safeHTMLAttr }}>
 {{/*<div id="block-{{ $id }}" class="block {{ .block.contrast | anchorize }}  bg-{{ $bg }} {{ if .block.fullWidth }}full-width{{end}}">*/}}
   <div class="wrapper container">
-    {{ partial "blocks/block-title" .block }}
+    {{ partial "block-title" .block }}
     {{ .block.blockContent | .page.RenderString | markdownify  }}
     {{ $section := .page.GetPage .block.section }}
     {{ with $section.Pages.ByWeight }}

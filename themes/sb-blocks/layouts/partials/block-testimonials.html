@@ -3,11 +3,11 @@
 {{ $block := .block }}
 {{ $page := .page }}
 {{ with $reusablePages }}
-{{ $id := partial "get-block-id" . }}
-<div id="block-{{ $id }}" {{partial "block-class" . | safeHTMLAttr }}>
+{{ $id := partial "getBlockId" . }}
+<div id="block-{{ $id }}" {{partial "getBlockClass" . | safeHTMLAttr }}>
 {{/*<div id="block-{{ $id }}" class="block testimonials full-width  {{ with $block.bgColor }}bg-{{ . }}{{ end }}  {{ $block.contrast | anchorize }} {{ if $block.fullWidth }}full-width{{end}}" {{ with $block.bgImage }}style="background-image: url({{.}})"{{end}}>*/}}
   <div class="wrapper text-white">
-    {{ partial "blocks/block-title" .block }}
+    {{ partial "block-title" .block }}
     {{ range first 1 . }}
       <div>
         <blockquote class="d1">

@@ -1,5 +1,5 @@
-{{ $id := partial "get-block-id" . }}
-<div id="block-{{ $id }}" {{partial "block-class" . | safeHTMLAttr }}>
+{{ $id := partial "getBlockId" . }}
+<div id="block-{{ $id }}" {{partial "getBlockClass" . | safeHTMLAttr }}>
   <div class="wrapper container">
     <div class="flex two four-600">
       {{ range .block.stats }}

@@ -1,6 +1,6 @@
 {{ $page := .page }}
 {{ $block := .block }}
-{{ $id := partial "get-block-id" . }}
+{{ $id := partial "getBlockId" . }}
 
 {{ with .block.bgImage }}
   {{ $smOptions := dict "context" . "image" . "transform" "c_fill,w_300"}}
@@ -58,9 +58,9 @@
 
   </style>
 {{end}}
-<div id="block-{{ $id }}" {{partial "block-class" . | safeHTMLAttr }}>
+<div id="block-{{ $id }}" {{partial "getBlockClass" . | safeHTMLAttr }}>
   <div class="wrapper container">
-    {{ partial "blocks/block-title" .block }}
+    {{ partial "block-title" .block }}
     {{ .block.content | $page.RenderString | markdownify }}      
     {{ $columnsClass := partial "getColumnsClass" .block.columns }}
     {{ with .block.columns }}

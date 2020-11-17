@@ -4,9 +4,15 @@
 {{ $bg := .block.bgColor | anchorize }}
 {{ $textColor := .block.textColor | anchorize }}
 {{ $textAlign := .block.textAlign | anchorize }}
-{{ $full := .block.fullWidth | anchorize }}
+{{/*  {{ $full := .block.fullWidth | anchorize }}  */}}
 {{ $layout := .block.template | anchorize }}
 {{ $title := .block.title | anchorize }}
+
+{{ if .block.fullWidth }}
+  {{ $scratch.Set "full" "full-width" }}
+{{ else }}
+  {{ $scratch.Set "full" "" }}
+{{ end }}
 
 {{/* with .block.bgColor }}
   {{ $scratch.Set "class" (printf `%s bg-%s` ($scratch.Get "class") ( anchorize . ))}}
@@ -30,4 +36,4 @@
 
 {{ return printf `class="block %s"` ($scratch.Get "class") */}}
 
-{{ return printf `class="block %s bg-%s text-%s text-%s %s block-%s"` $layout $bg $textAlign $textColor $full $title}}
+{{ return printf `class="block %s bg-%s text-%s text-%s %s block-%s"` $layout $bg $textAlign $textColor ($scratch.Get "full") $title}}

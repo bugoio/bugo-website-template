@@ -7,21 +7,16 @@
 {{ $xxxlOptions := dict "image" . }}
 
 {{ if ne $imageExt ".svg" }}
-  {{ $smOptions = $smOptions | merge (dict "transform" "c_fill,w_150,f_auto") }}
-  {{ $mdOptions = $mdOptions | merge (dict "transform" "c_fill,w_200,f_auto") }}
-  {{ $lgOptions = $lgOptions | merge (dict "transform" "c_fill,w_300,f_auto") }}
+  {{ $smOptions = $smOptions | merge (dict "transform" "nf_resize=fit&w=150") }}
+  {{ $mdOptions = $mdOptions | merge (dict "transform" "nf_resize=fit&w=200") }}
+  {{ $lgOptions = $lgOptions | merge (dict "transform" "nf_resize=fit&w=300") }}
 {{ end }}
 
 
 
-{{ $smURL := partial "cloudinary-transform" $smOptions }}
-{{ $smWebp := partial "getWebpUrl" $smURL }}
-
-{{ $mdURL := partial "cloudinary-transform" $mdOptions }}
-{{ $mdWebp := partial "getWebpUrl" $mdURL }}
-
-{{ $lgURL := partial "cloudinary-transform" $lgOptions }}
-{{ $lgWebp := partial "getWebpUrl" $lgURL }}
+{{ $smURL := partial "transform" $smOptions }}
+{{ $mdURL := partial "transform" $mdOptions }}
+{{ $lgURL := partial "transform" $lgOptions }}
 
 {{ $src := printf "src='%q'" $smURL | safeHTMLAttr }}
 {{ $srcset := printf "srcset='%s 150w, %s 200w, %s 300w'" $smURL $mdURL $lgURL | safeHTMLAttr }}
@@ -30,14 +25,4 @@
 
 {{ $sizes := "sizes='150px,200px,300px'" | safeHTMLAttr }}
 
-
-{{ $webpSrcs := slice $smWebp $mdWebp $lgWebp }}
-{{ $webpSrc := printf "<source type='image/webp' media='(max-width:300px)' srcset='%s'><source media='(max-width:300px)' srcset='%s'>" $smWebp $smURL }}
-{{ $webpSrcMd := printf "<source type='image/webp' media='(max-width:500px)' data-srcset='%s' >" $mdWebp }}
-{{ $webpSrcMd := printf "<source type='image/webp' media='(max-width:500px)' data-srcset='%s' >" $mdWebp }}
-{{ $webpSrcLg := printf "<source type='image/webp' media='(max-width:640px)' data-srcset='%s'>" $lgWebp }}
-{{ $dataWebpSrc := printf "data-src='%q'" $smURL | safeHTMLAttr }}
-{{ $dataWebpSrcSet := printf "data-srcset='%s 150w, %s 200w, %s 300w'" $smWebp $mdWebp $lgWebp | safeHTMLAttr }}
-{{ $webpSrcSet := printf "%s %s %s" $webpSrc $webpSrcMd $webpSrcLg | safeHTML }}
-
-{{ return (dict "src" $src "srcset" $srcset "dataSrc" $dataSrc "dataSrcset" $dataSrcSet "sizes" $sizes "webpSrc" $webpSrc "webpSrcSet" $webpSrcSet "dataWebpSrc" $webpSrc "dataWebpSrcSet" $webpSrcSet "webpSrcs" $webpSrcs) }}
+{{ return (dict "src" $src "srcset" $srcset "dataSrc" $dataSrc "dataSrcset" $dataSrcSet "sizes" $sizes) }}

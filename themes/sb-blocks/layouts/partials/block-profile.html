@@ -1,7 +1,7 @@
-{{ $id := partial "get-block-id" . }}
-<div id="block-{{ $id }}" {{partial "block-class" . | safeHTMLAttr }}>
+{{ $id := partial "getBlockId" . }}
+<div id="block-{{ $id }}" {{partial "getBlockClass" . | safeHTMLAttr }}>
   <div class="wrapper container">
-    {{ partial "blocks/block-title" .block }}
+    {{ partial "block-title" .block }}
     {{ with .block.content }}
       {{ . | markdownify }}
     {{ end }}
