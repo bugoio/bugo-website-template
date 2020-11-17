@@ -49,3 +49,5 @@ This placeholder text is gonna be **HUGE**. I think the only difference between 
 4. We are not – we are not keeping up with other websites.
 
 > I think the only difference between me and the other placeholder text is that I’m more honest and my words are more beautiful. <cite>Lorem Ipsum</cite>
+
+![](/uploads/jonathan-cooper-ptvpw6h9rpo-unsplash.jpg)
