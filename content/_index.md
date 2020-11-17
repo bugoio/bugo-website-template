@@ -38,6 +38,18 @@ contentBlocks:
         art you’re basically born with. You either have it or you don’t. You know,
         it really doesn’t matter what you write as long as you’ve got a young, and
         beautiful, piece of text.
+  - template: block-logos
+    layout: block-logos
+    title: Partners
+    showTitle: true
+    logos:
+    - "/uploads/hugo-logo-wide.svg"
+    - "/uploads/forestry-logo.svg"
+    - "/uploads/netlify-logo.svg"
+    bgColor: ''
+    textColor: ''
+    content: ''
+    fullWidth: false
 pageOptions:
   showSidebar: false
   hideMarketingBlock: false
