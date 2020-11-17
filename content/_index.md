@@ -23,7 +23,7 @@ contentBlocks:
     contrast: Lighten
     classList: columns
     layout: block-columns
-    title: Intro Block
+    title: JAMstack
     showTitle: true
     fullWidth: true
     bgColor: Light
