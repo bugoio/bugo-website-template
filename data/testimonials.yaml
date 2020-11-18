@@ -2,6 +2,12 @@
 testimonials:
 - test
 testimonial:
+- name: Tiki
+  position: Bird
+  company: Birdco
+  testimonial: An ‘extremely credible source’ has called my office and told me that
+    Lorem Ipsum’s birth certificate is a fraud. That other text? Sadly, it’s no longer
+    a 10. Lorem Ipsum is FAKE TEXT!
 - name: Lucy
   position: Barker
   company: Dogco
