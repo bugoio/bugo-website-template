@@ -2,6 +2,12 @@
 testimonials:
 - test
 testimonial:
+- name: George
+  position: Cat
+  company: Catco
+  testimonial: This placeholder text is gonna be HUGE. I think the only difference
+    between me and the other placeholder text is that I’m more honest and my words
+    are more beautiful.
 - name: Luchta
   position: Hunter
   company: Dogco
