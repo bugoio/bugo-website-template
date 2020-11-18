@@ -35,3 +35,5 @@ fields:
     max: 
     labelField: name
   label: Testimonial
+pages:
+- data/testimonials.yaml
