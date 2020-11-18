@@ -67,5 +67,4 @@ pageOptions:
   showSidebar: false
   hideMarketingBlock: false
   excludeFromSitemap: false
-
 ---
