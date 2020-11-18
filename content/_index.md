@@ -63,6 +63,16 @@ contentBlocks:
     showTitle: true
     bgColor: ''
     textColor: ''
+  - template: block-section-overview
+    layout: block-section
+    title: Get Started
+    bgColor: dark
+    textColor: White
+    section: "/getting-started/"
+    showTitle: false
+    textAlign: ''
+    blockContent: ''
+    fullWidth: false
 pageOptions:
   showSidebar: false
   hideMarketingBlock: false
