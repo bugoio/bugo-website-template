@@ -43,6 +43,10 @@ sections:
   - list-page
   - landing-page
   - section-list
+- type: document
+  path: data/testimonials.yaml
+  label: Testimonials
+  match: "**/*"
 - type: heading
   label: Options
 - type: document
