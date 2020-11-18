@@ -65,11 +65,11 @@ contentBlocks:
     textColor: ''
   - template: block-section-overview
     layout: block-section
-    title: Get Started
+    title: Documentation
     bgColor: dark
     textColor: White
-    section: "/getting-started/"
-    showTitle: false
+    section: "/docs/"
+    showTitle: true
     textAlign: ''
     blockContent: ''
     fullWidth: false
@@ -77,4 +77,5 @@ pageOptions:
   showSidebar: false
   hideMarketingBlock: false
   excludeFromSitemap: false
+
 ---
