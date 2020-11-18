@@ -72,7 +72,7 @@ contentBlocks:
     showTitle: true
     textAlign: ''
     blockContent: ''
-    fullWidth: false
+    fullWidth: true
 pageOptions:
   showSidebar: false
   hideMarketingBlock: false
