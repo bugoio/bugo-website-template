@@ -2,6 +2,11 @@
 testimonials:
 - test
 testimonial:
+- name: Olive
+  position: Digger
+  company: Dogco
+  testimonial: I have a 10 year old son. He has words. He is so good with these words
+    it’s unbelievable.
 - name: George
   position: Cat
   company: Catco
