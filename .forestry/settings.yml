@@ -46,7 +46,6 @@ sections:
 - type: document
   path: data/testimonials.yaml
   label: Testimonials
-  match: "**/*"
 - type: heading
   label: Options
 - type: document

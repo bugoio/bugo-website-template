@@ -1,0 +1,7 @@
+---
+label: Testimonials
+hide_body: true
+fields:
+- type: list
+  name: testimonials
+  label: testimonials
