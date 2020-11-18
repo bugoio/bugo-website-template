@@ -33,5 +33,5 @@ fields:
   config:
     min: 
     max: 
-    labelField: 
+    labelField: name
   label: Testimonial
