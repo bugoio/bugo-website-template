@@ -2,32 +2,37 @@
 testimonials:
 - test
 testimonial:
+- name: Rubie
+  position: Digger
+  company: Dogco
+  testimonial: The other thing with Lorem Ipsum is that you have to take out its family.
+  image: "/uploads/img_1463.JPG"
 - name: Olive
   position: Digger
   company: Dogco
   testimonial: I have a 10 year old son. He has words. He is so good with these words
     it’s unbelievable.
-  image: ''
+  image: "/uploads/img_1464.JPG"
 - name: George
   position: Cat
   company: Catco
   testimonial: This placeholder text is gonna be HUGE. I think the only difference
     between me and the other placeholder text is that I’m more honest and my words
     are more beautiful.
-  image: ''
+  image: "/uploads/104-0406_img.JPG"
 - name: Luchta
   position: Hunter
   company: Dogco
   testimonial: That other text? Sadly, it’s no longer a 10. That other text? Sadly,
     it’s no longer a 10.
-  image: ''
+  image: "/uploads/img_4553.JPG"
 - name: Tiki
   position: Bird
   company: Birdco
   testimonial: An ‘extremely credible source’ has called my office and told me that
     Lorem Ipsum’s birth certificate is a fraud. That other text? Sadly, it’s no longer
     a 10. Lorem Ipsum is FAKE TEXT!
-  image: "/uploads/img_2492.JPEG"
+  image: "/uploads/img_1415.JPG"
 - name: Lucy
   position: Barker
   company: Dogco
