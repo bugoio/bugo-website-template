@@ -29,5 +29,3 @@ fields:
   label: Layout
   default: page
   hidden: true
-pages:
-- content/getting-started/requirements.md

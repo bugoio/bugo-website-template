@@ -29,5 +29,3 @@ fields:
   label: Layout
   hidden: true
   default: blog
-pages:
-- content/blog/_index.md

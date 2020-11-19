@@ -29,5 +29,3 @@ fields:
   label: Layout
   default: contact
   hidden: true
-pages:
-- content/contact-us.md
