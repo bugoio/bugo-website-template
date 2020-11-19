@@ -157,7 +157,10 @@ contentBlocks:
     bgImage: https://res.cloudinary.com/startrekdesignproject-com/image/upload/v1551297015/ScreenGrabSlice.jpg
     columns:
     - template: text-column
-      content: "    "
+      content: |-
+        &nbsp;
+
+        &nbsp;
     showTitle: false
     fullWidth: false
     bgColor: ''
