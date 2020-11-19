@@ -3,7 +3,8 @@ baseURL:
 canonifyURLs: true
 enableGitInfo: true
 enableInlineShortcodes: true
-showSearchInMain: true
+showSearchInMain: false
+enableOffCanvasSearch: true
 showWCAG: true
 relatedPostsTitle: Related
 latestPostsTitle: Recent

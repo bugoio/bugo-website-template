@@ -1,0 +1,41 @@
+{{/**
+   * Latest Posts widget
+   *
+   * widget for displaying the website's latest blog posts on a landing page
+   *
+   * @version 1.0.0
+   */}}
+
+
+{{ if .widget.widget_options.show_title }}
+<div class="container">
+  <h2 class="widget-title">{{ .widget.title }}</h2>
+</div>
+{{ end }}
+{{ $page := .page }}
+{{ $site := .site }}
+{{ $posts := where (where .site.RegularPages "Section" "posts") ".Title" "!=" .page.Title }}
+{{ $widget := .widget }}
+{{ range first .widget.show_quantity $posts  }}
+<div class="item">
+  <article class="">
+    <div class="thumbnail">
+      {{ if .Params.featured_image.image }}
+      {{ partial "components/figure" ( dict "page" $page "site" $site "media" .Params.featured_image "transform" "c_fill,w_400,h_250") }}
+      {{ end }}
+    </div>
+    <header>
+        <time>{{ .Date.Format "January _2, 2006" }}</time>
+        {{ if $widget.widget_options.show_title }}
+        <h4><a href="{{ .Permalink }}">{{ .Title}}</a></h4>
+        {{ else }}
+        <h3><a href="{{ .Permalink }}">{{ .Title}}</a></h3>
+        {{ end }}
+    </header>
+    <div class="summary">
+      {{ .Summary | markdownify }}
+    </div>
+                
+  </article>
+</div>
+{{ end }}

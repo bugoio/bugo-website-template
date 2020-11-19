@@ -1,0 +1,41 @@
+{{ define "hero" }}
+  {{ partial "components/hero" . }}
+{{ end}}
+
+{{ define "main" }}
+{{ $scratch := newScratch }}
+{{ $site := .Site }}
+  <main id="main" aria-label="Main Content" tabindex="0">
+    {{ .Content }}
+    <div class="section-list flex one two-800 three-1000">
+      {{ range .Pages.ByTitle }}
+        {{ if ne .Params.layout "overview" }}
+          {{ with .Params.featured_image }}
+            {{ $scratch.Set "image" .image }}
+          {{ else }}
+            {{ $scratch.Set "image" $site.Data.organization.defaultHeroImage }}
+          {{ end }}
+          <div>
+            <a href="{{ .Permalink }}">
+              <article class="card">
+                {{ with  ($scratch.Get "image") }}
+                    {{ partial "components/thumbnail" . }}
+                {{ end }}
+                <header>{{ .Title | title }}</header>
+                {{ with .Description }}
+                <footer class="summary">
+                  <p>{{ . }}</p>
+                </footer>                
+                {{ end }}
+              </article>  
+            </a>  
+          </div>
+        {{ end }}
+      {{ end }}
+    </div>
+  </main>
+{{ end }}
+
+{{ define "sidebar" }}
+  {{ partial "aside" . }}
+{{ end }}

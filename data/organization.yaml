@@ -5,8 +5,8 @@ messageDanger: ''
 messageSuccess: ''
 companyName: Bugo
 companyDescription: ''
-headerLogo: "/uploads/bugo-logo-200.svg"
-footerLogo: "/uploads/bugo-logo-200.svg"
+headerLogo: "https://res.cloudinary.com/startrekdesignproject-com/image/upload/v1551248815/STDP_HeaderLogo.svg"
+footerLogo: "https://res.cloudinary.com/startrekdesignproject-com/image/upload/v1551248815/STDP_HeaderLogo.svg"
 defaultHeroImage: "/uploads/main-background-image.png"
 defaultHeroAlt: ''
 marketingBlocks: []

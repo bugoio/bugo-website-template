@@ -47,24 +47,41 @@ minify:
     xml:
       keepWhitespace: false
 metaDataFormat: yaml
+terms:
+  time_period: time_period
+  quadrant: quadrants
+  universe: universes
+  affiliation: affiliations
+  type: types
+  franchise: franchise
+  designer: designer
+  designers: designers
 related:
   threshold: 80
   includeNewer: true
-  toLower: true
+  toLower: false
   indices:
-  - name: categories
+  - name: time_period
+    weight: 100
+  - name: affiliation
+    weight: 60
+  - name: quadrant
+    weight: 50
+  - name: universe
+    weight: 30
+  - name: types
     weight: 20
-  - name: tags
-    weight: 80
+  - name: franchise
+    weight: 10
 theme:
 # Image Handling
-# - sb-cloudinary
-- sb-netlify-large-media
+- sb-cloudinary
+# - sb-netlify-large-media
 # Layouts
 - sb-search
 - sb-blocks
 - sb-landing-page
-# - sb-section
+- sb-section
 # - sb-sidebar
 - sb-utilities
 - custom

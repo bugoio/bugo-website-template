@@ -1,0 +1,5 @@
+{{ if .page.Params.featured_image.image }}
+<div class="featured-image">
+  {{ partial "components/figure" ( dict "page" .page "site" .site "media" .page.Params.featured_image "transform" "c_lpad,w_600,h_600") }}
+</div>
+{{ end }}

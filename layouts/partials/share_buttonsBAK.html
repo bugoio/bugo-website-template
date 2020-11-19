@@ -1,0 +1,49 @@
+{{/**
+   * Share Buttons
+   *
+   * Social Media share butons
+   *
+   * @version 1.0.0
+	 *
+   */}}
+
+<!-- Social Button HTML -->
+<div class="share-buttons">
+  <span>
+    Share:
+  </span>
+  <!-- Twitter -->
+  <a href="http://twitter.com/share?url={{ .Permalink }}&text={{ .Title }}" target="_blank" class="btn share-btn twitter" title="Share on Twitter">
+    <svg viewBox="0 0 100 100" class="icon share-icon">
+      <use xlink:href="#twitter"></use>
+    </svg>
+  </a>
+
+  <!-- Facebook -->
+  <a href="http://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" class="btn share-btn facebook" title="Share on Facebook">
+    <svg viewBox="0 0 100 100" class="icon share-icon">
+      <use xlink:href="#facebook-f"></use>
+    </svg>
+  </a>
+
+  <!-- LinkedIn -->
+  <a href="http://www.linkedin.com/shareArticle?url={{ .Permalink }}&title={{ .Title }}" target="_blank" class="btn share-btn linkedin" title="Share on LinkedIn">
+    <svg viewBox="0 0 100 100" class="icon share-icon">
+      <use xlink:href="#linkedin"></use>
+    </svg>
+  </a>
+
+  <!-- Reddit (url, title) -->
+  <a href="http://reddit.com/submit?url={{ .Permalink }}&title={{ .Title }}" target="_blank" class="btn share-btn reddit" class="Share on Reddit">
+    <svg viewBox="0 0 100 100" class="icon share-icon">
+      <use xlink:href="#reddit"></use>
+    </svg>
+  </a>
+
+  <!-- Email -->
+  <a href="mailto:?subject={{ .Title }}&body={{ .Title }}%0A%0A{{ .Permalink }}" target="_blank" class="btn share-btn email" title="Share via Email">
+    <svg viewBox="0 0 100 100" class="icon share-icon">
+      <use xlink:href="#envelope"></use>
+    </svg>
+  </a>
+</div>

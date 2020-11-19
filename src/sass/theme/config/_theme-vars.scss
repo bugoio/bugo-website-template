@@ -204,22 +204,22 @@ $tooltip-background: $black;
 $tooltip-size: .8em;
 
 // Offcanvas
-$offcanvas-bg: $light;
-$canvas-bg: $white;
+$offcanvas-bg: $black;
+$canvas-bg: $black;
 $offcanvasMobileHeight: 600px;
 
 // Desktop
 $desktop-bp: lg;
 
 // Header
-$header-bg: $white; 
+$header-bg: $black; 
 $header-color: $white;
 $header-brand-w: 15%;
 $header-brand-w-desktop: 15%;
 $header-padding: var(--space) 0;
 
 // Mobile Nav
-$mobile-hamburger-color: $black;
+$mobile-hamburger-color: $white;
 $mobile-hamburger-bp: lg;
 $mobile-hamburger-w: 9%;
 $mobile-link-color: $primary;
@@ -229,14 +229,14 @@ $mobile-link-margin: var(--space);
 $mobile-link-padding:  var(--space-least) var(--space-more);
 
 // Menubar
-$menubar-menu1-bg: $white;
-$menubar-menu1-color: $primary;
-$menubar-menu2-bg: $primary;
+$menubar-menu1-bg: $black;
+$menubar-menu1-color: $white;
+$menubar-menu2-bg: $black;
 $menubar-menu2-color: $white;
 
 // Main Nav
 $main-menu-link-bgColor: transparent;
-$main-menu-link-color: $primary;
+$main-menu-link-color: $white;
 $main-menu-link-size: -0.25;
 $main-menu-link-margin: 0 var(--space-less) 0 0;
 $main-menu-margin: 0;
