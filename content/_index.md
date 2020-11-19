@@ -66,7 +66,7 @@ contentBlocks:
     bgImage: ''
     textAlign: ''
   - template: block-columns
-    contrast: Lighten
+    contrast: Darken
     classList: columns
     layout: block-columns
     title: Catalog Section
@@ -81,8 +81,8 @@ contentBlocks:
     fullWidth: false
     bgColor: ''
     textColor: ''
-    bgImage: ''
-    textAlign: ''
+    bgImage: https://res.cloudinary.com/startrekdesignproject-com/image/upload/v1558222030/STDP_LogoPoster_Mockup_V2.jpg
+    textAlign: Center
   - template: block-logos
     layout: block-logos
     title: Partners
