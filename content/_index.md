@@ -196,7 +196,7 @@ contentBlocks:
     showTitle: false
     fullWidth: false
     bgColor: ''
-    textColor: ''
+    textColor: White
     useBgImage: false
     bgImage: ''
 pageOptions:
