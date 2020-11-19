@@ -38,6 +38,34 @@ contentBlocks:
         database."
   - template: block-taxonomy-navigation
     layout: taxonomy-navigation
+  - template: block-columns
+    contrast: Lighten
+    classList: columns
+    layout: block-columns
+    title: Background
+    textColor: White
+    columns:
+    - template: text-column
+      content: |-
+        **Star Trek has had great influence on modern culture. And no more so than its graphic design.**
+
+        For over two generations designers have been profoundly influenced by the symbols, insignias and logos seen in Star Trek. In turn, those generations have, through design, woven aspects of the Star Trek graphic design aesthetic into every aspect of daily life. So much so, that it should be thought of as a unique genre of graphic design.
+
+        Every designer that has contributed to this pervasive cultural influence has used Star Trek’s hopeful and optimistic future for humanity as a guideline. In turn, they applied the same philosophical tenants when creating each new symbol to build a fully evolved and internally consistent visual design spectrum that leverages established design representations of peace, oppression, freedom, foreignness, aggression, etc. and envisions how graphic design will advance along with humanity. But none more than…
+
+        **Matt Jeffries**’ foundational design premise that regardless the technological advance, simple striking visual elements used consistently guides the viewer in forming positive and negative associations.
+
+        **Franz Joseph**’s projections of a future visual language rooted in the United Nations and diplomacy rather than relying on the more obvious military influences.
+
+        [**Mike Okuda**](https://memory-alpha.fandom.com/wiki/Michael_Okuda)’s wonderful imaginary unbroken thread of design from genuine space exploration through to a future of exploration that Star Trek embodies.
+
+        [**Doug Drexler**](https://doug_drex_drexler.artstation.com/)**, William Ware Theiss, Pierre Drolet** and so many more (please scroll down for more on that).
+    showTitle: false
+    fullWidth: false
+    bgColor: ''
+    useBgImage: false
+    bgImage: ''
+    textAlign: ''
   - template: block-logos
     layout: block-logos
     title: Partners
