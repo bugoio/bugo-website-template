@@ -27,15 +27,14 @@ contentBlocks:
     showTitle: false
     fullWidth: true
     bgColor: ''
-    textColor: ''
+    textColor: 'white'
     useBgImage: false
     bgImage: ''
     textAlign: Center
     columns:
     - template: text-column
       content: "![](https://res.cloudinary.com/startrekdesignproject-com/image/upload/v1558222570/STDP_LogoBug2.svg)\n\n**ONE
-        MILDLY OBSESSIVE GOAL:**\n\n# The most accurate & complete  \nStar Trek symbol
-        database."
+        MILDLY OBSESSIVE GOAL:**\n\n# The most accurate & complete Star Trek symbol database."
   - template: block-taxonomy-navigation
     layout: taxonomy-navigation
   - template: block-logos
