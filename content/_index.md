@@ -151,6 +151,34 @@ contentBlocks:
     textColor: ''
     contrast: ''
     textAlign: ''
+  - template: block-columns
+    contrast: Lighten
+    classList: columns
+    layout: block-columns
+    columns:
+    - template: text-column
+      content: |-
+        ## It takes a fanbase.
+
+        I’ve spent years compiling the collection. But, I’m sure there is much more to be done. While I continue to scour episodes and reference material for more symbols, there is nothing as powerful as Star Trek fans to get to the goal of cataloging every mark. So, if there is an error in something cataloged or something missed, I want to know about it.
+
+        **Most importantly, the designers of this influential graphic design genre need to receive credit. If you are/were a designer of any of marks or know designers how were, please let me know.**
+
+        [Get In Touch](mailto:bradwilder@gmail.com)
+
+        A special thank you to:
+
+        Gary O’Neill for his invaluable research and input on many of the marks in the collection. His work can be found at [gazomg-trek-art.blogspot.com](https://startrekdesignproject.com/gazomg-trek-art.blogspot.com "Gazomg")
+
+        Jörg Hillebrand for incredibly deep knowledge of and research into Star Trek symbols. His work can be found at [Ex Astris Scientia](http://www.ex-astris-scientia.org/ "Ex Astris Scientia").
+    title: Contributing & Thanks
+    fullWidth: true
+    bgColor: Black
+    textColor: White
+    textAlign: Center
+    showTitle: false
+    useBgImage: false
+    bgImage: ''
 pageOptions:
   showSidebar: false
   hideMarketingBlock: false
