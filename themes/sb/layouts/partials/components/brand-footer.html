@@ -4,8 +4,8 @@
   <a href="{{ $home }}" tabindex="-1">
   {{ with .Site.Data.organization.footerLogo }}
   {{ $alt := $site.Title }}
-  {{ $imgSrc := partial "imgSrc" . }}
-  {{ partial "components/picture" (dict "imgSrc" $imgSrc "alt" $alt) }}
+  {{ $imgSrc := partial "getImgSrc" . }}
+  {{ partial "picture" (dict "img" . "imgSrc" $imgSrc "alt" $alt) }}
   {{ else }}
     {{ .Site.Title | title }}
   {{ end }}

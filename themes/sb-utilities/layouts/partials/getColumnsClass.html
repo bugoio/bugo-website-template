@@ -1,7 +1,7 @@
+
 {{ $scratch := newScratch }}
-{{ if eq (len .) 1 }}
-  {{ $scratch.Set "class" "one" }}
-{{ else if eq (len .) 2 }}
+{{ $scratch.Set "class" "one" }}
+{{ if eq (len .) 2 }}
   {{ $scratch.Set "class" "two" }}
 {{ else if eq (len .) 3 }}
   {{ $scratch.Set "class" "three" }}
