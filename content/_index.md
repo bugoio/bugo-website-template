@@ -1,5 +1,5 @@
 ---
-title: Bugo
+title: Home
 date: '2020-05-01T08:02:55.000-07:00'
 layout: home
 weight: -100
@@ -23,21 +23,19 @@ contentBlocks:
     contrast: Lighten
     classList: columns
     layout: block-columns
-    title: JAMstack
-    showTitle: true
+    title: Intro
+    showTitle: false
     fullWidth: true
-    bgColor: Light
-    textColor: dark
+    bgColor: ''
+    textColor: ''
     useBgImage: false
     bgImage: ''
     textAlign: Center
     columns:
     - template: text-column
-      content: Does everybody know that pig named Lorem Ipsum? She’s a disgusting
-        pig, right? Some people have an ability to write placeholder text… It’s an
-        art you’re basically born with. You either have it or you don’t. You know,
-        it really doesn’t matter what you write as long as you’ve got a young, and
-        beautiful, piece of text.
+      content: "![](https://res.cloudinary.com/startrekdesignproject-com/image/upload/v1558222570/STDP_LogoBug2.svg)\n\n**ONE
+        MILDLY OBSESSIVE GOAL:**\n\n# The most accurate & complete  \nStar Trek symbol
+        database."
   - template: block-logos
     layout: block-logos
     title: Partners
