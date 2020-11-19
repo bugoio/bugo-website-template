@@ -161,7 +161,7 @@ contentBlocks:
 
         &nbsp;
     showTitle: false
-    fullWidth: false
+    fullWidth: true
     bgColor: ''
     textColor: ''
     contrast: ''
