@@ -148,6 +148,21 @@ contentBlocks:
     textAlign: ''
     blockContent: ''
     fullWidth: true
+  - template: block-columns
+    classList: columns
+    layout: block-columns
+    title: Screengrab
+    useBgImage: true
+    bgImage: https://res.cloudinary.com/startrekdesignproject-com/image/upload/v1551297015/ScreenGrabSlice.jpg
+    columns:
+    - template: text-column
+      content: "    "
+    showTitle: false
+    fullWidth: false
+    bgColor: ''
+    textColor: ''
+    contrast: ''
+    textAlign: ''
 pageOptions:
   showSidebar: false
   hideMarketingBlock: false
