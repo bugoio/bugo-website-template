@@ -103,7 +103,7 @@ contentBlocks:
     showTitle: false
     useBgImage: false
     bgImage: ''
-    textAlign: ''
+    textAlign: Center
   - template: block-logos
     layout: block-logos
     title: Partners
