@@ -27,14 +27,18 @@ contentBlocks:
     showTitle: false
     fullWidth: true
     bgColor: ''
-    textColor: 'white'
+    textColor: white
     useBgImage: false
     bgImage: ''
     textAlign: Center
     columns:
     - template: text-column
-      content: "![](https://res.cloudinary.com/startrekdesignproject-com/image/upload/v1558222570/STDP_LogoBug2.svg)\n\n**ONE
-        MILDLY OBSESSIVE GOAL:**\n\n# The most accurate & complete Star Trek symbol database."
+      content: |-
+        ![](https://res.cloudinary.com/startrekdesignproject-com/image/upload/v1558222570/STDP_LogoBug2.svg)
+
+        **ONE MILDLY OBSESSIVE GOAL:**
+
+        # The most accurate & complete Star Trek symbol database.
   - template: block-taxonomy-navigation
     layout: taxonomy-navigation
   - template: block-columns
@@ -113,7 +117,7 @@ contentBlocks:
     - https://res.cloudinary.com/startrekdesignproject-com/image/upload/v1558212958/In-CanonKlingon_Check.jpg
     - https://res.cloudinary.com/startrekdesignproject-com/image/upload/v1558212958/Non-CanonStarfleetMedAcad_X.jpg
     bgColor: ''
-    textColor: 'White'
+    textColor: White
     content: |-
       ## Faithful reproduction for authentic reference.
 
@@ -125,29 +129,6 @@ contentBlocks:
       ### On-screen or it falls outside of the Star Trek graphic design canon.
 
       That countless non-canon additions, derivations, extensions and modifications based on the Star Trek design compendium have been created by designers for over 50 years is a testament to both its influence and adoration. STDP strives to codify only on-screen symbols with provenance to create a compendium for reference and inspiration.
-  - template: block-slideshow
-    layout: slideshow
-    title: Why JAMstack?
-    slides:
-    - image: "/uploads/jonathan-cooper-ptvpw6h9rpo-unsplash.jpg"
-      content: Cuz ocean.
-      imageAlt: Turbulent ocean water with swirling sea foam
-    - image: "/uploads/donnie-ray-crisp-66zrt0dj7mc-unsplash.jpg"
-      imageAlt: Face of a tiger looking to the right.
-      content: Winning and drinking tiger's blood.
-    showTitle: true
-    bgColor: ''
-    textColor: ''
-  - template: block-section-overview
-    layout: block-section
-    title: Documentation
-    bgColor: dark
-    textColor: White
-    section: "/docs/"
-    showTitle: true
-    textAlign: ''
-    blockContent: ''
-    fullWidth: true
   - template: block-columns
     classList: columns
     layout: block-columns
