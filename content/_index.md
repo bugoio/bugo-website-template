@@ -106,15 +106,21 @@ contentBlocks:
     textAlign: Center
   - template: block-logos
     layout: block-logos
-    title: Partners
-    showTitle: true
+    title: Faithful reproduction
+    showTitle: false
     logos:
-    - "/uploads/hugo-logo-wide.svg"
-    - "/uploads/forestry-logo.svg"
-    - "/uploads/netlify-logo.svg"
+    - https://res.cloudinary.com/startrekdesignproject-com/image/upload/v1558212958/In-CanonMissionControl_Check.jpg
+    - https://res.cloudinary.com/startrekdesignproject-com/image/upload/v1558212958/Non-CanonTholianSymbol_X.jpg
+    - https://res.cloudinary.com/startrekdesignproject-com/image/upload/v1558212958/In-CanonKlingon_Check.jpg
+    - https://res.cloudinary.com/startrekdesignproject-com/image/upload/v1558212958/Non-CanonStarfleetMedAcad_X.jpg
     bgColor: ''
     textColor: ''
-    content: ''
+    content: |-
+      **Faithful reproduction for authentic reference.**
+
+      To serve as a reliable resource, accuracy in recreation of all marks is of utmost importance. Every symbol is faithfully reproduced from the best sources available, adding only as much illustrative embellishments and artistic license needed to convey depth, texture or overall onscreen appearance.
+
+      STDP is a living compendium and symbols will added as discovered and updated as higher quality source material becomes available.
     fullWidth: false
   - template: block-slideshow
     layout: slideshow
