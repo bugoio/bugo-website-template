@@ -46,7 +46,7 @@ contentBlocks:
     columns:
     - template: text-column
       content: |-
-        **Star Trek has had great influence on modern culture. And no more so than its graphic design.**
+        ## Star Trek has had great influence on modern culture. And no more so than its graphic design.
 
         For over two generations designers have been profoundly influenced by the symbols, insignias and logos seen in Star Trek. In turn, those generations have, through design, woven aspects of the Star Trek graphic design aesthetic into every aspect of daily life. So much so, that it should be thought of as a unique genre of graphic design.
 
