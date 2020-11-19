@@ -65,6 +65,24 @@ contentBlocks:
     useBgImage: false
     bgImage: ''
     textAlign: ''
+  - template: block-columns
+    contrast: Lighten
+    classList: columns
+    layout: block-columns
+    title: Catalog Section
+    useBgImage: true
+    columns:
+    - template: text-column
+      content: |-
+        ![](https://res.cloudinary.com/startrekdesignproject-com/image/upload/v1558228884/sansar-logo.png)![](https://res.cloudinary.com/startrekdesignproject-com/image/upload/v1558228884/RoddenberryLogo.png)
+
+        ### **See the STDP catalog of symbols in the** [**Sansar Roddenberry Star Trek Nexus**](https://www.sansar.com/roddenberry "Roddenberry Nexus")
+    showTitle: false
+    fullWidth: false
+    bgColor: ''
+    textColor: ''
+    bgImage: ''
+    textAlign: ''
   - template: block-logos
     layout: block-logos
     title: Partners
