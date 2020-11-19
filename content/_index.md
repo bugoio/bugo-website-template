@@ -78,7 +78,7 @@ contentBlocks:
 
         ### **See the STDP catalog of symbols in the** [**Sansar Roddenberry Star Trek Nexus**](https://www.sansar.com/roddenberry "Roddenberry Nexus")
     showTitle: false
-    fullWidth: false
+    fullWidth: true
     bgColor: ''
     textColor: ''
     bgImage: https://res.cloudinary.com/startrekdesignproject-com/image/upload/v1558222030/STDP_LogoPoster_Mockup_V2.jpg
