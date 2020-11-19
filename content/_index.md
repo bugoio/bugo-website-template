@@ -116,12 +116,16 @@ contentBlocks:
     bgColor: ''
     textColor: ''
     content: |-
-      **Faithful reproduction for authentic reference.**
+      ## Faithful reproduction for authentic reference.
 
       To serve as a reliable resource, accuracy in recreation of all marks is of utmost importance. Every symbol is faithfully reproduced from the best sources available, adding only as much illustrative embellishments and artistic license needed to convey depth, texture or overall onscreen appearance.
 
       STDP is a living compendium and symbols will added as discovered and updated as higher quality source material becomes available.
     fullWidth: false
+    afterLogosContent: |-
+      ### On-screen or it falls outside of the Star Trek graphic design canon.
+
+      That countless non-canon additions, derivations, extensions and modifications based on the Star Trek design compendium have been created by designers for over 50 years is a testament to both its influence and adoration. STDP strives to codify only on-screen symbols with provenance to create a compendium for reference and inspiration.
   - template: block-slideshow
     layout: slideshow
     title: Why JAMstack?
