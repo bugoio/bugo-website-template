@@ -113,7 +113,7 @@ contentBlocks:
     - https://res.cloudinary.com/startrekdesignproject-com/image/upload/v1558212958/In-CanonKlingon_Check.jpg
     - https://res.cloudinary.com/startrekdesignproject-com/image/upload/v1558212958/Non-CanonStarfleetMedAcad_X.jpg
     bgColor: ''
-    textColor: ''
+    textColor: 'White'
     content: |-
       **Faithful reproduction for authentic reference.**
 

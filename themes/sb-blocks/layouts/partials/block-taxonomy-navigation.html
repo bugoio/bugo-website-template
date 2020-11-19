@@ -1,0 +1,30 @@
+{{ $page := .page }}
+{{ $site := .page.Site }}
+  {{ if .block.block_options.show_title }}
+    <div class="container"><h2 class="block-title">{{ .block.title }}</h2></div>
+  {{ end }}  
+  <div class="container">
+    <nav class="nav-taxonomies">
+      <div class="js-accordion">
+        {{ range $index, $taxonomy := $site.Taxonomies }}
+          {{ if gt (len $taxonomy) 0 }}
+          <div>
+            <button class="bg-none">{{ $index | humanize }}</button>
+            <div class="flex two three-800 four-1200">
+              {{ range $key, $value := $taxonomy }}
+                  <a 
+                    class="dropdown-item {{ $taxonomy.Name | urlize }}" 
+                    href="{{ "/" | relLangURL}}{{ $index | urlize }}/{{ $key| urlize }}"
+                  >
+                    {{ $key | humanize }}
+                  </a>
+                  {{ end }}
+            </div>
+          </div>          
+          {{ end }}
+        {{ end }}
+      </div>
+    </nav>
+    <p class="my-4 text-center text-uppercase">Or go rando</p>
+    <ul class="rando-symbols d-flex pl-0"></ul>
+  </div>

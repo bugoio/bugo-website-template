@@ -204,15 +204,15 @@ $tooltip-background: $black;
 $tooltip-size: .8em;
 
 // Offcanvas
-$offcanvas-bg: $black;
-$canvas-bg: $black;
+$offcanvas-bg: transparent;
+$canvas-bg: transparent;
 $offcanvasMobileHeight: 600px;
 
 // Desktop
 $desktop-bp: lg;
 
 // Header
-$header-bg: $black; 
+$header-bg: transparent; 
 $header-color: $white;
 $header-brand-w: 15%;
 $header-brand-w-desktop: 15%;

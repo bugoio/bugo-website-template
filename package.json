@@ -22,6 +22,7 @@
   "dependencies": {
     "@babel/preset-react": "^7.10.1",
     "@fortawesome/fontawesome-free": "^5.15.1",
+    "aria-accordion": "^1.1.0",
     "breakpoint-sass": "^2.7.1",
     "elliptic": "^6.5.3",
     "lodash": "^4.17.20",

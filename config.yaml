@@ -47,7 +47,7 @@ minify:
     xml:
       keepWhitespace: false
 metaDataFormat: yaml
-terms:
+taxonomies:
   time_period: time_period
   quadrant: quadrants
   universe: universes

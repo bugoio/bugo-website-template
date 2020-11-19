@@ -1,7 +1,19 @@
 import ready from "./utilities/ready"
 /* Add custom modules to this site */
-import {RandomPosts} from './components/RandomPosts';
+import {RandomPosts} from './components/RandomPosts'
 import LazyLoad from "vanilla-lazyload"
+import accordion from 'aria-accordion'
+
+// Required element to turn into an accordion
+var elm = document.querySelector('.js-accordion')
+if(elm){
+  new accordion.Accordion(elm,null,{
+    collapseOthers: true,
+    reflectStatic: false,
+    customHiding: true
+  });
+}
+
 
 const lazyLoadInstance = new LazyLoad({
   elements_selector: ".lazy"

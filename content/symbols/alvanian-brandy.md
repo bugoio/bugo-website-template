@@ -3,10 +3,10 @@ layout: post
 date: 2019-07-19T07:00:00+00:00
 title: Alvanian Brandy
 images:
-  - "https://res.cloudinary.com/startrekdesignproject-com/image/upload/v1563580200/AlvanianBrandy.png"
+  - https://res.cloudinary.com/startrekdesignproject-com/image/upload/v1563580200/AlvanianBrandy.png
 featured_image:
   title: Alvanian Brandy
-  image: 
+  image: https://res.cloudinary.com/startrekdesignproject-com/image/upload/v1563580200/AlvanianBrandy.png
   caption: Alvanian Brandy
 time_period: 2300s
 quadrants: Alpha

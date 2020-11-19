@@ -2,3 +2,30 @@
 @use './utility';
 @use 'sass:list' as list;
 @use 'sass:map' as map;
+
+html {
+  background-color: config.$white;
+}
+
+body {
+  background-color: config.$white;
+  background-image: url('/images/STDP_HeaderBGdark.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#unsupported { border: 1px solid yellow; color: black; background-color: #FFFFAD; padding: 2em; margin: 1em; display: inline-block; }
+#stars       { 
+  display: block; 
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body.home .block {
+  img {
+    display: inline;
+  }
+}
