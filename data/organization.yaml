@@ -5,13 +5,13 @@ messageDanger: ''
 messageSuccess: ''
 companyName: Bugo
 companyDescription: ''
-headerLogo: "https://res.cloudinary.com/startrekdesignproject-com/image/upload/v1551248815/STDP_HeaderLogo.svg"
-footerLogo: "https://res.cloudinary.com/startrekdesignproject-com/image/upload/v1551248815/STDP_HeaderLogo.svg"
-defaultHeroImage: "/uploads/main-background-image.png"
+headerLogo: https://res.cloudinary.com/startrekdesignproject-com/image/upload/v1551248815/STDP_HeaderLogo.svg
+footerLogo: https://res.cloudinary.com/startrekdesignproject-com/image/upload/v1551248815/STDP_HeaderLogo.svg
+defaultHeroImage: ''
 defaultHeroAlt: ''
 marketingBlocks: []
 signUpText: ''
 blogName: "/blog"
-defaultFeaturedImage: "/uploads/main-background-image.png"
+defaultFeaturedImage: ''
 showArticleThumbnails: true
 showSidebarThumbnails: true
