@@ -32,6 +32,15 @@ fields:
   type: image_gallery
   config: {}
   label: Logos
+- name: afterLogosContent
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: After Logos Content
 - name: layout
   type: text
   config:
