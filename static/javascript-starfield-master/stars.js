@@ -6,10 +6,10 @@ Stars = {
 
   Defaults: {
     fullscreen: true,
-    stats:      true,
+    stats:      false,
     dx:         -2,
     dy:          0,
-    maxspeed:   10,
+    maxspeed:   8,
     layers: [
       { percent:  30, size: { min: 0.4, max: 1.0 }, speed: { min:   1, max:   2 }, colors: ['#111', '#111', '#811'] }, // 1 in 3 get a tint of red
       { percent:  25, size: { min: 0.6, max: 1.2 }, speed: { min:   2, max:   4 }, colors: ['#333', '#333', '#833'] }, // 1 in 3 get a tint of red
@@ -56,8 +56,8 @@ Stars = {
       ctx.closePath();
     }
     ctx.fillStyle = 'white';
-    ctx.fillText("dx: " + this.cfg.dx, 30, 40);
-    ctx.fillText("dy: " + this.cfg.dy, 30, 50);
+    // ctx.fillText("dx: " + this.cfg.dx, 30, 40);
+    // ctx.fillText("dy: " + this.cfg.dy, 30, 50);
   },
 
   initLayers: function(layers) {

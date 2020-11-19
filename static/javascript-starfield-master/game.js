@@ -235,7 +235,7 @@ Game = {
       var start  = Game.timestamp(); this.update((start - this.lastFrame)/1000.0); // send dt as seconds
       var middle = Game.timestamp(); this.draw();
       var end    = Game.timestamp();
-      this.updateStats(middle - start, end - middle);
+      // this.updateStats(middle - start, end - middle);
       this.lastFrame = start;
     },
 
@@ -251,7 +251,7 @@ Game = {
 //      this.front2d.drawImage(this.back, 0, 0);
       this.front2d.clearRect(0, 0, this.width, this.height);
       this.game.draw(this.front2d);
-      this.drawStats(this.front2d);
+      // this.drawStats(this.front2d);
     },
 
     resetStats: function() {
