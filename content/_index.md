@@ -83,6 +83,26 @@ contentBlocks:
     textColor: ''
     bgImage: https://res.cloudinary.com/startrekdesignproject-com/image/upload/v1558222030/STDP_LogoPoster_Mockup_V2.jpg
     textAlign: Center
+  - template: block-columns
+    contrast: Lighten
+    classList: columns
+    layout: block-columns
+    title: Missing
+    bgColor: Secondary
+    textColor: White
+    fullWidth: true
+    columns:
+    - template: text-column
+      content: |-
+        **Is a symbol incorrect or missing?**
+
+        Then the Star Trek Design Project needs your help. Send an email with the symbol in question along with in which Star Trek it appears (if it’s not here), or which symbol has an error along with which Star Trek it appears (if there’s an error). Time codes are extremely helpful.
+
+        [Get In Touch](mailto:bradwilder@gmail.com)
+    showTitle: false
+    useBgImage: false
+    bgImage: ''
+    textAlign: ''
   - template: block-logos
     layout: block-logos
     title: Partners
@@ -118,26 +138,6 @@ contentBlocks:
     textAlign: ''
     blockContent: ''
     fullWidth: true
-  - template: block-columns
-    contrast: Lighten
-    classList: columns
-    layout: block-columns
-    title: Missing
-    bgColor: Secondary
-    textColor: White
-    fullWidth: true
-    columns:
-    - template: text-column
-      content: |-
-        **Is a symbol incorrect or missing?**
-
-        Then the Star Trek Design Project needs your help. Send an email with the symbol in question along with in which Star Trek it appears (if it’s not here), or which symbol has an error along with which Star Trek it appears (if there’s an error). Time codes are extremely helpful.
-
-        [Get In Touch](mailto:bradwilder@gmail.com)
-    showTitle: false
-    useBgImage: false
-    bgImage: ''
-    textAlign: ''
 pageOptions:
   showSidebar: false
   hideMarketingBlock: false
