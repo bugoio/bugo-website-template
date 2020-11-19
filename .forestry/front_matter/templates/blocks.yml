@@ -19,6 +19,7 @@ fields:
     - block-random-posts
     - block-latest-posts
     - block-profile
+    - block-taxonomy-navigation
     config:
       min: 
       max: 
