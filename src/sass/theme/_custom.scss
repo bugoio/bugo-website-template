@@ -14,6 +14,11 @@ body {
   background-size: cover;
 }
 
+:focus {
+  outline-offset: var(--space-1);
+  overflow: hidden;
+}
+
 input,select {
   color: config.$black !important;
 }
@@ -53,6 +58,9 @@ body.home {
 
 .js-accordion {
   background-color: #000;
+  button:focus {
+    outline-offset: 1px;
+  } 
 }
 
 /* ----------------------------------------------
@@ -131,5 +139,44 @@ body.home {
   img {
     -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  }
+}
+
+body.section .sort-buttons button {
+  margin: 0 var(--space--1);
+  &:focus {
+    outline-offset: var(--space--2);
+  }
+  
+  &::before {
+    content: " "
+  }
+
+  &::after {
+    content: " "
+  }
+
+  &.asc {
+    &::after {
+      content: "\21E1";
+    }  
+  }
+
+  &.desc {
+    &::after {
+      content: "\21E3"
+    }  
+  }
+}
+
+.meta-data {
+  padding-left: 0;
+  
+  .flex {
+    margin-left: calc(var(--space) * -1);
+    > *{
+      padding-left: var(--space);
+      padding-bottom: var(--space);
+    }
   }
 }

@@ -292,11 +292,11 @@ $thumb-padding: 100%;
 $thumb-fit: contain;
 
 // Headings
-$h1-font-size: var(--space-5);
-$h2-font-size: var(--space-4);
-$h3-font-size: var(--space-3);
-$h4-font-size: var(--space-2);
-$h5-font-size: var(--space-1);
+$h1-font-size: var(--space-4);
+$h2-font-size: var(--space-3);
+$h3-font-size: var(--space-2);
+$h4-font-size: var(--space-1);
+$h5-font-size: var(--space);
 $h6-font-size: var(--space);
 $heading-color: $primary;
 $heading-padding-top: var(--space-less);
@@ -316,7 +316,7 @@ $footer-bg: transparent;
 $footer-color: $white;
 $footer-p: var(--space-more);
 $footer-link: $white;
-$footer-brand-width: 15%;
+$footer-brand-width: 35%;
 $footer-locations-width: 85%;
 
 $copyright-font-size: -1.5;

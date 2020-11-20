@@ -24,7 +24,9 @@
     margin-bottom: var(--space-less);
   }
 
-  &:hover {
+  &:hover,
+  &:focus:hover,
+  &:focus {
     background-color: config.$card-hover-bg;
     border-color: config.$card-hover-border-color;
 
