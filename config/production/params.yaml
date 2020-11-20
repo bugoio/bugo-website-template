@@ -1,66 +1,12 @@
 ---
-  enableHeros: true
-  enableBugoBadge: true
-  enableAutoFeaturedImage: true
-  enableAutoGallery: false
-  breakpoints:
-    xs:
-      bp: 0px
-      mw: 90%
-      base: 12px
-      ratio: 1.3
-    sm:
-      bp: 400px
-      mw: 90%
-      base: 13px
-      ratio: 1.3
-    md:
-      bp: 768px
-      mw: 720px
-      base: 14px
-      ratio: 1.3
-    lg:
-      bp: 992px
-      mw: 90%
-      base: 14px
-      ratio: 1.3
-    xl:
-      bp: 1200px
-      mw: 90%
-      base: 14px
-      ratio: 1.3
-    xxl:
-      bp: 1400px
-      mw: 90%
-      base: 14px
-      ratio: 1.3
-    xxxl:
-      bp: 2200px
-      mw: 2100px
-      base: 28px
-      ratio: 1.3
-  email: 
-  googleCloudApi: ''
-  googleFonts:
-    importFonts:
-    - Roboto:400,700,900
-    baseFont: Roboto
-    headingFont: Roboto
-  headerLogo: 
-  footerLogo: 
-  social: []
-  themeColors:
-    primary: "#77BF2B"
-    secondary: "#536F48"
-    accent1: "#C030E7"
-    accent2: "#2EEB3B"
-    light: "#FFFFFF"
-    dark: "#444141"
-    white: "#FFFFFF"
-    black: "#000000"
-    info: "#205F70"
-    success: "#2F5404"
-    warning: "#CC881A"
-    danger: "#820211"
-  show_breadcrumbs: false
-  
+baseURL:
+canonifyURLs: true
+enableGitInfo: true
+enableInlineShortcodes: true
+showSearchInMain: false
+enableOffCanvasSearch: false
+showWCAG: true
+relatedPostsTitle: Related
+latestPostsTitle: Recent
+seoLogo: /uploads/rldqp4lna4rbp12ivn7o.png
+blogSlug: blog

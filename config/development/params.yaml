@@ -4,7 +4,7 @@ canonifyURLs: true
 enableGitInfo: true
 enableInlineShortcodes: true
 showSearchInMain: false
-enableOffCanvasSearch: true
+enableOffCanvasSearch: false
 showWCAG: true
 relatedPostsTitle: Related
 latestPostsTitle: Recent
