@@ -2,7 +2,7 @@
 layout: post
 designers: []
 date: 2020-02-04T08:00:00+00:00
-title: " Authorized Personnel Only (Utopia Planitia)"
+title: "Authorized Personnel Only (Utopia Planitia)"
 slug: ''
 images: 
 - "https://res.cloudinary.com/startrekdesignproject-com/image/upload/v1580839056/AuthorizedPersonnelOnly.png"

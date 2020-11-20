@@ -3,6 +3,26 @@ import ready from "./utilities/ready"
 import {RandomPosts} from './components/RandomPosts'
 import LazyLoad from "vanilla-lazyload"
 import accordion from 'aria-accordion'
+import List from 'list.js'
+
+var element = document.getElementById("section-list");
+ 
+//If it isn't "undefined" and it isn't "null", then it exists.
+if(typeof(element) != 'undefined' && element != null){
+  var options = {
+    valueNames: [ 'name','date' ]
+  };
+  
+  var sortList = new List('section-list', options);
+  
+  sortList.on('searchStart',()=>{
+    console.log('search started')
+  })
+  
+  sortList.on('updated',()=>{
+    console.log('updated')
+  })
+} 
 
 // Required element to turn into an accordion
 var elm = document.querySelector('.js-accordion')

@@ -6,32 +6,54 @@
 {{ $scratch := newScratch }}
 {{ $site := .Site }}
   <main id="main" aria-label="Main Content" tabindex="0">
+    <h1>{{ .Title }}</h1>
+    <div id="filters">
+    </div>
     {{ .Content }}
-    <div class="section-list flex two three-800 four-1500 five-1800 six-2200">
-      {{ range .Pages.ByTitle }}
+    <div id="section-list" class="">
+      <div class="flex one two-800">
+      <!-- class="search" automagically makes an input a search field. -->
+      <div>
+        <input class="search" placeholder="Search" />
+      </div>
+      <!-- class="sort" automagically makes an element a sort buttons. The date-sort value decides what to sort by. -->
+      <div class="sort-buttons">
+        <button class="sort" data-sort="name">
+          Sort by Name
+        </button>  
+        <button class="sort" data-sort="date">
+          Sort by Publish Date
+        </button>  
+      </div>
+      </div>
+      <div class="list flex two three-800 four-1500 five-1800 six-2200">
+        {{ range .Pages.ByDate.Reverse }}
         {{ if ne .Params.layout "overview" }}
           {{ with .Params.featured_image }}
             {{ $scratch.Set "image" .image }}
           {{ else }}
             {{ $scratch.Set "image" $site.Data.organization.defaultHeroImage }}
           {{ end }}
-          <div>
             <a href="{{ .Permalink }}">
               <article class="card">
                 {{ with  ($scratch.Get "image") }}
                     {{ partial "components/thumbnail" . }}
                 {{ end }}
-                <header class="text-center">{{ .Title | title }}</header>
+                <header class="text-center">
+                  <div class="name">{{ .Title | title }}</div>
+                  <div class="date sr-only" aria-hidden="true">{{ (time .Date).Unix }}</div>
+
+                </header>
                 {{ with .Description }}
                 <footer class="summary">
                   <p>{{ . }}</p>
                 </footer>                
                 {{ end }}
-              </article>  
+              </article>
             </a>  
-          </div>
         {{ end }}
       {{ end }}
+      </div>
     </div>
   </main>
 {{ end }}

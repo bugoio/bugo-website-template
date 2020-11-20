@@ -8,9 +8,10 @@
   box-shadow: config.$card-shadow;
   border-radius: config.$card-radius;
   margin-bottom: config.$card-margin-bottom;
+  padding: config.$card-padding;
 
   > p {
-    padding: config.$card-p-padding;
+    padding: config.$card-paragraph-padding;
   }
 
   header {

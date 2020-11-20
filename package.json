@@ -25,6 +25,7 @@
     "aria-accordion": "^1.1.0",
     "breakpoint-sass": "^2.7.1",
     "elliptic": "^6.5.3",
+    "list.js": "^1.5.0",
     "lodash": "^4.17.20",
     "mark.js": "^8.11.1",
     "mathsass": "^0.11.0",

@@ -27,6 +27,6 @@ ready(function () {
     t.init();
   }
 
-  MobileMenu()
+  //MobileMenu()
 
 });

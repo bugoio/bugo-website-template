@@ -15,7 +15,7 @@
 h1,h2,h3,h4,h5,h6,
 .h1,.h2,.h3,.h4,.h5,.h6 {
   color: config.$heading-color;
-  font-weight: 800;
+  font-weight: config.$heading-font-weight;
   @extend %padding;
 
   small {

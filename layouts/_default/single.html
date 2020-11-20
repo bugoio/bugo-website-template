@@ -1,10 +1,10 @@
 {{ define "main" }}
   <main id="main" class="main-single" aria-label="Main Content" tabindex="0">
     <div class="meta-data flex two">
-      <div>
+      <div class="two-third">
         {{ if .Params.featured_image }}
           <figure>
-            {{ $imgSrc := partial "getImgSrc" .Params.featured_image.image }}
+            {{ $imgSrc := partial "getImgLgSrc" .Params.featured_image.image }}
             <div>
               {{ partial "picture" (dict "imgSrc" $imgSrc "alt" (printf "%s Logo" .Params.featured_image.title )) }}
             </div>
@@ -15,7 +15,7 @@
         {{ end }}
 
       </div>
-      <div>
+      <div class="third ">
         <h1>{{ .Title }}</h1>
         <div class="flex one two-800">
           {{ with .Params.affiliations }}
@@ -88,17 +88,20 @@
             </div>         
           {{ end }}
           <div>
+          {{ with .Params.primary_reference }}
+            <div>
+              Reference:
+            </div>
+            <div>
+              {{ . | markdownify }}
+            </div>
+          {{ end }}
         </div>
       </div>
       {{ with .Params.memory_alpha_url }}
       <div>
         <a href="{{ . }}" target="new">{{ . }}<a>
       </div>
-      {{ end }}
-      {{ with .Params.primary_reference }}
-        <div>
-          {{ . | markdownify }}
-        </div>
       {{ end }}
       {{ partial "components/share-buttons.html" . }}
     </div>
