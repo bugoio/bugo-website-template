@@ -1,0 +1,148 @@
+{{ define "main" }}
+  <main id="main" class="main-single" aria-label="Main Content" tabindex="0">
+    <div class="meta-data flex two">
+      <div>
+        {{ with .Params.featured_image }}
+          <figure>
+            {{ $imgSrc := partial "getImgSrc" .image }}
+            <div>
+              {{ partial "picture" (dict "imgSrc" $imgSrc "alt" (printf "%s Logo" .title )) }}
+            </div>
+            <figcaption>
+              {{ .caption }}<br/><br/>
+              {{ with .Params.memory_alpha_url }}
+              <div>
+                <a href="{{ . }}" target="new">{{ . }}<a>
+              </div>
+            {{ end }}      
+            </figcaption>
+          </figure>
+        {{ end }}
+      </div>
+      <div>
+        <h1>{{ .Title }}</h1>
+        <div class="flex one two-800">
+          {{ with .Params.affiliations }}
+            <div>
+              Affiliation:
+            </div>
+            <div>
+              {{ range . }}
+                {{ . }}<br/>
+              {{ end }}
+            </div>         
+          {{ end }}
+    
+          {{ with .Params.quadrant }}
+            <div>
+              Quadrant:
+            </div>
+            <div>
+                {{ . }}<br/>
+            </div>         
+          {{ end }}
+    
+          {{ with .Params.time_period }}
+            <div>
+              Time Period:
+            </div>
+            <div>
+                {{ . }}<br/>
+            </div>         
+          {{ end }}
+          {{ with .Params.universes }}
+          <div>
+            Universe:
+          </div>
+          <div>
+            {{ range . }}
+              {{ . }}<br/>
+            {{ end }}
+          </div>         
+        {{ end }}
+    
+        {{ with .Params.designers }}
+            <div>
+              Designers:
+            </div>
+            <div>
+              {{ range . }}
+                {{ . }}<br/>
+              {{ end }}
+            </div>         
+          {{ end }}
+    
+          {{ with .Params.franchise }}
+            <div>
+              Franchise:
+            </div>
+            <div>
+              {{ . }}
+            </div>         
+          {{ end }}
+            
+          {{ with .Params.types }}
+            <div>
+              Types:
+            </div>
+            <div>
+              {{ range . }}
+                {{ . }}<br/>
+              {{ end }}
+            </div>         
+          {{ end }}
+          <div>
+        </div>
+      </div>
+      {{ partial "components/share-buttons.html" . }}
+    </div>
+
+    </div>
+    <div class="post-content">
+      {{ .Content }}
+    </div>
+  </main>
+{{ end }}
+
+{{ define "sidebar" }}
+  {{ partial "aside" . }}
+{{ end }}
+
+{{ define "structuredData" }}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://google.com/article"
+      },
+      "headline": "{{ .Title }}",
+      {{ with .Params.images }}
+        "image": [
+          {{ range first 1 . }}
+            {{ . | absURL }}
+          {{ end }}
+        ],
+      {{ end }}
+      "datePublished": "2015-02-05T08:00:00+08:00",
+      "dateModified": "2015-02-05T09:20:00+08:00",
+      "author": {
+        "@type": "Organization",
+        "name": "{{ .Site.Title }}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "/uploads/rldqp4lna4rbp12ivn7o.png"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{ .Site.Title }}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "/uploads/rldqp4lna4rbp12ivn7o.png"
+        }
+      }
+    }
+  </script>
+{{ end }}

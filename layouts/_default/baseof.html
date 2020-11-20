@@ -118,8 +118,8 @@
           {{- partial "components/message" (dict "id" "org-message" "classes" "global-message bg-success" "content" ( . | markdownify) ) -}}
         {{ end }}    
 
-        <!-- {{- block "hero" . -}}{{- end -}} -->
-        {{ partial "components/breadcrumbs" . }}
+        {{- block "hero" . -}}{{- end -}}
+        <!-- {{ partial "components/breadcrumbs" . }} -->
         {{/*  {{ partial "components/breadcrumbs" . }}  */}}
         {{ if (or .Page.Params.pageOptions.showSidebar (eq .Page.Type "post") (eq .Page.Type "term")) }}
         <!-- Layout with sidebar -->

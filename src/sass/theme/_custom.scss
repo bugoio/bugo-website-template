@@ -4,11 +4,11 @@
 @use 'sass:map' as map;
 
 html {
-  background-color: config.$white;
+  background-color: config.$black;
 }
 
 body {
-  background-color: config.$white;
+  background-color: config.$black;
   background-image: url('/images/STDP_HeaderBGdark.jpg');
   background-attachment: fixed;
   background-size: cover;
@@ -24,8 +24,25 @@ body {
   height: 100%;
 }
 
-body.home .block {
-  img {
-    display: inline;
+#content {
+  background-color: config.$black;
+  padding: var(--space-3);
+}
+
+body.home,body.section {
+  #content {
+    background-color: transparent;
   }
+  .block {
+    img {
+      display: inline;
+    }
+  }  
+}
+
+.post-content img {
+  max-width: 60%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
