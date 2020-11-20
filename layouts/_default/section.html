@@ -7,7 +7,7 @@
 {{ $site := .Site }}
   <main id="main" aria-label="Main Content" tabindex="0">
     {{ .Content }}
-    <div class="section-list flex two three-800 four-1000 five-1200 six-1400">
+    <div class="section-list flex two three-800 four-1500 five-1800 six-2200">
       {{ range .Pages.ByTitle }}
         {{ if ne .Params.layout "overview" }}
           {{ with .Params.featured_image }}
@@ -21,7 +21,7 @@
                 {{ with  ($scratch.Get "image") }}
                     {{ partial "components/thumbnail" . }}
                 {{ end }}
-                <header>{{ .Title | title }}</header>
+                <header class="text-center">{{ .Title | title }}</header>
                 {{ with .Description }}
                 <footer class="summary">
                   <p>{{ . }}</p>
