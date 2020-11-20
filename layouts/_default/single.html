@@ -2,22 +2,18 @@
   <main id="main" class="main-single" aria-label="Main Content" tabindex="0">
     <div class="meta-data flex two">
       <div>
-        {{ with .Params.featured_image }}
+        {{ if .Params.featured_image }}
           <figure>
-            {{ $imgSrc := partial "getImgSrc" .image }}
+            {{ $imgSrc := partial "getImgSrc" .Params.featured_image.image }}
             <div>
-              {{ partial "picture" (dict "imgSrc" $imgSrc "alt" (printf "%s Logo" .title )) }}
+              {{ partial "picture" (dict "imgSrc" $imgSrc "alt" (printf "%s Logo" .Params.featured_image.title )) }}
             </div>
             <figcaption>
-              {{ .caption }}<br/><br/>
-              {{ with .Params.memory_alpha_url }}
-              <div>
-                <a href="{{ . }}" target="new">{{ . }}<a>
-              </div>
-            {{ end }}      
+              {{ .Params.featured_image.caption }}
             </figcaption>
           </figure>
         {{ end }}
+
       </div>
       <div>
         <h1>{{ .Title }}</h1>
@@ -94,6 +90,16 @@
           <div>
         </div>
       </div>
+      {{ with .Params.memory_alpha_url }}
+      <div>
+        <a href="{{ . }}" target="new">{{ . }}<a>
+      </div>
+      {{ end }}
+      {{ with .Params.primary_reference }}
+        <div>
+          {{ . | markdownify }}
+        </div>
+      {{ end }}
       {{ partial "components/share-buttons.html" . }}
     </div>
 
