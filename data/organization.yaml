@@ -9,7 +9,27 @@ headerLogo: https://res.cloudinary.com/startrekdesignproject-com/image/upload/v1
 footerLogo: https://res.cloudinary.com/startrekdesignproject-com/image/upload/v1551248815/STDP_HeaderLogo.svg
 defaultHeroImage: ''
 defaultHeroAlt: ''
-marketingBlocks: []
+marketingBlocks:
+- template: block-columns
+  contrast: Lighten
+  classList: columns
+  layout: block-columns
+  title: Legal
+  textColor: White
+  columns:
+  - template: text-column
+    content: |-
+      Star Trek, Star Trek: The Animated Series, Star Trek: The Next Generation, Star Trek: Deep Space Nine, Star Trek: Voyager, Star Trek: Enterprise, and Star Trek: Discovery are all registered trademarks of CBS Corporation. Star Trek: The Motion Picture, Star Trek II: The Wrath of Khan, Star Trek III: The Search for Spock, Star Trek IV: The Voyage Home, Star Trek V: The Final Frontier, Star Trek VI: The Undiscovered Country, Star Trek: First Contact, Star Trek: Generations, Star Trek: Nemesis, Star Trek, Star Trek Into Darkness and Star Trek Beyond are all registered trademarks of Paramount. The Star Trek Design Project is in no way affiliated with or endorsed by CBS or Paramount.
+
+      The ST Design Project offers no suggestion that the work presented on this web page is “official” or produced or sanctioned by the owner of the aforementioned trademarks. The ST Design Project will take all steps necessary to ensure that any usage of trademarked items in no way confuses the audience of this site as to its origin. The ST Design Project makes no claim to own Star Trek or any of the names related to it. Images that are displayed on this site are copyrighted to Paramount Pictures, in the case of screen shots. Visitors may download any pictures displayed on this site for personal use, as long as they are not used for profit, and proper credit is given.
+
+      The ST Design Project is intended for personal and non-profit use only. Content posted on The Star Trek Design Project is licensed under the Creative Commons Attribution Noncommercial license. I simply want to embrace and extend the cataloging of Star Trek imagery for all to appreciate.
+  showTitle: false
+  fullWidth: false
+  bgColor: ''
+  useBgImage: false
+  bgImage: ''
+  textAlign: ''
 signUpText: ''
 blogName: "/blog"
 defaultFeaturedImage: ''
