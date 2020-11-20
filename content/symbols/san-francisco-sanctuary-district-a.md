@@ -18,7 +18,8 @@ time_period: 2000s
 universes:
 - Prime
 memory_alpha_url: https://memory-alpha.fandom.com/wiki/Sanctuary_District_A
-affiliations: Earth
+affiliations:
+  - Earth
 
 ---
 ## Canon Images

@@ -17,7 +17,8 @@ time_period: 2100s
 universes:
 - Prime
 memory_alpha_url: https://memory-alpha.fandom.com/wiki/Earth-Saturn_probe
-affiliations: Earth
+affiliations:
+  - Earth
 designers:
 - Mike Okuda
 

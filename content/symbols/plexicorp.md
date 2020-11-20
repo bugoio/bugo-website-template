@@ -17,7 +17,8 @@ time_period: 2000s
 universes:
 - Prime
 memory_alpha_url: https://memory-alpha.fandom.com/wiki/Plexicorp
-affiliations: Earth
+affiliations:
+  - Earth
 
 ---
 ## Canon Images
