@@ -1,17 +1,16 @@
 {{ $id := partial "getBlockId" . }}
-<div id="block-{{ $id }}" {{partial "getBlockClass" . | safeHTMLAttr }}>
+<div id="block-{{ $id }}" data-api="{{ .block.url }}/index.json" data-qty="4" {{partial "getBlockClass" . | safeHTMLAttr }}>
   <div class="container">
-    <h2 class="h1">Knowledge. Experience. Passion.<br/>
-      Meet the reasons why our clients sleep better at night.</h2>
-    <div class="flex three"></div>
-    <div>
+    <h2>Or Go Rando</h2>
+    <div class="flex four"></div>
+    {{/*  <div>
       {{ if .block.url }}
-      <a href="{{ .block.url }}" class="button-outline">
-        See All {{ .block.title | title }}
+      <a href="{{ .block.url }}" class="button">
+        See All Symbols
       </a>
       {{ end }}
     </div>
-  </div>
+  </div>  */}}
   <template id="random-post-template">
     <div class="post">
       <a class="post-thumbnail rounded"></a>

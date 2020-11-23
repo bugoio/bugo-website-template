@@ -33,7 +33,7 @@ $breakpoints: (
     breakpoint: 600px,
   ),
   md: (
-    breakpoint: 768px,
+    breakpoint: 700px,
   ),
   lg: (
     breakpoint: 1000px,
@@ -64,10 +64,10 @@ $line-height: 1.7;
 $container-w-xs: 90%;
 $container-w-sm: 90%;
 $container-w-md: 90%;
-$container-w-lg: 90%;
-$container-w-xl: 90%;
-$container-w-xxl: 90%;
-$container-w-xxxl: 90%;
+$container-w-lg: 80%;
+$container-w-xl: 80%;
+$container-w-xxl: 70%;
+$container-w-xxxl: 65%;
 
 
 // Spacing
@@ -109,6 +109,8 @@ $space-10: 10;
 $grid-space: var(--space-max);
 $vertical: $grid-space;
 $horizontal: $grid-space;
+$grid-sizes: 500 600 700 800 900 1000 1100 1200 1300 1400 1500 1600 1700 1800 1900 2000 2100 2200;
+
 
 // Button
 $button-radius: $radius;
@@ -207,7 +209,7 @@ $tooltip-size: .8em;
 // Offcanvas
 $offcanvas-bg: transparent;
 $canvas-bg: transparent;
-$offcanvasMobileHeight: 600px;
+$offcanvasMobileHeight: 0px;
 
 // Desktop
 $desktop-bp: lg;
@@ -215,7 +217,7 @@ $desktop-bp: lg;
 // Header
 $header-bg: transparent; 
 $header-color: $white;
-$header-brand-w: 25%;
+$header-brand-w: 50%;
 $header-brand-w-desktop: 33%;
 $header-padding: var(--space) 0;
 

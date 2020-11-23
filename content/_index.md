@@ -44,6 +44,7 @@ contentBlocks:
   - template: block-random-posts
     title: Or Go Rando
     url: "/symbols/"
+    textAlign: Center
   - template: block-columns
     contrast: Lighten
     classList: columns

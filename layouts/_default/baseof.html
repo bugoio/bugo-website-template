@@ -89,7 +89,7 @@
     </script>
     {{- partial "components/skip-menu" . -}}
     <div id="offcanvas">
-      <a href="#" class="close">
+      {{/*  <a href="#" class="close">
         {{ partial "icons/angle-up" . }}
         <span class="sr-only">Close</span>
       </a>
@@ -100,7 +100,7 @@
             {{ partial "forms/search-form-inline" . }}
           {{ end }}
         </div>  
-      </div>
+      </div>  */}}
       <div id="canvas" aria-label="Content" tabindex="0">
         {{- partial "components/message" (dict "id" "no-js-warning" "classes" "global-message bg-danger text-white" "content" "This site is best viewed with javascript turned on.") -}}
         {{- partial "components/message" (dict "id" "msie-warning" "classes" "global-message bg-danger text-white" "content" "This site uses features not supported by Internet Explorer.") -}}

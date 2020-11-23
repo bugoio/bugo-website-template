@@ -5742,10 +5742,10 @@ springboard-css@^0.4.33:
     normalize.css "^8.0.1"
     springboard-css "^0.4.33"
 
-springboard-css@^0.5.2:
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/springboard-css/-/springboard-css-0.5.2.tgz#75069769b4badcac1c2f6688887d0363118db508"
-  integrity sha512-PwGQfw2fBTwPbvV+aMvJC1L2bzWK+JIujVcMTKgSF4+VJuALruqwAbBo9v5bia1Xp0Uem9e6CZhRHPWUCzJH0A==
+springboard-css@^0.5.3:
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/springboard-css/-/springboard-css-0.5.3.tgz#9273ce0ef60ed048b7b514360ff602b5bad2e05a"
+  integrity sha512-WKwLJfkC399DyXT2xjjCGgveymaviphenzKP6jbjvEEmlAZPKacqWsMDrv7JTeWN9Huxz8tr++FfFvtZXmrUew==
   dependencies:
     breakpoint-sass "^2.7.1"
     caniuse-lite "^1.0.30001050"

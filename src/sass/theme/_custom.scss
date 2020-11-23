@@ -180,3 +180,10 @@ body.section .sort-buttons button {
     }
   }
 }
+
+body.home .button a{
+  border: var(--space--5) solid config.$white;
+  padding: var(--space--2);
+  font-weight: bold;
+  text-transform: uppercase;
+}

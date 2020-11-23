@@ -1,0 +1,15 @@
+{{ $scratch := newScratch }}
+{{ $scratch.Set "thumbnail" false }}
+{{ with .Params.featured_image.image }}
+  {{ $scratch.Set "thumbnail" (replaceRE "\n" "" (partial "components/thumbnail" . )) }}
+{{ end }}
+
+{
+  "name": "{{ .Title }}",
+  "permalink" : "{{ .Permalink }}",
+  "params" : {{ .Params | jsonify }},
+  "featured" : {{ .Params.featured_image.image | jsonify }}
+  {{ with $scratch.Get "thumbnail" }}
+  ,"thumbnail": "{{ . | htmlEscape }}"
+  {{ end }}
+}

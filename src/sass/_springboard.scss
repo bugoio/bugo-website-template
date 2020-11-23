@@ -29,7 +29,8 @@
   $with: (
     'grid-space': config.$grid-space,
     'vertical': config.$vertical,
-    'horizontal': config.$horizontal
+    'horizontal': config.$horizontal,
+    'grid-sizes': config.$grid-sizes
   )
 );
 
