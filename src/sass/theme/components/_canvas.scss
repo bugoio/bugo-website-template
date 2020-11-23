@@ -26,7 +26,7 @@
 
   @include utility.respond-to(config.$mobile-hamburger-bp){  
     &:not(:target){
-      margin-top: calc((var(--space-max)*4)*-1);
+      // margin-top: calc((var(--space-max)*4)*-1);
       transform: translateZ(0);
       transition: config.$transition;
     }
