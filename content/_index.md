@@ -36,7 +36,7 @@ contentBlocks:
       content: |-
         ![](https://res.cloudinary.com/startrekdesignproject-com/image/upload/v1558222570/STDP_LogoBug2.svg)
 
-        # <small>ONE MILDLY OBSESSIVE GOAL:</small>The most accurate & complete Star Trek symbol database.
+        # <small>ONE MILDLY OBSESSIVE GOAL:</small>The Most Accurate & Complete Star Trek Symbol Database.
   - template: block-taxonomy-navigation
     layout: taxonomy-navigation
   - template: block-random-posts
