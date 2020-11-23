@@ -179,7 +179,7 @@ contentBlocks:
     bgImage: ''
   - template: block-columns
     contrast: Lighten
-    classList: columns
+    classList: columns thanks
     layout: block-columns
     title: Thanks
     columns:
