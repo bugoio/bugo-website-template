@@ -45,10 +45,10 @@
 {{ $webpSrcs := slice $smWebp $mdWebp $lgWebp $xlWebp $xxlWebp $xxxlWebp }}
 {{ $webpSrc := printf "<source type='image/webp' srcset='%s'><source srcset='%s' type='image/webp'>" $smWebp $smURL }}
 {{ $webpSrcMd := printf "<source type='image/webp' media='(max-width:480px)' data-srcset='%s'  type='image/webp'>" $mdWebp }}
-{{ $webpSrcLg := printf "<source type='image/webp' media='(max-width:1024px)' data-srcset='%s'>" $lgWebp }}
-{{ $webpSrcXl := printf "<source type='image/webp' media='(max-width:1200px)' data-srcset='%s'>" $xlWebp }}
-{{ $webpSrcXxl := printf "<source type='image/webp' media='(max-width:1400px)' data-srcset='%s'>" $xxlWebp }}
-{{ $webpSrcXxxl := printf "<source type='image/webp' media='(max-width:3000px)' data-srcset='%s'>" $xxxlWebp }}
+{{ $webpSrcLg := printf "<source type='image/webp' media='(max-width:1024px)' data-srcset='%s' type='image/webp'>" $lgWebp }}
+{{ $webpSrcXl := printf "<source type='image/webp' media='(max-width:1200px)' data-srcset='%s' type='image/webp'>" $xlWebp }}
+{{ $webpSrcXxl := printf "<source type='image/webp' media='(max-width:1400px)' data-srcset='%s' type='image/webp'>" $xxlWebp }}
+{{ $webpSrcXxxl := printf "<source type='image/webp' media='(max-width:3000px)' data-srcset='%s' type='image/webp'>" $xxxlWebp }}
 {{ $webpSrcSet := printf "%s %s  %s %s %s" $webpSrcMd $webpSrcLg $webpSrcXl $webpSrcXxl $webpSrcXxxl | safeHTML }}
 {{ $dataWebpSrc := printf "data-src='%q'" $smURL | safeHTMLAttr }}
 {{ $dataWebpSrcSet := printf "data-srcset='%s 200w, %s 300w, %s 640w, %s 720w, %s 862w, %s 1024w'" $smWebp $mdWebp $lgWebp $xlWebp $xxlWebp $xxxlWebp | safeHTMLAttr }}

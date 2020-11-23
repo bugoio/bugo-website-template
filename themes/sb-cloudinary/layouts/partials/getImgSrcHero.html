@@ -45,13 +45,13 @@
 {{ $sizes := "sizes='(max-width:1024px) 480px,(max-width:1200px) 1024px,(max-width:1400px) 1200px,(max-width:1600px) 1400px,(max-width:2000px) 2000px'" | safeHTMLAttr }}
 
 {{ $webpSrcs := slice $smWebp $mdWebp $lgWebp $xlWebp $xxlWebp $xxxlWebp }}
-{{ $webpSrc := printf "<source type='image/webp' srcset='%s'><source srcset='%s'>" $smWebp $smURL }}
-{{ $webpSrcMd := printf "<source type='image/webp' media='(max-width:480px)' srcset='%s' >" $mdWebp }}
-{{ $webpSrcMd := printf "<source type='image/webp' media='(max-width:480px)' srcset='%s' >" $mdWebp }}
-{{ $webpSrcLg := printf "<source type='image/webp' media='(max-width:1024px)' srcset='%s'>" $lgWebp }}
-{{ $webpSrcXl := printf "<source type='image/webp' media='(max-width:1200px)' srcset='%s'>" $xlWebp }}
-{{ $webpSrcXxl := printf "<source type='image/webp' media='(max-width:1400px)' srcset='%s'>" $xxlWebp }}
-{{ $webpSrcXxxl := printf "<source type='image/webp' media='(max-width:3000px)' srcset='%s'>" $xxxlWebp }}
+{{ $webpSrc := printf "<source type='image/webp' srcset='%s'><source srcset='%s' type='image/webp'>" $smWebp $smURL }}
+{{ $webpSrcMd := printf "<source type='image/webp' media='(max-width:480px)' srcset='%s'  type='image/webp'>" $mdWebp }}
+{{ $webpSrcMd := printf "<source type='image/webp' media='(max-width:480px)' srcset='%s' type='image/webp' >" $mdWebp }}
+{{ $webpSrcLg := printf "<source type='image/webp' media='(max-width:1024px)' srcset='%s' type='image/webp'>" $lgWebp }}
+{{ $webpSrcXl := printf "<source type='image/webp' media='(max-width:1200px)' srcset='%s' type='image/webp'>" $xlWebp }}
+{{ $webpSrcXxl := printf "<source type='image/webp' media='(max-width:1400px)' srcset='%s' type='image/webp'>" $xxlWebp }}
+{{ $webpSrcXxxl := printf "<source type='image/webp' media='(max-width:3000px)' srcset='%s' type='image/webp'>" $xxxlWebp }}
 {{ $webpSrcSet := printf "%s %s  %s %s %s" $webpSrcMd $webpSrcLg $webpSrcXl $webpSrcXxl $webpSrcXxxl | safeHTML }}
 
 {{ return (dict "url" . "src" $src "srcset" $srcset "dataSrc" $dataSrc "dataSrcset" $dataSrcSet "sizes" $sizes "webpSrc" $webpSrc "webpSrcSet" $webpSrcSet "dataWebpSrc" $webpSrc "dataWebpSrcSet" $webpSrcSet "webpSrcs" $webpSrcs) }}
