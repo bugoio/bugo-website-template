@@ -11,12 +11,12 @@
     Share:
   </span>
   <!-- Twitter -->
-  <button class="share-button" data-sharer="twitter" data-title="{{ .Title }}" data-url="{{ .Permalink }}" aria-label="Share on Twitter">
+  <button class="share-button" data-sharer="twitter" data-title="{{ .Title }}" data-url="{{ .Permalink | absURL }}" aria-label="Share on Twitter">
       {{ partial "icons/twitter" . }}
   </button>
 
   <!-- Facebook -->
-  <button class="share-button" data-sharer="facebook" data-url="{{ .Permalink }}" aria-label="Share on Facebook">
+  <button class="share-button" data-sharer="facebook" data-url="{{ .Permalink | absURL }}" aria-label="Share on Facebook">
     {{ partial "icons/facebook" }}
   </button>
   {{/*  <a href="http://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="new" class="btn share-btn facebook" title="Share on Faecbook (Opens in a new window)" aria-label="Share on Faecbook (Opens in a new window)" tabindex="0">
@@ -25,7 +25,7 @@
   </a>  */}}
 
   <!-- LinkedIn -->
-  <button class="share-button" data-sharer="linkedin" data-url="{{ .Permalink }}" aria-label="Share on LinkedIn">
+  <button class="share-button" data-sharer="linkedin" data-url="{{ .Permalink | absURL }}" aria-label="Share on LinkedIn">
       {{ partial "icons/linkedin" (slice "linkedin" "icon-small")}}
   </button>
 
@@ -38,7 +38,7 @@
     class="share-button"
     data-sharer="email"
     data-title="{{ .Title }}"
-    data-url="{{ .Permalink }}"
+    data-url="{{ .Permalink | absURL }}"
     data-subject="Hey! Check this out: {{ .Title }}"
     data-to="some@email.com"
     aria-label="Share by email"

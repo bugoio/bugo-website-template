@@ -1,11 +1,11 @@
 {{ define "main" }}
   <main id="main" class="main-single" aria-label="Main Content" tabindex="0">
-    <div class="meta-data flex two">
-      <div class="two-third">
+    <div class="meta-data flex one two-1000">
+      <div class="two-third-1000">
         {{ if .Params.featured_image }}
           <figure>
             {{ $imgSrc := partial "getImgLgSrc" .Params.featured_image.image }}
-            <div>
+            <div class="">
               {{ partial "picture" (dict "imgSrc" $imgSrc "alt" (printf "%s Logo" .Params.featured_image.title )) }}
             </div>
             <figcaption>
@@ -15,14 +15,14 @@
         {{ end }}
 
       </div>
-      <div class="third meta-data">
+      <div class="third-1000 meta-data">
         <h1>{{ .Title }}</h1>
-        <div class="flex one two-800">
+        <div class="flex two">
           {{ with .Params.affiliations }}
-            <div>
+            <div class="third">
               Affiliation:
             </div>
-            <div>
+            <div class="">
               {{ range . }}
                 {{ . }}<br/>
               {{ end }}
@@ -30,27 +30,27 @@
           {{ end }}
     
           {{ with .Params.quadrant }}
-            <div>
+            <div class="third">
               Quadrant:
             </div>
-            <div>
+            <div class="">
                 {{ . }}<br/>
             </div>         
           {{ end }}
     
           {{ with .Params.time_period }}
-            <div>
+            <div class="third">
               Time Period:
             </div>
-            <div>
+            <div class="">
                 {{ . }}<br/>
             </div>         
           {{ end }}
           {{ with .Params.universes }}
-          <div>
+          <div class="third">
             Universe:
           </div>
-          <div>
+          <div class="">
             {{ range . }}
               {{ . }}<br/>
             {{ end }}
@@ -58,10 +58,10 @@
         {{ end }}
     
         {{ with .Params.designers }}
-            <div>
+            <div class="third">
               Designers:
             </div>
-            <div>
+            <div class="">
               {{ range . }}
                 {{ . }}<br/>
               {{ end }}
@@ -69,37 +69,37 @@
           {{ end }}
     
           {{ with .Params.franchise }}
-            <div>
+            <div class="third">
               Franchise:
             </div>
-            <div>
+            <div class="">
               {{ . }}
             </div>         
           {{ end }}
             
           {{ with .Params.types }}
-            <div>
+            <div class="third">
               Types:
             </div>
-            <div>
+            <div class="">
               {{ range . }}
                 {{ . }}<br/>
               {{ end }}
             </div>         
           {{ end }}
-          <div>
+          <div class="">
           {{ with .Params.primary_reference }}
-            <div>
+            <div class="third">
               Reference:
             </div>
-            <div>
+            <div class="">
               {{ . | markdownify }}
             </div>
           {{ end }}
         </div>
       </div>
       {{ with .Params.memory_alpha_url }}
-      <div>
+      <div class="">
         <a href="{{ . }}" target="new">{{ . }}<a>
       </div>
       {{ end }}
