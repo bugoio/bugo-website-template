@@ -41,6 +41,9 @@ contentBlocks:
         # The most accurate & complete Star Trek symbol database.
   - template: block-taxonomy-navigation
     layout: taxonomy-navigation
+  - template: block-random-posts
+    title: Or Go Rando
+    url: "/symbols/"
   - template: block-columns
     contrast: Lighten
     classList: columns
