@@ -157,7 +157,7 @@ contentBlocks:
     textAlign: ''
   - template: block-columns
     contrast: Lighten
-    classList: columns
+    classList: columns thanks
     layout: block-columns
     columns:
     - template: text-column
@@ -169,13 +169,7 @@ contentBlocks:
         **Most importantly, the designers of this influential graphic design genre need to receive credit. If you are/were a designer of any of marks or know designers how were, please let me know.**
 
         [Get In Touch](mailto:bradwilder@gmail.com)
-
-        A special thank you to:
-
-        Gary O’Neill for his invaluable research and input on many of the marks in the collection. His work can be found at [gazomg-trek-art.blogspot.com](https://startrekdesignproject.com/gazomg-trek-art.blogspot.com "Gazomg")
-
-        Jörg Hillebrand for incredibly deep knowledge of and research into Star Trek symbols. His work can be found at [Ex Astris Scientia](http://www.ex-astris-scientia.org/ "Ex Astris Scientia").
-    title: Contributing & Thanks
+    title: Contributing
     fullWidth: true
     bgColor: Black
     textColor: White
