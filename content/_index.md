@@ -177,6 +177,26 @@ contentBlocks:
     showTitle: false
     useBgImage: false
     bgImage: ''
+  - template: block-columns
+    contrast: Lighten
+    classList: columns
+    layout: block-columns
+    title: Thanks
+    columns:
+    - template: text-column
+      content: |-
+        A special thank you to:
+
+        Gary O’Neill for his invaluable research and input on many of the marks in the collection. His work can be found at [gazomg-trek-art.blogspot.com](https://startrekdesignproject.com/gazomg-trek-art.blogspot.com "Gazomg")
+
+        Jörg Hillebrand for incredibly deep knowledge of and research into Star Trek symbols. His work can be found at [Ex Astris Scientia](http://www.ex-astris-scientia.org/ "Ex Astris Scientia").
+    showTitle: false
+    fullWidth: false
+    bgColor: ''
+    textColor: ''
+    useBgImage: false
+    bgImage: ''
+    textAlign: ''
 pageOptions:
   showSidebar: false
   hideMarketingBlock: false
