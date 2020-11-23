@@ -27,7 +27,7 @@ contentBlocks:
     showTitle: false
     fullWidth: true
     bgColor: ''
-    textColor: white
+    textColor: ''
     useBgImage: false
     bgImage: ''
     textAlign: Center
@@ -36,9 +36,7 @@ contentBlocks:
       content: |-
         ![](https://res.cloudinary.com/startrekdesignproject-com/image/upload/v1558222570/STDP_LogoBug2.svg)
 
-        **ONE MILDLY OBSESSIVE GOAL:**
-
-        # The most accurate & complete Star Trek symbol database.
+        # <small>ONE MILDLY OBSESSIVE GOAL:</small>The most accurate & complete Star Trek symbol database.
   - template: block-taxonomy-navigation
     layout: taxonomy-navigation
   - template: block-random-posts
