@@ -157,7 +157,7 @@ contentBlocks:
     textAlign: ''
   - template: block-columns
     contrast: Lighten
-    classList: columns thanks
+    classList: columns contributing
     layout: block-columns
     columns:
     - template: text-column
