@@ -10,7 +10,7 @@ var element = document.getElementById("section-list");
 //If it isn't "undefined" and it isn't "null", then it exists.
 if(typeof(element) != 'undefined' && element != null){
   var options = {
-    valueNames: [ 'name','date' ]
+    valueNames: [ 'name','date','time-period' ]
   };
   
   var sortList = new List('section-list', options);

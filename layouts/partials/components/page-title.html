@@ -1,0 +1,16 @@
+<div class="page-title">
+  <div class="container">
+    <h1>
+      {{ if eq .Page.Kind "term"}}
+      {{ .Data.Plural | title }}: 
+    {{ end }}
+    {{ .Title | title }}
+    {{ with .Pages }}
+      ({{ len . }})
+    {{ end }}
+    </h1>
+    {{ with .Description }}
+      <p>{{ . }}</p>
+    {{ end }}
+  </div>  
+</div>

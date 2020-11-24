@@ -1,12 +1,12 @@
 {{ define "hero" }}
-  
+  {{ partial "components/page-title" . }}
 {{ end}}
 
 {{ define "main" }}
 {{ $scratch := newScratch }}
 {{ $site := .Site }}
   <main id="main" aria-label="Main Content" tabindex="0">
-    <h1>{{ .Title }}</h1>
+    
     <div id="filters">
     </div>
     {{ .Content }}
@@ -21,8 +21,8 @@
         <button class="sort" data-sort="name">
           Sort by Name
         </button>  
-        <button class="sort" data-sort="date">
-          Sort by Publish Date
+        <button class="sort" data-sort="time-period">
+          Sort by Time Period
         </button>  
       </div>
       </div>
@@ -42,8 +42,7 @@
                   {{ end }}
                   <header class="text-center">
                     <div class="name">{{ .Title | title }}</div>
-                    <div class="date sr-only" aria-hidden="true">{{ (time .Date).Unix }}</div>
-  
+                    <div class="time-period sr-only" aria-hidden="true">{{ .Params.time_period }}</div>
                   </header>
                   {{ with .Description }}
                   <footer class="summary">

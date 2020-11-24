@@ -1,12 +1,11 @@
 {{ define "hero" }}
-  
+  {{ partial "components/page-title" . }}
 {{ end}}
 
 {{ define "main" }}
 {{ $scratch := newScratch }}
 {{ $site := .Site }}
   <main id="main" aria-label="Main Content" tabindex="0">
-    <h1>{{ .Title }}</h1>
     <div id="filters">
     </div>
     {{ .Content }}

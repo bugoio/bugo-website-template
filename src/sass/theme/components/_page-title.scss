@@ -2,7 +2,7 @@
 @use '../utility';
 .page-title {
   h1 {
-    @include utility.mod(font-size,4);
+    font-size: var(--space-3);
     line-height: 1;
     font-weight: 800;
   }
