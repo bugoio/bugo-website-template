@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Enterprise
 primary_reference: S02E14 "[Stigma](https://memory-alpha.fandom.com/wiki/Stigma
   "Stigma")"

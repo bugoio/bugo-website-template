@@ -15,7 +15,7 @@ universes:
 affiliations:
 - Earth
 types:
-- Restaurant/Company
+- Commerce
 franchise: Enterprise
 primary_reference: S03E11 [Carpenter Street](https://memory-alpha.fandom.com/wiki/Carpenter_Street_(episode)
   "Carpenter Street (episode)")

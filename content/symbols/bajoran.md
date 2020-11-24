@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Bajor
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Deep Space 9
 primary_reference: S06E07 "[You Are Cordially Invited](https://memory-alpha.fandom.com/wiki/You_Are_Cordially_Invited
   "You Are Cordially Invited")"

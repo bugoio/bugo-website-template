@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: The Next Generation
 primary_reference: S01E05 "[The Last Outpost](https://memory-alpha.fandom.com/wiki/The_Last_Outpost
   "The Last Outpost")"

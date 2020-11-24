@@ -15,7 +15,7 @@ universes:
 affiliations:
 - Vidiian
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Voyager
 primary_reference: S01E14 [Faces](https://memory-alpha.fandom.com/wiki/Faces_(episode)
   "Faces (episode)")

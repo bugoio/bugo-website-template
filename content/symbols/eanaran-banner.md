@@ -14,7 +14,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Flag/Banner
+- flag & banner
 franchise: Voyager
 primary_reference: S03E06 [Remember](https://memory-alpha.fandom.com/wiki/Remember_(episode)
   "Remember (episode)")

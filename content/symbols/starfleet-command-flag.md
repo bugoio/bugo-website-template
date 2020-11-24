@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Starfleet
 types:
-- Flag/Banner
+- flag & banner
 franchise: TOS
 primary_reference: S01E15 "[The Menagerie, Part I](https://memory-alpha.fandom.com/wiki/The_Menagerie,_Part_I
   "The Menagerie, Part I (episode)")"

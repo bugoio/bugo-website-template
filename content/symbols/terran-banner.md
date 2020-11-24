@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Terran Empire
 types:
-- Flag/Banner
+- flag & banner
 franchise: Discovery
 primary_reference: S01E12 "[Vaulting Ambition](https://memory-alpha.fandom.com/wiki/Vaulting_Ambition
   "Vaulting Ambition (episode)")"

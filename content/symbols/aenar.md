@@ -14,7 +14,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- "Species & Civilization"
 franchise: Enterprise
 primary_reference: S04E14 "[The Aenar](https://memory-alpha.fandom.com/wiki/The_Aenar
   "The Aenar")"

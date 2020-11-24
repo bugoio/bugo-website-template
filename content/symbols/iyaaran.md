@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: The Next Generation
 primary_reference: S07E02 "[Liaisons](https://memory-alpha.fandom.com/wiki/Liaisons
   "Liaisons")"

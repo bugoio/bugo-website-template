@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: TAS
 primary_reference: S01E16 "[The Jihad](https://memory-alpha.fandom.com/wiki/The_Jihad
   "The Jihad")"

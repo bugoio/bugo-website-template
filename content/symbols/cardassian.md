@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Cardassian Union
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Deep Space 9
 primary_reference: S06E19 "[In the Pale Moonlight](https://memory-alpha.fandom.com/wiki/In_the_Pale_Moonlight
   "In the Pale Moonlight")"

@@ -15,7 +15,7 @@ universes:
 affiliations:
 - Earth
 types:
-- Restaurant/Company
+- Commerce
 franchise: Enterprise
 primary_reference: S02E24 [First Flight](https://memory-alpha.fandom.com/wiki/First_Flight "First Flight (episode)")
 designer: ''

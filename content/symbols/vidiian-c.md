@@ -15,7 +15,7 @@ universes:
 affiliations:
 - Vidiian
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Voyager
 primary_reference: S01E05 [Phage](https://memory-alpha.fandom.com/wiki/Phage_(episode)
   "Phage (episode)")

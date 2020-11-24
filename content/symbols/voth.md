@@ -9,7 +9,7 @@ featured_image:
   caption: ''
   alt: ''
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Voyager
 primary_reference: S03E23 "Distant Origin"
 quadrants: Delta

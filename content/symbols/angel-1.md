@@ -14,7 +14,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: The Next Generation
 primary_reference: S01E14 "[Angel One](https://memory-alpha.fandom.com/wiki/Angel_One
   "Angel One")"

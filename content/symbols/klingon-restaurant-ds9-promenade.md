@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Klingon Empire
 types:
-- Restaurant/Company
+- Commerce
 franchise: Deep Space 9
 primary_reference: S02E17 "[Playing God](https://memory-alpha.fandom.com/wiki/Playing_God
   "Playing God")"

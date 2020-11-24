@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: The Next Generation
 primary_reference: S03E21 "[Hollow Pursuits](https://memory-alpha.fandom.com/wiki/Hollow_Pursuits
   "Hollow Pursuits")"

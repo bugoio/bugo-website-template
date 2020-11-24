@@ -14,7 +14,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Flag/Banner
+- flag & banner
 - DS9 Promenade
 franchise: Deep Space 9
 primary_reference: S02E11 [Rivals](https://memory-alpha.fandom.com/wiki/Rivals_(episode)

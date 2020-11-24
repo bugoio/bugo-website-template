@@ -15,7 +15,7 @@ universes:
 affiliations:
 - Freecloud
 types:
-- Restaurant/Company
+- Commerce
 franchise: Picard
 primary_reference: S01E05 "[Stardust City Rag](https://memory-alpha.fandom.com/wiki/Stardust_City_Rag_(episode)
   "Stardust City Rag (episode)")"

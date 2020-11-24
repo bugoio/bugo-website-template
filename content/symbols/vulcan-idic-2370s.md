@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Vulcan
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Deep Space 9
 primary_reference: S01E12 "[Vortex](https://memory-alpha.fandom.com/wiki/Vortex
   "Vortex")"

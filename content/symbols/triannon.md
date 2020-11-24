@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Enterprise
 primary_reference: S03E12 "[Chosen Realm](https://memory-alpha.fandom.com/wiki/Chosen_Realm
   "Chosen Realm")"

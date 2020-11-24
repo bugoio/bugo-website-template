@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Discovery
 primary_reference: S02E08 "[If Memory Serves](https://memory-alpha.fandom.com/wiki/If_Memory_Serves
   "If Memory Serves")"

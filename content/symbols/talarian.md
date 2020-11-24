@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: ''
 primary_reference: S04E04 "[Suddenly Human](https://memory-alpha.fandom.com/wiki/Suddenly_Human
   "Suddenly Human")"

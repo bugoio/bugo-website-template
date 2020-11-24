@@ -15,7 +15,7 @@ universes:
 affiliations:
 - Capellan
 types:
-- Flag/Banner
+- flag & banner
 franchise: TOS
 primary_reference: S02E03 [Friday's Child](https://memory-alpha.fandom.com/wiki/Friday%27s_Child_(episode)
   "Friday's Child (episode)")

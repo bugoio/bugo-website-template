@@ -14,7 +14,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: TOS
 primary_reference: S03E03 "[The Paradise Syndrome](https://memory-alpha.fandom.com/wiki/The_Paradise_Syndrome
   "The Paradise Syndrome")"

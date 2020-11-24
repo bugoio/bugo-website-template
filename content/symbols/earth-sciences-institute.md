@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Earth
 types:
-- Science/Research
+- Science & Research
 franchise: Enterprise
 primary_reference: S02E23 "Regeneration
 designer: ''

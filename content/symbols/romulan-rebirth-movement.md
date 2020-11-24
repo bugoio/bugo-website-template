@@ -15,7 +15,7 @@ universes:
 affiliations:
 - Romulan Star Empire
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Picard
 primary_reference: S01E04 [Absolute Candor](https://memory-alpha.fandom.com/wiki/Absolute_Candor_(episode)
   "Absolute Candor (episode)")

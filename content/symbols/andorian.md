@@ -15,7 +15,7 @@ universes:
 affiliations:
 - Andoria
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Enterprise
 primary_reference: S03E13 "[Proving Ground](https://memory-alpha.fandom.com/wiki/Proving_Ground
   "Proving Ground")"

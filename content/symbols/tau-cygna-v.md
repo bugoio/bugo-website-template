@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Earth
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: The Next Generation
 primary_reference: S03E02 "[The Ensigns of Command](https://memory-alpha.fandom.com/wiki/The_Ensigns_of_Command
   "The Ensigns of Command")"

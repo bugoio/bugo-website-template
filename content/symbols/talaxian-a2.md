@@ -9,7 +9,7 @@ featured_image:
   caption: Talaxian A3
   alt: ''
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Voyager
 primary_reference: S03E03 "[The Chute](https://memory-alpha.fandom.com/wiki/The_Chute
   "The Chute (episode)")"

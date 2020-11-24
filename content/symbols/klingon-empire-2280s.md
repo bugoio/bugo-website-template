@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Klingon Empire
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Movies
 primary_reference: '[Star Trek IV: The Voyage Home](https://memory-alpha.fandom.com/wiki/Star_Trek_IV:_The_Voyage_Home
   "Star Trek IV: The Voyage Home")'

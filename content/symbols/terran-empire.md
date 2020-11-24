@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Terran Empire
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Enterprise
 primary_reference: S04E18 "[In a Mirror, Darkly](https://memory-alpha.fandom.com/wiki/In_a_Mirror,_Darkly
   "In a Mirror, Darkly")"

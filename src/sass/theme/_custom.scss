@@ -190,7 +190,13 @@ body.home {
       font-weight: bold;
       text-transform: uppercase;
     }
-  }  
+  }
+
+  .nav-taxonomies {
+    a {
+      text-transform: uppercase;
+    }
+  }
 }
 
 figure {

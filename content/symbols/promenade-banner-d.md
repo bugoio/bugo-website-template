@@ -14,7 +14,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Flag/Banner
+- flag & banner
 - DS9 Promenade
 franchise: Deep Space 9
 primary_reference: S02E09 [Second Sight](https://memory-alpha.fandom.com/wiki/Second_Sight_(episode)

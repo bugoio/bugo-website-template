@@ -13,7 +13,7 @@ universes:
 affiliations:
 - UFP
 types:
-- Flag/Banner
+- flag & banner
 franchise: TOS
 primary_reference: S03E05 "[And the Children Shall Lead](https://memory-alpha.fandom.com/wiki/And_the_Children_Shall_Lead
   "And the Children Shall Lead")"

@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: The Next Generation
 primary_reference: S01E19 "[Coming of Age](https://memory-alpha.fandom.com/wiki/Coming_of_Age
   "Coming of Age")"

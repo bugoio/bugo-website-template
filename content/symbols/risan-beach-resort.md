@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Risa
 types:
-- Restaurant/Company
+- Commerce
 franchise: Voyager
 primary_reference: S07E06 "[Inside Man](https://memory-alpha.fandom.com/wiki/Inside_Man
   "Inside Man")"

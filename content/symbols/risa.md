@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Risa
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: The Next Generation
 primary_reference: S03E19 "[Captain's Holiday](https://memory-alpha.fandom.com/wiki/Captain%27s_Holiday
   "Captain's Holiday")"

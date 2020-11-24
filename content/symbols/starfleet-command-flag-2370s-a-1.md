@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Starfleet
 types:
-- Flag/Banner
+- flag & banner
 franchise: Deep Space 9
 primary_reference: S06E04 "[Behind the Lines](https://memory-alpha.fandom.com/wiki/Behind_the_Lines
   "Behind the Lines (episode)")"

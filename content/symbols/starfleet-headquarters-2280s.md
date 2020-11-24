@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Starfleet
 types:
-- Seal/Shield
+- Seal & Shield
 franchise: Movies
 primary_reference: '[Star Trek III: The Search for Spock](https://memory-alpha.fandom.com/wiki/Star_Trek_III:_The_Search_for_Spock
   "Star Trek III: The Search for Spock")'

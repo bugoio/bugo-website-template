@@ -14,7 +14,7 @@ affiliations:
 - Starfleet
 types:
 - DS9 Promenade
-- Science/Research
+- Science & Research
 franchise: Deep Space 9
 primary_reference: S05E12 "[The Begotten](https://memory-alpha.fandom.com/wiki/The_Begotten
   "The Begotten (episode)")"

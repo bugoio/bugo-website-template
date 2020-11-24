@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Voyager
 primary_reference: S07E08 "[Nightingale](https://memory-alpha.fandom.com/wiki/Nightingale
   "Nightingale")"

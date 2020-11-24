@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Starfleet
 types:
-- Seal/Shield
+- Seal & Shield
 franchise: Picard
 primary_reference: Offical Trailer
 designer: ''

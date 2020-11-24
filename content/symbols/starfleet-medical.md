@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Starfleet
 types:
-- Science/Research
+- Science & Research
 franchise: Enterprise
 primary_reference: S01E01 "Broken Bow"
 designer: ''

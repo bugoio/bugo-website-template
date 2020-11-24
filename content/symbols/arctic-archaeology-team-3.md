@@ -16,7 +16,7 @@ affiliations:
 - Earth
 types:
 - Mission Patch
-- Science/Research
+- Science & Research
 franchise: Enterprise
 primary_reference: S02E23 "[Regeneration](https://memory-alpha.fandom.com/wiki/Regeneration
   "Regeneration")"

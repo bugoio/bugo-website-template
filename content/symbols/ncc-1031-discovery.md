@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Starfleet
 types:
-- Seal/Shield
+- Seal & Shield
 - Starship
 franchise: Discovery
 primary_reference: S01E03 "[Context Is for Kings](https://memory-alpha.fandom.com/wiki/Context_Is_for_Kings

@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Terran Empire
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: ''
 primary_reference: S02E10 "[Mirror, Mirror](https://memory-alpha.fandom.com/wiki/Mirror,_Mirror
   "Mirror, Mirror (episode)")"

@@ -16,7 +16,7 @@
                     class="dropdown-item {{ $taxonomy.Name | urlize }}" 
                     href="{{ "/" | relLangURL}}{{ $index | urlize }}/{{ $key| urlize }}"
                   >
-                    {{ $key | humanize }}
+                    {{ $value.Page.Title }}
                   </a>
                   {{ end }}
             </div>

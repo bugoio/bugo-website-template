@@ -15,7 +15,7 @@ universes:
 affiliations:
 - Borg Collective
 types:
-- Flag/Banner
+- flag & banner
 franchise: The Next Generation
 primary_reference: S06E26 "[Descent](https://memory-alpha.fandom.com/wiki/Descent
   "Descent (episode)")"

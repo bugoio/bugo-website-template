@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Movies
 primary_reference: '[Star Trek: Insurrection](https://memory-alpha.fandom.com/wiki/Star_Trek:_Insurrection
   "Star Trek: Insurrection")'

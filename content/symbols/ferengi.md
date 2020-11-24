@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Ferengi Alliance
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: The Next Generation
 primary_reference: S01E04 "[Code of Honor](https://memory-alpha.fandom.com/wiki/Code_of_Honor
   "Code of Honor")"

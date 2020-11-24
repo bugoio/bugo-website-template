@@ -13,7 +13,7 @@ universes:
 affiliations: []
 types:
 - DS9 Promenade
-- restaurant/company
+- Commerce
 franchise: Deep Space 9
 primary_reference: S01E11 "[The Nagus](https://memory-alpha.fandom.com/wiki/The_Nagus
   "The Nagus (episode)")"

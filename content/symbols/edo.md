@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: The Next Generation
 primary_reference: S01E07 "[Justice](https://memory-alpha.fandom.com/wiki/Justice
   "Justice")"

@@ -16,7 +16,7 @@ universes:
 affiliations:
 - UFP
 types:
-- Flag/Banner
+- flag & banner
 franchise: Deep Space 9
 primary_reference: S04E11 "[Homefront](https://memory-alpha.fandom.com/wiki/Homefront
   "Homefront (episode)")"

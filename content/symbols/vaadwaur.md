@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Voyager
 primary_reference: S06E07 "[Dragon's Teeth](https://memory-alpha.fandom.com/wiki/Dragon%27s_Teeth
   "Dragon's Teeth")"

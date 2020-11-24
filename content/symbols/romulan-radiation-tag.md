@@ -15,7 +15,7 @@ universes:
 affiliations:
 - Romulan Star Empire
 types:
-- Science/Research
+- Science & Research
 franchise: Picard
 primary_reference: S02E02 [Maps and Legends](https://memory-alpha.fandom.com/wiki/Maps_and_Legends_(episode)
   "Maps and Legends (episode)")

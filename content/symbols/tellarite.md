@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Discovery
 primary_reference: S00E04 "[The Escape Artist](https://memory-alpha.fandom.com/wiki/The_Escape_Artist
   "The Escape Artist")"

@@ -14,7 +14,7 @@ affiliations:
 - Earth
 - Orpheus Mining Authority
 types:
-- Seal/Shield
+- Seal & Shield
 franchise: Enterprise
 primary_reference: S04E21 "Terra Prime"
 designer: ''

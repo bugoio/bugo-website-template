@@ -13,7 +13,7 @@ universes:
 affiliations:
 - UFP
 types:
-- Seal/Shield
+- Seal & Shield
 franchise: Discovery
 primary_reference: S01E15 "[Will You Take My Hand?](https://memory-alpha.fandom.com/wiki/Will_You_Take_My_Hand%3F
   "Will You Take My Hand?")"

@@ -16,7 +16,7 @@ universes:
 affiliations:
 - Earth
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Voyager
 primary_reference: S02E09 [Tattoo](https://memory-alpha.fandom.com/wiki/Tattoo_(episode)
   "Tattoo (episode)")

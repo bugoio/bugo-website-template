@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Romulan Star Empire
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: TOS
 primary_reference: S03E04 "[The Enterprise Incident](https://memory-alpha.fandom.com/wiki/The_Enterprise_Incident
   "The Enterprise Incident")"

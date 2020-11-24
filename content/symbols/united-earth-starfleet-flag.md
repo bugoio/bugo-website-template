@@ -14,7 +14,7 @@ affiliations:
 - Starfleet
 - Earth
 types:
-- Flag/Banner
+- flag & banner
 franchise: Enterprise
 primary_reference: S04E20 "[Demons](https://memory-alpha.fandom.com/wiki/Demons "Demons
   (episode)")"

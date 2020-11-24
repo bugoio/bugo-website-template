@@ -15,7 +15,7 @@ universes:
 affiliations:
 - UFP
 types:
-- Seal/Shield
+- Seal & Shield
 franchise: Short Treks
 primary_reference: S02E06 "[Children of Mars](https://memory-alpha.fandom.com/wiki/Children_of_Mars_(episode)
   "Children of Mars (episode)")"

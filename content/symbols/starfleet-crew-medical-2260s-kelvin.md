@@ -14,7 +14,7 @@ affiliations:
 - Starfleet
 types:
 - Insignia
-- Science/Research
+- Science & Research
 franchise: Movies
 primary_reference: '[Star Trek (film)](https://memory-alpha.fandom.com/wiki/Star_Trek_(film)
   "Star Trek (film)")'

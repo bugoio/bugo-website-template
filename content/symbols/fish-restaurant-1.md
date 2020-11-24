@@ -13,7 +13,7 @@ universes:
 affiliations: []
 types:
 - DS9 Promenade
-- Restaurant/Company
+- Commerce
 franchise: Deep Space 9
 primary_reference: S03E06 "[The Abandoned](https://memory-alpha.fandom.com/wiki/The_Abandoned
   "The Abandoned (episode)")"

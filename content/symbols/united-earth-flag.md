@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Earth
 types:
-- Flag/Banner
+- flag & banner
 franchise: ''
 primary_reference: S04E20 "[Demons](https://memory-alpha.fandom.com/wiki/Demons
   "Demons (episode)")"

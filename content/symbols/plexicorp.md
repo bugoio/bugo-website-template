@@ -9,7 +9,7 @@ featured_image:
   caption: ''
   alt: ''
 types:
-- Restaurant/Company
+- Commerce
 franchise: Movies
 primary_reference: 'Star Trek IV: The Voyage Home'
 quadrants: Alpha

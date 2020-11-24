@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Romulan Star Empire
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Movies
 primary_reference: '[Star Trek Nemesis](https://memory-alpha.fandom.com/wiki/Star_Trek_Nemesis
   "Star Trek Nemesis")'

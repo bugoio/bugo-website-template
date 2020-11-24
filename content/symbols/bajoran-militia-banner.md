@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Bajor
 types:
-- Flag/Banner
+- flag & banner
 franchise: Deep Space 9
 primary_reference: S05E25 "[In the Cards](https://memory-alpha.fandom.com/wiki/In_the_Cards
   "In the Cards")"

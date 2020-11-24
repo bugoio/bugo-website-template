@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: TAS
 primary_reference: S01E14 "[The Slaver Weapon](https://memory-alpha.fandom.com/wiki/The_Slaver_Weapon
   "The Slaver Weapon")"

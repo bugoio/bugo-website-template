@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: The Next Generation
 primary_reference: S01E01 "[Encounter at Farpoint](https://memory-alpha.fandom.com/wiki/Encounter_at_Farpoint
   "Encounter at Farpoint")"

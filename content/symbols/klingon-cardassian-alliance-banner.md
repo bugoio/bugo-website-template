@@ -14,7 +14,7 @@ affiliations:
 - Klingon Empire
 - Cardassian Union
 types:
-- Flag/Banner
+- flag & banner
 franchise: Deep Space 9
 primary_reference: S02E23 "[Crossover](https://memory-alpha.fandom.com/wiki/Crossover
   "Crossover (episode)")"

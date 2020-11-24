@@ -9,7 +9,7 @@ featured_image:
   caption: Kazon C
   alt: ''
 type:
-- Species/Civilization
+- Species & Civilization
 franchise: Voyager
 primary_reference: S02E02 "Initiations"
 quadrants: Delta
@@ -18,7 +18,7 @@ universes:
 - Prime
 memory_alpha_url: https://memory-alpha.fandom.com/wiki/Kazon
 types:
-- Species/Civilization
+- Species & Civilization
 designers:
 - Wendy Drapanas
 affiliations:

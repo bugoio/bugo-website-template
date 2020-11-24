@@ -13,7 +13,7 @@ universes:
 affiliations:
 - UFP
 types:
-- Flag/Banner
+- flag & banner
 franchise: Deep Space 9
 primary_reference: S05E10 "[Rapture](https://memory-alpha.fandom.com/wiki/Rapture
   "Rapture (episode)")"

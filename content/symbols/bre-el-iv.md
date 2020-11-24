@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: The Next Generation
 primary_reference: S03E13 "[Deja Q](https://memory-alpha.fandom.com/wiki/Deja_Q
   "Deja Q")"

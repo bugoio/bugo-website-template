@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Deep Space 9
 primary_reference: S02E13 "[Armageddon Game](https://memory-alpha.fandom.com/wiki/Armageddon_Game
   "Armageddon Game")"

@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Voyager
 primary_reference: S06E04 "[Tinker Tenor Doctor Spy](https://memory-alpha.fandom.com/wiki/Tinker_Tenor_Doctor_Spy
   "Tinker Tenor Doctor Spy")"

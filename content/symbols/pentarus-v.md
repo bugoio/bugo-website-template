@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: The Next Generation
 primary_reference: S04E09 "[Final Mission](https://memory-alpha.fandom.com/wiki/Final_Mission
   "Final Mission (episode)")"

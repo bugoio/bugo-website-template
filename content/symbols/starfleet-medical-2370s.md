@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Starfleet
 types:
-- Science/Research
+- Science & Research
 franchise: Voyager
 primary_reference: S07E09 "[Flesh and Blood](https://memory-alpha.fandom.com/wiki/Flesh_and_Blood
   "Flesh and Blood")"

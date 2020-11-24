@@ -14,7 +14,7 @@ affiliations:
 - Starfleet
 types:
 - Insignia
-- Science/Research
+- Science & Research
 franchise: TOS
 primary_reference: S01E01 "[Where No Man Has Gone Before](https://memory-alpha.fandom.com/wiki/Where_No_Man_Has_Gone_Before
   "Where No Man Has Gone Before")"

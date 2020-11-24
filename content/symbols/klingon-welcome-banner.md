@@ -15,7 +15,7 @@ universes:
 affiliations:
 - Klingon Empire
 types:
-- Flag/Banner
+- flag & banner
 franchise: Deep Space 9
 primary_reference: S05E10 [Rapture](https://memory-alpha.fandom.com/wiki/Rapture_(episode)
   "Rapture (episode)")

@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Starfleet
 types:
-- Flag/Banner
+- flag & banner
 franchise: TOS
 primary_reference: S01E14 "[Court Martial](https://memory-alpha.fandom.com/wiki/Court_Martial
   "Court Martial")"

@@ -15,7 +15,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Enterprise
 primary_reference: S01E03 "[Fight or Flight](https://memory-alpha.fandom.com/wiki/Fight_or_Flight
   "Fight or Flight")"

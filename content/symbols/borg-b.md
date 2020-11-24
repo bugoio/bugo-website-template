@@ -14,7 +14,7 @@ universes:
 affiliations:
 - Borg Collective
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: The Next Generation
 primary_reference: S03E26 "[The Best of Both Worlds](https://memory-alpha.fandom.com/wiki/The_Best_of_Both_Worlds
   "The Best of Both Worlds (episode)")"

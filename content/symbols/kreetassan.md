@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Enterprise
 primary_reference: S02E05 "[A Night in Sickbay](https://memory-alpha.fandom.com/wiki/A_Night_in_Sickbay
   "A Night in Sickbay")"

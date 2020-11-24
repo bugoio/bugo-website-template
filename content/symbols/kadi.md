@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Voyager
 primary_reference: S05E22 "[Someone to Watch Over Me](https://memory-alpha.fandom.com/wiki/Someone_to_Watch_Over_Me
   "Someone to Watch Over Me")"

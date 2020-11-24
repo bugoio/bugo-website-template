@@ -9,7 +9,7 @@ featured_image:
   caption: ''
   alt: ''
 types:
-- Restaurant/Company
+- Commerce
 franchise: Voyager
 primary_reference: S03E08 "[Future's End](https://memory-alpha.fandom.com/wiki/Future%27s_End
   "Future's End")"

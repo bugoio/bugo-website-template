@@ -14,7 +14,7 @@ universes:
 affiliations: []
 types:
 - Sports
-- Flag/Banner
+- flag & banner
 franchise: Voyager
 primary_reference: S06E15 “[Tsunkatse](https://memory-alpha.fandom.com/wiki/Tsunkatse
   "Tsunkatse")“

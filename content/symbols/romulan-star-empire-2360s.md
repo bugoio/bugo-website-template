@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Romulan Star Empire
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: The Next Generation
 primary_reference: S02E11 "[Contagion](https://memory-alpha.fandom.com/wiki/Contagion
   "Contagion")"

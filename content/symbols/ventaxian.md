@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: The Next Generation
 primary_reference: S04E13 "[Devil's Due](https://memory-alpha.fandom.com/wiki/Devil%27s_Due
   "Devil's Due")"

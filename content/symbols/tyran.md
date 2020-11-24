@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: The Next Generation
 primary_reference: S06E09 "[The Quality of Life](https://memory-alpha.fandom.com/wiki/The_Quality_of_Life
   "The Quality of Life")"

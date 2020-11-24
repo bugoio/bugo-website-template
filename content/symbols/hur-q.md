@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Deep Space 9
 primary_reference: S04E09 "[The Sword of Kahless](https://memory-alpha.fandom.com/wiki/The_Sword_of_Kahless
   "The Sword of Kahless")"

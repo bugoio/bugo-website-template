@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Voyager
 primary_reference: S03E24 "[Displaced](https://memory-alpha.fandom.com/wiki/Displaced
   "Displaced")"

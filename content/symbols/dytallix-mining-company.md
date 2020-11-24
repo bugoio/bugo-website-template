@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Restaurant/Company
+- Commerce
 franchise: The Next Generation
 primary_reference: S01E25 "[Conspiracy](https://memory-alpha.fandom.com/wiki/Conspiracy
   "Conspiracy")"

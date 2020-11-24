@@ -17,7 +17,7 @@ universes:
 affiliations:
 - Aldea
 types:
-- Flag/Banner
+- flag & banner
 franchise: The Next Generation
 primary_reference: S01E17 [When The Bough Breaks](https://memory-alpha.fandom.com/wiki/When_The_Bough_Breaks_(episode)
   "When The Bough Breaks (episode)")

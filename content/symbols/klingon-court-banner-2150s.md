@@ -14,7 +14,7 @@ affiliations:
 - Klingon Empire
 types:
 - Law Enforcement
-- Flag/Banner
+- flag & banner
 franchise: Enterprise
 primary_reference: S02E19 "[Judgment](https://memory-alpha.fandom.com/wiki/Judgment
   "Judgment (episode)")"

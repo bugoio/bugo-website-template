@@ -15,7 +15,7 @@ universes:
 affiliations:
 - Ferengi Alliance
 types:
-- Flag/Banner
+- flag & banner
 franchise: The Next Generation
 primary_reference: S07E22 [Bloodlines](https://memory-alpha.fandom.com/wiki/Bloodlines_(episode)
   "Bloodlines (episode)")

@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: TOS
 primary_reference: S01E23 "[A Taste of Armageddon](https://memory-alpha.fandom.com/wiki/A_Taste_of_Armageddon
   "A Taste of Armageddon")"

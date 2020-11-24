@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Restaurant/Company
+- Commerce
 franchise: The Next Generation
 primary_reference: E02E12 "[The Royale](https://memory-alpha.fandom.com/wiki/The_Royale
   "The Royale")"

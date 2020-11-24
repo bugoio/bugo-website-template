@@ -15,7 +15,7 @@ universes:
 affiliations:
 - Earth
 types:
-- Science/Research
+- Science & Research
 franchise: Picard
 primary_reference: S01E01 [Remembrance](https://memory-alpha.fandom.com/wiki/Remembrance_(episode)
   "Remembrance (episode)")

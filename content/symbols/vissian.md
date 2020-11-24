@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Enterprise
 primary_reference: S02E22 "[Cogenitor](https://memory-alpha.fandom.com/wiki/Cogenitor
   "Cogenitor (episode)")"

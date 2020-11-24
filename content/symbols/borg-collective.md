@@ -17,7 +17,7 @@ universes:
 memory_alpha_url: https://memory-alpha.fandom.com/wiki/Borg
 affiliation: Borg Collective
 types:
-- Species/Civilization
+- Species & Civilization
 affiliations:
 - Borg Collective
 

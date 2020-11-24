@@ -14,7 +14,7 @@ universes:
 affiliations:
 - Romulan Star Empire
 types:
-- Seal/Shield
+- Seal & Shield
 franchise: Deep Space 9
 primary_reference: S03E21 "[The Die is Cast](https://memory-alpha.fandom.com/wiki/The_Die_is_Cast
   "The Die is Cast (episode)")"

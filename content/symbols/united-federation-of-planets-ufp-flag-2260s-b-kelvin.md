@@ -15,7 +15,7 @@ universes:
 affiliations:
 - UFP
 types:
-- Flag/Banner
+- flag & banner
 franchise: Movies
 primary_reference: '[Star Trek](https://memory-alpha.fandom.com/wiki/Star_Trek_(film)
   "Star Trek (film)")'

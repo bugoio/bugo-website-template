@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Klingon Empire
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: TOS
 primary_reference: S03E02 "[Elaan of Troyius](https://memory-alpha.fandom.com/wiki/Elaan_of_Troyius
   "Elaan of Troyius")"

@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Starfleet
 types:
-- Flag/Banner
+- flag & banner
 franchise: Voyager
 primary_reference: S06E10 "[Pathfinder](https://memory-alpha.fandom.com/wiki/Pathfinder
   "Pathfinder (episode)")"

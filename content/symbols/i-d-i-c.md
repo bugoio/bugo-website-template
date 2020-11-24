@@ -14,7 +14,7 @@ universes:
 affiliations:
 - Vulcan
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Enterprise
 primary_reference: S04E07 "The Forge"
 designer: ''

@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Earth
 types:
-- Restaurant/Company
+- Commerce
 franchise: Enterprise
 primary_reference: S01E17 "[Fusion](https://memory-alpha.fandom.com/wiki/Fusion
   "Fusion")"

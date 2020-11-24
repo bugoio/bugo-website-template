@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Starfleet
 types:
-- Science/Research
+- Science & Research
 franchise: Discovery
 primary_reference: S00E02 "[Calypso](https://memory-alpha.fandom.com/wiki/Calypso
   "Calypso")"

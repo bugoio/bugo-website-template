@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: TOS
 primary_reference: S02E17 "[The Gamesters of Triskelion](https://memory-alpha.fandom.com/wiki/The_Gamesters_of_Triskelion
   "The Gamesters of Triskelion")"

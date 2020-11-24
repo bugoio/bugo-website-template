@@ -14,7 +14,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Restaurant/Company
+- Commerce
 - Holodeck
 franchise: The Next Generation
 primary_reference: S07E23 "[Emergence](https://memory-alpha.fandom.com/wiki/Emergence_(episode)

@@ -13,7 +13,7 @@ universes:
 affiliations:
 - UFP
 types:
-- Seal/Shield
+- Seal & Shield
 franchise: Movies
 primary_reference: '[Star Trek VI: The Undiscovered Country](https://memory-alpha.fandom.com/wiki/Star_Trek_VI:_The_Undiscovered_Country
   "Star Trek VI: The Undiscovered Country")'

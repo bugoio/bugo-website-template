@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Romulan Star Empire
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Enterprise
 primary_reference: S04E12 "[Babel One](https://memory-alpha.fandom.com/wiki/Babel_One
   "Babel One (episode)")"

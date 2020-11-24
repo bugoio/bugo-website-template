@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: The Next Generation
 primary_reference: S03E06 "[Booby Trap](https://memory-alpha.fandom.com/wiki/Booby_Trap
   "Booby Trap")"

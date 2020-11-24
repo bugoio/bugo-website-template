@@ -14,7 +14,7 @@ universes:
 affiliations:
 - Kazon Order
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Voyager
 primary_reference: S02E11 "[Maneuvers](https://memory-alpha.fandom.com/wiki/Maneuvers
   "Maneuvers (episode)")"

@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Earth
 types:
-- Restaurant/Company
+- Commerce
 franchise: Deep Space 9
 primary_reference: S03E11 "[Past Tense, Part I](https://memory-alpha.fandom.com/wiki/Past_Tense,_Part_I
   "Past Tense, Part I")"

@@ -9,7 +9,7 @@ featured_image:
   caption: ''
   alt: ''
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Voyager
 primary_reference: S04E09 "Year of Hell, Part 2"
 quadrants: Delta

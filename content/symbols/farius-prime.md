@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Deep Space 9
 primary_reference: S06E15 "[Honor Among Thieves](https://memory-alpha.fandom.com/wiki/Honor_Among_Thieves
   "Honor Among Thieves")"

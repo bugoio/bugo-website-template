@@ -15,7 +15,7 @@ universes:
 affiliations:
 - Earth
 types:
-- Restaurant/Company
+- Commerce
 franchise: Deep Space 9
 primary_reference: S07E01 [Image in the Sand](https://memory-alpha.fandom.com/wiki/Image_in_the_Sand_(episode)
   "Image in the Sand (episode)")

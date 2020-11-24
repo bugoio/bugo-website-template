@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Romulan Star Empire
 types:
-- Flag/Banner
+- flag & banner
 franchise: Movies
 primary_reference: '[Star Trek VI: The Undiscovered Country](https://memory-alpha.fandom.com/wiki/Star_Trek_VI:_The_Undiscovered_Country
   "Star Trek VI: The Undiscovered Country")'

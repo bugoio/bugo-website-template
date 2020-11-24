@@ -9,8 +9,8 @@ featured_image:
   caption: 'Cetacean Institute logo from Start Trek IV: The Voyage Home'
   alt: ''
 types:
-- Restaurant/Company
-- Science/Research
+- Commerce
+- Science & Research
 franchise: Movies
 primary_reference: '[Star Trek IV: The Voyage Home](https://memory-alpha.fandom.com/wiki/Star_Trek_IV:_The_Voyage_Home
   "Star Trek IV: The Voyage Home")'

@@ -14,7 +14,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Science/Research
+- Science & Research
 franchise: TAS
 primary_reference: S01E13 "[The Ambergris Element](https://memory-alpha.fandom.com/wiki/The_Ambergris_Element
   "The Ambergris Element")"

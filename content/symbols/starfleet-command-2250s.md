@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Starfleet
 types:
-- Seal/Shield
+- Seal & Shield
 franchise: Discovery
 primary_reference: S01E02 "[Battle at the Binary Stars](https://memory-alpha.fandom.com/wiki/Battle_at_the_Binary_Stars
   "Battle at the Binary Stars")"

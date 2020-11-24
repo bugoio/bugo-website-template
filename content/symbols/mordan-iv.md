@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: The Next Generation
 primary_reference: S01E16 "[Too Short a Season](https://memory-alpha.fandom.com/wiki/Too_Short_a_Season
   "Too Short a Season")"

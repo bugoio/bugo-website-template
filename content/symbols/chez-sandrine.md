@@ -15,7 +15,7 @@ universes:
 affiliations: []
 types:
 - Holodeck
-- Restaurant/Company
+- Commerce
 franchise: Voyager
 primary_reference: S01E06 [The Cloud](https://memory-alpha.fandom.com/wiki/The_Cloud_(episode)
   "The Cloud (episode)")

@@ -15,7 +15,7 @@ universes:
 affiliations:
 - UFP
 types:
-- Flag/Banner
+- flag & banner
 franchise: Discovery
 primary_reference: Official Season 3 Trailer
 designer: ''

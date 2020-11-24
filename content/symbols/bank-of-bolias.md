@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Restaurant/Company
+- Commerce
 franchise: Deep Space 9
 primary_reference: S06E12 "[Who Mourns for Morn?](https://memory-alpha.fandom.com/wiki/Who_Mourns_for_Morn%3F
   "Who Mourns for Morn?")"

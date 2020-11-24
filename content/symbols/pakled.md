@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: The Next Generation
 primary_reference: S02E17 "[Samaritan Snare](https://memory-alpha.fandom.com/wiki/Samaritan_Snare
   "Samaritan Snare")"

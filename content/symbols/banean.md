@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Voyager
 primary_reference: S01E18 "[Ex Post Facto](https://memory-alpha.fandom.com/wiki/Ex_Post_Facto
   "Ex Post Facto")"

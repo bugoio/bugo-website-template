@@ -14,7 +14,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: The Next Generation
 primary_reference: S07E08 [Attached](https://memory-alpha.fandom.com/wiki/Attached_(episode)
   "Attached (episode)")

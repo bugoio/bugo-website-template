@@ -9,7 +9,7 @@ featured_image:
   caption: ''
   alt: ''
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Voyager
 primary_reference: S06E12 "Blink of an Eye"
 quadrants: Delta

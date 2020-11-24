@@ -16,7 +16,7 @@ universes:
 affiliations:
 - UFP
 types:
-- Flag/Banner
+- flag & banner
 franchise: Deep Space 9
 primary_reference: S07E25 "[What You Leave Behind](https://memory-alpha.fandom.com/wiki/What_You_Leave_Behind
   "What You Leave Behind (episode)")"

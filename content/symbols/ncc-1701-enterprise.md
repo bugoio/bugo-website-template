@@ -15,7 +15,7 @@ universes:
 affiliations:
 - Starfleet
 types:
-- Seal/Shield
+- Seal & Shield
 - Starship
 franchise: Discovery
 primary_reference: S02E01 [Brother](https://memory-alpha.fandom.com/wiki/Brother_(episode)

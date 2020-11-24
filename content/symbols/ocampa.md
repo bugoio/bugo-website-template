@@ -14,7 +14,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Voyager
 primary_reference: S01E01 [Caretaker](https://memory-alpha.fandom.com/wiki/Caretaker_(episode)
   "Caretaker (episode)")

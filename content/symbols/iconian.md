@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Deep Space 9
 primary_reference: S04E23 "[To the Death](https://memory-alpha.fandom.com/wiki/To_the_Death
   "To the Death")"

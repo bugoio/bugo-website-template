@@ -15,7 +15,7 @@ universes:
 affiliations:
 - Bajor
 types:
-- Flag/Banner
+- flag & banner
 - DS9 Promenade
 franchise: Deep Space 9
 primary_reference: S06E07 [You Are Cordially Invited](https://memory-alpha.fandom.com/wiki/You_Are_Cordially_Invited_(episode)

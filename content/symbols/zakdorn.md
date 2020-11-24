@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: The Next Generation
 primary_reference: S05E07 "[Unification I](https://memory-alpha.fandom.com/wiki/Unification_I
   "Unification I")"

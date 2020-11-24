@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Xindi
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Enterprise
 primary_reference: S03E13 "Proving Ground"
 designer: ''

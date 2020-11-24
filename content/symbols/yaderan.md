@@ -9,7 +9,7 @@ featured_image:
   caption: ''
   alt: ''
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Deep Space 9
 primary_reference: S02E16 "Shadowplay"
 quadrants: Gamma

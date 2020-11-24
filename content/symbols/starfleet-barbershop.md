@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Starfleet
 types:
-- Restaurant/Company
+- Commerce
 franchise: The Next Generation
 primary_reference: S04E11 "[Data's Day](https://memory-alpha.fandom.com/wiki/Data%27s_Day
   "Data's Day")"

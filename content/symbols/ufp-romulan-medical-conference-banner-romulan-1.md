@@ -13,7 +13,7 @@ universes:
 affiliations:
 - UFP
 types:
-- Flag/Banner
+- flag & banner
 franchise: Deep Space 9
 primary_reference: S07E16 "[Inter Arma Enim Silent Leges](https://memory-alpha.fandom.com/wiki/Inter_Arma_Enim_Silent_Leges
   "Inter Arma Enim Silent Leges (episode)")"

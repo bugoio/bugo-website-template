@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Starfleet
 types:
-- Flag/Banner
+- flag & banner
 franchise: ''
 primary_reference: S05E19 "[The First Duty](https://memory-alpha.fandom.com/wiki/The_First_Duty
   "The First Duty (episode)")"

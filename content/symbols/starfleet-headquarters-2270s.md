@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Starfleet
 types:
-- Seal/Shield
+- Seal & Shield
 franchise: Movies
 primary_reference: '[Star Trek: The Motion Picture](https://memory-alpha.fandom.com/wiki/Star_Trek:_The_Motion_Picture
   "Star Trek: The Motion Picture")'

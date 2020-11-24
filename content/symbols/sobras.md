@@ -14,7 +14,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Voyager
 primary_reference: S02E14 [Alliances](https://memory-alpha.fandom.com/wiki/Alliances_(episode)
   "Alliances (episode)")

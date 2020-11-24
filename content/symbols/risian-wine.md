@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Risa
 types:
-- Restaurant/Company
+- Commerce
 - Product
 franchise: Enterprise
 primary_reference: S01E25 "[Two Days and Two Nights](https://memory-alpha.fandom.com/wiki/Two_Days_and_Two_Nights

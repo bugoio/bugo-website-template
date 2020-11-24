@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Terran Empire
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Discovery
 primary_reference: S01E10 "[Despite Yourself](https://memory-alpha.fandom.com/wiki/Despite_Yourself
   "Despite Yourself (episode)")"

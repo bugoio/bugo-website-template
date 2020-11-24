@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Enterprise
 primary_reference: S01E09 "[Civilization](https://memory-alpha.fandom.com/wiki/Civilization
   "Civilization")"

@@ -13,7 +13,7 @@ universes:
 affiliations: []
 types:
 - Sports
-- Flag/Banner
+- flag & banner
 franchise: Deep Space 9
 primary_reference: S07E04 "[Take Me Out to the Holosuite](https://memory-alpha.fandom.com/wiki/Take_Me_Out_to_the_Holosuite
   "Take Me Out to the Holosuite")"

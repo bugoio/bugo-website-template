@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Trill
 types:
-- Science/Research
+- Science & Research
 franchise: Deep Space 9
 primary_reference: S04E06 "[Rejoined](https://memory-alpha.fandom.com/wiki/Rejoined
   "Rejoined (episode)")"

@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Starfleet
 types:
-- Seal/Shield
+- Seal & Shield
 franchise: Enterprise
 primary_reference: S04E20 "Demons"
 designer: ''

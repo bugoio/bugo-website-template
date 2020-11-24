@@ -14,7 +14,7 @@ universes:
 affiliations:
 - Vulcan
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: TOS
 primary_reference: S03E07 "[Is There in Truth No Beauty?](https://memory-alpha.fandom.com/wiki/Is_There_in_Truth_No_Beauty%3F
   "Is There in Truth No Beauty?")"

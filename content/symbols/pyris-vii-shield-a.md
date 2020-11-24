@@ -14,7 +14,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Flag/Banner
+- flag & banner
 franchise: TOS
 primary_reference: S02E01 [Catspaw](https://memory-alpha.fandom.com/wiki/Catspaw_(episode)
   "Catspaw (episode)")

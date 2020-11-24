@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Enterprise
 primary_reference: S02E17 "[Canamar](https://memory-alpha.fandom.com/wiki/Canamar
   "Canamar (episode)")"

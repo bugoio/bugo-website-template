@@ -15,7 +15,7 @@ universes:
 affiliations: []
 types:
 - Holodeck
-- Restaurant/company
+- Commerce
 franchise: The Next Generation
 primary_reference: S02E19 [Manhunt](https://memory-alpha.fandom.com/wiki/Manhunt_(episode)
   "Manhunt (episode)")

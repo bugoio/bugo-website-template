@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Ferengi Alliance
 types:
-- Restaurant/Company
+- Commerce
 - DS9 Promenade
 franchise: Deep Space 9
 primary_reference: S03E15 "[Destiny](https://memory-alpha.fandom.com/wiki/Destiny

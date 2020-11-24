@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Earth
 types:
-- Science/Research
+- Science & Research
 franchise: Enterprise
 primary_reference: S04E05 "[Cold Station 12](https://memory-alpha.fandom.com/wiki/Cold_Station_12
   "Cold Station 12")"

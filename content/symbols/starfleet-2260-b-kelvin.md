@@ -15,7 +15,7 @@ universes:
 affiliations:
 - Starfleet
 types:
-- Seal/Shield
+- Seal & Shield
 franchise: Movies
 primary_reference: '[Star Trek Beyond](https://memory-alpha.fandom.com/wiki/Star_Trek_Beyond
   "Star Trek Beyond")'

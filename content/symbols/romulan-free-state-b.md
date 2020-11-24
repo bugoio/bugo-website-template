@@ -15,7 +15,7 @@ universes:
 affiliations:
 - Romulan Star Empire
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Picard
 primary_reference: S01E01 [Remembrance](https://memory-alpha.fandom.com/wiki/Remembrance_(episode)
   "Remembrance (episode)")

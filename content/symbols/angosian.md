@@ -14,7 +14,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: The Next Generation
 primary_reference: S03E11 "[The Hunted](https://memory-alpha.fandom.com/wiki/The_Hunted
   "The Hunted")"

@@ -9,7 +9,7 @@ featured_image:
   caption: Vidiian A
   alt: ''
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Voyager
 primary_reference: S02E21 "Deadlock"
 quadrants: Delta

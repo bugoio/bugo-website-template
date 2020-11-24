@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Starfleet
 types:
-- Science/Research
+- Science & Research
 franchise: Deep Space 9
 primary_reference: S07E21 "[When It Rains...](https://memory-alpha.fandom.com/wiki/When_It_Rains...
   "When It Rains... (episode)")"

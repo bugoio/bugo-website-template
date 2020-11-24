@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Voyager
 primary_reference: S05E21 "[Juggernaut](https://memory-alpha.fandom.com/wiki/Juggernaut
   "Juggernaut")"

@@ -15,7 +15,7 @@ universes:
 affiliations:
 - Starfleet
 types:
-- Flag/Banner
+- flag & banner
 franchise: Picard
 primary_reference: S01E02 [Maps and Legends](https://memory-alpha.fandom.com/wiki/Maps_and_Legends_(episode)
   "Maps and Legends (episode)")

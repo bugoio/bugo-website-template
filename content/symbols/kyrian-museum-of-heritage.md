@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Science/Research
+- Science & Research
 franchise: Voyager
 primary_reference: S04E23 "[Living Witness](https://memory-alpha.fandom.com/wiki/Living_Witness
   "Living Witness")"

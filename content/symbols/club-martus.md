@@ -13,7 +13,7 @@ universes:
 affiliations: []
 types:
 - DS9 Promenade
-- Restaurant/Company
+- Commerce
 franchise: Deep Space 9
 primary_reference: S02E11 "[Rivals](https://memory-alpha.fandom.com/wiki/Rivals
   "Rivals (episode)")"

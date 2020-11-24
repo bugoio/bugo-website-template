@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Trill
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Deep Space 9
 primary_reference: S07E11 "[Prodigal Daughter](https://memory-alpha.fandom.com/wiki/Prodigal_Daughter
   "Prodigal Daughter")"

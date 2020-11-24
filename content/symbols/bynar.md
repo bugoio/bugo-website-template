@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: The Next Generation
 primary_reference: S01E15 "[11001001](https://memory-alpha.fandom.com/wiki/11001001
   "11001001")"

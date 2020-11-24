@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Starfleet
 types:
-- Seal/Shield
+- Seal & Shield
 franchise: Deep Space 9
 primary_reference: S07E24 "[The Dogs of War](https://memory-alpha.fandom.com/wiki/The_Dogs_of_War
   "The Dogs of War")"

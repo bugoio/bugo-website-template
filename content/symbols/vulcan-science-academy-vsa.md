@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Science/Research
+- Science & Research
 franchise: Discovery
 primary_reference: S01E06 "[Lethe](https://memory-alpha.fandom.com/wiki/Lethe
   "Lethe (episode)")"

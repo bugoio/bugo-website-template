@@ -14,7 +14,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: TAS
 primary_reference: E01E13 "[The Ambergris Element](https://memory-alpha.fandom.com/wiki/The_Ambergris_Element
   "The Ambergris Element")"

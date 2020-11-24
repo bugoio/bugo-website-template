@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Deep Space 9
 primary_reference: S07E24 "[The Dogs of War](https://memory-alpha.fandom.com/wiki/The_Dogs_of_War
   "The Dogs of War")"

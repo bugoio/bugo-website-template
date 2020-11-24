@@ -9,7 +9,7 @@ featured_image:
   caption: Talaxian A1
   alt: ''
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Voyager
 primary_reference: S07E23 "[Homestead](https://memory-alpha.fandom.com/wiki/Homestead
   "Homestead (episode)")"

@@ -14,7 +14,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Movies
 primary_reference: '[_Star Trek: The Motion Picture_](https://memory-alpha.fandom.com/wiki/Star_Trek:_The_Motion_Picture
   "Star Trek: The Motion Picture")'

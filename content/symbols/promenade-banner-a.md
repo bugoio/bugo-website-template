@@ -15,7 +15,7 @@ universes:
 affiliations: []
 types:
 - DS9 Promenade
-- Flag/Banner
+- flag & banner
 franchise: Deep Space 9
 primary_reference: S04E14 [Return to Grace](https://memory-alpha.fandom.com/wiki/Return_to_Grace_(episode)
   "Return to Grace (episode)")

@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: The Next Generation
 primary_reference: S05E17 "[The Outcast](https://memory-alpha.fandom.com/wiki/The_Outcast
   "The Outcast")"

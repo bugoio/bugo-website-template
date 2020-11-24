@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: The Next Generation
 primary_reference: E03E12 "[The High Ground](https://memory-alpha.fandom.com/wiki/The_High_Ground
   "The High Ground")"

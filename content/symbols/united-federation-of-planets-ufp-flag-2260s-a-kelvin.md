@@ -15,7 +15,7 @@ universes:
 affiliations:
 - UFP
 types:
-- Flag/Banner
+- flag & banner
 franchise: Movies
 primary_reference: '[Star Trek Into Darkness](https://memory-alpha.fandom.com/wiki/Star_Trek_Into_Darkness
   "Star Trek Into Darkness")'

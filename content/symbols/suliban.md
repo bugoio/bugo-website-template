@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Enterprise
 primary_reference: S01E01 "[Broken Bow](https://memory-alpha.fandom.com/wiki/Broken_Bow
   "Broken Bow")"

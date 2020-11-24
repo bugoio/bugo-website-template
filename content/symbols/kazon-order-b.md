@@ -14,7 +14,7 @@ universes:
 affiliations:
 - Kazon Order
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Voyager
 primary_reference: S02E02 "[Initiations](https://memory-alpha.fandom.com/wiki/Initiations
   "Initiations (episode)")"

@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Voyager
 primary_reference: S03E20 "[Favorite Son](https://memory-alpha.fandom.com/wiki/Favorite_Son
   "Favorite Son")"

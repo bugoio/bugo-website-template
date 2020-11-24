@@ -16,7 +16,7 @@ universes:
 affiliations:
 - UFP
 types:
-- Flag/Banner
+- flag & banner
 franchise: Movies
 primary_reference: '[Star Trek II: The Wrath of Khan](https://memory-alpha.fandom.com/wiki/Star_Trek_II:_The_Wrath_of_Khan
   "Star Trek II: The Wrath of Khan")'

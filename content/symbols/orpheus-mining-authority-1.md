@@ -14,7 +14,7 @@ affiliations:
 - Earth
 - Orpheus Mining Authority
 types:
-- Science/Research
+- Science & Research
 franchise: Enterprise
 primary_reference: S04E21 "[Terra Prime](https://memory-alpha.fandom.com/wiki/Terra_Prime
   "Terra Prime (episode)")"

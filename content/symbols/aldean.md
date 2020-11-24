@@ -15,7 +15,7 @@ universes:
 affiliations:
 - Aldea
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: The Next Generation
 primary_reference: S01E17 [When The Bough Breaks](https://memory-alpha.fandom.com/wiki/When_The_Bough_Breaks
   "When The Bough Breaks")

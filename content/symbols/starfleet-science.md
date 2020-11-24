@@ -15,8 +15,8 @@ universes:
 affiliations:
 - Starfleet
 types:
-- Seal/Shield
-- Science/Research
+- Seal & Shield
+- Science & Research
 franchise: Short Treks
 primary_reference: S02E05 "[Ephraim and Dot](https://memory-alpha.fandom.com/wiki/Ephraim_and_Dot_(episode)
   "Ephraim and Dot (episode)")"

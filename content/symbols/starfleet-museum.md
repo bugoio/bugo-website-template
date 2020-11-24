@@ -16,7 +16,7 @@ affiliations:
 - Starfleet
 - UFP
 types:
-- Seal/Shield
+- Seal & Shield
 franchise: Picard
 primary_reference: S01E02 "[Maps and Legends](https://memory-alpha.fandom.com/wiki/Maps_and_Legends_(episode)
   "Maps and Legends (episode)")"

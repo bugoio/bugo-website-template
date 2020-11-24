@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Deep Space 9
 primary_reference: S02E20 "[The Maquis, Part I](https://memory-alpha.fandom.com/wiki/The_Maquis,_Part_I
   "The Maquis, Part I")"

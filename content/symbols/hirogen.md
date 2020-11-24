@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: Voyager
 primary_reference: S07E09 "[Flesh and Blood](https://memory-alpha.fandom.com/wiki/Flesh_and_Blood
   "Flesh and Blood")"

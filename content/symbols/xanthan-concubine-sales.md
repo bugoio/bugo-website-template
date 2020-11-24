@@ -14,7 +14,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Restaurant/Company
+- Commerce
 franchise: Enterprise
 primary_reference: S03E04 [Rajiin](https://memory-alpha.fandom.com/wiki/Rajiin_(episode)
   "Rajiin (episode)")

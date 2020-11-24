@@ -15,7 +15,7 @@ universes:
 affiliations:
 - Earth
 types:
-- Restaurant/Company
+- Commerce
 franchise: Voyager
 primary_reference: S02E05 [Non Sequitur](https://memory-alpha.fandom.com/wiki/Non_Sequitur_(episode)
   "Non Sequitur (episode)")

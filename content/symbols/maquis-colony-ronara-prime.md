@@ -13,7 +13,7 @@ universes:
 affiliations:
 - Maquis
 types:
-- Restaurant/Company
+- Commerce
 franchise: The Next Generation
 primary_reference: S07E24 "[Preemptive Strike](https://memory-alpha.fandom.com/wiki/Preemptive_Strike
   "Preemptive Strike (episode)")"

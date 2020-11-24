@@ -12,7 +12,7 @@ universes:
 - Prime
 affiliations: []
 types:
-- Species/Civilization
+- Species & Civilization
 franchise: TOS
 primary_reference: S03E20 "[The Way to Eden](https://memory-alpha.fandom.com/wiki/The_Way_to_Eden
   "The Way to Eden")"
