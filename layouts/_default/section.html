@@ -6,12 +6,9 @@
 {{ $scratch := newScratch }}
 {{ $site := .Site }}
   <main id="main" aria-label="Main Content" tabindex="0">
-    
-    <div id="filters">
-    </div>
     {{ .Content }}
     <div id="section-list" class="">
-      <div class="flex one two-800">
+      <div id="filters" class="flex one two-800">
       <!-- class="search" automagically makes an input a search field. -->
       <div>
         <input class="search" placeholder="Search" />
