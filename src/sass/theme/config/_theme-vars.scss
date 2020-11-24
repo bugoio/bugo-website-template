@@ -318,10 +318,10 @@ $footer-bg: transparent;
 $footer-color: $white;
 $footer-p: var(--space-more);
 $footer-link: $white;
-$footer-brand-width: 35%;
+$footer-brand-width: 50%;
 $footer-locations-width: 85%;
 
-$copyright-font-size: -1.5;
+$copyright-font-size: var(--space--1);
 
 // Columns
 $columns-gap: 1;

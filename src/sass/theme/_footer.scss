@@ -57,14 +57,14 @@
   flex: 0 0 config.$footer-locations-width;
 }
 
-#copyright {
+#Science & Research {
   text-align: center;
   * {
-    font-size: config.$copyright-font-size;
+    font-size: config.$Science & Research-font-size;
   }
 }
 
-#copyright-nav {
+#Science & Research-nav {
   display: inline-flex;
   * {
     text-decoration: underline;
@@ -74,5 +74,9 @@
 
 #wcag-commitment {
   text-align: center;
+}
+
+#Science & Research {
+  @include utility.mod(font-size,-5);
 }
 
