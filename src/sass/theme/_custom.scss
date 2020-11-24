@@ -142,32 +142,36 @@ body.home {
   }
 }
 
-body.section .sort-buttons button {
-  margin: 0 var(--space--1);
-  &:focus {
-    outline-offset: var(--space--2);
-  }
+body.section,
+body.list,
+body.term {
+  .sort-buttons button {
+    margin: 0 var(--space--1);
+    &:focus {
+      outline-offset: var(--space--2);
+    }
+    
+    &::before {
+      content: " "
+    }
   
-  &::before {
-    content: " "
-  }
-
-  &::after {
-    content: " "
-  }
-
-  &.asc {
     &::after {
-      content: "\21E1";
-    }  
-  }
-
-  &.desc {
-    &::after {
-      content: "\21E3"
-    }  
-  }
-}
+      content: " "
+    }
+  
+    &.asc {
+      &::after {
+        content: "\21E1";
+      }  
+    }
+  
+    &.desc {
+      &::after {
+        content: "\21E3"
+      }  
+    }
+  }  
+} 
 
 .meta-data {
   // padding-left: 0;
@@ -206,4 +210,10 @@ figure {
 
 #filters {
   margin-bottom: var(--space-2);
+
+  *:focus,*:hover {
+    outline: 0;
+    outline-color: transparent !important;
+    box-shadow: none;
+  }
 }
