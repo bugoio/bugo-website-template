@@ -38,28 +38,6 @@ fields:
     time_format: 
     display_utc: false
   label: Expire Date
-- name: hero
-  type: include
-  config: {}
-  template: hero
-  label: Hero
-- name: page_options
-  type: include
-  config: {}
-  template: page-options
-  label: Page Options
-- name: slug
-  type: text
-  config:
-    required: false
-  label: Slug
-- name: aliases
-  type: list
-  config:
-    use_select: false
-    min: 
-    max: 
-  label: Aliases
 - name: location
   type: field_group
   config: {}
@@ -95,5 +73,27 @@ fields:
       required: false
     label: Zip Code
   label: Location
+- name: hero
+  type: include
+  config: {}
+  template: hero
+  label: Hero
+- name: page_options
+  type: include
+  config: {}
+  template: page-options
+  label: Page Options
+- name: slug
+  type: text
+  config:
+    required: false
+  label: Slug
+- name: aliases
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: Aliases
 pages:
 - content/events/los-angeles.md
