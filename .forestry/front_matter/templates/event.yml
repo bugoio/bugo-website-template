@@ -38,3 +38,5 @@ fields:
     time_format: 
     display_utc: false
   label: Expire Date
+pages:
+- content/events/los-angeles.md
