@@ -1,4 +1,9 @@
 ---
 label: Event
 hide_body: false
-fields: []
+fields:
+- name: page_meta
+  type: include
+  config: {}
+  template: page-meta
+  label: Page Meta
