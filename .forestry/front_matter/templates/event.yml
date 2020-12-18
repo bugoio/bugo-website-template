@@ -20,10 +20,21 @@ fields:
   default: now
 - name: eventDate
   type: datetime
-  description: ''
+  description: Enter the date and time the event starts.
   config:
     required: true
     date_format: 
     time_format: 
     display_utc: false
   label: Event Date
+- name: expiryDate
+  type: datetime
+  description: " Enter the date and time this event ends. This page will no longer
+    display on the site after this date. It may take up to 24hrs to remove, depending
+    on the time you select."
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+  label: Expire Date
