@@ -7,7 +7,7 @@ description:
 images: []
 categories: []
 event_date: 
-expiryDate: 2021-01-01T04:00:00-08:00
+expiryDate: 2021-01-02T04:00:00-08:00
 multiple_days: true
 slug: disneyland
 aliases: []
