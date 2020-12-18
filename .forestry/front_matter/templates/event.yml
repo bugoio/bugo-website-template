@@ -99,5 +99,12 @@ fields:
   type: tag_list
   default: []
   label: Tags
+- name: layout
+  type: text
+  config:
+    required: false
+  label: layout
+  hidden: true
+  default: event
 pages:
 - content/events/los-angeles.md
