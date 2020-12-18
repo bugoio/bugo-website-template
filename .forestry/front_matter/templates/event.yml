@@ -38,6 +38,11 @@ fields:
     time_format: 
     display_utc: false
   label: Expire Date
+- name: hero
+  type: include
+  config: {}
+  template: hero
+  label: Hero
 - name: page_options
   type: include
   config: {}
