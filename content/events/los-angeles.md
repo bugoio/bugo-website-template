@@ -21,9 +21,9 @@ location:
   phone: 
   locationImages: []
 hero:
-  useDefaultImage: true
+  useDefaultImage: false
   displayPageTitle: true
-  heroImage: ''
+  heroImage: "/uploads/img_1463.JPG"
   heroCaption: ''
   heroImageAltText: ''
   heroCustomText: ''
