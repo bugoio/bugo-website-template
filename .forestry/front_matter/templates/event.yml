@@ -38,5 +38,10 @@ fields:
     time_format: 
     display_utc: false
   label: Expire Date
+- name: page_options
+  type: include
+  config: {}
+  template: page-options
+  label: Page Options
 pages:
 - content/events/los-angeles.md
