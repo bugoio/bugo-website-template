@@ -31,7 +31,7 @@ pageOptions:
   showSidebar: true
   hideMarketingBlock: false
   excludeFromSitemap: false
-eventDate: 2020-12-31T00:00:00-08:00
+eventDate: 2020-12-30T00:00:00-08:00
 tags: []
 
 ---
