@@ -60,5 +60,40 @@ fields:
     min: 
     max: 
   label: Aliases
+- name: location
+  type: field_group
+  config: {}
+  fields:
+  - name: name
+    type: text
+    config:
+      required: false
+    label: Name
+  - name: street1
+    type: text
+    config:
+      required: false
+    label: Street 1
+  - name: street2
+    type: text
+    config:
+      required: false
+    label: Street 2
+  - name: city
+    type: text
+    config:
+      required: false
+    label: City
+  - name: state
+    type: text
+    config:
+      required: false
+    label: State
+  - name: zip
+    type: text
+    config:
+      required: false
+    label: Zip Code
+  label: Location
 pages:
 - content/events/los-angeles.md
