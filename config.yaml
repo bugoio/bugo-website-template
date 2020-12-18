@@ -57,6 +57,8 @@ related:
   - name: tags
     weight: 80
 theme:
+# Archetypes
+- sb-events
 # Image Handling
 # - sb-cloudinary
 - sb-netlify-large-media

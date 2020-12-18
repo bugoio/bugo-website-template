@@ -1,0 +1,114 @@
+{{/**
+   * Default List Template
+	 *
+	 * The default list for the site.
+   *
+   * @version 1.0.0
+	 *
+   */}}
+
+{{/** Hero **/}}
+{{ define "hero" }}
+{{ partial "hero" . }}
+{{ end }}
+
+{{/** Breadcrumbs **/}}
+{{ define "breadcrumbs" }}
+<div class="breadcrumbs">
+  {{ partial "breadcrumbs" . }}
+</div>
+{{ end }}
+
+{{/** Main **/}}
+{{ define "main" }}
+{{ $context := . }}
+<main id="main" class="" tabindex="0" aria-label="{{ .Title }}">
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+
+  {{/** Posts **/}}
+  {{ $site := .Site }}
+  {{/** Paginated Posts **/}}
+  {{ $paginator :=  .Paginate (sort .Pages "Params.event_date" "asc") }}
+
+  <div class="columns flex-wrap events-{{ $paginator.PageNumber }}">
+    {{ if gt (len $paginator.Pages) 0}}
+    {{ range $paginator.Pages  }}
+    {{/*  {{ partial "article-summary-link" . }} */}}
+    <div class="event flex-100 flex-sm-50 flex-md-100 mb-4">
+      <div class="mx-1">
+        <a href="{{ .Permalink }}" class="event-link dflex flex-wrap align-start" tabindex="0">
+          {{ if .Params.city_image }}
+          {{ $smOptions := dict "context"  $context "image" .Params.city_image "transform" "w_400"}}
+          {{ $smURL := partial "utilities/cloudinary-transform" $smOptions }}
+          <div class="flex-30 align-start dflex justify-center flex-wrap">
+            <div class="thumbnail clip-hexigon">
+
+              {{ $imgSrc := partial "utilities/springboard/imgSrc" .Params.city_image }}
+              {{ partial "picture" (dict "imgSrc" $imgSrc "alt" .Title ) }}
+            </div>
+            <div class="bug dnone flex-100 text-center"><span></span></div>
+          </div>
+          {{ end }}
+          <div class="flex-70">
+            <div class="ml-2">
+              {{ if .Params.image }}
+              {{ $smOptions := dict "context" . "image" .Params.image "transform" "w_400"}}
+              {{ $smURL := partial "utilities/cloudinary-transform" $smOptions }}
+              <div>
+                <div class="w-33">
+                  {{ $imgSrc := partial "utilities/springboard/imgSrc" .Params.image }}
+                  {{ partial "picture" (dict "imgSrc" $imgSrc "alt" .Title) }}
+                </div>
+              </div>
+              {{ end }}
+              <div>
+                <h2 class="h5  mt-0 mb-0">
+                  {{ .Title }}                
+                </h2>
+                <div class="dblock h6 text-dark mt-0">
+                  {{ .Params.city }}
+                  <div class="sr-only">
+                    <time 
+                      id="event-{{ .Title | anchorize }}" 
+                      class="start text-black dblock" 
+                      datetime="{{ dateFormat "2006-01-02T15:04:05Z" .Params.event_date }}"
+                      data-start="{{ dateFormat "02 January 2006 15:00 MST" .Params.event_date }}">
+                      Starts: {{ (time .Params.event_date).Local.Format "Mon, 02 Jan 2006" }}
+                    </time>
+                    <time 
+                      id="event-{{ .Title | anchorize }}" 
+                      class="end text-black dblock" 
+                      datetime="{{ .Params.expiryDate.Format "2006-01-02T15:04:05Z"}}"
+                      data-end="{{ .Params.expiryDate.Format "02 January 2006 15:00 MST" }}">
+                      Ends: {{ ( time .Params.expiryDate).Local.Format "Mon, 02 Jan 2006" }}
+                    </time>
+                  </div>
+                  <div class="time text-dark" aria-hidden="true"></div>
+                </div>
+                <div class="mb-0 text-black">
+                  <p>
+                    <span class="button button-primary">Schedule a meeting with us at {{ .Title }}</span>
+                  </p>
+                </div>  
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    {{ end }}
+    {{ else }}
+      <p>There are no events at this time.</p>
+    {{end}}
+  </div>
+  <div class="pagination">
+    {{ partial "pagination.html" . }}
+  </div>
+</main>
+{{ end }}
+
+{{/** Sidebar **/}}
+{{ define "aside" }}
+{{ partial "sidebar" . }}
+{{ end }}
