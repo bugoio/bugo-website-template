@@ -95,5 +95,9 @@ fields:
     min: 
     max: 
   label: Aliases
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
 pages:
 - content/events/los-angeles.md
