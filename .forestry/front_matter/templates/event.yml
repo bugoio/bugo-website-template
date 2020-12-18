@@ -18,3 +18,12 @@ fields:
     display_utc: false
   hidden: true
   default: now
+- name: eventDate
+  type: datetime
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+  label: Event Date
