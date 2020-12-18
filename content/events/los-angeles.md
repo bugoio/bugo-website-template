@@ -2,14 +2,14 @@
 date: 2020-12-18T11:47:47.000-08:00
 show_sidebar: true
 layout: event
-title: " Los Angeles"
+title: " Disneyland"
 description: 
 images: []
 categories: []
 event_date: 
 expiryDate: 2021-01-01T04:00:00-08:00
 multiple_days: true
-slug: ''
+slug: disneyland
 aliases: []
 location:
   name: Disneyland
