@@ -2,7 +2,7 @@
 date: 2020-12-18T11:47:47.000-08:00
 show_sidebar: true
 layout: event
-title: los-angeles
+title: " Los Angeles"
 description: 
 images: []
 categories: []
