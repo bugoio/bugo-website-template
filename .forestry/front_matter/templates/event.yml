@@ -48,5 +48,17 @@ fields:
   config: {}
   template: page-options
   label: Page Options
+- name: slug
+  type: text
+  config:
+    required: false
+  label: Slug
+- name: aliases
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: Aliases
 pages:
 - content/events/los-angeles.md
