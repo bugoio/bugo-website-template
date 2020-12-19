@@ -7,7 +7,7 @@ description:
 images: []
 categories: []
 event_date: 
-expiryDate: 2021-01-02T04:00:00-08:00
+expiryDate: 2021-01-02T04:00:00.000-08:00
 multiple_days: true
 slug: disneyland
 aliases: []
@@ -23,15 +23,16 @@ location:
 hero:
   useDefaultImage: false
   displayPageTitle: true
-  heroImage: "/uploads/img_1463.JPG"
-  heroCaption: ''
-  heroImageAltText: ''
+  heroImage: "/uploads/sleeping_beauty_castle_disneyland_anaheim_2013.jpg"
+  heroCaption: Cinderella's Castle at Disneyland. Tuxyso / Wikimedia Commons / CC
+    BY-SA 3.0
+  heroImageAltText: 'Cinderella''s Castle at Disneyland. '
   heroCustomText: ''
 pageOptions:
   showSidebar: true
   hideMarketingBlock: false
   excludeFromSitemap: false
-eventDate: 2020-12-30T00:00:00-08:00
+eventDate: 2020-12-30T00:00:00.000-08:00
 tags: []
 
 ---
