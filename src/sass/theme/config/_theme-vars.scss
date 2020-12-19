@@ -33,7 +33,7 @@ $breakpoints: (
     breakpoint: 600px,
   ),
   md: (
-    breakpoint: 768px,
+    breakpoint: 700px,
   ),
   lg: (
     breakpoint: 1000px,
@@ -54,7 +54,7 @@ $border: 0.25rem solid;
 $border-color: transparent;
 $class-name: "";
 $radius: 0;
-$font-family: 'Roboto', sans-serif;
+$font-family: "Barlow Semi Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $transition: all 0.3s ease;
 $breakpoint: 60rem;
 $shadow: none;
@@ -64,10 +64,10 @@ $line-height: 1.7;
 $container-w-xs: 90%;
 $container-w-sm: 90%;
 $container-w-md: 90%;
-$container-w-lg: 90%;
+$container-w-lg: 80%;
 $container-w-xl: 80%;
 $container-w-xxl: 70%;
-$container-w-xxxl: 60%;
+$container-w-xxxl: 65%;
 
 
 // Spacing
@@ -109,6 +109,8 @@ $space-10: 10;
 $grid-space: var(--space-max);
 $vertical: $grid-space;
 $horizontal: $grid-space;
+$grid-sizes: 500 600 700 800 900 1000 1100 1200 1300 1400 1500 1600 1700 1800 1900 2000 2100 2200;
+
 
 // Button
 $button-radius: $radius;
@@ -117,22 +119,23 @@ $button-hover-shadow: inset 0 0 0 99em rgba($white, $transparency);
 $button-click: inset 0 0 0 99em rgba($black, $transparency);
 $button-pseudo-hover-shadow: inset 0 0 0 99em rgba($black, $transparency / 2);
 $button-bg: $secondary;
-$button-color: $black;
+$button-color: $white;
 $button-disabled-bg: #bbb;
 $button-weight: bold;
 
 // Card
 $card-shadow: 0;
-$card-border: $border $border-color;
+$card-border: dotted $border-color;
 $card-radius: $radius;
 $card-shadow: $shadow;
 $card-margin-bottom: var(--space);
-$card-p-padding: var(--space-less) var(--space-least);
+$card-padding: var(--space-2) var(--space-2);
+$card-paragraph-padding: var(--space-2) var(--space-2);
 $card-header-border-bottom: 1px solid #333;
 $card-bg: transparent;
-$card-hover-bg: $light;
+$card-hover-bg: transparent;
 $card-hover-scale-image: true;
-$card-hover-border-color: transparent;
+$card-hover-border-color: $light;
 
 // Checkbox
 $checkbox-character: '\2714';
@@ -156,7 +159,7 @@ $dropimage-radius: $button-radius;
 $dropimage-margin: $button-margin;
 
 // Generic
-$generic-color: #000;
+$generic-color: $white;
 $generic-link-color: inherit;
 $generic-shadow-color: #000;
 $generic-bg: #fff;
@@ -204,22 +207,22 @@ $tooltip-background: $black;
 $tooltip-size: .8em;
 
 // Offcanvas
-$offcanvas-bg: $light;
-$canvas-bg: $white;
-$offcanvasMobileHeight: 600px;
+$offcanvas-bg: transparent;
+$canvas-bg: transparent;
+$offcanvasMobileHeight: 0;
 
 // Desktop
 $desktop-bp: lg;
 
 // Header
-$header-bg: $white; 
+$header-bg: transparent; 
 $header-color: $white;
-$header-brand-w: 15%;
-$header-brand-w-desktop: 15%;
+$header-brand-w: 50%;
+$header-brand-w-desktop: 33%;
 $header-padding: var(--space) 0;
 
 // Mobile Nav
-$mobile-hamburger-color: $black;
+$mobile-hamburger-color: $white;
 $mobile-hamburger-bp: lg;
 $mobile-hamburger-w: 9%;
 $mobile-link-color: $primary;
@@ -229,14 +232,14 @@ $mobile-link-margin: var(--space);
 $mobile-link-padding:  var(--space-least) var(--space-more);
 
 // Menubar
-$menubar-menu1-bg: $white;
-$menubar-menu1-color: $primary;
-$menubar-menu2-bg: $primary;
+$menubar-menu1-bg: $black;
+$menubar-menu1-color: $white;
+$menubar-menu2-bg: $black;
 $menubar-menu2-color: $white;
 
 // Main Nav
 $main-menu-link-bgColor: transparent;
-$main-menu-link-color: $primary;
+$main-menu-link-color: $white;
 $main-menu-link-size: -0.25;
 $main-menu-link-margin: 0 var(--space-less) 0 0;
 $main-menu-margin: 0;
@@ -287,22 +290,23 @@ $asideCategoriesShow: true;
 $asideArticleHeadingSize: var(--space-2);
 
 // Thumbnails
-$thumb-padding: 40%;
+$thumb-padding: 100%;
+$thumb-fit: contain;
 
 // Headings
-$h1-font-size: var(--space-5);
-$h2-font-size: var(--space-4);
-$h3-font-size: var(--space-3);
-$h4-font-size: var(--space-2);
-$h5-font-size: var(--space-1);
+$h1-font-size: var(--space-4);
+$h2-font-size: var(--space-3);
+$h3-font-size: var(--space-2);
+$h4-font-size: var(--space-1);
+$h5-font-size: var(--space);
 $h6-font-size: var(--space);
 $heading-color: $primary;
 $heading-padding-top: var(--space-less);
 $heading-padding-bottom: 0;
 $heading-margin-bottom: var(--space-less);
 $heading-line-height: 1.3;
-$heading-font: "Roboto Slab", serif;
-
+$heading-font: "Barlow Semi Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$heading-font-weight: 500;
 $block-padding: var(--space-most) 0;
 $block-text-align: left;
 
@@ -310,14 +314,16 @@ $block-text-align: left;
 $share-modal-bg: $white;
 
 //Footer
-$footer-bg: $primary;
+$footer-bg: transparent;
 $footer-color: $white;
+$footer-font-size: var(--space);
 $footer-p: var(--space-more);
 $footer-link: $white;
-$footer-brand-width: 15%;
+$footer-brand-width: 50%;
+$footer-brand-width-desktop: 35%;
 $footer-locations-width: 85%;
 
-$copyright-font-size: -1.5;
+$copyright-font-size: var(--space--1);
 
 // Columns
 $columns-gap: 1;

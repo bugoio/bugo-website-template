@@ -1,9 +1,12 @@
-<div class="responsive-iframe">
-  <iframe 
-  width="600" 
-  height="450" 
-  frameborder="0" 
-  style="border:0" 
-  src={{ printf "https://www.google.com/maps/embed/v1/place?q=%s&key=%s" . (getenv "GOOGLE_KEY")}} 
-  allowfullscreen></iframe>
+{{ $address := printf "%s %s %s %s %s" .street1 .street2 .city .state .zip }}
+<div class="goolge-map">
+  <div class="responsive-iframe">
+    <iframe 
+    width="600" 
+    height="450" 
+    frameborder="0" 
+    style="border:0" 
+    src={{ printf "https://www.google.com/maps/embed/v1/place?%s" (querify "q" $address "key" (getenv "GOOGLE_KEY"))}} 
+    allowfullscreen></iframe>
+  </div>
 </div>

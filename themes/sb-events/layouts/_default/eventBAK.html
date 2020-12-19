@@ -1,0 +1,87 @@
+{{/**
+   * Default Single Page Layout
+	 *
+	 * The default single for the site.
+   * All pages and posts will default to this template.
+   *
+   * @version 1.0.0
+	 *
+   */}}
+   {{ define "breadcrumbs" }}
+   <div class="breadcrumbs">
+     {{ partial "breadcrumbs" . }}
+   </div>
+   {{ end }}
+   
+   {{ define "main" }}
+   <main id="main" tabindex="0">
+     <a href="/events" class="dinline-block mb-2">&lt; Back to Events</a>
+    <div class="dflex flex-wrap align-center mb-4">
+      {{ if .Params.city_image }}
+        <div class="flex-30 dflex justify-center flex-wrap">
+          <div class="thumbnail clip-hexigon">
+            {{ $imgSrc := partial "utilities/springboard/imgSrc" .Params.city_image }}
+            {{ partial "picture" (dict "imgSrc" $imgSrc "alt" .Title ) }}
+          </div>
+          <div class="bug dnone flex-100 text-center"><span></span></div>
+        </div>
+    {{ end }}
+      <div class="flex-70">
+        <div class="ml-2 mb-0">
+          {{ if .Params.image }}
+            {{ $smOptions := dict "context" . "image" .Params.image "transform" "w_400"}}
+            {{ $smURL := partial "utilities/cloudinary-transform" $smOptions }}
+            <div>
+              <div class="w-33">
+                {{ $imgSrc := partial "utilities/springboard/imgSrc" .Params.image }}
+                {{ partial "picture" (dict "imgSrc" $imgSrc "alt" .Title) }}
+              </div>
+            </div>
+          {{ end }}
+          <h2 class="h4 mt-0 mb-0">
+            {{ .Title }}
+            <time id="event-1" class="text-black dblock" data-event="{{ .Params.eventDate }}" data-expire="{{ .Params.expiryDate }}">
+              <script>
+                var el = document.getElementById('event-1');
+                var start = el.getAttribute('data-event');
+                var end = el.getAttribute('data-expire');
+                console.log(el,start.toDateString(),end);
+              </script>
+            </time>
+          </h2>
+          <p class="dblock h5 text-dark mt-0">
+            {{ .Params.city }}<br/>
+            <span class="sr-only">
+              <time 
+                id="event-{{ .Title | anchorize }}" 
+                class="start text-black dblock"
+                datetime="{{ dateFormat "2006-01-02T15:04:05Z" .Params.eventDate }}"
+                data-start="{{ dateFormat "02 January 2006 15:00 MST" .Params.eventDate }}">                  
+                  Starts: {{ (time .Params.eventDate).Local.Format "Mon, 02 Jan 2006" }}
+              </time>
+              <time 
+                id="event-{{ .Title | anchorize }}" 
+                class="end text-black dblock" 
+                datetime="{{ .Params.expiryDate.Format "2006-01-02T15:04:05Z"}}"
+                data-end="{{ .Params.expiryDate.Format "02 January 2006 15:00 MST" }}">
+                Ends: {{ ( time .Params.expiryDate).Local.Format "Mon, 02 Jan 2006" }}
+              </time>
+            </span>
+            <span class="time text-dark" aria-hidden="true"></span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+     {{ .Content }}
+    {{ with .Params.rsvp_form}}
+      <div class="camg-embed-wrapper">
+        <iframe id="rsvp-form" class="camg-embed " src="{{ . }}" frameborder="0" width="100%"></iframe>
+      </div>
+    {{ end }}
+   </main>
+   {{ end }}
+   
+   {{ define "aside" }}
+     {{ partial "sidebar" . }}
+   {{ end }}

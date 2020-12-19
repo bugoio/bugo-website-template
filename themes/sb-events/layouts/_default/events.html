@@ -9,7 +9,7 @@
 
 {{/** Hero **/}}
 {{ define "hero" }}
-{{ partial "hero" . }}
+{{ partial "components/hero" . }}
 {{ end }}
 
 {{/** Breadcrumbs **/}}
@@ -29,7 +29,7 @@
   {{/** Posts **/}}
   {{ $site := .Site }}
   {{/** Paginated Posts **/}}
-  {{ $paginator :=  .Paginate (sort .Pages "Params.event_date" "asc") }}
+  {{ $paginator :=  .Paginate (sort .Pages "Params.eventDate" "asc") }}
 
   <div class="columns flex-wrap events-{{ $paginator.PageNumber }}">
     {{ if gt (len $paginator.Pages) 0}}
@@ -72,9 +72,9 @@
                     <time 
                       id="event-{{ .Title | anchorize }}" 
                       class="start text-black dblock" 
-                      datetime="{{ dateFormat "2006-01-02T15:04:05Z" .Params.event_date }}"
-                      data-start="{{ dateFormat "02 January 2006 15:00 MST" .Params.event_date }}">
-                      Starts: {{ (time .Params.event_date).Local.Format "Mon, 02 Jan 2006" }}
+                      datetime="{{ dateFormat "2006-01-02T15:04:05Z" .Params.eventDate }}"
+                      data-start="{{ dateFormat "02 January 2006 15:00 MST" .Params.eventDate }}">
+                      Starts: {{ (time .Params.eventDate).Local.Format "Mon, 02 Jan 2006" }}
                     </time>
                     <time 
                       id="event-{{ .Title | anchorize }}" 
@@ -103,7 +103,6 @@
     {{end}}
   </div>
   <div class="pagination">
-    {{ partial "pagination.html" . }}
   </div>
 </main>
 {{ end }}

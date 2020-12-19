@@ -6,9 +6,8 @@ title: {{ .Name }}
 description: 
 images: []
 categories: []
-event_date: 
+eventDate: 
 expiryDate: 
-multiple_days: true
 slug: ''
 aliases: []
 location:
