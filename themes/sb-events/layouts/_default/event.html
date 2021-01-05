@@ -74,6 +74,13 @@
         "addressCountry": "US"
       }
     },
+    {{ else }}
+    {{ with .Params.registrationUrl }}
+    "location": {
+      "@type": "VirtualLocation",
+      "url": "{{ . }}"
+      },
+    {{ end }}
     {{ end }}
     {{ with .Params.images }}
       "image": {{ . | jsonify }},      
