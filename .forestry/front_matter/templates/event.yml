@@ -137,5 +137,6 @@ fields:
   hidden: true
   default: event
 pages:
+- content/events/facing-homelessness-benefit.md
 - content/events/feit4kidz-gala.md
 - content/events/los-angeles.md

@@ -1,7 +1,7 @@
 ---
 layout: event
 title: Facing Homelessness Benefit
-date: 2020-12-21T19:53:23.000+00:00
+date: 2021-01-05T10:25:42-08:00
 slug: ''
 aliases: []
 page_meta:
@@ -32,9 +32,19 @@ hero:
   heroImageAltText: ''
   displayPageTitle: false
   heroCustomText: ''
+  heroCaption: ''
 categories: []
 tags: []
 eventDate: 2020-12-25T00:00:00.000+00:00
+locationType: Place
+url: ''
+location:
+  name: ''
+  address1: ''
+  address2: ''
+  city: ''
+  state: ''
+  zip: ''
 
 ---
 ### Sarah Dusseault
