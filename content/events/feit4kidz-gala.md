@@ -1,7 +1,7 @@
 ---
 layout: event
 title: Feit4kidz
-date: 2021-01-05T10:25:26-08:00
+date: 2021-01-05T10:25:26.000-08:00
 slug: feit4kidz
 aliases: []
 page_meta:
@@ -43,8 +43,8 @@ location:
   state: CA
   zip: "90049"
 registrationUrl: https://interland3.donorperfect.net/weblink/WebLink.aspx?name=E9816&id=51&FromAdminLink=true
-locationType: Place
-url: ''
+locationType: Virtual Location
+url: https://bugo.io
 
 ---
 ## Join Us for the 6th Feit 4 Kidz Gala
