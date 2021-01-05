@@ -22,7 +22,7 @@ pageOptions:
   showSidebar: true
   hideMarketingBlock: false
   excludeFromSitemap: false
-expiryDate: 2021-01-05T14:00:00-08:00
+expiryDate: 2021-01-05T18:00:00-08:00
 images: []
 hero:
   useDefaultImage: false
@@ -33,7 +33,7 @@ hero:
   heroCaption: ''
 categories: []
 tags: []
-eventDate: 2021-01-05T18:00:00-08:00
+eventDate: 2021-01-05T13:00:00-08:00
 registrationUrl: https://interland3.donorperfect.net/weblink/WebLink.aspx?name=E9816&id=48
 locationType: Virtual Location
 eventUrl: https://bugo.io
