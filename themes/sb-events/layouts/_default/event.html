@@ -3,6 +3,7 @@
 {{ end}}
 
 {{ define "main" }}
+
   <main id="main" class="main-page" aria-label="Main Content" tabindex="0">
     {{ .Content }}
     {{ partial "components/share-buttons.html" . }}
@@ -10,6 +11,16 @@
 {{ end }}
 
 {{ define "sidebar" }}
+{{ $scratch := newScratch }}
+{{ with .Params.eventDate }}
+  {{ $scratch.Set "start" (time .) }}
+{{ end }}
+{{ with .Params.expiryDate }}
+  {{ $scratch.Set "end" (time .) }}
+{{ end }}
+{{ $start := $scratch.Get "start" }}
+{{ $end := $scratch.Get "end" }}
+
 <aside id="sidebar" role="complimentary" tabindex="0">
   <article class="event-listing">
     <header>
@@ -24,7 +35,12 @@
       {{ with .Params.location }}
         {{ partial "components/address" . }}  
         {{ partial "components/google-map" . }}  
-      {{ end }}  
+      {{ end }}
+      {{ if and .Params.eventUrl (ge now.YearDay $start.YearDay) (le now.Unix $end.Unix) (eq .Params.locationType "Virtual Location" )}}
+        <a href="{{ .Params.eventUrl }}" title="Launch Event" >{{ .Params.eventUrl }}</a>
+      {{ else }}
+        <p>This is a virtual event.</p>
+      {{ end }}
       {{ with .Params.registrationUrl }}
       <p>
         <a class="button button-outline" href="{{ . }}" target="new" rel="noopener noreferrer">Register Now</a>

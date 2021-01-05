@@ -22,7 +22,7 @@ pageOptions:
   showSidebar: true
   hideMarketingBlock: false
   excludeFromSitemap: false
-expiryDate: 2020-12-24T07:00:00.000+00:00
+expiryDate: 2021-12-24T07:00:00.000+00:00
 images:
 - https://res.cloudinary.com/dw7ezzuop/image/upload/v1553020820/JFLA_Header28.jpg
 hero:
@@ -34,7 +34,7 @@ hero:
   heroCaption: ''
 categories: []
 tags: []
-eventDate: 2020-12-24T03:00:00.000+00:00
+eventDate: 2021-12-24T03:00:00.000+00:00
 location:
   name: Luxe Hotel
   address1: 11461 Sunset Blvd
@@ -44,7 +44,6 @@ location:
   zip: "90049"
 registrationUrl: https://interland3.donorperfect.net/weblink/WebLink.aspx?name=E9816&id=51&FromAdminLink=true
 locationType: Virtual Location
-url: https://bugo.io
 eventUrl: https://bugo.io
 
 ---
