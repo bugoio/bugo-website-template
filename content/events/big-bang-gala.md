@@ -1,7 +1,7 @@
 ---
 layout: event
 title: Big Bang Gala
-date: 2020-12-21T19:54:21+00:00
+date: 2021-01-05T10:26:31-08:00
 slug: big-bang-gala
 aliases: []
 page_meta:
@@ -22,7 +22,7 @@ pageOptions:
   showSidebar: true
   hideMarketingBlock: false
   excludeFromSitemap: false
-expiryDate: 2021-05-20T07:00:00+00:00
+expiryDate: 2021-05-20T07:00:00.000+00:00
 images: []
 hero:
   useDefaultImage: false
@@ -30,10 +30,21 @@ hero:
   heroImageAltText: ''
   displayPageTitle: false
   heroCustomText: ''
+  heroCaption: ''
 categories: []
 tags: []
-eventDate: 2021-05-19T07:00:00+00:00
+eventDate: 2021-05-19T07:00:00.000+00:00
 registrationUrl: https://interland3.donorperfect.net/weblink/WebLink.aspx?name=E9816&id=48
+locationType: Place
+url: ''
+location:
+  name: ''
+  address1: ''
+  address2: ''
+  city: ''
+  state: ''
+  zip: ''
+
 ---
 ###### Join us as we honor
 
