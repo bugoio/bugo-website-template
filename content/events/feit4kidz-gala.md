@@ -43,7 +43,7 @@ location:
   state: CA
   zip: "90049"
 registrationUrl: https://interland3.donorperfect.net/weblink/WebLink.aspx?name=E9816&id=51&FromAdminLink=true
-locationType: Virtual Location
+locationType: Place
 eventUrl: https://bugo.io
 
 ---
