@@ -22,7 +22,7 @@ pageOptions:
   showSidebar: true
   hideMarketingBlock: false
   excludeFromSitemap: false
-expiryDate: 2021-05-20T07:00:00.000+00:00
+expiryDate: 2021-01-05T14:00:00-08:00
 images: []
 hero:
   useDefaultImage: false
