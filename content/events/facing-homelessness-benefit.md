@@ -37,14 +37,6 @@ categories: []
 tags: []
 eventDate: 2020-12-25T00:00:00.000+00:00
 locationType: Place
-url: ''
-location:
-  name: ''
-  address1: ''
-  address2: ''
-  city: ''
-  state: ''
-  zip: ''
 
 ---
 ### Sarah Dusseault

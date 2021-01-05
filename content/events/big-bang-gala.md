@@ -36,15 +36,7 @@ tags: []
 eventDate: 2021-05-19T07:00:00.000+00:00
 registrationUrl: https://interland3.donorperfect.net/weblink/WebLink.aspx?name=E9816&id=48
 locationType: Virtual Location
-url: https://bugo.io
-location:
-  name: ''
-  address1: ''
-  address2: ''
-  city: ''
-  state: ''
-  zip: ''
-
+eventUrl: https://bugo.io
 ---
 ###### Join us as we honor
 

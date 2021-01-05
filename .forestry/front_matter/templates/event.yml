@@ -56,7 +56,7 @@ fields:
       file: 
       path: 
   label: Location Type
-- name: url
+- name: eventUrl
   type: text
   config:
     required: false
