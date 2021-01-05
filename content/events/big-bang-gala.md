@@ -1,7 +1,7 @@
 ---
 layout: event
 title: Big Bang Gala
-date: 2021-01-05T10:26:31-08:00
+date: 2021-01-05T10:26:31.000-08:00
 slug: big-bang-gala
 aliases: []
 page_meta:
@@ -33,10 +33,18 @@ hero:
   heroCaption: ''
 categories: []
 tags: []
-eventDate: 2021-05-19T07:00:00.000+00:00
+eventDate: 2021-01-05T13:00:00-08:00
 registrationUrl: https://interland3.donorperfect.net/weblink/WebLink.aspx?name=E9816&id=48
 locationType: Virtual Location
 eventUrl: https://bugo.io
+location:
+  name: ''
+  address1: ''
+  address2: ''
+  city: ''
+  state: ''
+  zip: ''
+
 ---
 ###### Join us as we honor
 
