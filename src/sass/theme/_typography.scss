@@ -15,8 +15,8 @@
 h1,h2,h3,h4,h5,h6,
 .h1,.h2,.h3,.h4,.h5,.h6 {
   color: config.$heading-color;
-  font-weight: 800;
-  @extend %padding;
+  font-weight: config.$heading-font-weight;
+  text-transform: config.$heading-text-transform;
 
   small {
     display: block;
@@ -25,15 +25,68 @@ h1,h2,h3,h4,h5,h6,
 }
 
 p,ul,ol {
-  @extend %padding;
+  padding: config.$typographic-padding;
 }
 
-blockquote {
-  font-size: var(--space-2);
-  @extend %margin;
+  blockquote {
+    font-weight: bold;
+    font-size: var(--space-2);
+    margin: config.$typographic-margin;
+    position: relative;
+    padding: config.$typographic-padding;
+    padding-left: var(--space-1);
+    padding-right: var(--space-1);
+    border-color: config.$secondary;
+    border-style: solid;
+    border-top-width: var(--space--5);
+    border-right: 0;
+    border-bottom-width: var(--space--5);
+    border-left: 0;
+    box-shadow: none;
 
-  cite {
-    display: block;
-    text-align: right;
+    &::before {
+      content: "“";
+      font-size: calc(var(--space-5)*2);
+      position: absolute;
+      display: flex;
+      top: 0;
+      left: 0;
+      transform: translateY(-40%);
+      background-color: config.$white;
+      height: 3rem;
+      overflow: hidden;
+      align-content: flex-start;
+      line-height: .7;
+    }
+
+    &::after {
+      content: "”";
+      font-size: calc(var(--space-5)*2);
+      position: absolute;
+      position: absolute;
+      display: flex;
+      bottom: 0;
+      right: 0;
+      transform: translateY(70%);
+      background-color: config.$white;
+      height: 3rem;
+      overflow: hidden;
+      align-content: flex-start;
+      line-height: .7;
+    }
+
+    p {
+      padding: 0 !important;
+      line-height: 1.4;
+    }
+
+    cite {
+      display: block;
+      text-align: left;
+      // position: absolute;
+      // bottom: 0;
+      font-size: 75%;
+      font-weight: normal;
+      padding: config.$typographic-padding;
+    }
   }
-}

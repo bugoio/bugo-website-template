@@ -3,3 +3,5 @@ node_modules
 resources
 # Local Netlify folder
 .netlify
+src/sassBAK
+BAK

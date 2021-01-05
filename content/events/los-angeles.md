@@ -1,13 +1,12 @@
 ---
 date: 2020-12-18T11:47:47.000-08:00
 show_sidebar: true
-layout: event
-title: " Disneyland"
+title: "Disneyland"
 description: 
 images: []
 categories: []
 event_date: 
-expiryDate: 2021-01-02T04:00:00.000-08:00
+expiryDate: 2021-01-12T04:00:00.000-08:00
 multiple_days: true
 slug: disneyland
 aliases: []
@@ -32,8 +31,8 @@ pageOptions:
   showSidebar: true
   hideMarketingBlock: false
   excludeFromSitemap: false
-eventDate: 2020-12-30T00:00:00.000-08:00
+eventDate: 2021-12-13T00:00:00.000-08:00
 tags: []
-
+layout: event
 ---
 Disneyland Park, originally Disneyland, is the first of two theme parks built at the Disneyland Resort in Anaheim, California, opened on July 17, 1955. It is the only theme park designed and built to completion under the direct supervision of Walt Disney.

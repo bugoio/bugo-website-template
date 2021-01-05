@@ -13,7 +13,7 @@ pageOptions:
   hideMarketingBlock: false
   excludeFromSitemap: false
 tags: []
-layout: contact
+layout: landing-page
 title: Contact Us
 expiryDate: ''
 description: An ‘extremely credible source’ has called my office and told me that Barack Obama’s placeholder text is a fraud.

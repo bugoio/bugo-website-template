@@ -20,6 +20,7 @@ Basic site using Springboard CSS
 
 ### Accounts
 
+  * Github.com for storing your website
   * Netlify.com for Hosting and simple image transformations
   * Forestry.io (optional) for Content Management
   * Cloundiary.com (optional) for complex image transformations

@@ -1,0 +1,22 @@
+{{ $scratch := newScratch }}
+{{ $scratch.Set "start" false }}
+{{ $scratch.Set "end" false }}
+
+{{ with .Params.eventDate }}
+  {{ $scratch.Set "start" (time .) }}
+{{ end }}
+{{ with .Params.expiryDate }}
+  {{ $scratch.Set "end" (time .) }}
+{{ end }}
+
+{{ $start := $scratch.Get "start" }}
+{{ $end := $scratch.Get "end" }}
+{{/* Same Day */}}
+{{ if eq $start.YearDay $end.YearDay }}
+  {{ $start.Weekday }}, {{ $start.Month }} {{ $start.Day }}, {{ $start.Year }}<br/>
+  {{ $start.Format "3:04 AM" }} - {{ $end.Format "3:04 AM" }}
+{{ else }}
+{{ $start.Weekday }} - {{ $end.Weekday }}<br/>
+{{ $start.Month }} {{ $start.Day }} - {{ $end.Day }}
+{{ end }}
+{{/* Multiple Days */}}

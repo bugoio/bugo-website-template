@@ -1,5 +1,5 @@
 @use 'sass:meta';
-@use './theme/config';
+@use './config';
 
 @use 'breakpoint-sass/stylesheets/breakpoint' as *;
 @use 'springboard-css/src/sass/plugins/spacing/plugin' as root;

@@ -38,6 +38,33 @@ fields:
     time_format: 
     display_utc: false
   label: Expire Date
+- name: images
+  type: image_gallery
+  config: {}
+  label: Images
+- name: locationType
+  type: select
+  default: Place
+  config:
+    required: false
+    options:
+    - Place
+    - Virtual Location
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Location Type
+- name: url
+  type: text
+  config:
+    required: false
+  label: Virtual Location URL
+  showOnly:
+    field: locationType
+    value: Virtual Location
+  description: Enter the URL to this virtual event.
 - name: location
   type: field_group
   config: {}
@@ -47,12 +74,12 @@ fields:
     config:
       required: false
     label: Name
-  - name: street1
+  - name: address1
     type: text
     config:
       required: false
     label: Street 1
-  - name: street2
+  - name: address2
     type: text
     config:
       required: false
@@ -73,6 +100,9 @@ fields:
       required: false
     label: Zip Code
   label: Location
+  showOnly:
+    field: locationType
+    value: Place
 - name: hero
   type: include
   config: {}
@@ -81,7 +111,7 @@ fields:
 - name: page_options
   type: include
   config: {}
-  template: page-options
+  template: event-options
   label: Page Options
 - name: slug
   type: text
@@ -106,5 +136,3 @@ fields:
   label: layout
   hidden: true
   default: event
-pages:
-- content/events/los-angeles.md

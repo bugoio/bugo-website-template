@@ -1,4 +1,4 @@
-@use '../config';
+@use "../../config";
 @use '../utility';
 
 .card {
@@ -8,9 +8,10 @@
   box-shadow: config.$card-shadow;
   border-radius: config.$card-radius;
   margin-bottom: config.$card-margin-bottom;
+  padding: config.$card-padding;
 
   > p {
-    padding: config.$card-p-padding;
+    padding: config.$card-paragraph-padding;
   }
 
   header {
@@ -23,7 +24,9 @@
     margin-bottom: var(--space-less);
   }
 
-  &:hover {
+  &:hover,
+  &:focus:hover,
+  &:focus {
     background-color: config.$card-hover-bg;
     border-color: config.$card-hover-border-color;
 

@@ -1,4 +1,4 @@
-@use "../config";
+@use "../../config";;
 @use "../utility";
 @use "../typography";
 
@@ -8,7 +8,7 @@
 }
 
 #main-nav {
-  display: none;
+  // /display: none;
   justify-content: config.$main-menu-justify;
   align-items: config.$main-menu-align;
 
@@ -37,5 +37,6 @@
     color: config.$main-menu-link-color;
     background-color: config.$main-menu-link-bgColor;
     margin: config.$main-menu-link-margin;
+    text-transform: config.$main-menu-text-transform;
   }
 }

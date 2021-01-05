@@ -1,6 +1,6 @@
-@use '../config/theme-vars' as *;
-@use '../config/colors' as *;
-@use '../config/plugins' as *;
+@use '../../config/theme-vars' as *;
+@use '../../config/colors' as *;
+@use '../../config/plugins' as *;
 
 // .share-buttons {
 //   @include set-margin($share-margin-top, $share-margin-right, $share-margin-bottom, $share-margin-left);

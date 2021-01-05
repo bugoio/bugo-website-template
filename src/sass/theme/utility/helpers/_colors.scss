@@ -1,4 +1,4 @@
-@use '../../config';
+@use "../../../config";
 
 @each $label,$color in config.$colors {
   .bg-#{$label} {

@@ -1,0 +1,14 @@
+<address class="vcard">
+  <span class="adr">
+    {{ with .name }}
+    <span class="h3">{{ . }}</span><br/>
+    {{ end }}
+    <span class="street-address">{{ .address1 }}</span>
+    {{ with .address2 }}
+      <span class="street-address2">{{ . }}</span>      
+    {{ end }}<br/>
+    <span class="locality">{{ .city }}</span>,
+    {{ .state }}&nbsp;&nbsp;
+    <span class="postal-code">{{ .zip }}</span>
+  </span>
+</address>

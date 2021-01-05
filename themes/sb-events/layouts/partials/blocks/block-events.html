@@ -1,0 +1,53 @@
+{{ $scratch := newScratch }}
+{{ $scratch.Set "flexClass" "" }}
+{{ $seq := seq 3 }}
+{{ $self := . }}
+
+{{ $id := partial "utilities/get-block-id" . }}
+
+{{/*<div id="block-{{ $id }}" class="block latest-posts bg-{{ $bg }} {{ if .block.fullWidth }}full-width{{end}}">*/}}
+  {{ $posts := first 3 (sort ( where .page.Site.RegularPages "Section" "events") ".Params.eventDate" "asc") }}
+  {{ $qty := 3 }}
+  {{ partial "blocks/block-title" .block }}
+  {{ with $posts }}
+  <div id="block-{{ $id }}" {{ partial "utilities/block-class" $self | safeHTMLAttr }}>
+    <div class="wrapper container">
+      <h2 class="text-center">Upcoming Events</h2>
+      {{ if eq (len .) 1 }}
+        {{ $scratch.Set "flexClass" "one" }}
+      {{ else if eq (len .) 2 }}
+        {{ $scratch.Set "flexClass" "two" }}
+      {{ else if eq (len .) 3 }}
+        {{ $scratch.Set "flexClass" "three" }}
+      {{ end }}
+      {{ $columnsClass := partial "utilities/getColumnsClass" $seq }}
+      <div class="posts-latest flex one {{ $scratch.Get "flexClass" }}-600">
+        {{ range . }}
+          <a href="{{ .Permalink }}" aria-label="{{ .Title }}">
+            <article class="text-left">
+              {{ with index .Params.images 0 }}
+                {{ partial "components/thumbnail" . }}  
+              {{ end }}<br/>
+              <article class="event-listing">
+                <header>
+                  <span class="h3">
+                    {{ .Title }}
+                  </span>
+                </header>
+                <footer>
+                  <p>
+                    {{ with .Params.location }}
+                      {{ with .name }}{{.}}<br/>{{end}}
+                    {{ end }}
+                    {{ partial "formatEventDates" . }}
+                  </p>  
+                </footer>
+              </article>
+            </article>
+          </a>
+        {{ end }}
+      </div>
+      <hr/>
+  </div>
+</div>
+{{ end }}

@@ -54,10 +54,10 @@ $border: 0.25rem solid;
 $border-color: transparent;
 $class-name: "";
 $radius: 0;
-$font-family: "Barlow Semi Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $transition: all 0.3s ease;
 $breakpoint: 60rem;
-$shadow: none;
+$shadow: 0.25rem 0.25rem 0.5rem transparentize($black, .6);
 $hr-color: $gray;
 $line-height: 1.7;
 
@@ -105,6 +105,13 @@ $space-8: 8;
 $space-9: 9;
 $space-10: 10;
 
+// Generic Block Element Spacing
+$margin: var(--space-3) 0;
+$padding: var(--space-3) 0;
+
+$typographic-margin: var(--space--1) 0;
+$typographic-padding: var(--space--1) 0;
+
 // Grid
 $grid-space: var(--space-max);
 $vertical: $grid-space;
@@ -129,8 +136,8 @@ $card-border: dotted $border-color;
 $card-radius: $radius;
 $card-shadow: $shadow;
 $card-margin-bottom: var(--space);
-$card-padding: var(--space-2) var(--space-2);
-$card-paragraph-padding: var(--space-2) var(--space-2);
+$card-padding: var(--space) var(--space);
+$card-paragraph-padding: var(--space) var(--space);
 $card-header-border-bottom: 1px solid #333;
 $card-bg: transparent;
 $card-hover-bg: transparent;
@@ -159,7 +166,7 @@ $dropimage-radius: $button-radius;
 $dropimage-margin: $button-margin;
 
 // Generic
-$generic-color: $white;
+$generic-color: $black;
 $generic-link-color: inherit;
 $generic-shadow-color: #000;
 $generic-bg: #fff;
@@ -194,8 +201,6 @@ $radio-border: $border;
 
 // Select
 $select-height: 0;
-$margin: var(--space-least);
-$padding: var(--space-least) var(--space-less);
 
 // ! Stack has no variables right now
 
@@ -209,20 +214,21 @@ $tooltip-size: .8em;
 // Offcanvas
 $offcanvas-bg: transparent;
 $canvas-bg: transparent;
-$offcanvasMobileHeight: 0;
+$offcanvasMobileHeight: 30rem;
+$offcanvasDesktopHeight: 0;
 
 // Desktop
 $desktop-bp: lg;
 
 // Header
 $header-bg: transparent; 
-$header-color: $white;
-$header-brand-w: 50%;
-$header-brand-w-desktop: 33%;
+$header-color: $black;
+$header-brand-w: 33%;
+$header-brand-w-desktop: 18%;
 $header-padding: var(--space) 0;
 
 // Mobile Nav
-$mobile-hamburger-color: $white;
+$mobile-hamburger-color: $primary;
 $mobile-hamburger-bp: lg;
 $mobile-hamburger-w: 9%;
 $mobile-link-color: $primary;
@@ -232,14 +238,14 @@ $mobile-link-margin: var(--space);
 $mobile-link-padding:  var(--space-least) var(--space-more);
 
 // Menubar
-$menubar-menu1-bg: $black;
-$menubar-menu1-color: $white;
-$menubar-menu2-bg: $black;
-$menubar-menu2-color: $white;
+$menubar-menu1-bg: transparent;
+$menubar-menu1-color: $black;
+$menubar-menu2-bg: transparent;
+$menubar-menu2-color: $black;
 
 // Main Nav
 $main-menu-link-bgColor: transparent;
-$main-menu-link-color: $white;
+$main-menu-link-color: $primary;
 $main-menu-link-size: -0.25;
 $main-menu-link-margin: 0 var(--space-less) 0 0;
 $main-menu-margin: 0;
@@ -247,6 +253,7 @@ $main-menu-link-padding: var(--space-min);
 $main-menu-width: 80%;
 $main-menu-justify: flex-end;
 $main-menu-align: center;
+$main-menu-text-transform: uppercase;
 
 // Hero
 $hero-height-sm: 100%;
@@ -290,8 +297,8 @@ $asideCategoriesShow: true;
 $asideArticleHeadingSize: var(--space-2);
 
 // Thumbnails
-$thumb-padding: 100%;
-$thumb-fit: contain;
+$thumb-padding: 80%;
+$thumb-fit: cover;
 
 // Headings
 $h1-font-size: var(--space-4);
@@ -301,12 +308,14 @@ $h4-font-size: var(--space-1);
 $h5-font-size: var(--space);
 $h6-font-size: var(--space);
 $heading-color: $primary;
-$heading-padding-top: var(--space-less);
+$heading-padding-top: var(--space);
 $heading-padding-bottom: 0;
-$heading-margin-bottom: var(--space-less);
+$heading-margin-bottom: 0;
 $heading-line-height: 1.3;
 $heading-font: "Barlow Semi Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$heading-font-weight: 500;
+$heading-font-weight: 400;
+$heading-text-transform: uppercase;
+
 $block-padding: var(--space-most) 0;
 $block-text-align: left;
 
@@ -314,9 +323,8 @@ $block-text-align: left;
 $share-modal-bg: $white;
 
 //Footer
-$footer-bg: transparent;
+$footer-bg: $white;
 $footer-color: $white;
-$footer-font-size: var(--space);
 $footer-p: var(--space-more);
 $footer-link: $white;
 $footer-brand-width: 50%;

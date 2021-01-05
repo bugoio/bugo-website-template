@@ -1,4 +1,4 @@
-@use "../config";
+@use "../../config";;
 @use "../utility";
 @use "../typography";
 
@@ -51,6 +51,10 @@
 
 #brand-footer {
   flex: 0 0 config.$footer-brand-width;
+
+  @include utility.respond-to(md){
+    flex-basis: config.$footer-brand-width-desktop;
+  }
 }
 
 #footer-locations {
@@ -60,7 +64,7 @@
 #copyright {
   text-align: center;
   * {
-    @include utility.mod(font-size,config.$copyright-font-size);
+    font-size: config.$copyright-font-size;
   }
 }
 
@@ -74,9 +78,5 @@
 
 #wcag-commitment {
   text-align: center;
-}
-
-#copyright {
-  @include utility.mod(font-size,-5);
 }
 

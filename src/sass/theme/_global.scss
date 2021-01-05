@@ -14,6 +14,7 @@ body {
   height: auto;
   font-family: config.$font-family;
   line-height: config.$line-height;
+  color: config.$generic-color;
   &:focus {
     outline: none !important;
     border: none !important;
@@ -56,4 +57,20 @@ body.search.loading {
   // @include mod(--space-9,$space-9);
   // @include mod(--space-10,$space-10);
 
+}
+
+.stretch {
+  display: flex;
+  align-items: stretch;
+
+  > a {
+    display: flex;
+    flex-basis: 100%;
+    align-items: stretch;
+
+    > * {
+      display: block;
+      flex-basis: 100%;
+    }
+  }
 }

@@ -13,7 +13,7 @@ pageOptions:
   hideMarketingBlock: false
   excludeFromSitemap: false
 tags: []
-layout: legal
+layout: page
 title: Terms of Use
 expiryDate: ''
 description: ''

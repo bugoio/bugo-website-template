@@ -1,42 +1,75 @@
 {{ define "hero" }}
-  {{ partial "components/hero" . }}
+  {{ partial "event-hero" . }}
 {{ end}}
 
 {{ define "main" }}
   <main id="main" class="main-page" aria-label="Main Content" tabindex="0">
-    <time id="event-1" class="text-black dblock" data-event="{{ .Params.eventDate }}" data-expire="{{ .Params.expiryDate }}">
-      <!-- <script>
-        function getLang()
-        {
-        if (navigator.languages != undefined) 
-        return navigator.languages[0]; 
-        else 
-        return navigator.language;
-        }
-        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        var el = document.getElementById('event-1');
-        var start = new Date(el.getAttribute('data-event'));
-        var end = new Date(el.getAttribute('data-expire'));
-        console.log("hey",el,start,end.toDateString());
-        options.timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone,
-        options.timeZoneName = 'short';
-        document.write(start.toLocaleTimeString(getLang(),options)) 
-        document.write(" - ")
-        document.write(end.toLocaleTimeString(getLang(),options))
-
-
-      </script> -->
-      Start Date: {{ dateFormat "Monday, Jan 2, 2006 3:04 AM" .Params.eventDate  }}<br/>
-      End Date: {{ dateFormat "Monday, Jan 2, 2006 3:04 AM" .Params.expiryDate  }}
-    </time>
     {{ .Content }}
-    {{ with .Params.location }}
-      {{ partial "components/google-map" . }}
-    {{ end }}
     {{ partial "components/share-buttons.html" . }}
   </main>
 {{ end }}
 
 {{ define "sidebar" }}
-  {{ partial "aside" . }}
+<aside id="sidebar" role="complimentary" tabindex="0">
+  <article class="event-listing">
+    <header>
+      <div class="h2">
+        {{ .Title }}
+      </div>
+      <time id="event-1" class="text-black dblock" data-event="{{ .Params.eventDate }}" data-expire="{{ .Params.expiryDate }}">
+        {{ partial "formatEventDates" . }}
+      </time>
+    </header>
+    <footer>
+      {{ with .Params.location }}
+        {{ partial "components/address" . }}  
+        {{ partial "components/google-map" . }}  
+      {{ end }}  
+      {{ with .Params.registrationUrl }}
+      <p>
+        <a class="button button-outline" href="{{ . }}" target="new" rel="noopener noreferrer">Register Now</a>
+      </p>
+      {{ end }}    
+    </footer>
+  </article>
+</aside>
+{{ end }}
+
+{{ define "structuredData" }}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "{{ .Title }}",
+    "startDate": "{{ .Params.eventDate }}",
+    "endDate": "{{ .Params.expiryDate }}",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    {{ with .Params.location }}
+    "location": {
+      "@type": "Place",
+      "name": "{{ .name }}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{{ .address1 }} {{ with .address2 }}, {{ . }}{{end}}",
+        "addressLocality": "{{ .city }}",
+        "postalCode": "{{ .zip }}",
+        "addressRegion": "{{ .state }}",
+        "addressCountry": "US"
+      }
+    },
+    {{ end }}
+    {{ with .Params.images }}
+      "image": {{ . | jsonify }},      
+    {{ end }}
+    {{ with .Params.description }}
+      "description": "The Adventures of Kira and Morrison is coming to Snickertown in a can't miss performance.",
+    {{ end }}
+    "organizer": {
+      "@type": "Organization",
+      "name": "{{ .Site.Title }}",
+      "url": "{{ .Site.BaseURL }}"
+    }
+  }
+  </script>
 {{ end }}

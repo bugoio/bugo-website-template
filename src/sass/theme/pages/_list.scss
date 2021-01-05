@@ -1,6 +1,22 @@
-@use "../config";
+@use "../../config";;
 @use "../utility";
 
 body.list {
   // put styles here
+
+  .posts {
+    time {
+      font-weight: normal !important;
+      padding: 0;
+    }
+
+    li,a {
+      display: flex;
+      align-items: stretch;
+    }
+
+    a,article {
+      width: 100%;
+    }
+  }
 }
