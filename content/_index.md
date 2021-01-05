@@ -40,7 +40,7 @@ contentBlocks:
         beautiful, piece of text.
   - template: block-logos
     layout: block-logos
-    title: Partners
+    title: What's Inside
     showTitle: true
     logos:
     - "/uploads/hugo-logo-wide.svg"
