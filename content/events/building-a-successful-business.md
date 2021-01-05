@@ -1,7 +1,7 @@
 ---
 layout: event
 title: 'Building a Successful Business: How To Develop Your Mission & Vision'
-date: 2020-12-21T19:54:09.000+00:00
+date: 2021-01-05T10:26:09-08:00
 slug: ''
 aliases: []
 page_meta:
@@ -23,7 +23,7 @@ pageOptions:
   showSidebar: true
   hideMarketingBlock: false
   excludeFromSitemap: false
-expiryDate: 2021-12-30T20:00:00+00:00
+expiryDate: 2021-12-30T20:00:00.000+00:00
 images:
 - https://res.cloudinary.com/dw7ezzuop/image/upload/v1602784220/JFLA_BusinessLoans_cskfwv.jpg
 hero:
@@ -32,9 +32,10 @@ hero:
   heroImageAltText: ''
   displayPageTitle: false
   heroCustomText: ''
+  heroCaption: ''
 categories: []
 tags: []
-eventDate: 2021-12-30T18:00:00+00:00
+eventDate: 2021-12-30T18:00:00.000+00:00
 location:
   name: Matt's Place
   address1: 400 Wall St
@@ -43,6 +44,8 @@ location:
   state: WA
   zip: "98121"
 registrationUrl: https://interland3.donorperfect.net/weblink/WebLink.aspx?name=E9816&id=63
+locationType: Place
+url: ''
 
 ---
 Presented by California Lutheran University Professor Mary Jo Shane
