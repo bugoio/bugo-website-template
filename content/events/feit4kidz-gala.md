@@ -45,6 +45,7 @@ location:
 registrationUrl: https://interland3.donorperfect.net/weblink/WebLink.aspx?name=E9816&id=51&FromAdminLink=true
 locationType: Virtual Location
 url: https://bugo.io
+eventUrl: https://bugo.io
 
 ---
 ## Join Us for the 6th Feit 4 Kidz Gala
