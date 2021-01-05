@@ -136,3 +136,6 @@ fields:
   label: layout
   hidden: true
   default: event
+pages:
+- content/events/feit4kidz-gala.md
+- content/events/los-angeles.md

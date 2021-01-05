@@ -1,7 +1,7 @@
 ---
 layout: event
 title: Feit4kidz
-date: 2020-12-21T19:53:51.000+00:00
+date: 2021-01-05T10:25:26-08:00
 slug: feit4kidz
 aliases: []
 page_meta:
@@ -31,6 +31,7 @@ hero:
   heroImageAltText: ''
   displayPageTitle: false
   heroCustomText: ''
+  heroCaption: ''
 categories: []
 tags: []
 eventDate: 2020-12-24T03:00:00.000+00:00
@@ -42,6 +43,8 @@ location:
   state: CA
   zip: "90049"
 registrationUrl: https://interland3.donorperfect.net/weblink/WebLink.aspx?name=E9816&id=51&FromAdminLink=true
+locationType: Place
+url: ''
 
 ---
 ## Join Us for the 6th Feit 4 Kidz Gala
