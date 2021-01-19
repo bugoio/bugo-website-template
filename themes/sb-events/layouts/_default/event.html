@@ -1,0 +1,98 @@
+{{ define "hero" }}
+  {{ partial "event-hero" . }}
+{{ end}}
+
+{{ define "main" }}
+
+  <main id="main" class="main-page" aria-label="Main Content" tabindex="0">
+    {{ .Content }}
+    {{ partial "components/share-buttons.html" . }}
+  </main>
+{{ end }}
+
+{{ define "sidebar" }}
+{{ $scratch := newScratch }}
+{{ with .Params.eventDate }}
+  {{ $scratch.Set "start" (time .) }}
+{{ end }}
+{{ with .Params.expiryDate }}
+  {{ $scratch.Set "end" (time .) }}
+{{ end }}
+{{ $start := $scratch.Get "start" }}
+{{ $end := $scratch.Get "end" }}
+
+<aside id="sidebar" role="complimentary" tabindex="0">
+  <article class="event-listing">
+    <header>
+      <div class="h2">
+        {{ .Title }}
+      </div>
+      <time id="event-1" class="text-black dblock" data-event="{{ .Params.eventDate }}" data-expire="{{ .Params.expiryDate }}">
+        {{ partial "formatEventDates" . }}
+      </time>
+    </header>
+    <footer>
+      {{ with .Params.location }}
+        {{ partial "components/address" . }}  
+        {{ partial "components/google-map" . }}  
+      {{ end }}
+      {{ if and .Params.eventUrl (ge now.YearDay $start.YearDay) (le now.Unix $end.Unix) (eq .Params.locationType "Virtual Location" )}}
+        <a href="{{ .Params.eventUrl }}" title="Launch Event" >{{ .Params.eventUrl }}</a>
+      {{ else }}
+        <p>This is a virtual event.</p>
+      {{ end }}
+      {{ with .Params.registrationUrl }}
+      <p>
+        <a class="button button-outline" href="{{ . }}" target="new" rel="noopener noreferrer">Register Now</a>
+      </p>
+      {{ end }}    
+    </footer>
+  </article>
+</aside>
+{{ end }}
+
+{{ define "structuredData" }}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "{{ .Title }}",
+    "startDate": "{{ .Params.eventDate }}",
+    "endDate": "{{ .Params.expiryDate }}",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    {{ with .Params.location }}
+    "location": {
+      "@type": "Place",
+      "name": "{{ .name }}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{{ .address1 }} {{ with .address2 }}, {{ . }}{{end}}",
+        "addressLocality": "{{ .city }}",
+        "postalCode": "{{ .zip }}",
+        "addressRegion": "{{ .state }}",
+        "addressCountry": "US"
+      }
+    },
+    {{ else }}
+    {{ with .Params.registrationUrl }}
+    "location": {
+      "@type": "VirtualLocation",
+      "url": "{{ . }}"
+      },
+    {{ end }}
+    {{ end }}
+    {{ with .Params.images }}
+      "image": {{ . | jsonify }},      
+    {{ end }}
+    {{ with .Params.description }}
+      "description": "The Adventures of Kira and Morrison is coming to Snickertown in a can't miss performance.",
+    {{ end }}
+    "organizer": {
+      "@type": "Organization",
+      "name": "{{ .Site.Title }}",
+      "url": "{{ .Site.BaseURL }}"
+    }
+  }
+  </script>
+{{ end }}

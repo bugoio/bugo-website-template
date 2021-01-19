@@ -1,0 +1,43 @@
+{{ $currentPage := .context.Page }}
+<div class="tree">
+  <ul role="tree" class="focusables">
+    {{ $page := .context.Page }}
+    {{ range .menu }}
+      {{ if .HasChildren }}
+        {{ template "treeGroup" (dict "page" $page "group" .) }}
+      {{ else }}
+        {{ template "treeItem" (dict "page" $page "item" .) }}
+      {{ end }}
+    {{ end }}
+  </ul>
+</div>
+
+{{ define "treeGroup" }}
+  <li
+    role="treeitem"
+    aria-expanded="false"
+    class=""
+  >
+    <span>
+      {{ .group.Name }}
+    </span>
+    <ul role="group">
+      {{ $page := .page }}
+      {{ range sort .group.Children "Weight" "asc" }}
+        {{ if .HasChildren }}
+          {{ template "treeGroup" (dict "page" $page "group" .) }}
+        {{ else }}
+          {{ template "treeItem" (dict "page" $page "item" .) }}
+        {{ end }}
+      {{ end }}
+    </ul>
+  </li>
+{{ end }}
+
+{{ define "treeItem" }}
+  <li role="none">
+    <a class="{{ .item.Name | anchorize }} tree-item" role="treeitem" href="{{ .item.URL }}">
+      {{ .item.Name | title }}
+    </a>
+  </li>
+{{ end }}

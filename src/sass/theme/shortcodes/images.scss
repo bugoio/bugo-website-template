@@ -1,0 +1,36 @@
+@use "../../config";
+@use '../utility';
+
+.img-sm,
+.img-md,
+.img-lg {
+  padding: config.$padding;
+  clear: both;
+}
+
+.img-sm {
+  img {
+    max-width: 33%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.img-md {
+  img {
+    max-width: 66%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.img-lg {
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

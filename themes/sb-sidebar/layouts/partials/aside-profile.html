@@ -1,0 +1,17 @@
+<aside id="sidebar" role="complimentary" tabindex="0">
+  {{ with .Params.images }}
+    {{ partial "components/thumbnail" (index . 0) }}
+  {{ end }}
+  {{ with .Params.prefix | title }}{{ . }}{{ end }}
+  {{ with .Params.fName | title }}{{ . }}{{ end }}
+  {{ with .Params.mName | title }}{{ . }}{{ end }}
+  {{ with .Params.lName | title }}{{ . }}{{ end }}
+  {{ with .Params.suffix | title }}{{ . }}{{ end }}
+  {{ with .Params.position | title }}
+  <small>{{ . }}</small>
+  {{ end }}
+  {{ partial "components/contact-info" . }}
+  {{ with .Params.social }}
+    {{ partial "components/social-account-list" . }}
+  {{ end }}
+</aside>

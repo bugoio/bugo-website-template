@@ -1,0 +1,14 @@
+{{ define "hero" }}
+  {{ partial "components/hero" . }}
+{{ end}}
+
+{{ define "main" }}
+  <main id="main" class="main-page" aria-label="Main Content" tabindex="0">
+    {{ .Content }}
+    {{ partial "components/share-buttons.html" . }}
+  </main>
+{{ end }}
+
+{{ define "sidebar" }}
+  {{ partial "aside" . }}
+{{ end }}

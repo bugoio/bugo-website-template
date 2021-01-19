@@ -1,0 +1,45 @@
+
+@use "../../config";
+@use '../utility';
+
+.container {
+  flex: config.$container-w-xs;
+  max-width: config.$container-w-xs;
+  margin: 0 auto;
+
+  @include utility.respond-to(sm){
+    flex: config.$container-w-sm;
+    max-width: config.$container-w-sm;
+  }
+
+  @include utility.respond-to(md){
+    flex: config.$container-w-md;
+    max-width: config.$container-w-md;
+  }
+
+  @include utility.respond-to(lg){
+    flex: config.$container-w-lg;
+    max-width: config.$container-w-lg;
+  }
+
+  @include utility.respond-to(xl){
+    flex: config.$container-w-xl;
+    max-width: config.$container-w-xl;
+  }
+
+  @include utility.respond-to(xxl){
+    flex: config.$container-w-xxl;
+    max-width: config.$container-w-xxl;
+  }
+
+  @include utility.respond-to(xxxl){
+    flex: config.$container-w-xxxl;
+    max-width: config.$container-w-xxxl;
+  }
+}
+
+body.sidebar {
+  #content {
+    display: flex;
+  }
+}

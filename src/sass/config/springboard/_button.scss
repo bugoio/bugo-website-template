@@ -1,0 +1,29 @@
+// Button
+@use '../colors' as *;
+@use './global' as *;
+@use './spacing' as *;
+
+$button-radius: $radius;
+$button-margin: var(--space-least) var(--space-less);
+$button-hover-shadow: inset 0 0 0 99em rgba($white, $transparency);
+$button-click: inset 0 0 0 99em rgba($black, $transparency);
+$button-pseudo-hover-shadow: inset 0 0 0 99em rgba($black, $transparency / 2);
+$button-bg: $primary;
+$button-color: $white;
+$button-disabled-bg: #bbb;
+
+@each $name, $color in $colors {
+  .button-#{$name} {
+    border-color: $color;
+    background-color: $color;
+    display: inline-block;
+  }
+
+  .button-outline-#{$name} {
+    color: $color;
+    border-color: $color;
+    background-color: transparent !important;
+    display: inline-block;
+  }
+}
+

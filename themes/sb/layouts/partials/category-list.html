@@ -1,0 +1,5 @@
+<ul class="unstyled-list">
+  {{ range .Site.Taxonomies.categories }}
+          <li><a href="{{ .Page.Permalink }}">{{ .Page.Title | title }} ({{ .Count }})</a></li>
+  {{ end }}
+</ul>

@@ -1,0 +1,31 @@
+<div id="hero" class="full">
+  <div id="hero-image">
+      {{ with .Params.hero.heroImage }}
+        {{ $alt := humanize (index (split (path.Base . ) ".") 0) }}
+        {{ $imgSrc := partial "getImgSrcHero" . }}
+        {{ partial "picture" (dict "imgSrc" $imgSrc "alt" $alt) }}
+      {{ else }}
+        {{ with .Site.Data.organization.defaultHeroImage }}
+          {{ $imgSrc := partial "getImgSrcHero" . }}
+          {{ $alt := humanize (index (split (path.Base . ) ".") 0) }}
+          {{ partial "picture" (dict "imgSrc" $imgSrc "alt" $alt) }}
+        {{ end }}
+      {{ end }}
+      </div>
+    {{ with .Params.hero.heroCustomText }}
+    <div id="hero-container" class="container">
+      <div id="hero-text">
+          {{ . | markdownify }}
+      </div>
+    </div>
+    {{ else }}
+    <div id="hero-container" class="container">
+      <div id="hero-text">
+        <h1>{{ .Title | title }}</h1>
+        {{ with .Description }}
+        <p>{{ . }}</p>
+        {{ end }}
+    </div>
+    </div>
+    {{ end }}
+</div>

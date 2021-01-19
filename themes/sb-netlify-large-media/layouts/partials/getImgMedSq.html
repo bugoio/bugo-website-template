@@ -1,0 +1,34 @@
+{{ $imageExt := path.Ext . }}
+{{ $smOptions := dict "image" . }}
+{{ $mdOptions := dict "image" . }}
+{{ $lgOptions := dict "image" . }}
+{{ $xlOptions := dict "image" . }}
+{{ $xxlOptions := dict "image" . }}
+{{ $xxxlOptions := dict "image" . }}
+
+{{ if ne $imageExt ".svg" }}
+  {{ $smOptions = $smOptions | merge (dict "transform" "nf_resize=smartcrop&w=200&h=200") }}
+  {{ $mdOptions = $mdOptions | merge (dict "transform" "nf_resize=smartcrop&w=300&h=300") }}
+  {{ $lgOptions = $lgOptions | merge (dict "transform" "nf_resize=smartcrop&w=640&h=640") }}
+  {{ $xlOptions = $xlOptions | merge (dict "transform" "nf_resize=smartcrop&w=720&h=720") }}
+  {{ $xxlOptions = $xxlOptions | merge (dict "transform" "nf_resize=smartcrop&w=862&h=862") }}
+  {{ $xxxlOptions = $xxxlOptions | merge (dict "transform" "nf_resize=smartcrop&w=1024&h=1024") }}  
+{{ end }}
+
+
+{{ $smURL := partial "transform" $smOptions }}
+{{ $mdURL := partial "transform" $mdOptions }}
+{{ $lgURL := partial "transform" $lgOptions }}
+{{ $xlURL := partial "transform" $xlOptions }}
+{{ $xxlURL := partial "transform" $xxlOptions }}
+{{ $xxxlURL := partial "transform" $xxxlOptions }}
+
+{{ $src := printf "src='%q'" $smURL | safeHTMLAttr }}
+{{ $srcset := printf "srcset='%s 200w, %s 300w, %s 640w, %s 500w, %s 600w, %s 1024w'" $smURL $mdURL $lgURL $xlURL $xxlURL $xxxlURL | safeHTMLAttr }}
+{{ $dataSrc := printf "data-src='%q'" $smURL | safeHTMLAttr }}
+{{ $dataSrcSet := printf "data-srcset='%s 200w, %s 300w, %s 640w, %s 720w, %s 862w, %s 1024w'" $smURL $mdURL $lgURL $xlURL $xxlURL $xxxlURL | safeHTMLAttr }}
+
+
+{{ $sizes := "sizes='200px, 300px, 640px, 500px, 600px, 1024px'" | safeHTMLAttr }}
+
+{{ return (dict "src" $src "srcset" $srcset "dataSrc" $dataSrc "dataSrcset" $dataSrcSet "sizes" $sizes) }}

@@ -1,0 +1,24 @@
+---
+label: External Post
+hide_body: false
+fields:
+- name: page_meta
+  type: include
+  config: {}
+  template: page-meta
+  label: Page Meta
+- name: external_link
+  type: text
+  config:
+    required: true
+  label: External Link
+- name: page_options
+  type: include
+  config: {}
+  template: page-options
+  label: Page Options
+- name: url_mangement
+  type: include
+  config: {}
+  template: permalinks
+  label: URL Mangement

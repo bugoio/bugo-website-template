@@ -1,0 +1,20 @@
+@forward 'mathsass/dist/functions/pow';
+
+@import "../../config";
+@import 'modularscale-sass/stylesheets/modularscale';
+@import 'mathsass';
+
+// @mixin mod($name,$scale) {
+//   @include ms-respond($name,$scale,$ms);
+// }
+
+// @use 'springboard-css/src/sass/plugins/modularscale' as ms;
+// @forward 'springboard-css/src/sass/plugins/modularscale';
+
+
+// @use 'springboard-css/src/sass/plugins/modularscale' as ms;
+// @forward 'springboard-css/src/sass/plugins/modularscale';
+
+@mixin mod($name,$scale) {
+  @include ms-respond($name,$scale,$ms);
+}

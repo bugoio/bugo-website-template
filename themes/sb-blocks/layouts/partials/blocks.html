@@ -1,0 +1,9 @@
+{{ $page := .Page }}
+{{ with.Params.contentBlocks.blocks }}
+  {{ range .}}
+    {{ $block := . }}
+    {{ with .template }}
+      {{ partial . ( dict "block" $block "page" $page ) }}     
+    {{ end }}
+  {{ end }}
+{{ end }}

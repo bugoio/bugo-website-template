@@ -1,0 +1,65 @@
+{
+  "name": "camg-iframe-test",
+  "version": "1.0.3",
+  "description": "Springboard CSS",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack -w --mode=development --env.NODE_ENV=development",
+    "build": "webpack --mode=development --env.NODE_ENV=production && webpack --mode=development --env.NODE_ENV=development",
+    "vendor": "cp -rf ./node_modules/mathsass ./src/sass/vendor/ && cp -rf ./node_modules/modularscale-sass ./src/sass/vendor/",
+    "push": "git add . && git commit -m 'update from dev' && git push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/springboardcss/springboard.git"
+  },
+  "author": "Matthew Antone",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/springboardcss/springboard/issues"
+  },
+  "homepage": "https://github.com/springboardcss/springboard#readme",
+  "dependencies": {
+    "@babel/preset-react": "^7.10.1",
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "breakpoint-sass": "^2.7.1",
+    "elliptic": "^6.5.3",
+    "lodash": "^4.17.20",
+    "mark.js": "^8.11.1",
+    "mathsass": "^0.11.0",
+    "modularscale-sass": "^3.0.10",
+    "normalize.css": "^8.0.1",
+    "onoffcanvas": "^2.2.4",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "serialize-javascript": "^5.0.1",
+    "springboard-css": "^0.5.2",
+    "vanilla-lazyload": "^16.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.1",
+    "@babel/polyfill": "^7.10.1",
+    "@babel/preset-env": "^7.10.1",
+    "autoprefixer": "^9.7.6",
+    "babel-loader": "8",
+    "babel-minify-webpack-plugin": "^0.3.1",
+    "caniuse-lite": "^1.0.30001050",
+    "chokidar": "^3.4.0",
+    "compression-webpack-plugin": "^4.0.0",
+    "core-js": "^3.6.5",
+    "css-loader": "^3.5.3",
+    "cssnano": "^4.1.10",
+    "mini-css-extract-plugin": "^0.9.0",
+    "path": "^0.12.7",
+    "postcss": "^7.0.28",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-fix-style-only-entries": "^0.4.0"
+  }
+}

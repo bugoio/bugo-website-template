@@ -1,0 +1,41 @@
+
+@use "../../config";;
+@use "../utility";
+@use "../typography";
+
+#site-header {
+  background-color: config.$header-bg;
+  z-index: 10000;
+  position: relative;
+  justify-content: center;
+  align-items: stretch;
+  padding: config.$header-padding;
+
+  .container {
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin: 0 auto;
+  }
+
+  .flex > * {
+    padding-bottom: 0;
+  }
+
+
+  #brand-header {
+    flex: 0 0 config.$header-brand-w;
+    width: fit-content;
+
+    @include utility.respond-to(config.$desktop-bp){
+      flex-basis: config.$header-brand-w-desktop;
+    }
+
+    a {
+      flex: 0 0 auto;
+      width: auto;
+      text-align: left;
+    }
+  }
+}
+
+//custom 

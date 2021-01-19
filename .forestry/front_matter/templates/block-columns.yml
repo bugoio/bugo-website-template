@@ -1,0 +1,79 @@
+---
+label: Block - Columns
+hide_body: true
+display_field: title
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+- name: showTitle
+  type: boolean
+  label: Show Title
+- name: fullWidth
+  type: boolean
+  label: Full Width
+- name: bgColor
+  type: include
+  config: {}
+  template: fields-colors
+  label: Background Color
+- name: useBgImage
+  type: boolean
+  label: Use Background Image
+- name: bgImage
+  type: file
+  config:
+    maxSize: 64
+  label: Background Image
+  description: Add a background image.
+  showOnly:
+    field: useBgImage
+    value: true
+- name: contrast
+  type: select
+  default: Lighten
+  config:
+    required: false
+    options:
+    - Lighten
+    - Darken
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Contrast
+  showOnly:
+    field: useBgImage
+    value: true
+  description: Select a contrast.
+- name: textAlign
+  type: include
+  config: {}
+  template: field-text-align
+  label: Text Align
+- name: columns
+  type: blocks
+  template_types:
+  - text-column
+  - youtube-column
+  config:
+    min: 
+    max: 
+  label: Columns
+- name: classList
+  type: text
+  config:
+    required: false
+  default: columns
+  hidden: false
+  label: Classes
+- name: layout
+  type: text
+  config:
+    required: false
+  label: Layout
+  hidden: true
+  default: block-columns

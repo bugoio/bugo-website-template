@@ -1,0 +1,129 @@
+{{ define "hero" }}
+{{ $fileName := printf "/vcards/%s.vcf" ( replace (.Title | anchorize ) "." "" )}}
+{{ $vcard := resources.Get "vcard.html" | resources.ExecuteAsTemplate $fileName . }}
+{{ $site := .Site }}
+<div id="hero" class="full">
+  <div id="hero-image">
+    {{ with .Params.heroImage }}
+      {{ $alt := humanize (index (split (path.Base . ) ".") 0) }}
+      {{ $imgSrc := partial "imgSrcHero" . }}
+      {{ partial "components/picture" (dict "imgSrc" $imgSrc "alt" $alt) }}
+    {{ else }}
+      {{ with .Site.Data.organization.defaultHeroImage }}
+        {{ $imgSrc := partial "imgSrcHero" . }}
+        {{ $alt := humanize (index (split (path.Base . ) ".") 0) }}
+        {{ partial "components/picture" (dict "imgSrc" $imgSrc "alt" $alt) }}
+      {{ end }}
+    {{ end }}
+  </div>
+  <div id="hero-container" class="container">
+    <div id="hero-text">
+      <h1>
+        {{ with .Params.prefix | title }}{{ . }}{{ end }}
+        {{ with .Params.name.firstName | title }}{{ . }}{{ end }}
+        {{ with .Params.name.middleName | title }}{{ . }}{{ end }}
+        {{ with .Params.name.lastName | title }}{{ . }}{{ end }}
+        {{ with .Params.suffix | title }}{{ . }}{{ end }}
+        {{ with .Params.name.position | title }}
+        <small>{{ . }}</small>
+        {{ end }}
+      </h1>
+      <ul class="contact-info unstyled-list">
+        {{ with .Params.contactInfo.phone }}
+          <li>{{ partial "icons/phone" }} <a href="tel:{{ . | anchorize }}">{{ . }}</a></li>
+        {{ end }}
+        {{ with .Params.contactInfo.mobile }}
+          <li>{{ partial "icons/mobile" }} <a href="tel:{{ . | anchorize }}">{{ . }}</a></li>
+        {{ end }}
+        {{ with .Params.contactInfo.email }}
+          <li>{{ partial "icons/envelope" }} <a href="mailto:{{ . }}">{{ . }}</a></li>
+        {{ end }}
+      </ul>
+      {{ with .Params.location }}
+        {{with where $site.Data.locations.locations ".name" "==" . }}
+          {{ range . }}
+            <p>
+              {{ .address1 }}{{with .address2 }},{{ . }}{{ end }}<br/>
+              {{ .city }}, {{ .state }} {{ .zip }}  
+            </p>
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      <ul class="unstyled-list flex-list profile-options">
+        <li><a href="{{ $vcard.Permalink }}"><span class="sr-only">Download vCard</span>{{ partial "icons/vcard" . }}</a></li>
+        <li><a href="#" onclick="window.print();return false;"><span class="sr-only">Print this page</span>{{ partial "icons/print" . }}</a></li>
+        {{ with .Params.contactInfo.socialAccounts }}
+          <li>
+            <span class="sr-only">Social Accounts</span>
+            {{ partial "components/social-account-list" . }}
+          </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</div>
+{{ end }}
+
+{{ define "main" }}
+  <main id="main" aria-label="Main Content" tabindex="0">
+    {{ .Content }}
+    {{ with .Params.attorneyFields }}
+      <div class="js-accordion">
+      {{ with .education }}
+        <div>
+          <button>Education</button>
+          <div>
+            {{ . | markdownify}}
+          </div>
+        </div>
+      {{ end }}
+      {{ with .experience }}
+      <div>
+        <button>Experience</button>
+        <div>
+          {{ . | markdownify}}
+        </div>
+      </div>
+      {{ end }}
+      {{ with .publications }}
+      <div>
+        <button>Publications</button>
+        <div>
+          {{ . | markdownify}}
+        </div>
+      </div>
+      {{ end }}
+      {{ with .published_decisions }}
+      <div>
+        <button>Published Decisions</button>
+        <div>
+          {{ . | markdownify}}
+        </div>
+      </div>
+      {{ end }}
+      {{ with .professional_activities}}
+      <div>
+        <button>Professional Activities</button>
+        <div>
+          {{ . | markdownify}}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+    {{ with .Params.badges }}
+      <ul id="badges" class="unstyled-list flex-list">
+        {{ range . }}
+        {{ $imgSrc := partial "imgSrcHero" . }}
+        {{ $alt := humanize (index (split (path.Base . ) ".") 0) }}
+        <div>{{ partial "components/picture" (dict "imgSrc" $imgSrc "alt" $alt) }}</div>
+        {{ end }}
+      </ul>
+    {{ end }}
+  </main>
+{{ end }}
+
+{{ define "sidebar" }}
+  {{ partial "aside-profile-related" . }}
+{{ end }}
+

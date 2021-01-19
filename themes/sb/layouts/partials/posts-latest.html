@@ -1,0 +1,16 @@
+{{ $context := .context }}
+{{ $posts := where $context.Site.RegularPages "Section" $.context.Site.Params.blogSlug }}
+{{ $qty := .qty }}
+{{ with $posts }}
+<div class="posts-latest">
+  <h3>{{ $context.Site.Params.latestPostsTitle }}</h3>
+  <ul class="unstyled-list">
+    {{ range first $qty . }}
+    <li>
+      <a href="{{ .Permalink }}">
+        {{ partial "article" . }}
+      </a></li>
+    {{ end }}  
+  </ul>
+</div>
+{{ end }}

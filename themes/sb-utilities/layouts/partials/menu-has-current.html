@@ -1,0 +1,16 @@
+{{ $scratch := newScratch }}
+{{ $scratch.Set "result" false }}
+{{ $currentPage := .currentPage }}
+{{/* range .menuItem.Pages }}
+  {{ if ne $currentPage.Title "Home" }}
+    {{ if eq $currentPage . }}
+    {{ $scratch.Set "result" true }}
+    {{ end }}
+    {{ range .Pages }}
+      {{ if eq $currentPage . }}
+      {{ $scratch.Set "result" true }}
+      {{ end }}
+    {{ end}}
+  {{ end }}  
+{{ end */}}
+{{ return $scratch.Get "result" }}

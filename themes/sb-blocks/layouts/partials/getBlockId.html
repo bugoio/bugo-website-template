@@ -1,0 +1,7 @@
+{{ $scratch := newScratch }}
+{{ if .block.title }}
+  {{ $scratch.Set "id" (printf `%s` ( .block.title | anchorize)) }}
+{{ else }}
+  {{ $scratch.Set "id" (index (seq 2000 | shuffle | first 1) 0)}}
+{{ end }}
+{{ return $scratch.Get "id" }}

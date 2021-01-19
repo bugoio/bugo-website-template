@@ -1,0 +1,9 @@
+{{ $scratch := newScratch }}
+{{ $parsed := urls.Parse . }}
+{{ $split := split $parsed.Host "." }}
+{{ if eq (len $split ) 3}}
+  {{ $scratch.Set "name" (index $split 1) }}
+{{ else }}
+{{ $scratch.Set "name" (index $split 0) }}      
+{{ end }}
+{{ return $scratch.Get "name" }}

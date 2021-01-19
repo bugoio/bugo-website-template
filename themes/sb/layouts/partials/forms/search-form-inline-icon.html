@@ -1,0 +1,10 @@
+<form tabindex="0" aria-label="Search Website" role="search" class="search-form search-form-inline-icon form-inline" action="/search">
+  <div class="form-group">
+      <label for="search-query" class="sr-only">Search this site</label>
+      <input type="text" class="form-control" id="search-query" name="q" placeholder="">
+      <button aria-label="search" type="submit" class="">
+        <span class="sr-only">Search</span>
+        {{ partial "icons/search" . }}
+      </button>
+  </div>
+</form>

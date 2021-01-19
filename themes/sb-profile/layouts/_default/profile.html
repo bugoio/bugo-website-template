@@ -1,0 +1,146 @@
+{{ define "hero" }}
+{{ $site := .Site }}
+{{ $query := partial "querifyProfile" . }}
+{{ $vCardURL := printf "/.netlify/functions/vcard/?%s" $query }}
+
+<div id="hero" class="full">
+  <div id="hero-image">
+    {{ with .Params.heroImage }}
+      {{ $alt := humanize (index (split (path.Base . ) ".") 0) }}
+      {{ $imgSrc := partial "imgSrcHero" . }}
+      {{ partial "components/picture" (dict "imgSrc" $imgSrc "alt" $alt) }}
+    {{ else }}
+      {{ with .Site.Data.organization.defaultHeroImage }}
+        {{ $imgSrc := partial "imgSrcHero" . }}
+        {{ $alt := humanize (index (split (path.Base . ) ".") 0) }}
+        {{ partial "components/picture" (dict "imgSrc" $imgSrc "alt" $alt) }}
+      {{ end }}
+    {{ end }}
+  </div>
+  <div id="hero-container" class="container">
+    <div id="hero-text">
+      <h1>
+        {{ with .Params.prefix | title }}{{ . }}{{ end }}
+        {{ with .Params.name.firstName | title }}{{ . }}{{ end }}
+        {{ with .Params.name.middleName | title }}{{ . }}{{ end }}
+        {{ with .Params.name.lastName | title }}{{ . }}{{ end }}
+        {{ with .Params.suffix | title }}{{ . }}{{ end }}
+        {{ with .Params.name.position | title }}
+        <small>{{ . }}</small>
+        {{ end }}
+      </h1>
+      <ul class="contact-info unstyled-list">
+        {{ with .Params.contactInfo.phone }}
+          <li>{{ partial "icons/phone" }} <a href="tel:{{ . | anchorize }}">{{ . }}</a></li>
+        {{ end }}
+        {{ with .Params.contactInfo.mobile }}
+          <li>{{ partial "icons/mobile" }} <a href="tel:{{ . | anchorize }}">{{ . }}</a></li>
+        {{ end }}
+        {{ with .Params.contactInfo.email }}
+          <li>{{ partial "icons/envelope" }} <a href="mailto:{{ . }}">{{ . }}</a></li>
+        {{ end }}
+      </ul>
+      {{ with .Params.location }}
+        {{with where $site.Data.locations.locations ".name" "==" . }}
+          {{ range . }}
+            <p>
+              {{ .address1 }}{{with .address2 }},{{ . }}{{ end }}<br/>
+              {{ .city }}, {{ .state }} {{ .zip }}  
+            </p>
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      <ul class="unstyled-list flex-list profile-options">
+        <li><a href="{{ $vCardURL }}"><span class="sr-only">Download vCard</span>{{ partial "icons/vcard" . }}</a></li>
+        <li><a href="#" onclick="window.print();return false;"><span class="sr-only">Print this page</span>{{ partial "icons/print" . }}</a></li>
+        {{ with .Params.contactInfo.socialAccounts }}
+          <li>
+            <span class="sr-only">Social Accounts</span>
+            {{ partial "components/social-account-list" . }}
+          </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</div>
+{{ end }}
+
+{{ define "main" }}
+  <main id="main" aria-label="Main Content" tabindex="0">
+    {{ .Content }}
+    {{ with .Params.badges }}
+      <ul id="badges" class="unstyled-list flex five">
+        {{ range . }}
+        {{ $imgSrc := partial "imgSrcHero" . }}
+        {{ $alt := humanize (index (split (path.Base . ) ".") 0) }}
+        <div>{{ partial "components/picture" (dict "imgSrc" $imgSrc "alt" $alt) }}</div>
+        {{ end }}
+      </ul>
+    {{ end }}
+  </main>
+{{ end }}
+
+{{ define "sidebar" }}
+  <aside id="sidebar" role="complimentary" tabindex="0">
+    {{ with .Params.attorneyFields }}
+      <div class="profile-details">
+        {{ with .education }}
+        <div>
+          <h2 class="h4">Education</h2>
+          <div>
+            {{ . | markdownify}}
+          </div>
+        </div>
+      {{ end }}
+      {{ with .experience }}
+      <div>
+        <h2 class="h4">Experience</h2>
+        <div>
+          {{ . | markdownify}}
+        </div>
+      </div>
+      {{ end }}
+      {{ with .admittedToPractice }}
+        <div>
+          <h2 class="h4">Admitted To Practice</h2>
+          {{ . | markdownify}}  
+        </div>
+      {{ end }}
+      {{ with .professional_activities}}
+      <div>
+        <h2 class="h4">Professional Activities</h2>
+        <div>
+          {{ . | markdownify}}
+        </div>
+      </div>
+      {{ end }}
+      {{ with .publications }}
+      <div>
+        <h2 class="h4">Publications</h2>
+        <div>
+          {{ . | markdownify}}
+        </div>
+      </div>
+      {{ end }}
+      {{ with .published_decisions }}
+      <div>
+        <h2 class="h4">Published Decisions</h2>
+        <div>
+          {{ . | markdownify}}
+        </div>
+      </div>
+      {{ end }}
+      </div>
+      {{ end }}
+    {{ with .Params.relatedPracticeAreas }}
+      <h3>Practice Areas</h3>
+      <ul class="unstyled-list">
+      {{ range . }}
+        {{ $practiceArea := ($context.GetPage .) }}
+        <li><a href="{{ $practiceArea.Permalink }}">{{ $practiceArea.Title }}</a></li>
+      {{ end }}
+      </ul>
+    {{ end }}
+  </aside>
+{{ end }}
+

@@ -1,0 +1,21 @@
+@use "../../../config";
+.logo-group {
+  margin-top: var(--space-max);
+  > *:last-child {
+    padding-bottom: config.$grid-space; 
+  }
+  img {
+    display: block;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.block-logos-right {
+  img {
+    max-height: 20vh;
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}

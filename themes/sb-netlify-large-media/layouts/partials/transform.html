@@ -1,0 +1,15 @@
+{{/* if and (strings.Contains .image "cloudinary.com") -}}
+ {{- $tmp := split .image "/upload/" -}}
+ {{- $fileName :=  split (path.Base .image) "." -}}
+ {{- index $tmp 0 -}}/upload/{{- .transform -}}/{{- index $tmp 1 -}}
+{{- else -}}
+  {{- .image -}}
+{{- end -*/}}
+{{ $scratch := newScratch }}
+{{ $scratch.Set "transform" "" }}
+{{ with .transform }}
+  {{ $scratch.Set "transform" . }}
+{{ end }}
+{{ $path := absURL .image }}
+{{ $url := printf "%s?%s"  $path ($scratch.Get "transform") }}
+{{ return $url }}

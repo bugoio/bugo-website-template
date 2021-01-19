@@ -1,0 +1,56 @@
+{{ $id := partial "getBlockId" . }}
+<div id="block-{{ $id }}" {{partial "getBlockClass" . | safeHTMLAttr }}>
+  <div class="wrapper container">
+    {{ partial "block-title" .block }}
+    {{ with .block.content }}
+      {{ . | markdownify }}
+    {{ end }}
+    {{ with .page.GetPage .block.profile }}
+    {{ $page := . }}
+    <div class="flex two">
+      <div>
+        <h2>
+          {{ with .Params.prefix | title }}{{ . }}{{ end }}
+          {{ with .Params.name.firstName | title }}{{ . }}{{ end }}
+          {{ with .Params.name.middleName | title }}{{ . }}{{ end }}
+          {{ with .Params.name.lastName | title }}{{ . }}{{ end }}
+          {{ with .Params.suffix | title }}{{ . }}{{ end }}
+          {{ with .Params.name.position | title }}
+          <small>{{ . }}</small>
+          {{ end }}  
+        </h2>
+        <ul class="contact-info unstyled-list flex">
+          {{ with .Params.contactInfo.phone }}
+            <li><a href="tel:{{ . | anchorize }}">{{ partial "icons/phone" }} <span class="sr-only">{{ . }}</span></a></li>
+          {{ end }}
+          {{ with .Params.contactInfo.mobile }}
+            <li><a href="tel:{{ . | anchorize }}">{{ partial "icons/mobile" }} <span class="sr-only">{{ . }}</span></a></li>
+          {{ end }}
+          {{ with .Params.contactInfo.email }}
+            <li><a href="mailto:{{ . }}">{{ partial "icons/envelope" }} <span class="sr-only">{{ . }}</span></a></li>
+          {{ end }}
+          {{ range .Params.contactInfo.socialAccounts }}
+            {{ $url := urls.Parse . }}
+            <li><a href="{{ . }}">{{ partial ( printf "icons/%s.html" $url.Host ) . }} <span class="sr-only">{{ $url.Host }}</span></a></li>
+          {{ end }}
+        </ul>
+        <blockquote>
+          {{ .Params.quote | markdownify }}
+          <cite class="sr-only">{{ .Title }}</cite>
+        </blockquote>
+      </div>
+      <div>
+        {{ with index .Params.images 0 }}
+          {{ $imgSrc := partial "imgSrc" . }}
+          {{ partial "components/picture" (dict "imgSrc" $imgSrc "alt" $page.Title ) }}
+        {{ end }}
+      </div>
+    </div>
+    {{ with .Summary }}
+      <div>
+        {{ . }} <a class="strong" href="{{ $page.Permalink }}">More about {{ $page.Title }}</a>
+      </div>
+    {{ end }}
+    {{ end }}
+  </div>
+</div>

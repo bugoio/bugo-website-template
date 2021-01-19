@@ -1,0 +1,41 @@
+---
+label: Practice Area
+hide_body: false
+fields:
+- name: page_meta
+  type: include
+  config: {}
+  template: page-meta
+  label: Page Meta
+- name: hero
+  type: include
+  config: {}
+  template: hero
+  label: Hero
+- name: relatedStaff
+  type: list
+  config:
+    use_select: true
+    min: 
+    max: 
+    source:
+      type: pages
+      section: profiles
+  label: Related Staff
+- name: page_options
+  type: include
+  config: {}
+  template: page-options
+  label: Page Options
+- name: url_mangement
+  type: include
+  config: {}
+  template: permalinks
+  label: URL Mangement
+- name: layout
+  type: text
+  config:
+    required: false
+  label: Layout
+  hidden: true
+  default: practice-area

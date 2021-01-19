@@ -1,0 +1,86 @@
+@use '../../config';
+@use '../../utility';
+
+.block {
+  position: relative;
+  text-align: config.$block-text-align;
+  background-size: cover;
+  padding: config.$block-padding;
+
+  &.lighten,
+  &.darken {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
+
+  &.lighten {
+    &::before {
+      background-color: config.$white;
+      background-blend-mode: screen;
+      opacity: 0.85;
+    }
+  }
+
+  &.darken {
+    > *, a, h1,h2,h3,h4,h5,h6 {
+      color: config.$white;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+
+    &::before {
+      background-color: config.$black;
+      background-blend-mode: multiply;
+      opacity: 0.85;
+      max-height: 500px;
+    }
+  }
+
+  &.block-title {
+    width: 100vw;
+    max-width:100vw; 
+    left: 50%;
+    transform: translateX(-50%);
+
+    .wrapper {
+      flex: 90%;
+      max-width: 90%;
+      margin: 0 auto;
+
+      @include utility.respond-to(xxl){
+        max-width: 80%;
+      }
+    }
+  }
+
+  .wrapper,
+  .container {
+    padding: var(--space-max) 0;
+  }
+
+  iframe {
+    max-width: 100%;
+  }
+
+  .card {
+    margin-bottom: 0;
+  }
+
+  .flex > div > * {
+    &:first-child {
+      margin-top: 0;
+      padding-top: 0;
+    }
+  }
+}

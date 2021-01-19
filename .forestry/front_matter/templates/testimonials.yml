@@ -1,0 +1,44 @@
+---
+label: Testimonials
+hide_body: true
+fields:
+- name: testimonial
+  type: field_group_list
+  fields:
+  - name: name
+    type: text
+    config:
+      required: false
+    label: Name
+    description: Name of the person being quoted
+  - name: position
+    type: text
+    config:
+      required: false
+    label: Position
+  - name: company
+    type: text
+    config:
+      required: false
+    label: Company
+  - name: testimonial
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: true
+      schema:
+        format: markdown
+    label: Testimonial
+  - name: image
+    type: file
+    config:
+      maxSize: 64
+    label: Image
+  config:
+    min: 
+    max: 
+    labelField: name
+  label: Testimonial
+pages:
+- data/testimonials.yaml

@@ -1,0 +1,21 @@
+{{ $context := .context }}
+{{ $related := .context.Site.RegularPages.Related $context }}
+{{ $qty := .qty }}
+
+{{ $attorneys := index (where .context.Site.Sections "Title" "Our Attorneys") 0}}
+{{ with ($attorneys.Pages.Related $context) }}
+  <h3>Related People</h3>
+  <ul class="unstyled-list">
+    {{ range first $qty (.ByParam "name.lastName") }}
+    <li>
+      <a href="{{ .Permalink }}">
+        <article>
+          {{ with .Params.images }}
+            {{ partial "components/thumbnail" (index . 0) }}        
+          {{ end }}
+          <header>{{ .Title | title }}</header>
+        </article>
+      </a></li>
+    {{ end }}  
+  </ul>
+{{ end }}

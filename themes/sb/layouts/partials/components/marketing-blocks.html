@@ -1,0 +1,11 @@
+{{ $page := .Page }}
+{{ with .Site.Data.organization.marketingBlocks }}
+<div class="marketing-blocks">
+  {{ range .}}
+    {{ $block := . }}
+    {{ with .layout }}
+      {{ partial ( printf "blocks/%s" .) ( dict "block" $block "page" $page ) }}
+    {{ end }}
+  {{ end }}
+</div>
+{{ end }}

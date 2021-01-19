@@ -1,0 +1,6 @@
+{{ $scratch := newScratch }}
+{{ $scratch.Set "sidebar" " " }}
+{{- if (or .Page.Params.pageOptions.showSidebar (eq .Page.Type "post") (eq .Page.Type "term")) -}}
+  {{ $scratch.Set "sidebar" "sidebar"}}
+{{- end -}}
+{{ return $scratch.Get "sidebar" }}

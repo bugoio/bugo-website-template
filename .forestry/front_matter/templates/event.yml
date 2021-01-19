@@ -1,0 +1,144 @@
+---
+label: Event
+hide_body: false
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: date
+  type: datetime
+  label: Date
+  description: ''
+  config:
+    required: true
+    date_format: 
+    time_format: 
+    display_utc: false
+  hidden: true
+  default: now
+- name: eventDate
+  type: datetime
+  description: Enter the date and time the event starts.
+  config:
+    required: true
+    date_format: 
+    time_format: 
+    display_utc: false
+  label: Event Date
+- name: expiryDate
+  type: datetime
+  description: " Enter the date and time this event ends. This page will no longer
+    display on the site after this date. It may take up to 24hrs to remove, depending
+    on the time you select."
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+  label: Expire Date
+- name: images
+  type: image_gallery
+  config: {}
+  label: Images
+- name: locationType
+  type: select
+  default: Place
+  config:
+    required: false
+    options:
+    - Place
+    - Virtual Location
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Location Type
+- name: eventUrl
+  type: text
+  config:
+    required: false
+  label: Virtual Location URL
+  showOnly:
+    field: locationType
+    value: Virtual Location
+  description: Enter the URL to this virtual event.
+- name: location
+  type: field_group
+  config: {}
+  fields:
+  - name: name
+    type: text
+    config:
+      required: false
+    label: Name
+  - name: address1
+    type: text
+    config:
+      required: false
+    label: Street 1
+  - name: address2
+    type: text
+    config:
+      required: false
+    label: Street 2
+  - name: city
+    type: text
+    config:
+      required: false
+    label: City
+  - name: state
+    type: text
+    config:
+      required: false
+    label: State
+  - name: zip
+    type: text
+    config:
+      required: false
+    label: Zip Code
+  label: Location
+  showOnly:
+    field: locationType
+    value: Place
+- name: hero
+  type: include
+  config: {}
+  template: hero
+  label: Hero
+- name: page_options
+  type: include
+  config: {}
+  template: event-options
+  label: Page Options
+- name: slug
+  type: text
+  config:
+    required: false
+  label: Slug
+- name: aliases
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: Aliases
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
+- name: layout
+  type: text
+  config:
+    required: false
+  label: layout
+  hidden: true
+  default: event
+pages:
+- content/events/big-bang-gala.md
+- content/events/building-a-successful-business.md
+- content/events/facing-homelessness-benefit.md
+- content/events/feit4kidz-gala.md
+- content/events/los-angeles.md

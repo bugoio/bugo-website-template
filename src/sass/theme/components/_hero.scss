@@ -1,0 +1,126 @@
+@use "../../config";;
+@use "../utility";
+
+#hero {
+  position: relative;
+  margin: config.$hero-margin;
+  z-index: 1000;
+  overflow: hidden;
+
+  .thumbnail {
+    width: calc(var(--space-max) * 1.5);
+    height: calc(var(--space-max) * 1.5);
+    padding-top: 0;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    transform: translateX(-50%) translateY(50%);
+  }
+}
+
+#hero-image {
+  padding-bottom: config.$hero-height-sm;
+  width: 100%;
+  max-height: 100%;
+  position: relative;
+  z-index: 1;
+
+  @include utility.respond-to(md) {
+    padding-bottom: config.$hero-height-md;
+  }
+
+  @include utility.respond-to(lg) {
+    padding-bottom: config.$hero-height-lg;
+  }
+
+  @include utility.respond-to(xl) {
+    padding-bottom: config.$hero-height-xl;
+  }
+
+  @include utility.respond-to(xxl) {
+    padding-bottom: config.$hero-height-xxl;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50%;
+    max-height: none;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+
+    @include utility.respond-to(sm) {
+      max-height: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.5);
+    mix-blend-mode: multiply;
+    z-index: 2;
+  }
+}
+
+#hero-container {
+  // display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+
+#hero-text {
+  background-color: config.$hero-text-bg;
+  color: config.$hero-color;
+  text-align: config.$hero-align;
+  font-weight: 600;
+  line-height: config.$hero-line-height;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  max-width: config.$hero-text-max-char;
+  flex-direction: column;
+  justify-content: center;
+
+  h1 {
+    padding-top: 0;
+    letter-spacing: 0.00825rem;
+    max-width: config.$hero-h1-max-char;
+    font-weight: 600;
+
+    // @include utility.mod(font-size,config.$hero-h1/1.5);
+
+    // @include utility.respond-to(sm) {
+    //   @include utility.mod(font-size,config.$hero-h1);
+    // }
+
+    // @include utility.respond-to(lg) {
+    //   @include utility.mod(font-size,config.$hero-h1*1.25);
+    // }
+
+
+    @if config.$hero-shadow == true {
+      text-shadow: 0.2rem 0.2rem 0.3rem transparentize(config.$black,0.1);
+    }
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+    color: config.$hero-heading-color;
+  }
+}

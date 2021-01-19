@@ -1,0 +1,10 @@
+{{ $scratch := newScratch }}
+{{ $parsed := urls.Parse . }}
+{{ if $parsed.RawQuery }}
+  {{ $scratch.Set "id" (index (split $parsed.RawQuery "=") 1) }}
+{{ else }}
+  parse path
+  {{ path.Dir . }}
+  {{ $scratch.Set "id" (path.Base .) }}
+{{ end }}
+{{ return $scratch.Get "id" }}

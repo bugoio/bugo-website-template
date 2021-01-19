@@ -1,0 +1,76 @@
+
+@use '../../config/theme-vars' as *;
+@use '../../config/colors' as *;
+@use '../../config/plugins' as *;
+
+ul[role="tree"] {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul[role="tree"] li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul[role="tree"] a {
+  text-decoration: none;
+  border-color: transparent;
+}
+
+[role="treeitem"] ul {
+  margin: 0;
+  padding: 0;
+  margin-left: 0.9em;
+}
+
+[role="treeitem"][aria-expanded="false"] > ul {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s;
+}
+
+[role="treeitem"][aria-expanded="true"] > ul {
+  display: block;
+  max-height: 500px;
+  transition: max-height 0.75s;
+}
+
+[role="treeitem"][aria-expanded="false"] > span::before {
+  // content: url(../images/right-arrow-brown.png);
+  position: relative;
+  left: -0.25em;
+}
+
+[role="treeitem"][aria-expanded="true"] > span::before {
+  // content: url(../images/down-arrow-brown.png);
+  position: relative;
+  left: -0.25em;
+}
+
+[role="treeitem"],
+[role="treeitem"] span {
+  margin: 0;
+  padding: 0.125em;
+  border: 2px transparent solid;
+  display: inline-block;
+}
+
+/* disable default keyboard focus styling for treeitems
+   Keyboard focus is styled with the following CSS */
+[role="treeitem"]:focus {
+  outline: 0;
+}
+
+[role="treeitem"].focus,
+[role="treeitem"] span.focus {
+  // border-color: black;
+  // background-color: #eee;
+}
+
+[role="treeitem"].hover,
+[role="treeitem"] span.hover {
+  // background-color: #ddd;
+}

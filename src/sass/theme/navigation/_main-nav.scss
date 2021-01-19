@@ -1,0 +1,42 @@
+@use "../../config";;
+@use "../utility";
+@use "../typography";
+
+#main-menubar {
+  margin: config.$main-menu-margin;
+  justify-content: flex-end;
+}
+
+#main-nav {
+  // /display: none;
+  justify-content: config.$main-menu-justify;
+  align-items: config.$main-menu-align;
+
+  @include utility.respond-to(config.$mobile-hamburger-bp){
+    display: flex;
+  }
+
+  .menubar-list-item {
+    display: block;
+  }
+
+  [role=menu]{
+    a {
+      margin: var(--space-less) var(--space-min);
+    }
+  }
+}
+
+#menubar-main {
+  justify-content: flex-end;
+
+  a {
+    font-weight: 600;
+    padding: config.$main-menu-link-padding;
+    @include utility.mod(font-size,config.$main-menu-link-size);
+    color: config.$main-menu-link-color;
+    background-color: config.$main-menu-link-bgColor;
+    margin: config.$main-menu-link-margin;
+    text-transform: config.$main-menu-text-transform;
+  }
+}

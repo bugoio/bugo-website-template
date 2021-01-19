@@ -1,0 +1,72 @@
+@use "../../config";
+@use '../utility';
+
+body.blog {
+  .blog-list {
+    > * {
+      flex: 0 0 100%;
+      padding-bottom: var(--space);
+
+      @include utility.respond-to(sm){
+        flex-basis: 50%;
+      }
+
+      @include utility.respond-to(xl){
+        flex-basis: 50%;
+      }
+
+      header {
+        padding-top: 0 !important;
+        font-weight: bold;
+      }
+      footer {
+        display: none;
+      }
+
+      .category {
+        color: config.$secondary;
+        font-weight: bold;
+        &::before {
+          content: " - ";
+          color: config.$black;
+          font-weight: 300;
+        }
+      }
+
+      &:first-child,
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4) {
+        flex: 0 0 100%;
+      }
+
+      &:first-child,
+      &:nth-child(2){
+        header {
+          font-size: var(--space-most) !important;
+        }
+
+      }
+
+      &:nth-child(5),
+      &:nth-child(6),
+      &:nth-child(7),
+      &:nth-child(8),
+      &:nth-child(9),
+      &:nth-child(10) {
+        font-size: 80%;
+        header {
+          font-size: 80%;
+        }
+        .category {
+          display: block;
+          color: config.$secondary;
+          font-weight: bold;
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

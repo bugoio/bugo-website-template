@@ -1,0 +1,78 @@
+{{ $page := .page }}
+{{ $block := .block }}
+{{ $id := partial "getBlockId" . }}
+
+{{ with .block.bgImage }}
+  {{ $smOptions := dict "context" . "image" . "transform" "c_fill,w_300"}}
+  {{ $smURL := partial "cloudinary-transform" $smOptions }}
+  {{ $mdOptions := dict "context" . "image" . "transform" "c_fill,w_400"}}
+  {{ $mdURL := partial "cloudinary-transform" $mdOptions }}
+  {{ $lgOptions := dict "context" . "image" . "transform" "c_fill,w_500"}}
+  {{ $lgURL := partial "cloudinary-transform" $lgOptions }}
+  <style>
+    #block-{{ $id }} {
+      background-image: url({{.}});
+      background-size: cover;
+      background-position: center;
+    }
+
+    @media only screen and (max-width: 480px) {
+      #block-{{ $id }} {
+        background-image: url({{$smURL}});
+      }
+    }
+
+    @media only screen and (max-width: 640px) {
+      #block-{{ $id }} {
+        background-image: url({{$mdURL}});
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      #block-{{ $id }} {
+        background-image: url({{$lgURL}});
+      }
+    }
+
+    .webp #block-{{ $id }} {
+      background-image: url({{ partial "getWebpUrl" . }});
+    }
+
+    @media only screen and (max-width: 480px) {
+      .webp #block-{{ $id }} {
+        background-image: url({{ partial "getWebpUrl" $smURL}});
+      }
+    }
+
+    @media only screen and (max-width: 640px) {
+      .webp #block-{{ $id }} {
+        background-image: url({{partial "getWebpUrl" $mdURL}});
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      .webp #block-{{ $id }} {
+        background-image: url({{ partial "getWebpUrl" $lgURL}});
+      }
+    }
+
+  </style>
+{{end}}
+<div id="block-{{ $id }}" {{partial "getBlockClass" . | safeHTMLAttr }}>
+  <div class="wrapper container">
+    {{ partial "block-title" .block }}
+    {{ .block.content | $page.RenderString | markdownify }}      
+    {{ $columnsClass := partial "getColumnsClass" .block.columns }}
+    {{ with .block.columns }}
+      <div class="flex one {{ $columnsClass }}-600">
+        {{ range . }}
+          {{ if .template }}
+            {{ $columnContent := (dict "columnContent" ($page.RenderString .content)) }}
+            {{ $column := merge $columnContent . }}
+            {{ partial ( printf "columns/%s" .template) $column }}
+          {{ end }}
+        {{ end }}
+      </div>
+    {{ end }}  
+  </div>
+</div>  

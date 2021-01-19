@@ -1,0 +1,13 @@
+---
+label: Text Column
+hide_body: true
+fields:
+- name: content
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Content

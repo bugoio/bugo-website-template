@@ -1,0 +1,56 @@
+{{ $imageExt := path.Ext . }}
+{{ $smOptions := dict "image" . }}
+{{ $mdOptions := dict "image" . }}
+{{ $lgOptions := dict "image" . }}
+{{ $xlOptions := dict "image" . }}
+{{ $xxlOptions := dict "image" . }}
+{{ $xxxlOptions := dict "image" . }}
+
+{{ if ne $imageExt ".svg" }}
+  {{ $smOptions = $smOptions | merge (dict "transform" "c_fill,w_200,f_auto") }}
+  {{ $mdOptions = $mdOptions | merge (dict "transform" "c_fill,w_300,f_auto") }}
+  {{ $lgOptions = $lgOptions | merge (dict "transform" "c_fill,w_640,f_auto") }}
+  {{ $xlOptions = $xlOptions | merge (dict "transform" "c_fill,w_720,f_auto") }}
+  {{ $xxlOptions = $xxlOptions | merge (dict "transform" "c_fill,w_862,f_auto") }}
+  {{ $xxxlOptions = $xxxlOptions | merge (dict "transform" "c_fill,w_1024,f_auto") }}  
+{{ end }}
+
+
+{{ $smURL := partial "cloudinary-transform" $smOptions }}
+{{ $smWebp := partial "getWebpUrl" $smURL }}
+
+{{ $mdURL := partial "cloudinary-transform" $mdOptions }}
+{{ $mdWebp := partial "getWebpUrl" $mdURL }}
+
+{{ $lgURL := partial "cloudinary-transform" $lgOptions }}
+{{ $lgWebp := partial "getWebpUrl" $lgURL }}
+
+{{ $xlURL := partial "cloudinary-transform" $xlOptions }}
+{{ $xlWebp := partial "getWebpUrl" $xlURL }}
+
+{{ $xxlURL := partial "cloudinary-transform" $xxlOptions }}
+{{ $xxlWebp := partial "getWebpUrl" $xxlURL }}
+
+{{ $xxxlURL := partial "cloudinary-transform" $xxxlOptions }}
+{{ $xxxlWebp := partial "getWebpUrl" $xxxlURL }}
+
+{{ $src := printf "src='%q'" $smURL | safeHTMLAttr }}
+{{ $srcset := printf "srcset='%s 200w, %s 300w, %s 640w, %s 500w, %s 600w, %s 1024w'" $smURL $mdURL $lgURL $xlURL $xxlURL $xxxlURL | safeHTMLAttr }}
+{{ $dataSrc := printf "data-src='%q'" $smURL | safeHTMLAttr }}
+{{ $dataSrcSet := printf "data-srcset='%s 200w, %s 300w, %s 640w, %s 720w, %s 862w, %s 1024w'" $smURL $mdURL $lgURL $xlURL $xxlURL $xxxlURL | safeHTMLAttr }}
+
+
+{{ $sizes := "sizes='200px, 300px, 640px, 500px, 600px, 1024px'" | safeHTMLAttr }}
+
+{{ $webpSrcs := slice $smWebp $mdWebp $lgWebp $xlWebp $xxlWebp $xxxlWebp }}
+{{ $webpSrc := printf "<sourc type='image/webp'e srcset='%s'><source srcset='%s'>" $smWebp $smURL }}
+{{ $webpSrcMd := printf "<source type='image/webp' type='image/webp' media='(max-width:480px)' data-srcset='%s' >" $mdWebp }}
+{{ $webpSrcLg := printf "<source type='image/webp' media='(max-width:1024px)' data-srcset='%s'>" $lgWebp }}
+{{ $webpSrcXl := printf "<source type='image/webp' media='(max-width:1200px)' data-srcset='%s'>" $xlWebp }}
+{{ $webpSrcXxl := printf "<source type='image/webp' media='(max-width:1400px)' data-srcset='%s'>" $xxlWebp }}
+{{ $webpSrcXxxl := printf "<source type='image/webp' media='(max-width:3000px)' data-srcset='%s'>" $xxxlWebp }}
+{{ $webpSrcSet := printf "%s %s  %s %s %s" $webpSrcMd $webpSrcLg $webpSrcXl $webpSrcXxl $webpSrcXxxl | safeHTML }}
+{{ $dataWebpSrc := printf "data-src='%q'" $smURL | safeHTMLAttr }}
+{{ $dataWebpSrcSet := printf "data-srcset='%s 200w, %s 300w, %s 640w, %s 720w, %s 862w, %s 1024w'" $smWebp $mdWebp $lgWebp $xlWebp $xxlWebp $xxxlWebp | safeHTMLAttr }}
+
+{{ return (dict "src" $src "srcset" $srcset "dataSrc" $dataSrc "dataSrcset" $dataSrcSet "sizes" $sizes "webpSrc" $webpSrc "webpSrcSet" $webpSrcSet "dataWebpSrc" $webpSrc "dataWebpSrcSet" $webpSrcSet "webpSrcs" $webpSrcs) }}

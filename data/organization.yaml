@@ -1,0 +1,17 @@
+---
+messageInfo: ''
+messageWarning: ''
+messageDanger: ''
+messageSuccess: ''
+companyName: Bugo
+companyDescription: ''
+headerLogo: "/uploads/bugo-logo-200.svg"
+footerLogo: "/uploads/bugo-logo-200.svg"
+defaultHeroImage: "/uploads/main-background-image.png"
+defaultHeroAlt: ''
+marketingBlocks: []
+signUpText: ''
+blogName: "/blog"
+defaultFeaturedImage: "/uploads/main-background-image.png"
+showArticleThumbnails: true
+showSidebarThumbnails: true

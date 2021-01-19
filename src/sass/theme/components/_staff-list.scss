@@ -1,0 +1,11 @@
+@use "../../config";
+@use '../utility';
+
+.staff-list {
+  header {
+    small {
+      display: block;
+      font-weight: normal;
+    }
+  }
+}

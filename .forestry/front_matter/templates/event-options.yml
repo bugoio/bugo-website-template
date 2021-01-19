@@ -1,0 +1,22 @@
+---
+label: Page Options
+hide_body: true
+fields:
+- name: pageOptions
+  type: field_group
+  config: {}
+  fields:
+  - name: showSidebar
+    type: boolean
+    label: Show Sidebar
+    default: true
+  - name: hideMarketingBlock
+    type: boolean
+    label: Hide Marketing Block
+    description: If your site uses a global marketing block, hide it.
+  - name: excludeFromSitemap
+    type: boolean
+    label: Exclude from Sitemap
+    description: Exclude this page from all of this websites sitemaps.
+  label: Page Options
+  description: You can change various display options for this page.

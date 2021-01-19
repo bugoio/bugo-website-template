@@ -1,0 +1,14 @@
+{{ $scratch := newScratch }}
+{{ $scratch.Set "class" " " }}
+
+{{ with .textAlign }}
+  {{ $textAlign := . |  }}
+  {{ $scratch.Set "class" (printf `%s text-%s` ($scratch.Get "class") ( anchorize . ))}}
+{{ end }}
+
+{{ with .classList }}
+  {{ $textAlign := . |  }}
+  {{ $scratch.Set "class" (printf `%s %s` ($scratch.Get "class") . )}}
+{{ end }}
+
+{{ return printf `class="columns %s"` ($scratch.Get "class") }}

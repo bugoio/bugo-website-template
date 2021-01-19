@@ -1,0 +1,8 @@
+<li
+  role="none"
+  class="{{ if eq .page.Title .item.Title }}current{{ end }}"
+>
+  <a role="treeitem" href="{{ .item.Permalink }}">
+    {{ .item.Title }}
+  </a>
+</li>

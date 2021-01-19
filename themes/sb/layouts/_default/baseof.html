@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{- $page := . -}}
+  {{- $site := .Site -}}
+  {{- $env := getenv "HUGO_ENV" -}}
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      {{ if eq .Page.Kind "term"}}
+        {{ .Data.Plural | title }}: 
+      {{ end }}
+      {{- if .Params.page_meta.meta_title -}}
+      {{- .Params.page_meta.meta_title -}}
+      {{- else -}} 
+      {{- .Title | title -}} 
+      {{- end -}}
+      {{- if (or (eq .Page.Kind "term") (and (eq .Page.Kind "section") .Page.Params.paginate ))}}
+        - Page {{ .Paginator.PageNumber }}
+      {{- end -}}
+    </title>
+    {{ hugo.Generator }}
+    {{- template "_internal/schema.html" . -}}
+    {{/* NOTE: For Production make sure you add `HUGO_ENV="production"` before your build command */}}
+    {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+    <meta name="robots" content="index, follow" />
+    {{ else }}
+    <meta name="robots" content="noindex, nofollow" />
+    {{ end }}
+    <!-- Open Graph Meta Data -->
+    {{- template "_internal/opengraph.html" . -}}
+    <!-- Twitter Card -->
+    {{- template "_internal/twitter_cards.html" . -}}
+    <!-- Structured Data -->
+    {{ with .Site.Params.seoLogo }}
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "{{ $site.Title }}",
+          "url": "{{ "/" | absURL | safeURL }}",
+          "logo": "{{ . | absURL | safeURL }}",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "{{ "/" | absURL | safeURL }}"
+          }
+        }
+      </script>
+      
+    {{ end }}
+     <!-- Page specific structured data -->
+    {{- block "structuredData" . -}}{{- end -}}
+  
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://i.ytimg.com" crossorigin>
+    <link rel="preconnect" href="https://yt3.ggpht.com" crossorigin>
+    <link rel="preconnect" href="https://static.doubleclick.net" crossorigin>
+    <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet"/>
+  </head>
+  
+  {{- $bodyClass := partial "getBodyClass" . -}}
+  {{- $bodySidebar := partial "getSidebarClass" . -}}
+  <body class="no-js msie {{ $bodyClass }} {{ $bodySidebar }}">
+    <script>
+      document.body.classList.remove("no-js");
+      var ua = window.navigator.userAgent;
+      var msie = ua.indexOf("MSIE ");
+      if ( msie < 0 || msie,navigator.userAgent.match(/Trident.*rv\:11\./) == null ){
+        document.body.classList.remove("msie");
+      } else {
+        // Add IE polyfills
+        if(!window.picturefillJs){
+          //console.log('loading js');
+          window.picturefillJs = document.createElement('script'); 
+          window.picturefillJs.src = '/js/picturefill.js'; 
+          let firstScriptTag = document.getElementsByTagName('script')[0]; 
+          firstScriptTag.parentNode.insertBefore(window.picturefillJs, firstScriptTag);
+        }
+      }
+    </script>
+    {{- partial "components/skip-menu" . -}}
+    <div id="offcanvas">
+      <a href="#" class="close">
+        {{ partial "icons/angle-up" . }}
+        <span class="sr-only">Close</span>
+      </a>
+      {{ partial "navigation/mobile-nav" . }}
+      <div class="offmenu">
+        <div class="container">
+          {{ if .Site.Params.enableOffCanvasSearch }}
+            {{ partial "forms/search-form-inline" . }}
+          {{ end }}
+        </div>  
+      </div>
+      <div id="canvas" aria-label="Content" tabindex="0">
+        {{- partial "components/message" (dict "id" "no-js-warning" "classes" "global-message bg-danger text-white" "content" "This site is best viewed with javascript turned on.") -}}
+        {{- partial "components/message" (dict "id" "msie-warning" "classes" "global-message bg-danger text-white" "content" "This site uses features not supported by Internet Explorer.") -}}
+            {{- partial "header.html" . -}}
+        {{ with .Site.Data.organization.messageInfo }}
+          {{- partial "components/message" (dict "id" "org-message" "classes" "global-message bg-info" "content" ( . | markdownify) ) -}}
+        {{ end }}
+        {{ with .Site.Data.organization.messageWarning }}
+          {{- partial "components/message" (dict "id" "org-message" "classes" "global-message bg-warning" "content" ( . | markdownify) ) -}}
+        {{ end }}
+        {{ with .Site.Data.organization.messageDanger }}
+          {{- partial "components/message" (dict "id" "org-message" "classes" "global-message bg-danger" "content" ( . | markdownify) ) -}}
+        {{ end }}
+        {{ with .Site.Data.organization.messageSuccess }}
+          {{- partial "components/message" (dict "id" "org-message" "classes" "global-message bg-success" "content" ( . | markdownify) ) -}}
+        {{ end }}    
+
+        {{- block "hero" . -}}{{- end -}}
+        {{ partial "components/breadcrumbs" . }}
+        {{/*  {{ partial "components/breadcrumbs" . }}  */}}
+        {{ if (or .Page.Params.pageOptions.showSidebar (eq .Page.Type "post") (eq .Page.Type "term")) }}
+        <!-- Layout with sidebar -->
+        <div id="content" class="container">
+          <div class="flex one two-600">
+            <div class="full two-third-600">
+              {{- block "main" . -}}{{- end -}}
+            </div>
+            <div class="full third-600">
+              {{- block "sidebar" . -}}{{- end -}}
+            </div>  
+          </div>
+        </div>
+        {{ else }}
+        <!-- Layout with NO sidebar -->
+        <div id="content" class="container">
+          <div class="full">
+            {{- block "main" . -}}{{- end -}}
+          </div>
+        </div>
+        {{ end }}
+        {{- partial "components/marketing-blocks" . -}}
+        {{- partial "layout/footer-simple.html" . -}}
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['Roboto+Slab:wght@500&family','Roboto:ital,wght@0,300;0,500;1,300;1,500']
+        }
+      });
+      /*
+      WebFont.load({
+        google: {
+          families: ['Droid Sans&display=swap']
+        }
+      });
+      */
+    </script>  
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    {{- block "styles" . -}}{{- end -}}
+    <script src="/js/app.js" type="text/javascript"></script>
+    <script src="/js/custom.js" type="text/javascript"></script>
+    {{- block "script" . -}}{{- end -}}
+  </body>
+</html>

@@ -1,0 +1,34 @@
+---
+label: Decision
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: Title
+- type: datetime
+  name: date
+  label: Date
+- name: court
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - California Supreme Court
+    - California Court of Appeal
+    - United States Court of Appeals
+    - United States District Court
+    - National Labor Relations Board
+    - National Labor Relations Board General Counsel Decisions
+    - Labor Arbitration Awards
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Deciding Body
+- name: year
+  type: text
+  config:
+    required: false
+  label: Year

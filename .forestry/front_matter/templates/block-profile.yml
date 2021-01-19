@@ -1,0 +1,82 @@
+---
+label: Block - Profile Overview
+hide_body: true
+display_field: title
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+- name: showTitle
+  type: boolean
+  label: Show Title
+  description: Add the title field to the top of the first column. The title will
+    have special styling.
+- name: profile
+  type: select
+  default: []
+  config:
+    required: false
+    options: []
+    source:
+      type: pages
+      section: attorneys
+      file: 
+      path: 
+  label: Profile
+  description: Select an attorney profile to display in this block
+- name: blockContent
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Block Content
+  description: "<br>Add the content to be displayed above the section list."
+- name: fullWidth
+  type: boolean
+  label: Full Width
+- name: bgColor
+  type: include
+  config: {}
+  template: fields-colors
+  label: Background Color
+- name: useBgImage
+  type: boolean
+  label: Use a background image
+- name: bgImage
+  type: file
+  config:
+    maxSize: 64
+  label: Background Image
+  showOnly:
+    field: useBgImage
+    value: true
+- name: contrast
+  type: select
+  default: Lighten
+  config:
+    required: false
+    options:
+    - Lighten
+    - Darken
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Contrast
+  description: Select a contrast.
+  showOnly:
+    field: useBgImage
+    value: true
+- name: layout
+  type: text
+  config:
+    required: false
+  label: layout
+  default: block-section
+  hidden: true

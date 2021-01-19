@@ -1,0 +1,13 @@
+{{ $home := "/" | absURL }}
+{{ $site := .Site }}
+<div id="brand-footer" class="half-600" aria-hidden="true">
+  <a href="{{ $home }}" tabindex="-1">
+  {{ with .Site.Data.organization.footerLogo }}
+  {{ $alt := $site.Title }}
+  {{ $imgSrc := partial "imgSrc" . }}
+  {{ partial "components/picture" (dict "imgSrc" $imgSrc "alt" $alt) }}
+  {{ else }}
+    {{ .Site.Title | title }}
+  {{ end }}
+</a>
+</div>

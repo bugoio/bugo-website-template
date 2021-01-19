@@ -1,0 +1,60 @@
+---
+label: Page Meta
+hide_body: true
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+  description: 'This page''s title. Note: the first title you enter will be the default
+    slug for this page when saved for the first time. '
+- name: date
+  type: datetime
+  label: Publish Date
+  description: Enter a date. Dates can be back and future dated. Future dated pages
+    will be published when the date is the current date.
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+  default: now
+- name: expiryDate
+  type: datetime
+  label: Expire Date
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+    max: 170
+    min: 
+  label: Meta Description
+  description: Enter a description of the page. Google will use this when displaying
+    a link to this page.
+- name: images
+  type: image_gallery
+  config: {}
+  label: Meta Images
+  description: Meta images used when a user shares this page to social media. Multiple
+    images can be displayed as a gallery depending on the social platform.
+- name: weight
+  type: number
+  label: Weight
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 

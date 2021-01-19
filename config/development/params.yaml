@@ -1,0 +1,12 @@
+---
+baseURL:
+canonifyURLs: true
+enableGitInfo: true
+enableInlineShortcodes: true
+enableHeros: false
+showSearchInMain: true
+showWCAG: true
+relatedPostsTitle: Related
+latestPostsTitle: Recent
+seoLogo: /uploads/rldqp4lna4rbp12ivn7o.png
+dateFormat: "01/02/2006"

@@ -1,0 +1,6 @@
+{{ with .Params.videoUrl }}
+  <div class="video-embed">
+    {{ $provider := partial "getDomainFromUrl" . }}
+    {{ partial (printf "components/%s" $provider) . }}    
+  </div>
+{{ end }}

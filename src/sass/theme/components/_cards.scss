@@ -1,0 +1,38 @@
+@use "../../config";
+@use '../utility';
+
+.card {
+  flex-wrap: wrap;
+  background-color: transparent;
+  border: config.$card-border;
+  box-shadow: config.$card-shadow;
+  border-radius: config.$card-radius;
+  margin-bottom: config.$card-margin-bottom;
+  padding: config.$card-padding;
+
+  > p {
+    padding: config.$card-paragraph-padding;
+  }
+
+  header {
+    border-bottom: config.$card-header-border-bottom;
+    border-color: transparent;
+  }
+
+  footer {
+    padding-bottom: 0;
+    margin-bottom: var(--space-less);
+  }
+
+  &:hover,
+  &:focus:hover,
+  &:focus {
+    background-color: config.$card-hover-bg;
+    border-color: config.$card-hover-border-color;
+
+    @if config.$card-hover-scale-image == true {
+      img {
+      }
+    }
+  }
+}

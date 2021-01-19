@@ -1,0 +1,44 @@
+<div id="hero" class="full event-hero">
+  <div id="hero-image">
+      {{ with .Params.hero.heroImage }}
+        {{ $alt := humanize (index (split (path.Base . ) ".") 0) }}
+        {{ $imgSrc := partial "getImgSrcHero" . }}
+        {{ partial "picture" (dict "imgSrc" $imgSrc "alt" $alt) }}
+      {{ else }}
+        {{ with .Site.Data.organization.defaultHeroImage }}
+          {{ $imgSrc := partial "getImgSrcHero" . }}
+          {{ $alt := humanize (index (split (path.Base . ) ".") 0) }}
+          {{ partial "picture" (dict "imgSrc" $imgSrc "alt" $alt) }}
+        {{ end }}
+      {{ end }}
+      </div>
+    <div id="hero-container" class="container">
+      <div id="hero-text">
+        <h1>{{ .Title | title }}</h1>
+        <p>
+          {{ with .Params.location }}
+            <span class="h3 text-white">{{ .name }}</span><br/>
+          {{ end }}
+          {{ partial "formatEventDates" . }}
+        </p>
+        {{ with .Params.registrationUrl }}
+        <p>
+          <a class="button button-outline-white" href="{{ . }}" target="new" rel="noopener noreferrer">Register Now</a>
+        </p>
+        {{ end }}
+    </div>
+  </div>
+</div>
+<div id="secondary-menubar-custom" aria-hidden="true" class="menubar focusables">
+  <ul id="menubar-secondary" role="menubar" aria-label="Secondary Navigation">
+    <li role="none" class="menubar-list-item no-padding">
+      &nbsp;
+    </li>      
+    <li role="none" class="menubar-list-item no-padding">
+      &nbsp;
+    </li>      
+    <li role="none" class="menubar-list-itemno-padding no-padding">
+      &nbsp;
+    </li>      
+  </ul>
+</div>

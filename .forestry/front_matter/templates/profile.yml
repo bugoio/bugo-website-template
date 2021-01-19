@@ -1,0 +1,93 @@
+---
+label: Profile
+hide_body: false
+fields:
+- name: page_meta
+  type: include
+  config: {}
+  template: page-meta
+  label: Page Meta
+- name: quote
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Quote
+- name: name
+  type: field_group
+  config: {}
+  fields:
+  - type: text
+    name: firstName
+    label: First Name
+  - type: text
+    name: middleName
+    label: " Middle Name"
+  - type: text
+    name: lastName
+    label: Last Name
+  - type: text
+    name: position
+    label: Position
+  label: Name & Position
+- name: contactInfo
+  type: field_group
+  config: {}
+  fields:
+  - type: text
+    name: phone
+    label: phone
+  - type: text
+    name: mobile
+    label: mobile
+  - type: text
+    name: email
+    label: email
+  - type: list
+    name: socialAccounts
+    label: Social Accounts
+  label: Contact Info
+- name: location
+  type: select
+  default: []
+  config:
+    required: false
+    options: []
+    source:
+      type: documents
+      section: locations
+      file: data/locations.yaml
+      path: select
+  label: Location
+- name: badges
+  type: image_gallery
+  config: {}
+  label: Badges
+- name: attorney_fields
+  type: include
+  config: {}
+  template: attorney-profile-fields
+  label: Attorney Fields
+- name: relatedPracticeAreas
+  type: list
+  config:
+    use_select: true
+    min: 
+    max: 
+    source:
+      type: pages
+      section: practice-areas
+  label: Related Practice Areas
+- name: url_mangement
+  type: include
+  config: {}
+  template: permalinks
+  label: URL Mangement
+- type: text
+  name: layout
+  label: layout
+  hidden: true
+  default: profile

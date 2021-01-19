@@ -1,0 +1,16 @@
+{{ $context := . }}
+<aside id="sidebar" role="complimentary" tabindex="0">
+  {{ with .Params.attorneyFields.admittedToPractice }}
+    <h3>Admitted To Practice</h3>
+    {{ . | markdownify}}
+  {{ end }}
+  {{ with .Params.relatedPracticeAreas }}
+    <h3>Practice Areas</h3>
+    <ul class="unstyled-list">
+    {{ range . }}
+      {{ $practiceArea := ($context.GetPage .) }}
+      <li><a href="{{ $practiceArea.Permalink }}">{{ $practiceArea.Title }}</a></li>
+    {{ end }}
+    </ul>
+  {{ end }}
+</aside>

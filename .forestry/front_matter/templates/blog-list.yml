@@ -1,0 +1,33 @@
+---
+label: Blog List
+hide_body: false
+fields:
+- name: list_page_meta
+  type: include
+  config: {}
+  template: list-meta
+  label: List Page Meta
+- name: page_options
+  type: include
+  config: {}
+  template: page-options
+  label: Page Options
+- name: section_options
+  type: include
+  config: {}
+  template: section-options
+  label: Section Options
+- name: url_mangement
+  type: include
+  config: {}
+  template: permalinks
+  label: URL Mangement
+- name: layout
+  type: text
+  config:
+    required: false
+  label: Layout
+  hidden: true
+  default: blog
+pages:
+- content/blog/_index.md

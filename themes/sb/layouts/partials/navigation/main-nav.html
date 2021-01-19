@@ -1,0 +1,5 @@
+{{ if .Site.Menus.main }}
+<div id="main-nav" class="">
+  {{ partial "components/menubar" (dict "context" . "location" "main" "menu" .Site.Menus.main ) }}
+</div>
+{{ end }}

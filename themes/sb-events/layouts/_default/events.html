@@ -1,0 +1,45 @@
+{{ define "hero" }}
+  {{ partial "components/hero" . }}
+{{ end }}
+
+{{ define "main" }}
+<main id="main" class="main-list" aria-label="Main Content" tabindex="0">
+  {{ .Content }}
+  <ul class="unstyled-list posts flex one three-600">
+    {{ range (.Paginate ( first 9 (.Pages.ByParam "eventDate" ))).Pages }}
+      {{ if ne .Params.layout "overview" }}
+        <li>
+          <a href="{{ .Permalink }}" class="">
+            <article class="event-listing">
+              {{ with index .Params.images 0 }}
+                {{ partial "components/thumbnail" . }}  
+              {{ end }}<br/>
+              <header>
+                <span class="h2">
+                  {{ .Title }}
+                </span>
+              </header>
+              <p>
+                {{ with .Params.location }}
+                  {{ with .name }}{{.}}<br/>{{end}}
+                {{ end }}
+                {{ partial "formatEventDates" . }}
+              </p>
+              <footer>
+                {{ with .Description }}
+                  <p>{{ . }}</p>
+                {{ end }}
+              </footer>
+            </article>
+          </a>  
+        </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+  {{ template "_internal/pagination.html" . }}
+</main>
+{{ end }}
+
+{{ define "sidebar" }}
+  {{ partial "aside" . }}
+{{ end }}

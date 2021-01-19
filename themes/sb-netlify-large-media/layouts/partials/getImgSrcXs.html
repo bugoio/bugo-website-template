@@ -1,0 +1,28 @@
+{{ $imageExt := path.Ext . }}
+{{ $smOptions := dict "image" . }}
+{{ $mdOptions := dict "image" . }}
+{{ $lgOptions := dict "image" . }}
+{{ $xlOptions := dict "image" . }}
+{{ $xxlOptions := dict "image" . }}
+{{ $xxxlOptions := dict "image" . }}
+
+{{ if ne $imageExt ".svg" }}
+  {{ $smOptions = $smOptions | merge (dict "transform" "nf_resize=fit&w=150") }}
+  {{ $mdOptions = $mdOptions | merge (dict "transform" "nf_resize=fit&w=200") }}
+  {{ $lgOptions = $lgOptions | merge (dict "transform" "nf_resize=fit&w=300") }}
+{{ end }}
+
+
+
+{{ $smURL := partial "transform" $smOptions }}
+{{ $mdURL := partial "transform" $mdOptions }}
+{{ $lgURL := partial "transform" $lgOptions }}
+
+{{ $src := printf "src='%q'" $smURL | safeHTMLAttr }}
+{{ $srcset := printf "srcset='%s 150w, %s 200w, %s 300w'" $smURL $mdURL $lgURL | safeHTMLAttr }}
+{{ $dataSrc := printf "data-src='%q'" $smURL | safeHTMLAttr }}
+{{ $dataSrcSet := printf "data-srcset='%s 150w, %s 200w, %s 300w'" $smURL $mdURL $lgURL | safeHTMLAttr }}
+
+{{ $sizes := "sizes='150px,200px,300px'" | safeHTMLAttr }}
+
+{{ return (dict "src" $src "srcset" $srcset "dataSrc" $dataSrc "dataSrcset" $dataSrcSet "sizes" $sizes) }}

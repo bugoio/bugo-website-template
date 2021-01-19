@@ -1,0 +1,42 @@
+
+@use "../../config";
+@use '../utility';
+
+#content {
+  padding: config.$contentPadding;
+}
+
+main {
+  article {
+    .title {
+      font-size: config.$mainArticleHeadingSize;
+      line-height: config.$heading-line-height;
+    }
+    .thumbnail {
+      @if config.$mainThumbnailShow != true {
+        display: none;
+      }
+    }
+
+    .summary {
+      @if config.$mainSummaryShow != true {
+        display: none;
+      }
+    }      
+  }
+}
+
+main,aside {
+
+  > *:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  a {
+    color: config.$primary;
+  }
+
+  &:focus {
+    // outline: config.$black var(--space-less) 1px !important;
+  }
+}

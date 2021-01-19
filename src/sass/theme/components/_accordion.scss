@@ -1,0 +1,65 @@
+@use "../../config";
+@use '../utility';
+
+.js-accordion {
+  margin: 2rem 0;
+  padding: 0;
+
+  h1,h2,h3,h4,h5,h6 {
+    font-size: inherit;
+  }
+
+  > div {
+    list-style-type: none;
+    margin-bottom: var(--space-min);
+  }
+
+  button {
+    width: 100%;
+    background-color: config.$black;
+    border-color: transparent;
+    color: config.$primary;
+    text-align: left;
+
+    &::after {
+      content: "+";
+      display: inline-block;
+      float: right;
+      font-size: var(--space);
+    }
+
+    &[aria-expanded=true] {
+      &::after {
+        content: "-";
+      }      
+    }
+    
+  }
+
+  
+
+  > div {
+    
+    > div {
+      padding: 0 var(--space-2);
+      transition: all .3s ease-in-out;
+
+      > * {
+        padding-top: var(--space-1);
+        padding-bottom: var(--space-1) !important;
+      }
+    }
+
+
+  
+    [aria-hidden=true] {
+      max-height: 0;
+      overflow: hidden;
+    }
+  
+    [aria-hidden=false] {
+      max-height: 2000rem;
+      overflow: hidden;
+    }
+  }
+}

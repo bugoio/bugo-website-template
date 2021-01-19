@@ -1,0 +1,52 @@
+
+@use '../../config/theme-vars' as *;
+@use '../../config/colors' as *;
+@use '../../config/plugins' as *;
+
+.message {
+  padding: var(--space-least);
+  > * {
+    margin-top: var(--spacing-none);
+    margin-bottom: var(--space-none);
+  }
+}
+
+.global-message {
+  padding: var(--space-min);
+  text-align: center;
+  > * {
+    margin-top: var(--spacing-min);
+    margin-bottom: var(--space-min);
+  }
+}
+
+.bg-info {
+  background-color: $info;
+  color: $black;
+}
+
+.bg-warning {
+  background-color: $warning;
+  color: $black;
+}
+
+.bg-danger {
+  background-color: $danger;
+  color: $black;
+}
+
+.bg-success {
+  background-color: $success;
+  color: $black;
+}
+
+// No JS and MSIE
+
+#no-js-warning,#msie-warning {
+  display: none;
+}
+
+body.no-js #no-js-warning,
+body.msie #msie-warning{
+  display: block;
+}

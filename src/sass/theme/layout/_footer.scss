@@ -1,0 +1,82 @@
+@use "../../config";;
+@use "../utility";
+@use "../typography";
+
+%basic-address {
+  .name {
+    display: block;
+    font-weight: bold;
+  }
+
+  .street {
+    display: block;
+  }
+
+  .phones {
+    padding: 0;
+
+    li {
+      list-style-type: none;
+    }
+  }
+
+  .phones {
+    li {
+      margin: 0;
+    }
+  }
+
+  .phone-label {
+    margin: 0;
+    font-weight: bold;
+  }
+}
+
+#site-footer {
+  background-color: config.$footer-bg;
+  color: config.$footer-color;
+  padding-top: config.$footer-p;
+  padding-bottom: config.$footer-p;
+  @include utility.mod(font-size,-1);
+  
+
+  .location {
+    @extend %basic-address;
+  }
+
+  a {
+    color: config.$footer-link;
+  }
+}
+
+#brand-footer {
+  flex: 0 0 config.$footer-brand-width;
+
+  @include utility.respond-to(md){
+    flex-basis: config.$footer-brand-width-desktop;
+  }
+}
+
+#footer-locations {
+  flex: 0 0 config.$footer-locations-width;
+}
+
+#copyright {
+  text-align: center;
+  * {
+    font-size: config.$copyright-font-size;
+  }
+}
+
+#copyright-nav {
+  display: inline-flex;
+  * {
+    text-decoration: underline;
+    color: config.$primary;
+  }
+}
+
+#wcag-commitment {
+  text-align: center;
+}
+

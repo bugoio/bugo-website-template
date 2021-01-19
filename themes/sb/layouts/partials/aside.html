@@ -1,0 +1,7 @@
+<aside id="sidebar" role="complimentary" tabindex="0">
+  {{ partial "posts-related" (dict "context" . "qty" 3 "thumbnail" false) }}
+  <div class="categories">
+    <h3>Categories</h3>
+    {{ partial "category-list" . }}  
+  </div>
+</aside>

@@ -1,0 +1,42 @@
+---
+label: Block - Stats
+hide_body: true
+display_field: title
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+- name: stats
+  type: field_group_list
+  fields:
+  - name: number
+    type: number
+    label: Stat Number
+    description: ''
+    default: 0
+    required: true
+    config:
+      min: 
+      max: 
+      step: 
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Stat Title
+  - name: content
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Stat Content
+  config:
+    min: 
+    max: 
+    labelField: title
+  label: Stats

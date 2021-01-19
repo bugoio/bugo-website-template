@@ -1,0 +1,91 @@
+@use "../global";
+@use "../../config";;
+@use "../utility";
+
+#mobile-nav {
+  position: relative;
+  padding-bottom: 0;
+  z-index: 20000;
+  // @extend %top-down;
+  height: config.$offcanvasMobileHeight;
+
+  @include utility.respond-to(config.$mobile-hamburger-bp){
+    display: none;
+  }
+
+  .tree {
+    background-color: config.$mobile-bg-color;
+    position: relative;
+    padding-top: calc(var(--space-max)*2);
+
+    li {
+      padding: config.$mobile-link-margin;
+
+      a {
+        display: inline-block;
+        width: auto;
+        color: config.$mobile-link-color;
+        padding: config.$mobile-link-padding;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .container {
+    position: relative;
+  }
+}
+
+#mobile-button {
+  --mb-width: #{config.$header-brand-w};
+
+  flex: 0 0 calc(100% - var(--mb-width));
+  padding-left: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  @include utility.respond-to(config.$mobile-hamburger-bp){
+    display: none;
+  }
+
+  a {
+    display: block;
+    color: config.$primary;
+  }
+
+  svg {
+    width: 2rem;
+    height: auto;
+    max-height: 2rem;
+    object-fit: contain;
+  }
+}
+
+%top-down {
+  .tree {
+    max-height: 0vh;
+    overflow: hidden;
+    transform: translate3d(0);
+    transition: max-height 0.5s;
+    text-align: left;
+    margin: 0 auto;
+    &:focus-within {
+      max-height: 100vw;
+      transition: max-height 0.75s;
+    }
+
+    a {
+      display: block;
+      text-decoration: none;
+      color: config.$primary;
+    }
+  }
+
+  &.open {
+    .tree {
+      max-height: 100vh;
+      transition: max-height 0.75s;
+    }
+  }
+}
