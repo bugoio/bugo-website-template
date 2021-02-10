@@ -3,56 +3,6 @@ label: Block - Hero Movie
 hide_body: true
 display_field: title
 fields:
-- name: title
-  type: text
-  config:
-    required: true
-  label: Title
-- name: showTitle
-  type: boolean
-  label: Show Title
-- name: fullWidth
-  type: boolean
-  label: Full Width
-- name: contrast
-  type: select
-  default: Lighten
-  config:
-    required: false
-    options:
-    - Lighten
-    - Darken
-    source:
-      type: simple
-      section: 
-      file: 
-      path: 
-  label: Contrast
-  showOnly:
-    field: useBgImage
-    value: true
-  description: Select a contrast.
-- name: textAlign
-  type: include
-  config: {}
-  template: field-text-align
-  label: Text Align
-- name: columns
-  type: blocks
-  template_types:
-  - text-column
-  - youtube-column
-  config:
-    min: 
-    max: 
-  label: Columns
-- name: classList
-  type: text
-  config:
-    required: false
-  default: columns
-  hidden: false
-  label: Classes
 - name: layout
   type: text
   config:
@@ -60,8 +10,22 @@ fields:
   label: Layout
   hidden: true
   default: block-hero
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
 - name: heroMovie
   type: file
   config:
     maxSize: 64
   label: Hero Movie
+- name: heroText
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Hero Text
