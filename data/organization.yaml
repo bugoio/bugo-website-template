@@ -5,13 +5,13 @@ messageDanger: ''
 messageSuccess: ''
 companyName: Unclaimed Asset Recovery Service
 companyDescription: ''
-headerLogo: "/uploads/bugo-logo-200.svg"
-footerLogo: "/uploads/bugo-logo-200.svg"
-defaultHeroImage: "/uploads/main-background-image.png"
+headerLogo: https://res.cloudinary.com/uars/image/upload/v1612998127/header-logo_b15qqf.jpg
+footerLogo: https://res.cloudinary.com/uars/image/upload/v1612998127/header-logo_b15qqf.jpg
+defaultHeroImage: ''
 defaultHeroAlt: ''
 marketingBlocks: []
 signUpText: ''
 blogName: "/blog"
-defaultFeaturedImage: "/uploads/main-background-image.png"
+defaultFeaturedImage: ''
 showArticleThumbnails: true
 showSidebarThumbnails: true
