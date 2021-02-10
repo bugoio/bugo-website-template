@@ -18,7 +18,6 @@ hero:
   displayPageTitle: false
   heroCustomText: ''
 contentBlocks:
-  blocks:
   - template: block-columns
     contrast: Lighten
     classList: columns
