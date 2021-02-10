@@ -6,7 +6,6 @@
     <div class="carousel">
       {{ range $index,$slide := . }}
         {{ $alt := humanize (index (split (path.Base .image ) ".") 0) }}
-        {{ $imgSrc := partial "getImgMedSq" .image }}
         <div>
           <div class="flex one two-600">
             <div class="content">
@@ -18,9 +17,12 @@
               </div>
             </div>
             <div>
+              {{ with .image }}
               <div class="responsive-image">
+                {{ $imgSrc := partial "getImgMedSq" . }}
                 {{ partial "picture" (dict "imgSrc" $imgSrc "alt" $alt) }}
-              </div>
+              </div>                
+              {{ end }}
             </div>
           </div>
         </div>

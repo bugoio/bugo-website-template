@@ -1,0 +1,25 @@
+{{ define "hero" }}
+  {{ partial "components/hero" . }}
+{{ end }}
+
+{{ define "main" }}
+<main id="main" class="main-list" aria-label="Main Content" tabindex="0">
+  {{ .Content }}
+  <ul class="unstyled-list flex one">
+    {{ range .Pages }}
+      {{ if ne .Params.layout "overview" }}
+        <li>
+          <a href="{{ .Permalink }}" class="">
+            {{ partial "article" . }}
+          </a>  
+        </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+</main>
+{{ end }}
+
+{{ define "sidebar" }}
+profiles
+{{ partial "aside" . }}
+{{ end }}

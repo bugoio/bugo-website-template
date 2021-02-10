@@ -10,7 +10,7 @@
     list-style: none;
     background-color: transparent;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
   
     [role="menuitem"],
     [role="separator"] {
@@ -45,7 +45,7 @@
     [role="menu"] {
       display: block;
       position: absolute;
-      width: 100%;
+      width: 100vw;
       top: 100%;
       left: 50%;
       margin: 0;
@@ -57,7 +57,7 @@
       z-index: 0;
 
       &.expanded {
-        transform: translateX(-50%)  scaleY(1);
+        transform: translateX(-50%) scaleY(1);
       }
 
       a {

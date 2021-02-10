@@ -2,18 +2,20 @@
 {{ $site := .Site }}
 {{ $query := partial "querifyProfile" . }}
 {{ $vCardURL := printf "/.netlify/functions/vcard/?%s" $query }}
-
+{{ .Params }}
 <div id="hero" class="full">
   <div id="hero-image">
-    {{ with .Params.heroImage }}
-      {{ $alt := humanize (index (split (path.Base . ) ".") 0) }}
-      {{ $imgSrc := partial "imgSrcHero" . }}
-      {{ partial "components/picture" (dict "imgSrc" $imgSrc "alt" $alt) }}
+
+    {{ with .Params.hero }}
+      {{ with .heroImage }}
+        {{ $imgSrc := partial "getImgSrcHero" . }}
+        {{ partial "picture" (dict "imgSrc" $imgSrc "alt" "") }}        
+      {{ end }}
     {{ else }}
       {{ with .Site.Data.organization.defaultHeroImage }}
-        {{ $imgSrc := partial "imgSrcHero" . }}
+        {{ $imgSrc := partial "getImgSrcHero" . }}
         {{ $alt := humanize (index (split (path.Base . ) ".") 0) }}
-        {{ partial "components/picture" (dict "imgSrc" $imgSrc "alt" $alt) }}
+        {{ partial "picture" (dict "imgSrc" $imgSrc "alt" $alt) }}
       {{ end }}
     {{ end }}
   </div>
@@ -66,12 +68,13 @@
 {{ end }}
 
 {{ define "main" }}
+  {{ $context := . }}
   <main id="main" aria-label="Main Content" tabindex="0">
     {{ .Content }}
     {{ with .Params.badges }}
       <ul id="badges" class="unstyled-list flex five">
         {{ range . }}
-        {{ $imgSrc := partial "imgSrcHero" . }}
+        {{ $imgSrc := partial "getImgSrcHero" . }}
         {{ $alt := humanize (index (split (path.Base . ) ".") 0) }}
         <div>{{ partial "components/picture" (dict "imgSrc" $imgSrc "alt" $alt) }}</div>
         {{ end }}
@@ -81,6 +84,7 @@
 {{ end }}
 
 {{ define "sidebar" }}
+  {{ $context := . }}
   <aside id="sidebar" role="complimentary" tabindex="0">
     {{ with .Params.attorneyFields }}
       <div class="profile-details">

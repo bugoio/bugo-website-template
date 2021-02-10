@@ -68,8 +68,8 @@
         {{ range . }}
           {{ if .template }}
             {{ $columnContent := (dict "columnContent" ($page.RenderString .content)) }}
-            {{ $column := merge $columnContent . }}
-            {{ partial ( printf "columns/%s" .template) $column }}
+            {{/*  {{ $column := merge $columnContent . }}  */}}
+            {{ partial ( printf "columns/%s" .template) $columnContent }}
           {{ end }}
         {{ end }}
       </div>
