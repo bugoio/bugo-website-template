@@ -5,7 +5,7 @@ messageDanger: ''
 messageSuccess: ''
 companyName: Unclaimed Asset Recovery Service
 companyDescription: ''
-headerLogo: "/uploads/bugo-logo-200.svg"
+headerLogo: https://res.cloudinary.com/uars/image/upload/v1612998127/header-logo_b15qqf.jpg
 footerLogo: "/uploads/bugo-logo-200.svg"
 defaultHeroImage: "/uploads/main-background-image.png"
 defaultHeroAlt: ''
