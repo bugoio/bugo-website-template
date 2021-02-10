@@ -76,4 +76,4 @@ fields:
     required: false
   label: Layout
   hidden: true
-  default: block-columns
+  default: block-hero
