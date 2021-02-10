@@ -6,12 +6,12 @@ messageSuccess: ''
 companyName: Unclaimed Asset Recovery Service
 companyDescription: ''
 headerLogo: https://res.cloudinary.com/uars/image/upload/v1612998127/header-logo_b15qqf.jpg
-footerLogo: "/uploads/bugo-logo-200.svg"
-defaultHeroImage: "/uploads/main-background-image.png"
+footerLogo: https://res.cloudinary.com/uars/image/upload/v1612998127/header-logo_b15qqf.jpg
+defaultHeroImage: ''
 defaultHeroAlt: ''
 marketingBlocks: []
 signUpText: ''
 blogName: "/blog"
-defaultFeaturedImage: "/uploads/main-background-image.png"
+defaultFeaturedImage: ''
 showArticleThumbnails: true
 showSidebarThumbnails: true
