@@ -17,8 +17,11 @@
     margin: 0 auto;
   }
 
-  .flex > * {
-    padding-bottom: 0;
+  .flex {
+    flex-wrap: nowrap;
+    > * {
+      padding-bottom: 0;
+    }  
   }
 
 

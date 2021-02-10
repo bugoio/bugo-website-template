@@ -5,6 +5,7 @@
 #main-menubar {
   margin: config.$main-menu-margin;
   justify-content: flex-end;
+  height: inherit;
 }
 
 #main-nav {

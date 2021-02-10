@@ -60,8 +60,8 @@ theme:
 # Archetypes
 - sb-events
 # Image Handling
-# - sb-cloudinary
-- sb-netlify-large-media
+- sb-cloudinary
+# - sb-netlify-large-media
 # Layouts
 - sb-search
 - sb-blocks

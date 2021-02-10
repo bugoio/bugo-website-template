@@ -7,10 +7,10 @@
     {{ range $index, $menuItem := .menu }}
       {{ $hasCurrent := partial "menu-has-current" (dict "menuItem" .Page "currentPage" $currentPage) }}
       {{ $placehoder := slice }}
-        <!-- Determine URL -->
-        <li role="none" class="menubar-list-item">
+      <li role="none" class="menubar-list-item">
+        {{ if and $menuItem.Page.Pages $menuItem.Page.Params.includeChildren }}
           <a  role="menuitem"
-              href="{{ $menuItem.URL }}"
+              href="#"
               tabindex="0"
               aria-haspopup="true"
               aria-expanded="false"
@@ -20,7 +20,21 @@
             {{ $menuItem.Name | title }}
             {{ $menuItem.Post }}
           </a>
-        </li>      
+          {{ partial "components/menubarMenu" (dict "currentPage" $currentPage "location" $location "menuItem" . ) }}
+        {{ else }}
+          <a  role="menuitem"
+              href="{{ $menuItem.URL }}"
+              tabindex="0"
+              aria-haspopup="false"
+              aria-expanded="false"
+              class="menu-item {{ .Title | anchorize }}"
+          >
+            {{ $menuItem.Pre }}
+            {{ $menuItem.Name | title }}
+            {{ $menuItem.Post }}
+          </a>
+        {{ end }}
+      </li>
     {{ end }}
     {{ if $site.Params.enableSearchInMain }}
       <li role="none" class="menubar-list-item">
@@ -34,6 +48,5 @@
         </a>
       </li>
     {{ end }}
-
   </ul>
 </nav>

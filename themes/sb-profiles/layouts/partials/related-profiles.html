@@ -1,0 +1,5 @@
+<div id="related-proflies">
+  {{ range ((where .Site.Pages "Section" "our-attorneys").Related .).ByWeight }}
+    {{ . }}</br>
+  {{ end }}
+</div>

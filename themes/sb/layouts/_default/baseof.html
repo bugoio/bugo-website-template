@@ -96,7 +96,7 @@
           {{ end }}
         </div>  
       </div>
-      <div id="canvas" aria-label="Content" tabindex="0">
+      <div id="canvas" aria-label="Content" tabindex="-1">
         {{- partial "components/message" (dict "id" "no-js-warning" "classes" "global-message bg-danger text-white" "content" "This site is best viewed with javascript turned on.") -}}
         {{- partial "components/message" (dict "id" "msie-warning" "classes" "global-message bg-danger text-white" "content" "This site uses features not supported by Internet Explorer.") -}}
             {{- partial "header.html" . -}}

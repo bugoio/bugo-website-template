@@ -10,23 +10,25 @@
   height: 100%;
   background-color: config.$offcanvas-bg;
   margin-top: 0;
+  position: relative;
+  padding-top: config.$offcanvasMobilePaddingTop;
 
   &:target{
     transition: config.$transition;
-    #site-header {
-      position: absolute;
-      top: 0;
-    }
+    // #site-header {
+    //   position: absolute;
+    //   top: 0;
+    // }
   }
   
   &:not(:target){
-    margin-top: config.$offcanvasMobileHeight * -1;
+    margin-top: (config.$offcanvasMobileHeight  + config.$offcanvasMobilePaddingTop) * -1;
     transition: config.$transition;
   }
 
   @include utility.respond-to(config.$mobile-hamburger-bp){  
     &:not(:target){
-      margin-top: config.$offcanvasDesktopHeight * -1;
+      margin-top: (config.$offcanvasDesktopHeight) * -1;
       transition: config.$transition;
     }
   }
@@ -62,9 +64,9 @@
 
   .offmenu {
     width: 100%;
-    height: calc(var(--space-max)*4);
+    // height: calc(var(--space-max)*4);
     display: none;
-    padding-top: calc(var(--space-max)*2);
+    // padding-top: calc(var(--space-max)*2);
 
     @include utility.respond-to(config.$mobile-hamburger-bp){
       display: block;
@@ -80,7 +82,7 @@
     }
   }
 
-  .close {
+  .close-button {
     display: block;
     width: var(--space-max);
     position: absolute;
@@ -93,6 +95,7 @@
     color: config.$mobile-close-color;
     text-align: center;
     transform: translateX(-50%);
+    // height: config.$offcanvasCloseHeight;
 
     @include utility.respond-to(md){
       color: config.$primary;

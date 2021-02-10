@@ -12,11 +12,6 @@ fields:
   config: {}
   template: hero
   label: Hero
-- name: contentBlocks
-  type: include
-  config: {}
-  template: blocks
-  label: Content Blocks
 - name: page_options
   type: include
   config: {}
@@ -29,5 +24,29 @@ fields:
   label: Layout
   default: landing-page
   hidden: true
+- name: contentBlocks
+  type: field_group
+  config: {}
+  fields:
+  - name: blocks
+    type: blocks
+    template_types:
+    - block-columns
+    - block-logos
+    - block-stats
+    - block-random-profiles
+    - block-section-overview
+    - block-slideshow
+    - block-testimonials
+    - block-random-posts
+    - block-latest-posts
+    - block-profile
+    config:
+      min: 
+      max: 
+    label: Blocks
+  label: Content Blocks
+  description: This page does not have a content editor. Instead you add content blocks
+    to it.
 pages:
 - content/_index.md

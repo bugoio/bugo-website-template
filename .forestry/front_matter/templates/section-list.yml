@@ -29,8 +29,3 @@ fields:
   label: Layout
   hidden: true
   default: section
-pages:
-- content/docs/_index.md
-- content/docs/configuration/_index.md
-- content/docs/templates/themes.md
-- content/getting-started/_index.md

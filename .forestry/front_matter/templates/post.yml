@@ -24,15 +24,3 @@ fields:
   config: {}
   template: page-options
   label: Post Options
-pages:
-- content/blog/i-know-words.i-have-the-best-words.lorem-ipsum-is-fake-text.md
-- content/blog/i-was-going-to-say-something-extremely-rough-to-lorem-ipsum.md
-- content/blog/i-will-write-some-great-great-text-on-your-website-s-southern-border-and-i-will-make-google-pay-for-that-text..md
-- content/blog/it-s-about-making-placeholder-text-great-again.md
-- content/blog/lorem-ipsum-is-unattractive-both-inside-and-out.md
-- content/blog/lorem-ispum-is-a-choke-artist.it-chokes.md
-- content/blog/no-wonder-you-ve-been-fighting-lorem-ipsum-your-entire-adult-life.md
-- content/blog/the-other-thing-with-lorem-ipsum-is-that-you-have-to-take-out-its-family.md
-- content/blog/this-placeholder-text-is-gonna-be-huge.md
-- content/blog/we-are-going-to-make-placeholder-text-great-again.greater-than-ever-before..md
-- content/blog/you-re-disgusting.when-other-websites-give-you-text-they-re-not-sending-the-best..md

@@ -5,7 +5,6 @@
 {{ $menuItem := .menuItem }}
 
 <div id="{{ .menuItem.Name | anchorize }}-menu" class="menu-level-{{ $scratch.Get "menuLevel" }} default" role="menu" aria-label="{{ .menuItem.Name | title }}">
-  <div class="container">
     <!-- First Level uses Hugo menu system -->
     <ul class="menu-list-level-{{ $scratch.Get "menuLevel" }}">
       {{ $scratch.Set "menuLevel" ( add ( $scratch.Get "menuLevel" ) 1 ) }}
@@ -29,7 +28,7 @@
           {{ end }}
         </a>
         <!-- loop through section -->
-        {{ if .Params.includeChildrenInMenu }}
+        {{ if .Params.includeChildren }}
           <div class="menu-level-{{ $scratch.Get "menuLevel" }} default" role="menu" aria-label="{{ .Title | title }}" data-mouseout="false">
             <div class="container">
               <ul>
@@ -46,7 +45,6 @@
     {{ with $menuItem.Page.Description }}
     <div class="description">{{ . }}</div>
     {{ end }}  
-  </div>
 </div>
 
 
@@ -67,7 +65,7 @@
   >
     {{ .page.Title | title }} 
     {{ if .page.Pages }}
-      {{/*  {{ partial "icon" (slice "angle-down" "icon-small")}}  */}}
+      <!-- {{/*  {{ partial "icon" (slice "angle-down" "icon-small")}}  */}} -->
     {{ end }}
   </a>
   {{ if .page.Params.includeChildrenInMenu }}

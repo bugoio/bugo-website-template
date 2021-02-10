@@ -8,20 +8,29 @@
   left: 0;
   width: 100%;
   background-color: white;
-  transform: translateY(0);
+  transform: translateY(-110%);
   transition: all 0.3s;
   box-shadow: $shadow;
-  z-index: 40000;
+  z-index: 99999999;
 
   &:focus-within {
     transform: translateY(100%);
   }
 
+  .flex > * {
+    padding-bottom: 0;
+
+    > :first-child {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
   .container a {
-    display: inline-block;
-    padding: var(--space-least) var(--space-less);
-    // background-color: $primary;
-    // color: $white;
-    font-weight: bold;
+    // display: inline-block;
+    // padding: var(--space-least) var(--space-less);
+    // // background-color: $primary;
+    // // color: $white;
+    // font-weight: bold;
   }
 }
