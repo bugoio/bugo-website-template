@@ -5730,10 +5730,10 @@ springboard-css@^0.4.33:
     normalize.css "^8.0.1"
     springboard-css "^0.4.33"
 
-springboard-css@^0.5.2:
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/springboard-css/-/springboard-css-0.5.2.tgz#75069769b4badcac1c2f6688887d0363118db508"
-  integrity sha512-PwGQfw2fBTwPbvV+aMvJC1L2bzWK+JIujVcMTKgSF4+VJuALruqwAbBo9v5bia1Xp0Uem9e6CZhRHPWUCzJH0A==
+springboard-css@^0.5.6:
+  version "0.5.6"
+  resolved "https://registry.yarnpkg.com/springboard-css/-/springboard-css-0.5.6.tgz#a8684806637b534cbf0bf7144ac22ac318b42cce"
+  integrity sha512-ZMD7LyN2fYJjBTzuQFWuZdVQxec8RMWrvZKAwneK5Qpyrcb127XxmkwWTGeRMn2zD/dVZ4bsAZVJ7su79JgUNA==
   dependencies:
     breakpoint-sass "^2.7.1"
     caniuse-lite "^1.0.30001050"

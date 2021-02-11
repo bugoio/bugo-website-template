@@ -32,7 +32,7 @@
     "onoffcanvas": "^2.2.4",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "serialize-javascript": "^5.0.1",
-    "springboard-css": "^0.5.2",
+    "springboard-css": "^0.5.6",
     "vanilla-lazyload": "^16.1.0"
   },
   "devDependencies": {
