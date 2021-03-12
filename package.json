@@ -23,7 +23,7 @@
     "@babel/preset-react": "^7.10.1",
     "@fortawesome/fontawesome-free": "^5.15.1",
     "breakpoint-sass": "^2.7.1",
-    "elliptic": "^6.5.3",
+    "elliptic": "^6.5.4",
     "lodash": "^4.17.20",
     "mark.js": "^8.11.1",
     "mathsass": "^0.11.0",
