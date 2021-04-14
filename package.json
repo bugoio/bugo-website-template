@@ -24,6 +24,7 @@
     "@fortawesome/fontawesome-free": "^5.15.1",
     "breakpoint-sass": "^2.7.1",
     "elliptic": "^6.5.4",
+    "image-to-base64": "^2.2.0",
     "lodash": "^4.17.20",
     "mark.js": "^8.11.1",
     "mathsass": "^0.11.0",
@@ -33,7 +34,8 @@
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "serialize-javascript": "^5.0.1",
     "springboard-css": "^0.5.6",
-    "vanilla-lazyload": "^16.1.0"
+    "vanilla-lazyload": "^16.1.0",
+    "vcards-js": "^2.10.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.1",
