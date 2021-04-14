@@ -1,0 +1,54 @@
+@forward '../config';
+@forward '../modularscale/index';
+
+@use '../config' as *;
+@use '../modularscale/index' as *;
+
+$h1-font-size: var(--space-6) !default;
+$h2-font-size: var(--space-5) !default;
+$h3-font-size: var(--space-4) !default;
+$h4-font-size: var(--space-3) !default;
+$h5-font-size: var(--space-2) !default;
+$h6-font-size: var(--space-1) !default;
+$heading-color: $black !default;
+$heading-padding-top: $spacing-less !default;
+$heading-padding-bottom: 0 !default;
+$heading-margin-bottom: $spacing-less !default;
+$heading-line-height: 1 !default;
+
+%heading {
+  color: $heading-color;
+  padding-top: $heading-padding-top;
+  padding-bottom: $heading-padding-bottom;
+  margin-bottom: $heading-margin-bottom;
+}
+
+%h1 {
+  @include mod(font-size, $h1-font-size);
+  line-height: $heading-line-height;
+}
+
+%h2 {
+  @include mod(font-size, $h2-font-size);
+  line-height: $heading-line-height;
+}
+
+%h3 {
+  @include mod(font-size, $h3-font-size);
+  line-height: $heading-line-height;
+}
+
+%h4 {
+  @include mod(font-size, $h4-font-size);
+  line-height: $heading-line-height;
+}
+
+%h5 {
+  @include mod(font-size, $h5-font-size);
+  line-height: $heading-line-height;
+}
+
+%h6 {
+  @include mod(font-size, $h6-font-size);
+  line-height: $heading-line-height;
+}

@@ -1,0 +1,23 @@
+@forward '../config';
+@forward '../modularscale/index';
+
+@use '../config' as *;
+@use '../modularscale/index' as *;
+
+// Top level selector
+%input {
+  line-height: 1.5;
+  margin: 0;
+  // height: $input-height; // think we need to remove
+  padding: $padding;
+  border: $border;
+  background-color: $input-bg;
+  border-radius: $radius;
+  transition: $transition;
+  width: 100%;
+
+  &:focus {
+    border-color: $primary;
+    outline: 0;
+  }
+}

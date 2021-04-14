@@ -1,8 +1,14 @@
 @use "../../../config";
+@use '../../utility';
+
 .logo-group {
-  margin-top: var(--space-max);
-  > *:last-child {
-    padding-bottom: config.$grid-space; 
+  padding: var(--space) 0;
+  justify-content: center;
+
+  > * {
+    @include utility.respond-to(lg){
+      padding-bottom: 0 !important; 
+    }
   }
   img {
     display: block;

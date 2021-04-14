@@ -33,7 +33,7 @@ main,aside {
     padding-top: 0;
   }
   a {
-    color: config.$primary;
+    color: config.$generic-link-color;
   }
 
   &:focus {

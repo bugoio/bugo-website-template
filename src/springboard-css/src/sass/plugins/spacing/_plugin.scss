@@ -1,0 +1,142 @@
+@use '../config' as *;
+@use '../modularscale/index' as *;
+
+// Spacing
+  // creates CSS variables in :root
+  $space:        0 !default;
+  $space-min:    $space - 8 !default;
+  $space-least:  $space - 2 !default;
+  $space-less:   $space - 1 !default;
+  $space-more:   $space + 1 !default;
+  $space-most:   $space + 2 !default;
+  $space-max:    $space + 4 !default;
+
+  // using CSS variables from above. Use these for spacing.
+  $spacing: var(--space) !default;
+  $spacing-min: var(--space-min) !default;
+  $spacing-least: var(--space-least) !default;
+  $spacing-less: var(--space-less) !default;
+  $spacing-more: var(--space-more) !default;
+  $spacing-most: var(--space-most) !default;
+  $spacing-max: var(--space-max) !default;
+
+  // Smaller Space
+  $space--10: $space - 10  !default; 
+  $space--9: $space - 9 !default; 
+  $space--8: $space - -8 !default; 
+  $space--7: $space - 7 !default; 
+  $space--6: $space - 6 !default; 
+  $space--5: $space - 5 !default; 
+  $space--4: $space - 4 !default; 
+  $space--3: $space - 3 !default; 
+  $space--2: $space - 2 !default;
+  $space--1: $space - 1 !default; 
+
+  // Larger Space
+  $space-1: $space + 1 !default;
+  $space-2: $space + 2 !default;
+  $space-3: $space + 3 !default;
+  $space-4: $space + 4 !default;
+  $space-5: $space + 5 !default;
+  $space-6: $space + 6 !default;
+  $space-7: $space + 7 !default;
+  $space-8: $space + 8 !default;
+  $space-9: $space + 9 !default;
+  $space-10: $space + 10 !default;
+
+
+:root {
+  //setup space modular scale and save as CSS property
+  @include mod(--space-min,$space-min);
+  @include mod(--space-least,$space-least);
+  @include mod(--space-less,$space-less);
+  @include mod(--space,$space);
+  @include mod(--space-more,$space-more);
+  @include mod(--space-most,$space-most);
+  @include mod(--space-max,$space-max);
+
+  @include mod(--space--10,$space--10);
+  @include mod(--space--9,$space--9);
+  @include mod(--space--8,$space--8);
+  @include mod(--space--7,$space--7);
+  @include mod(--space--6,$space--6);
+  @include mod(--space--5,$space--5);
+  @include mod(--space--4,$space--4);
+  @include mod(--space--3,$space--3);
+  @include mod(--space--2,$space--2);
+  @include mod(--space--1,$space--1);
+
+
+  @include mod(--space-1,$space-1);
+  @include mod(--space-2,$space-2);
+  @include mod(--space-3,$space-3);
+  @include mod(--space-4,$space-4);
+  @include mod(--space-5,$space-5);
+  @include mod(--space-6,$space-6);
+  @include mod(--space-7,$space-7);
+  @include mod(--space-8,$space-8);
+  @include mod(--space-9,$space-9);
+  @include mod(--space-10,$space-10);
+}
+
+// Padding Helpers
+.p-none {
+  padding: 0 !important;
+}
+
+.p-min {
+  padding: var(--space-min);
+}
+
+.p-least {
+  padding: var(--space-least);
+}
+
+.p-less {
+  padding: var(--space-less);
+}
+
+.p-normal {
+  padding: var(--space);
+}
+
+.p-more {
+  padding: var(--space-more);
+}
+
+.p-most {
+  padding: var(--space-most);
+}
+
+.p-max {
+  padding: var(--space-max);
+}
+
+// Margin Helpers
+.m-none {
+  margin: 0 !important;
+}
+
+.m-min {
+  margin: var(--space-min);
+}
+
+.m-least {
+  margin: var(--space-least);
+}
+
+.m-less {
+  margin: var(--space-less);
+}
+
+.m-normal {
+  margin: var(--space);
+}
+
+.m-more {
+  margin: var(--space-more);
+}
+
+.m-most {
+  margin: var(--space-most);
+}

@@ -1,0 +1,82 @@
+@use '../modularscale/index' as *;
+
+$h1-font-size: 4 !default;
+$h2-font-size: 3 !default;
+$h3-font-size: 2 !default;
+$h4-font-size: 1 !default;
+$h5-font-size: 0 !default;
+$h6-font-size: 0 !default;
+$heading-color: #000 !default;
+$heading-padding-top: var(--spacing-less) !default;
+$heading-padding-bottom: 0 !default;
+$heading-margin-bottom: var(--spacing-less) !default;
+$heading-line-height: 1 !default;
+$heading-font: 'Arial', sans-serif !default;
+
+%heading {
+  color: $heading-color;
+  padding-top: $heading-padding-top;
+  padding-bottom: $heading-padding-bottom;
+  margin-bottom: $heading-margin-bottom;
+  font-family: $heading-font;
+}
+
+%h1 {
+  font-size:  $h1-font-size;
+  line-height: $heading-line-height;
+}
+
+%h2 {
+  font-size:  $h2-font-size;
+  line-height: $heading-line-height;
+}
+
+%h3 {
+  font-size:  $h3-font-size;
+  line-height: $heading-line-height;
+}
+
+%h4 {
+  font-size:  $h4-font-size;
+  line-height: $heading-line-height;
+}
+
+%h5 {
+  font-size:  $h5-font-size;
+  line-height: $heading-line-height;
+}
+
+%h6 {
+  font-size:  $h6-font-size;
+  line-height: $heading-line-height;
+}
+
+h1,.h1 {
+  @extend %h1;
+  @extend %heading;
+}
+
+h2,.h2 {
+  @extend %h2;
+  @extend %heading;
+}
+
+h3,.h3 {
+  @extend %h3;
+  @extend %heading;
+}
+
+h4,.h4 {
+  @extend %h4;
+  @extend %heading;
+}
+
+h5,.h5 {
+  @extend %h5;
+  @extend %heading;
+}
+
+h6,.h6 {
+  @extend %h6;
+  @extend %heading;
+}

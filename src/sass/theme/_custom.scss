@@ -2,3 +2,16 @@
 @use './utility';
 @use 'sass:list' as list;
 @use 'sass:map' as map;
+
+$canvasPadding: calc(var(--space-4) * 2);
+$caseStudyHeight: calc(100vh - #{$canvasPadding});
+
+// @include utility.respond-to(xl){
+//   #offcanvas:not(:target){
+//     margin-top: -8.5rem;
+//   }
+// }  
+
+html,body {
+  font-size: var(--space);
+}

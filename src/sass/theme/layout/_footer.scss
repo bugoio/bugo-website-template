@@ -37,7 +37,7 @@
   color: config.$footer-color;
   padding-top: config.$footer-p;
   padding-bottom: config.$footer-p;
-  @include utility.mod(font-size,-1);
+  font-size: config.$footer-font-size;
   
 
   .location {
@@ -46,25 +46,6 @@
 
   a {
     color: config.$footer-link;
-  }
-}
-
-#brand-footer {
-  flex: 0 0 config.$footer-brand-width;
-
-  @include utility.respond-to(md){
-    flex-basis: config.$footer-brand-width-desktop;
-  }
-}
-
-#footer-locations {
-  flex: 0 0 config.$footer-locations-width;
-}
-
-#copyright {
-  text-align: center;
-  * {
-    font-size: config.$copyright-font-size;
   }
 }
 

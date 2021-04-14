@@ -1,0 +1,40 @@
+@use "../../config";;
+@use "../utility";
+
+#related-profiles {
+
+  @include utility.respond-to(md){
+    padding-left: var(--space-most);
+  }
+
+  .title {
+    font-size: config.$asideArticleHeadingSize;
+    // line-height: config.$heading-line-height;
+  }
+
+  @debug config.$asideThumbnailShow;
+  .thumbnail {
+    @if config.$asideThumbnailShow != true {
+      display: none;
+    }
+  }
+
+  .summary {
+    @if config.$asideSummaryShow != true {
+      display: none;
+    }
+  }
+
+  .categories {
+    @if config.$asideCategoriesShow != true {
+      display: none;
+    }
+  }
+
+
+
+  h1,h2,h3,h4,h5,h6 {
+    margin-top: 0;
+    padding-top: 0;
+  }
+}

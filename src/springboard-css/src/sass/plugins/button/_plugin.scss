@@ -1,0 +1,100 @@
+@use 'class' as *; 
+// %button
+// This class defines a clickable element that looks like a label
+
+@use '../config' as *;
+@use '../modularscale/index' as *;
+@use '../label/plugin' as *;
+
+
+$button-radius: $radius !default;
+$button-margin: $spacing-least $spacing-less !default;
+$button-hover-shadow: inset 0 0 0 99em rgba($white, $transparency) !default;
+$button-click: inset 0 0 0 99em rgba($black, $transparency) !default;
+$button-pseudo-hover-shadow: inset 0 0 0 99em rgba($black, $transparency / 2) !default;
+$button-bg: $primary !default;
+$button-color: $black !default;
+$button-disabled-bg: #bbb !default;
+$button-weight: normal !default;
+$button-border-width: 1px !default;
+$button-border-color: transaprent !default;
+$button-border-style: solid !default;
+
+// Definition
+%button {
+
+  margin: 0;
+  cursor: pointer;
+  transition: $transition;
+  border-color: $button-border-color;
+  border-width: $button-border-width;
+  border-style: $button-border-style;
+  border-radius: $button-radius;
+  background-color: $button-bg;
+  color: $button-color;
+  font-weight: $button-weight;
+
+  // Avoid the input { height: 2.2 }
+  height: auto;
+  vertical-align: baseline;
+
+  // This avoids a nasty "hover" issue (slightly taller on hover)
+  box-shadow: 0 0 rgba(0, 0, 0, 0) inset;
+
+  // Methods
+  &:hover,
+  &:focus {
+    box-shadow: $button-hover-shadow;
+    // border: 0;
+    }
+
+  &.pseudo:hover,
+  &.pseudo:focus {
+    box-shadow: $button-pseudo-hover-shadow;
+    }
+
+  &.active,
+  &:active,
+  &.pseudo:active {
+    box-shadow: $button-click;
+    }
+
+  &[disabled] {
+    cursor: default;
+    box-shadow: none;
+    background: $button-disabled-bg;
+  }
+}
+
+// For the toggle buttons
+:checked + .toggle,
+:checked + .toggle:hover {
+  box-shadow: $button-click;
+}
+
+// Hide the checkbox/radiobutton
+// Handle with care
+[type] + .toggle {
+  padding: $padding;
+  margin-right: 0;
+
+  &:after,
+  &:before {
+    display: none;
+  }
+}
+
+// Implement the abstract class for real elements
+button,
+.button,
+[type=submit],
+.button-link a {
+  @extend %button;
+}
+
+.button-outline {
+  @extend %button;
+  background-color: transparent;
+  color: $button-bg;
+  border-color: $button-bg;
+}

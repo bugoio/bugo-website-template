@@ -7,46 +7,48 @@
     display: none;
   }
 
-  ol.breadcrumb {
+  .breadcrumb {
     margin: 0 !important;
     justify-content: left;
     align-items: center;
-  }
 
-  li {
-    display: flex;
-    margin: 0;
-    a {
-      color: config.$primary;
-      display: block;
-    }
-
-    &:nth-child(n+2){
-      &::before {
-        content: "/";
-        color: config.$black;
-        font-weight: normal;
-        margin-left: 0.5rem;
-        display: flex;
-        align-items: center;
-      }
-
+    div {
+      display: flex;
+      margin: 0;
       a {
-        margin-left: var(--space-least);     
-      }  
-    }
-
-    &:last-child {
-      font-weight: bold;
-
-      a {
-        color: config.$black;
-        max-width: 22ch;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        cursor: default;
+        color: config.$primary;
+        display: block;
+      }
+  
+      &:nth-child(n+2){
+        &::before {
+          content: "/";
+          color: config.$black;
+          font-weight: normal;
+          margin-left: 0.5rem;
+          display: flex;
+          align-items: center;
+        }
+  
+        a {
+          margin-left: var(--space-least);     
+        }  
+      }
+  
+      &:last-child {
+        font-weight: bold;
+  
+        a {
+          color: config.$black;
+          max-width: 22ch;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          cursor: default;
+        }
       }
     }
+  
+
   }
 }

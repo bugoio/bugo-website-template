@@ -1,0 +1,32 @@
+$ms: (
+  base: 18px,
+  ratio: 1.2,
+  600px: ( 
+    base: 18px,
+  ), 
+  800px: ( 
+    base: 18px, 
+  ), 
+  1000px: ( 
+    base: 18px, 
+  ), 
+  1200px: ( 
+    base: 18px, 
+  ), 
+  1400px: ( 
+    base: 20px,
+  ), 
+  2200px: ( 
+    base: 22px, 
+  )
+) !default;
+
+
+@forward 'mathsass/dist/functions/pow';
+@import 'modularscale-sass/stylesheets/modularscale';
+@import 'mathsass';
+
+@mixin mod($name,$scale) {
+  @include ms-respond($name,$scale,$ms);
+}
+

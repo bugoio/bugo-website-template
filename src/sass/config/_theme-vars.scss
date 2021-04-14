@@ -3,8 +3,8 @@
 @forward './springboard';
 
 $ms: (
-  base: 18px, 
-  ratio: 1.6180,
+  base: 18px,
+  ratio: 1.2,
   600px: ( 
     base: 18px,
   ), 
@@ -54,25 +54,25 @@ $border: 0.25rem solid;
 $border-color: transparent;
 $class-name: "";
 $radius: 0;
-$font-family: "Lusitana", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$transition: all 0.3s ease;
+$font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+// $transition: all .3s;
 $breakpoint: 60rem;
 $shadow: 0.25rem 0.25rem 0.5rem transparentize($black, .6);
 $hr-color: $gray;
 $line-height: 1.7;
 
-$container-w-xs: 90%;
+$container-w-xs: 95%;
 $container-w-sm: 90%;
 $container-w-md: 90%;
 $container-w-lg: 80%;
 $container-w-xl: 80%;
-$container-w-xxl: 70%;
-$container-w-xxxl: 65%;
+$container-w-xxl: 65%;
+$container-w-xxxl: 55%;
 
 
 // Spacing
 // creates CSS variables in :root
-$space:        0;
+$space:        0.5;
 $space-min:    $space - 8;
 $space-least:  $space - 2;
 $space-less:   $space - 1;
@@ -111,9 +111,10 @@ $padding: var(--space-3) 0;
 
 $typographic-margin: var(--space--1) 0;
 $typographic-padding: var(--space--1) 0;
+$typographic-list-padding: var(--space--1) 0 var(--space--1) var(--space-1);
 
 // Grid
-$grid-space: var(--space-max);
+$grid-space: var(--space-1);
 $vertical: $grid-space;
 $horizontal: $grid-space;
 $grid-sizes: 500 600 700 800 900 1000 1100 1200 1300 1400 1500 1600 1700 1800 1900 2000 2100 2200;
@@ -122,19 +123,19 @@ $grid-sizes: 500 600 700 800 900 1000 1100 1200 1300 1400 1500 1600 1700 1800 19
 // Button
 $button-radius: $radius;
 $button-margin: var(--space-least) var(--space-less);
-$button-hover-shadow: inset 0 0 0 99em rgba($white, $transparency);
+$button-hover-shadow: none;
 $button-click: inset 0 0 0 99em rgba($black, $transparency);
 $button-pseudo-hover-shadow: inset 0 0 0 99em rgba($black, $transparency / 2);
-$button-bg: $secondary;
+$button-bg: $dark;
 $button-color: $white;
 $button-disabled-bg: #bbb;
 $button-weight: bold;
 
 // Card
 $card-shadow: 0;
-$card-border: dotted $border-color;
+$card-border: solid $border-color;
 $card-radius: $radius;
-$card-shadow: $shadow;
+$card-shadow: none;
 $card-margin-bottom: var(--space);
 $card-padding: var(--space) var(--space);
 $card-paragraph-padding: var(--space) var(--space);
@@ -143,6 +144,7 @@ $card-bg: transparent;
 $card-hover-bg: transparent;
 $card-hover-scale-image: true;
 $card-hover-border-color: $light;
+$card-hover-border-style: solid;
 
 // Checkbox
 $checkbox-character: '\2714';
@@ -167,7 +169,7 @@ $dropimage-margin: $button-margin;
 
 // Generic
 $generic-color: $black;
-$generic-link-color: inherit;
+$generic-link-color: $primary;
 $generic-shadow-color: #000;
 $generic-bg: #fff;
 $class-name: "";
@@ -214,51 +216,57 @@ $tooltip-size: .8em;
 // Offcanvas
 $offcanvas-bg: transparent;
 $canvas-bg: transparent;
-$offcanvasMobileHeight: 24rem;
-$offcanvasMobilePaddingTop: 3rem;
-$offcanvasDesktopHeight: 10rem;
+$offcanvasMobileHeight: 700px;
+$offcanvasMobilePaddingTop: 0;
+$offcanvasDesktopHeight: 200px;
 
 // Desktop
 $desktop-bp: lg;
 
 // Header
-$header-bg: transparent; 
-$header-color: $black;
-$header-brand-w: 33%;
-$header-brand-w-desktop: 18%;
+$header-bg: $primary;
+$header-color: $white;
+$header-brand-w: 15%;
+$header-brand-w-desktop: var(--space-8);
 $header-padding: var(--space) 0;
 
 // Mobile Nav
-$mobile-hamburger-color: $primary;
+$mobile-hamburger-color: $white;
 $mobile-hamburger-bp: lg;
 $mobile-hamburger-w: 9%;
-$mobile-link-color: $primary;
+$mobile-link-color: $danger;
 $mobile-bg-color: transparent;
-$mobile-close-color: $primary;
+$mobile-close-color: $danger;
 $mobile-link-margin: var(--space);
 $mobile-link-padding:  var(--space-least) var(--space-more);
 
 // Menubar
-$menubar-menu1-bg: $secondary;
+$menubar-menu1-bg: $primary;
 $menubar-menu1-color: $black;
 $menubar-menu2-bg: $secondary;
 $menubar-menu2-color: $black;
+$menubar-menu-height: 20rem;
+$menubar-menu2-font-size: normal;
+$menubar-menu2-font-weight: 300 !important;
+$menubar-text-align: left;
+
 
 // Main Nav
 $main-menu-link-bgColor: transparent;
-$main-menu-link-color: $primary;
+$main-menu-link-color: $white;
 $main-menu-link-size: -0.25;
-$main-menu-link-margin: 0 var(--space-less) 0 0;
+$main-menu-link-margin: 0;
 $main-menu-margin: 0;
-$main-menu-link-padding: var(--space-min);
-$main-menu-width: 80%;
+$main-menu-link-padding: var(--space--4);
+$main-menu-width: 50%;
 $main-menu-justify: flex-end;
 $main-menu-align: stretch;
 $main-menu-text-transform: uppercase;
+$main-menu-font-weight: normal;
 
 // Hero
 $hero-height-sm: 100%;
-$hero-height-md: 38%;
+$hero-height-md: 100%;
 $hero-height-lg: 40%; // percent relative to the container width
 $hero-height-xl: 40%; // percent relative to the container width
 $hero-height-xxl: 40%; // percent relative to the container width
@@ -281,7 +289,7 @@ $home-hero-height-lg: 45%; // percent relative to the container width
 
 // Bread crumbs
 $breadcrumbsShow: true;
-$breadcrumbPadding: var(--space-max) 0 0;
+$breadcrumbPadding: var(--space-4) 0 var(--space-4);
 
 // Content Wrapper
 $contentPadding: var(--space-max) 0;
@@ -292,32 +300,32 @@ $mainSummaryShow: true;
 $mainArticleHeadingSize: var(--space-2);
 
 // Aside Elementf
-$asideThumbnailShow: false;
+$asideThumbnailShow: true;
 $asideSummaryShow: false;
 $asideCategoriesShow: true;
-$asideArticleHeadingSize: var(--space-2);
+$asideArticleHeadingSize: var(--space);
 
 // Thumbnails
-$thumb-padding: 80%;
+$thumb-padding: 65%;
 $thumb-fit: cover;
 
 // Headings
-$h1-font-size: var(--space-4);
-$h2-font-size: var(--space-3);
-$h3-font-size: var(--space-2);
-$h4-font-size: var(--space-1);
-$h5-font-size: var(--space);
-$h6-font-size: var(--space);
+$h1-font-size: var(--space-3);
+$h2-font-size: var(--space-2);
+$h3-font-size: var(--space-1);
+$h4-font-size: var(--space);
+$h5-font-size: var(--space--1);
+$h6-font-size: var(--space--2);
 $heading-color: $primary;
 $heading-padding-top: var(--space);
 $heading-padding-bottom: 0;
-$heading-margin-bottom: 0;
+$heading-margin-bottom: var(--space);
 $heading-line-height: 1.3;
-$heading-font: "Lusitana", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$heading-font: "Roboto Condensed", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $heading-font-weight: 400;
 $heading-text-transform: none;
 
-$block-padding: var(--space-most) 0;
+$block-padding: var(--space-2) 0;
 $block-text-align: left;
 
 //Sharing
@@ -328,11 +336,9 @@ $footer-bg: $primary;
 $footer-color: $white;
 $footer-p: var(--space-more);
 $footer-link: $white;
-$footer-brand-width: 50%;
-$footer-brand-width-desktop: 35%;
-$footer-locations-width: 85%;
+$footer-font-size: var(--space--1);
 
-$copyright-font-size: var(--space--1);
+$copyright-font-size: 16px;
 
 // Columns
 $columns-gap: 1;

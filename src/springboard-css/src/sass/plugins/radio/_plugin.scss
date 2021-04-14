@@ -1,0 +1,11 @@
+// Radio
+// Allows to choose one element from several of them
+@use 'class' as *;
+
+$radio-size: 1em !default;
+$radio-border: 1px solid #aaa !default;
+
+[type=radio] {
+  @extend %radio;
+  }
+

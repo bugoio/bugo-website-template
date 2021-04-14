@@ -2,25 +2,25 @@
 @use './config';
 
 @use 'breakpoint-sass/stylesheets/breakpoint' as *;
-@use 'springboard-css/src/sass/plugins/spacing/plugin' as root;
-@use 'springboard-css/src/sass/plugins/generic/plugin' as generic;
-@use 'springboard-css/src/sass/plugins/normalize/plugin' as normalize;
-@use 'springboard-css/src/sass/plugins/label/plugin' as label;
-@use 'springboard-css/src/sass/plugins/input/plugin' as input;
-@use 'springboard-css/src/sass/plugins/select/plugin' as select;
-@use 'springboard-css/src/sass/plugins/radio/plugin' as radio;
-@use 'springboard-css/src/sass/plugins/checkbox/plugin' as checkbox;
-@use 'springboard-css/src/sass/plugins/table/plugin' as table;
-/*@use 'springboard-css/src/sass/plugins/grid/plugin' as grid;*/
-/* @use 'springboard-css/src/sass/plugins/nav/plugin' as nav; */
-/* @use 'springboard-css/src/sass/plugins/stack/plugin' as stack;*/
-@use 'springboard-css/src/sass/plugins/card/plugin' as card;
-@use 'springboard-css/src/sass/plugins/modal/plugin' as modal;
-@use 'springboard-css/src/sass/plugins/picture/plugin' as picture;
+@use '../springboard-css/src/sass/plugins/spacing/plugin' as root;
+@use '../springboard-css/src/sass/plugins/generic/plugin' as generic;
+@use '../springboard-css/src/sass/plugins/normalize/plugin' as normalize;
+@use '../springboard-css/src/sass/plugins/label/plugin' as label;
+@use '../springboard-css/src/sass/plugins/input/plugin' as input;
+@use '../springboard-css/src/sass/plugins/select/plugin' as select;
+@use '../springboard-css/src/sass/plugins/radio/plugin' as radio;
+@use '../springboard-css/src/sass/plugins/checkbox/plugin' as checkbox;
+@use '../springboard-css/src/sass/plugins/table/plugin' as table;
+/*@use '../springboard-css/src/sass/plugins/grid/plugin' as grid;*/
+/* @use '../springboard-css/src/sass/plugins/nav/plugin' as nav; */
+/* @use '../springboard-css/src/sass/plugins/stack/plugin' as stack;*/
+@use '../springboard-css/src/sass/plugins/card/plugin' as card;
+@use '../springboard-css/src/sass/plugins/modal/plugin' as modal;
+@use '../springboard-css/src/sass/plugins/picture/plugin' as picture;
 /*
-@use 'springboard-css/src/sass/plugins/dropimage/plugin' as drop-image;
-@use 'springboard-css/src/sass/plugins/tabs/plugin' as tabs;
-@use 'springboard-css/src/sass/plugins/tooltip/plugin' as tooltip;
+@use '../springboard-css/src/sass/plugins/dropimage/plugin' as drop-image;
+@use '../springboard-css/src/sass/plugins/tabs/plugin' as tabs;
+@use '../springboard-css/src/sass/plugins/tooltip/plugin' as tooltip;
 */
 
 

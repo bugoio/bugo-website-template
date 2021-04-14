@@ -29,6 +29,7 @@
   &:focus {
     background-color: config.$card-hover-bg;
     border-color: config.$card-hover-border-color;
+    border-style: config.$card-hover-border-style; 
 
     @if config.$card-hover-scale-image == true {
       img {

@@ -1,0 +1,49 @@
+// %button
+// This class defines a clickable element that looks like a label
+@forward '../config';
+@forward '../modularscale/index';
+
+@use '../config' as *;
+@use '../modularscale/index' as *;
+@use '../label/plugin' as *;
+
+// Definition
+%button {
+  @extend %label;
+
+  margin: 0;
+  cursor: pointer;
+  transition: $transition;
+  border-radius: $radius;
+
+  // Avoid the input { height: 2.2 }
+  height: auto;
+  vertical-align: baseline;
+
+  // This avoids a nasty "hover" issue (slightly taller on hover)
+  box-shadow: 0 0 rgba(0, 0, 0, 0) inset;
+
+  // Methods
+  &:hover,
+  &:focus {
+    box-shadow: $button-hover-shadow;
+    border: 0;
+    }
+
+  &.pseudo:hover,
+  &.pseudo:focus {
+    box-shadow: $button-pseudo-hover-shadow;
+    }
+
+  &.active,
+  &:active,
+  &.pseudo:active {
+    box-shadow: $button-click;
+    }
+
+  &[disabled] {
+    cursor: default;
+    box-shadow: none;
+    background: $button-disabled-bg;
+  }
+}

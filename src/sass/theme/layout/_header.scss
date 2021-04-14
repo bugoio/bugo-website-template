@@ -23,22 +23,23 @@
       padding-bottom: 0;
     }  
   }
+}
 
+#brand-header {
+  flex: 0 0 config.$header-brand-w;
+  width: fit-content;
 
-  #brand-header {
-    flex: 0 0 config.$header-brand-w;
-    width: fit-content;
+  @include utility.respond-to(config.$desktop-bp){
+    flex-basis: config.$header-brand-w-desktop;
+  }
 
-    @include utility.respond-to(config.$desktop-bp){
-      flex-basis: config.$header-brand-w-desktop;
-    }
-
-    a {
-      flex: 0 0 auto;
-      width: auto;
-      text-align: left;
-    }
+  a {
+    flex: 0 0 auto;
+    width: auto;
+    text-align: left;
+    color: config.$main-menu-link-color;
   }
 }
+
 
 //custom 

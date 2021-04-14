@@ -1,0 +1,45 @@
+@forward '../config';
+@forward '../modularscale/index';
+
+@use '../config' as *;
+@use '../modularscale/index' as *;
+
+// Styles
+%label {
+  display: inline-block;
+  text-align: center;
+  letter-spacing: inherit;
+  margin: 0;
+  padding: $padding;
+  vertical-align: middle;
+  background: $primary;
+  color: $white;
+  border: 0;
+  border-radius: $radius;
+  width: auto;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  // Colors
+  &.success {
+    background: $success;
+  }
+
+  &.warning {
+    background: $warning;
+  }
+
+  &.error {
+    background: $error;
+  }
+
+  &.pseudo {
+    background-color: transparent;
+    color: inherit;
+  }
+}

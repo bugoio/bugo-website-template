@@ -22,9 +22,17 @@
   }
 
   [role=menu]{
+    justify-content: flex-start;
+
     a {
-      margin: var(--space-less) var(--space-min);
+      // margin: var(--space) var(--space-1);
+      font-size: config.$menubar-menu2-font-size;
+      font-weight: config.$menubar-menu2-font-weight;
     }
+  }
+
+  .menu-list-item.level-2 {
+    flex: 0 0 25%;
   }
 }
 

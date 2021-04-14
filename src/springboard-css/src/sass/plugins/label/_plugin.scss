@@ -1,0 +1,14 @@
+// Inherit from the class
+@use 'class' as *;
+
+.label {
+  @extend %label;
+  // font-size: $font-size;
+  @include mod(font-size,$label-font-size);
+  // padding: .4em .6em;
+  padding: var(--space-least) var(--space-less);
+  // margin-left: 1em;
+  margin-left: var(--space);
+  line-height: 1;
+}
+

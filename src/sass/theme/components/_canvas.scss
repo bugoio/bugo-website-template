@@ -11,7 +11,7 @@
   background-color: config.$offcanvas-bg;
   margin-top: 0;
   position: relative;
-  padding-top: config.$offcanvasMobilePaddingTop;
+  // padding-top: config.$offcanvasMobilePaddingTop;
 
   &:target{
     transition: config.$transition;
@@ -22,49 +22,20 @@
   }
   
   &:not(:target){
-    margin-top: (config.$offcanvasMobileHeight  + config.$offcanvasMobilePaddingTop) * -1;
+    margin-top: calc((#{config.$offcanvasMobileHeight}) * -1);
     transition: config.$transition;
   }
 
   @include utility.respond-to(config.$mobile-hamburger-bp){  
     &:not(:target){
-      margin-top: (config.$offcanvasDesktopHeight) * -1;
+      margin-top: calc((#{config.$offcanvasDesktopHeight}) * -1);
       transition: config.$transition;
     }
   }
-  // position: relative;
-  // z-index: 0;
-  // overflow: hidden;
-  // width: 100%;
-  // height: 100%;
-  // background-color: config.$offcanvas-bg;
-  // margin-top: 0;
-
-  // &:target{
-  //   transform: translateZ(0);
-  //   transition: config.$transition;
-  // }
-  
-  // &:not(:target){
-  //   margin-top: config.$offcanvasMobileHeight * -1;
-  //   transform: translateZ(0);
-  //   transition: config.$transition;
-  //   @include utility.respond-to(config.$mobile-hamburger-bp){
-  //     margin-top: config.$offcanvasDesktopHeight * -1;
-  //   }
-  // }
-
-  // @include utility.respond-to(config.$mobile-hamburger-bp){  
-  //   &:not(:target){
-  //     // margin-top: calc((var(--space-max)*4)*-1);
-  //     transform: translateZ(0);
-  //     transition: config.$transition;
-  //   }
-  // }
 
   .offmenu {
     width: 100%;
-    // height: calc(var(--space-max)*4);
+    height: config.$offcanvasDesktopHeight;
     display: none;
     // padding-top: calc(var(--space-max)*2);
 
@@ -73,7 +44,7 @@
     }
 
     .container {
-      padding: var(--space-most) 0;
+      padding: 0;
     }
 
     &:focus-within {

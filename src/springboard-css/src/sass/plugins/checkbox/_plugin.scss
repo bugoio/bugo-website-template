@@ -1,0 +1,8 @@
+// Get the checkbox definition
+@use 'class' as *;
+
+// Define it for the element checkbox
+[type=checkbox] {
+  @extend %radio;
+  @extend %checkbox;
+  }

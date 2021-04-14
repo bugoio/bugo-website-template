@@ -69,19 +69,23 @@
         display: flex;
         padding: 0;
         width: 100%;
+        flex-direction: column;
         flex-wrap: wrap;
+        max-height: config.$menubar-menu-height;
 
         li {
-          flex: 0 0 33%;
-          text-align: center;
+          flex: 1 1 auto;
         }
       }
 
       [role="menu"] {
         background-color: config.$menubar-menu2-bg;
+        text-align: config.$menubar-text-align;
 
         a {
           color: config.$menubar-menu2-color;
+          font-size: config.$menubar-menu2-font-size;
+          font-weight: config.$menubar-menu2-font-weight;
         }
       }
     }

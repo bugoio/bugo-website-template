@@ -1,0 +1,7 @@
+// Definition of card
+@use 'class' as *; 
+
+// Implementation of card
+.card {
+  @extend %card;
+}

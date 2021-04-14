@@ -1,0 +1,71 @@
+// Variables
+// $height: 2.2em !default;
+@forward '../config';
+@forward '../modularscale/index';
+
+@use '../config' as *;
+@use '../modularscale/index' as *;
+
+// This comes from arrow.svg. Converted with:
+// http://dopiaza.org/tools/datauri/index.php
+$dropimage: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyIiBoZWlnaHQ9IjMiPjxwYXRoIGQ9Im0gMCwxIDEsMiAxLC0yIHoiLz48L3N2Zz4=" !default;
+
+@use '../modularscale/index' as *;
+
+@debug "height #{$select-height}";
+
+// Code
+%select {
+  // Compatible with old androids
+  background: #fff url(#{$dropimage}) no-repeat scroll 95% center/
+    10px 15px;
+
+  // Compatible with modern browsers
+  background-position: calc(100% - 15px) center;
+
+  border: $border;
+  border-radius: $radius;
+  cursor: pointer;
+  width: 100%;
+  @include mod(height,$select-height);
+  box-sizing: border-box;
+  padding: $padding;
+  transition: all 0.3s;
+
+  // Hide dropdown arrow
+
+  // vendor prefixes required, see:
+  // https://github.com/postcss/autoprefixer#why-doesnt-autoprefixer-support-appearance
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+
+  // Hide the arrow for IE (apparently IE10+)
+  // http://stackoverflow.com/a/21417591 method
+  // http://stackoverflow.com/a/15933790 version
+  &::-ms-expand {
+    display: none;
+  }
+
+  &:focus,
+  &:active {
+    border: 1px solid $primary;
+    transition: outline 0s;
+  }
+
+  &:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 $black;
+  }
+
+  option {
+    //font-size: inherit;
+    padding: $spacing-less;
+  }
+
+  &[multiple] {
+    height: auto;
+    background: none;
+    padding: 0;
+  }
+}

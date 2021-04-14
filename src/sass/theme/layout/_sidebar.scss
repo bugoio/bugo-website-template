@@ -9,7 +9,7 @@
 
   .title {
     font-size: config.$asideArticleHeadingSize;
-    line-height: config.$heading-line-height;
+    // line-height: config.$heading-line-height;
   }
 
   @debug config.$asideThumbnailShow;

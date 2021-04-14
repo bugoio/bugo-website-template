@@ -48,7 +48,9 @@
     <link rel="preconnect" href="https://googleads.g.doubleclick.net" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     {{ $css := resources.Get "css/styles.min.css" }}
-    <link rel="stylesheet" href="{{ $css.Permalink }}">
+    {{ with $css }}
+      <link rel="stylesheet" href="{{ .Permalink }}">
+    {{ end }}
   </head>
   
   {{- $bodyClass := partial "getBodyClass" . -}}
