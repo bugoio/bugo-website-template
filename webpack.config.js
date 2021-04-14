@@ -17,7 +17,7 @@ const styles = (env) => {
       'styles': './src/sass/index.scss',
     },
     output: {
-      path: path.resolve(__dirname, 'static/css'),
+      path: path.resolve(__dirname, 'assets/css'),
     },
     module: {
       rules: [
@@ -63,7 +63,7 @@ const stylesMin = (env) => {
       'styles.min': './src/sass/index.scss',
     },
     output: {
-      path: path.resolve(__dirname, 'static/css'),
+      path: path.resolve(__dirname, 'assets/css'),
     },
     module: {
       rules: [
@@ -113,7 +113,7 @@ const app = {
     "./src/js/app.js",
   ],
   output: {
-    path: path.resolve(__dirname, "static", "js"),
+    path: path.resolve(__dirname, "assets", "js"),
     filename: `app.js`
   },
   externals: ["fs"],
@@ -169,7 +169,7 @@ const search = {
     "./src/js/search.js",
   ],
   output: {
-    path: path.resolve(__dirname, "static", "js"),
+    path: path.resolve(__dirname, "assets", "js"),
     filename: `search.js`
   },
   externals: ["fs"],
@@ -225,7 +225,7 @@ const custom = {
     "./src/js/custom.js",
   ],
   output: {
-    path: path.resolve(__dirname, "static", "js"),
+    path: path.resolve(__dirname, "assets", "js"),
     filename: `custom.js`
   },
   externals: ["fs"],

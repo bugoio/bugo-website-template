@@ -46,6 +46,4 @@ git clone https://github.com/bugoio/bugo-website-template.git
 2. Click the "New site from Git" button and follow the instructions
 3. 
 
-#### Setup Large Media (recommended)
 
-You can skip this if you are going to use Cloudinary.com for CDN and image processing.
