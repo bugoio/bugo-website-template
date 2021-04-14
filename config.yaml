@@ -69,7 +69,6 @@ theme:
 # - sb-section
 # - sb-sidebar
 - sb-utilities
-- custom
 # Base Theme and API
 - sb
 - sb-api

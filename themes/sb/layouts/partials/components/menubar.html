@@ -38,7 +38,7 @@
         {{ end }}
       </li>
     {{ end }}
-    {{ if and $site.Params.enableSearchInMain (or (eq $location "main") (eq $location "secondary") }}
+    {{ if and $site.Params.enableSearchInMain (or (eq $location "main") (eq $location "secondary")) }}
       <li role="none" class="menubar-list-item">
         {{ partial "forms/search-form-inline-icon" . }}
       </li>
