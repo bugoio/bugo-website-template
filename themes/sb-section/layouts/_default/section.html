@@ -16,7 +16,7 @@
             {{ $scratch.Set "image" $site.Data.organization.defaultHeroImage }}
           {{ end }}
           <div>
-            <a href="{{ .Permalink }}">
+            <a href="{{ .Permalink  | absURL }}" >
               <article class="card">
                 {{ with  ($scratch.Get "image") }}
                   {{ if gt (len .) 1}}

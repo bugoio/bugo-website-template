@@ -1,0 +1,21 @@
+{{ $scratch := newScratch }}
+{{ with .Params.images }}
+{{ $scratch.Set "image" (index . 0)}}
+{{ else }}
+{{ $scratch.Set "image" .Site.Data.organization.defaultFeaturedImage }}
+{{ end }}
+
+<article class="flex">
+  <div class="two-fifth">
+    {{ with  ($scratch.Get "image") }}
+      {{ if gt (len .) 1}}
+        {{ partial "components/thumbnail-sq" . }}
+      {{ end }}
+    {{ end }}
+  </div>
+  <div class="three-fifth">
+    <header>
+      <span class="">{{ .Title | title }}</span><br/>
+    </header>  
+  </div>
+</article>

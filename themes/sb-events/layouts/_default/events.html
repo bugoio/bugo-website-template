@@ -9,7 +9,7 @@
     {{ range (.Paginate ( first 9 (.Pages.ByParam "eventDate" ))).Pages }}
       {{ if ne .Params.layout "overview" }}
         <li>
-          <a href="{{ .Permalink }}" class="">
+          <a href="{{ .Permalink | absURL }}"  class="">
             <article class="event-listing">
               {{ with index .Params.images 0 }}
                 {{ partial "components/thumbnail" . }}  
@@ -36,7 +36,7 @@
       {{ end }}
     {{ end }}
   </ul>
-  {{ template "_internal/pagination.html" . }}
+  {{ partial "components/pagination" . }}
 </main>
 {{ end }}
 

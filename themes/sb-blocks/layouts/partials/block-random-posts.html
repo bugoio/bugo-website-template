@@ -6,7 +6,7 @@
     <div class="flex three"></div>
     <div>
       {{ if .block.url }}
-      <a href="{{ .block.url }}" class="button-outline">
+      <a href="{{ .block.url | absURL }}"  class="button-outline">
         See All {{ .block.title | title }}
       </a>
       {{ end }}

@@ -1,14 +1,9 @@
 {{ $scratch := newScratch }}
 {{ $scratch.Set "thumbnail" false }}
 {{ with .Params.images }}
-  {{ $scratch.Set "thumbnail" (replaceRE "\n" "" (partial "components/thumbnail" (index . 0))) }}
+  {{ $scratch.Set "thumbnail" (replaceRE "\n" "" (partial "components/thumbnail-external" (index . 0))) }}
 {{ end }}
 
-{
-  "name": "{{ .Title }}",
-  "permalink" : "{{ .Permalink }}",
-  "params" : {{ .Params | jsonify }}
-  {{ with $scratch.Get "thumbnail" }}
-  ,"thumbnail": "{{ . | htmlEscape }}"
-  {{ end }}
-}
+{{- $.Scratch.Add "index" slice -}}
+{{- $.Scratch.Add "index" (dict "name" (.Title | htmlEscape ) "permalink" (.Permalink | absURL) "summary" .Summary "params" (.Params ) "thumbnail" ($scratch.Get "thumbnail" | htmlEscape )) -}}
+{{- index ($.Scratch.Get "index") 0 | jsonify -}}

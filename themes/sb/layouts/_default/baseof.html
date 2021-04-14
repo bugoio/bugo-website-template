@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>
       {{ if eq .Page.Kind "term"}}
         {{ .Data.Plural | title }}: 
@@ -34,21 +34,9 @@
     {{- template "_internal/twitter_cards.html" . -}}
     <!-- Structured Data -->
     {{ with .Site.Params.seoLogo }}
-      <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "{{ $site.Title }}",
-          "url": "{{ "/" | absURL | safeURL }}",
-          "logo": "{{ . | absURL | safeURL }}",
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "{{ "/" | absURL | safeURL }}"
-          }
-        }
-      </script>
-      
+      {{ partial "structured/organization" $site }}      
     {{ end }}
+    {{ partial "structured/breadcrumbs-sd" . }}
      <!-- Page specific structured data -->
     {{- block "structuredData" . -}}{{- end -}}
   
@@ -84,7 +72,7 @@
     </script>
     {{- partial "components/skip-menu" . -}}
     <div id="offcanvas">
-      <a href="#" class="close">
+      <a href="#"  class="close">
         {{ partial "icons/angle-up" . }}
         <span class="sr-only">Close</span>
       </a>

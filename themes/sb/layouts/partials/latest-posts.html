@@ -1,0 +1,15 @@
+{{ $posts := where .Site.RegularPages "Section" .Site.Params.postsDirectory }}
+{{ $site := .Site }}
+{{ with $posts }}
+<div class="latest-posts">
+  <h3>{{ $site.Params.latestPostsTitle }}</h3>
+  <ul class="unstyled-list">
+    {{ range first $site.Params.asidePostsQty . }}
+    <li>
+      <a href="{{ .Permalink | absURL }}" >
+        {{ partial "article" . }}
+      </a></li>
+    {{ end }}  
+  </ul>
+</div>
+{{ end }}

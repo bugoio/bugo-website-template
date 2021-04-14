@@ -1,0 +1,65 @@
+{{ $site := .Site }}
+{{ $query := partial "querifyProfile" . }}
+{{ $vCardURL := printf "/.netlify/functions/vcard/?%s" $query }}
+<div id="hero" class="full">
+  <div id="hero-image">
+
+    {{ with .Params.hero }}
+      {{ with .heroImage }}
+        {{ $imgSrc := partial "getImgSrcHero" . }}
+        {{ partial "picture" (dict "imgSrc" $imgSrc "alt" "") }}        
+      {{ end }}
+    {{ else }}
+      {{ with .Site.Data.organization.defaultHeroImage }}
+        {{ $imgSrc := partial "getImgSrcHero" . }}
+        {{ $alt := humanize (index (split (path.Base . ) ".") 0) }}
+        {{ partial "picture" (dict "imgSrc" $imgSrc "alt" $alt) }}
+      {{ end }}
+    {{ end }}
+  </div>
+  <div id="hero-container" class="container">
+    <div id="hero-text">
+      <h1>
+        {{ with .Params.prefix | title }}{{ . }}{{ end }}
+        {{ with .Params.name.firstName | title }}{{ . }}{{ end }}
+        {{ with .Params.name.middleName | title }}{{ . }}{{ end }}
+        {{ with .Params.name.lastName | title }}{{ . }}{{ end }}
+        {{ with .Params.suffix | title }}{{ . }}{{ end }}
+        {{ with .Params.name.position | title }}
+        <small>{{ . }}</small>
+        {{ end }}
+      </h1>
+      <ul class="contact-info unstyled-list">
+        {{ with .Params.contactInfo.phone }}
+          <li>{{ partial "icons/phone" }} <a href="tel:{{ . | anchorize }}" >{{ . }}</a></li>
+        {{ end }}
+        {{ with .Params.contactInfo.mobile }}
+          <li>{{ partial "icons/mobile" }} <a href="tel:{{ . | anchorize }}" >{{ . }}</a></li>
+        {{ end }}
+        {{ with .Params.contactInfo.email }}
+          <li>{{ partial "icons/envelope" }} <a href="mailto:{{ . }}" >{{ . }}</a></li>
+        {{ end }}
+      </ul>
+      {{ with .Params.location }}
+        {{with where $site.Data.locations.locations ".name" "==" . }}
+          {{ range . }}
+            <p>
+              {{ .address1 }}{{with .address2 }},{{ . }}{{ end }}<br/>
+              {{ .city }}, {{ .state }} {{ .zip }}  
+            </p>
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      <ul class="unstyled-list flex-list profile-options">
+        <li><a href="{{ $vCardURL }}" ><span class="sr-only">Download vCard</span>{{ partial "icons/vcard" . }}</a></li>
+        <li><a href="#" onclick="window.print();return false;"><span class="sr-only">Print this page</span>{{ partial "icons/print" . }}</a></li>
+        {{ with .Params.contactInfo.socialAccounts }}
+          <li>
+            <span class="sr-only">Social Accounts</span>
+            {{ partial "components/social-account-list" . }}
+          </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</div>

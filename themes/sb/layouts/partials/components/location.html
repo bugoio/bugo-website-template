@@ -1,9 +1,6 @@
-<div class="location text-center">
-  {{ with .locationImage }}
-    {{ partial "components/featured-image.html" . }}    
-  {{ end }}
+<div id="{{ .name | anchorize }}" class="location text-center">
   <div class="name">
-    <h2 class="h6">{{ .name | title }}</h2>
+    <h2 class="">{{ .name | title }}</h2>
   </div>
   <span class="street">
     <span class="address1">{{ .address1 }}</span>{{ with .address2 }} <span class="address2">{{ . }}</span>
@@ -15,35 +12,35 @@
     <span class="city">{{ . }}</span>,
     {{ end }}
     {{ with .state }}
-    <span class="state"></span>
+    <span class="state">{{ . }}</span>
     {{ end }}
-    {{ with .zip }}
+    {{ with .zipCode }}
     <span class="zip">{{ . }}</span>
     {{ end }}  
   </span>
-  {{ with .phones }}
-  <ul class="unstyled-list phones">
+  <div class="unstyled-list phones text-center">
+    {{ with .phones }}
     {{ range $index,$phone := . }}
-    <li>
-      <a class="flex-auto" href="tel:{{ .phone | urlize }}">
+    <div>
+      <a class="flex-auto"  href="tel:{{ .phone | urlize }}">
         {{ with .label }}
         <span class="phone-label sr-only">
           <span class="sr-only">{{ . }}:</span>
         </span>
         {{ end }}
-        {{ partial "icons/phone-outline" . }}
-        <span>
+        <i class="fas fa-phone"></i>
           {{ .phone }}
-        </span>  
       </a>
-    </li>              
+    </div>              
     {{ end }}
-  </ul>            
-  {{ end }}
-  <a class="flex-auto" href="https://www.google.com/maps/dir/?api=1&destination={{ .address1 | urlize }}+{{ .zip }}" target="new" rel="noopener noreferrer">
-    {{ partial "icons/map" . }}
-    <span>
-      Get Directions
-    </span>
-  </a>
+    {{ end }}
+    <div>
+      <a class="flex-auto"  href="https://www.google.com/maps/dir/?api=1&destination={{ .address1 | urlize }}+{{ .zip }}" target="new" rel="noopener noreferrer">
+        <i class="fas fa-map"></i>
+        <span>
+          Get Directions
+        </span>
+      </a>    
+    </div>
+  </div>
 </div>

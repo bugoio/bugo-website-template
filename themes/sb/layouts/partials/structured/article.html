@@ -1,0 +1,46 @@
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://google.com/article"
+    },
+    "headline": "{{ .Title }}",
+    {{ with .Params.images }}
+      "image": [
+        {{ with (index . 0) }}
+          {{ . | absURL }}
+        {{ end }}
+      ],
+    {{ else }}
+      "image": [
+        {{ with .Site.Data.organization.seoLogo }}
+          {{ . | absURL }}
+        {{ end }}
+      ],
+    {{ end }}
+    "datePublished": "{{ .Date }}",
+    "dateModified": "{{ .Page.Lastmod }}",
+    "author": {
+      "@type": "Organization",
+      "name": "{{ .Site.Title }}",
+      {{ with .Site.Data.organization.seoLogo }}
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://res.cloudinary.com/spertus-landes-umhofer/image/upload/v1553883127/spertus-landes-umhofer-logo-seo.png"
+      }
+      {{ end }}
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ .Site.Title }}",
+      {{ with .Site.Data.organization.seoLogo }}
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://res.cloudinary.com/spertus-landes-umhofer/image/upload/v1553883127/spertus-landes-umhofer-logo-seo.png"
+      }
+      {{ end }}
+    }
+  }
+</script>

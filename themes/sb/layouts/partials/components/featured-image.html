@@ -1,5 +1,5 @@
 <div class="featured-image">
   {{ $alt := humanize (index (split (path.Base .) ".") 0) }}
-  {{ $imgSrc := partial "ImgSrcFeatured" . }}
-  {{ partial "components/picture" (dict "imgSrc" $imgSrc "alt" $alt) }}
+  {{ $imgSrc := partial "getImgSrcFeatured" . }}
+  {{ partial "picture" (dict "imgSrc" $imgSrc "alt" $alt) }}
 </div>

@@ -2,7 +2,6 @@
 {{ $site := .Site }}
 {{ $query := partial "querifyProfile" . }}
 {{ $vCardURL := printf "/.netlify/functions/vcard/?%s" $query }}
-{{ .Params }}
 <div id="hero" class="full">
   <div id="hero-image">
 
@@ -33,13 +32,13 @@
       </h1>
       <ul class="contact-info unstyled-list">
         {{ with .Params.contactInfo.phone }}
-          <li>{{ partial "icons/phone" }} <a href="tel:{{ . | anchorize }}">{{ . }}</a></li>
+          <li>{{ partial "icons/phone" }} <a href="tel:{{ . | anchorize }}" >{{ . }}</a></li>
         {{ end }}
         {{ with .Params.contactInfo.mobile }}
-          <li>{{ partial "icons/mobile" }} <a href="tel:{{ . | anchorize }}">{{ . }}</a></li>
+          <li>{{ partial "icons/mobile" }} <a href="tel:{{ . | anchorize }}" >{{ . }}</a></li>
         {{ end }}
         {{ with .Params.contactInfo.email }}
-          <li>{{ partial "icons/envelope" }} <a href="mailto:{{ . }}">{{ . }}</a></li>
+          <li>{{ partial "icons/envelope" }} <a href="mailto:{{ . }}" >{{ . }}</a></li>
         {{ end }}
       </ul>
       {{ with .Params.location }}
@@ -53,7 +52,7 @@
         {{ end }}
       {{ end }}
       <ul class="unstyled-list flex-list profile-options">
-        <li><a href="{{ $vCardURL }}"><span class="sr-only">Download vCard</span>{{ partial "icons/vcard" . }}</a></li>
+        <li><a href="{{ $vCardURL }}" ><span class="sr-only">Download vCard</span>{{ partial "icons/vcard" . }}</a></li>
         <li><a href="#" onclick="window.print();return false;"><span class="sr-only">Print this page</span>{{ partial "icons/print" . }}</a></li>
         {{ with .Params.contactInfo.socialAccounts }}
           <li>
@@ -85,7 +84,7 @@
 
 {{ define "sidebar" }}
   {{ $context := . }}
-  <aside id="sidebar" role="complimentary" tabindex="0">
+  <aside id="sidebar" role="complementary" tabindex="0">
     {{ with .Params.attorneyFields }}
       <div class="profile-details">
         {{ with .education }}

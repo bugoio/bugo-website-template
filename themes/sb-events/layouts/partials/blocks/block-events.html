@@ -21,9 +21,9 @@
         {{ $scratch.Set "flexClass" "three" }}
       {{ end }}
       {{ $columnsClass := partial "utilities/getColumnsClass" $seq }}
-      <div class="posts-latest flex one {{ $scratch.Get "flexClass" }}-600">
+      <div class="latest-posts flex one {{ $scratch.Get "flexClass" }}-600">
         {{ range . }}
-          <a href="{{ .Permalink }}" aria-label="{{ .Title }}">
+          <a href="{{ .Permalink | absURL }}">
             <article class="text-left">
               {{ with index .Params.images 0 }}
                 {{ partial "components/thumbnail" . }}  

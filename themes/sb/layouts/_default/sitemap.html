@@ -1,0 +1,47 @@
+{{/**
+   * Default Single Page Layout
+	 *
+	 * The default single for the site.
+   * All pages and posts will default to this template.
+   *
+   * @version 1.0.0
+	 *
+   */}}
+
+{{ define "hero" }}
+  {{ partial "components/page-title" . }}
+{{ end }}
+
+{{ define "main" }}
+<main id="main" tabindex="0" aria-labelledby="page-title" role="main">
+  <h1>{{ .Site.Title }}</h1>
+  <ul class="">
+    {{ range .Site.Pages }}
+    {{ if eq .Section "" }}
+    {{ if ne .Params.exclude_from_sitemap true }}
+    <li><a href="{{ .Permalink | relURL }}" >{{ .Title | title }} {{ .Section }}</a></li>
+    {{ end }}
+    {{ end }}
+    {{ end }}
+  </ul>
+  <h2>Sections</h2>
+  {{ range .Site.Sections.ByWeight }}
+    {{ if and (ne .Title "Staff")}}
+      <h3>{{ .Title }}</h3>
+      <ul>
+        <li><a href="{{ .Permalink | relURL }}" >{{ .Title | title }}{{.Params.exclude_from_sitemap}}</a></li>
+        {{ range .Pages.ByTitle }}
+        {{ if ne .Params.pageOptions.excludeFromSitemap true }}
+        <li><a href="{{ .Permalink | relURL }}" >{{ .Title | title }}{{.Params.exclude_from_sitemap}}</a></li>
+        {{ end }}
+        {{ end }}
+      </ul>      
+    {{ end }}
+  {{ end }}
+</main>
+{{ end }}
+
+{{ define "aside" }}
+<aside class="sidebar" tabindex="0" role="complementary">
+</aside>
+{{ end }}

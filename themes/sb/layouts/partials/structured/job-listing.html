@@ -1,0 +1,53 @@
+{{ $id := first 1 (seq 1000 2000 | shuffle ) }}
+<script type="application/ld+json">
+  {
+    "@context" : "https://schema.org/",
+    "@type" : "JobPosting",
+    "title" : "{{ .Title }}",
+    "description" : "{{ .Content | markdownify }}",
+    "identifier": {
+      "@type": "PropertyValue",
+      "name": "{{ .Site.Title }}",
+      "value": "{{ md5 .Title }}"
+    },
+    "datePosted" : "2017-01-18",
+    "validThrough" : "{{ .Params.validThrough }}",
+    "employmentType" : "{{ .Params.employmentType }}",
+    "hiringOrganization" : {
+      "@type" : "Organization",
+      "name" : "{{ .Site.Title }}",
+      "sameAs" : "{{ .Site.BaseURL }}",
+      {{ with .Site.Data.organization.seoLogo }}
+      "logo" : "{{ . }}"        
+      {{ end }}
+    },
+    {{ with .Site.Data.locations }}
+    "jobLocation": [
+        {{ $len := len .locations }}
+        {{ range $index,$location := .locations }}
+          {
+          {{ $curLocation := add $index 1 }}
+          "@type": "Place",
+            "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "{{ .address1 }} {{ with .address2 }}, {{ . }}{{end}}",
+            "addressLocality": "{{ .city }}",
+            "postalCode": "{{ .zipCode }}",
+            "addressRegion": "{{ .state }}",
+            "addressCountry": "US"  
+            }}{{ if lt $curLocation $len }},{{ end }}
+        {{ end }}        
+      ]
+    },            
+    {{ end }}
+   "baseSalary": {
+      "@type": "MonetaryAmount",
+      "currency": "USD",
+      "value": {
+        "@type": "QuantitativeValue",
+        "value": 40.00,
+        "unitText": "HOUR"
+      }
+    }
+  }
+  </script>

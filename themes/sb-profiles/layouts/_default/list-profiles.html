@@ -5,12 +5,12 @@
 {{ define "main" }}
 <main id="main" class="main-list" aria-label="Main Content" tabindex="0">
   {{ .Content }}
-  <ul class="unstyled-list flex one">
+  <ul class="unstyled-list flex one four-600">
     {{ range .Pages }}
       {{ if ne .Params.layout "overview" }}
         <li>
-          <a href="{{ .Permalink }}" class="">
-            {{ partial "article" . }}
+          <a href="{{ .Permalink | absURL }}"  class="">
+            {{ partial "profile-card" . }}
           </a>  
         </li>
       {{ end }}

@@ -3,7 +3,7 @@
 <form tabindex="0" aria-label="Search Website" role="search" class="search-form form-inline" action="/search">
   <div class="form-group">
       <label for="search-query-{{ $id }}" class="sr-only">Search this site</label>
-      <input type="text" class="form-control" id="search-query-{{ $id }}" name="q" placeholder="">
-      <button aria-label="search" type="submit" class="button button-primary text-white">Search</button>
+      <input type="text" class="form-control" id="search-query-{{ $id }}" name="q" placeholder="" aria-label="Search this site">
+      <button aria-label="Search" type="submit" class="button button-primary text-white">Search</button>
   </div>
 </form>

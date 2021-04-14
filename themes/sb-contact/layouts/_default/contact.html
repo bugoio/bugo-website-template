@@ -5,18 +5,23 @@
 {{ define "main" }}
   <main id="main" aria-label="Main Content" tabindex="0">
     {{ .Content }}
-    <div class="flex one two-800">
+    <div>
       {{ with .Site.Data.locations }}
-        {{ range $index,$location := .locations }}
-        <div>
-          <div>
-            {{ partial "components/location-map" . }}
-          </div>  
-          <div>
+        <div class="flex one two-800">
+          {{ range $index,$location := .locations }}
             {{ partial "components/location" . }}
-          </div>
+          {{ end }}
         </div>
-        {{ end }}
+        <div class="flex one two-800">
+          {{ range $index,$location := .locations }}
+            <div>
+              {{ with .locationImage }}
+              {{ partial "components/featured-image" . }}
+              {{ end }}
+              {{ partial "components/google-map" . }}
+            </div>
+          {{ end }}
+        </div>
       {{ end }}
     </div>
   </main>
@@ -24,4 +29,48 @@
 
 {{ define "sidebar" }}
   {{ partial "aside" . }}
+{{ end }}
+
+{{ define "structuredData" }}
+  {{ $site := .Site }}
+  {{ $page := . }}
+  {{ with .Site.Data.locations }}
+    {{ range .locations }}
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "{{ $site.Data.organization.businessType}}",
+          {{ with .locationImage }}
+          "image": [
+            "{{ . }}"
+          ],            
+          {{ end }}
+          "@id": "{{ printf "%s#%s" $page.Permalink ( .name | anchorize ) | absURL }}",
+          "name": {{ printf "%s - %s" $site.Title .name }},
+          "address": {
+            "@type": "PostalAddress",
+            {{ if and .address1 .address2 }}
+            "streetAddress": "{{ printf "%s, %s" .address1 .address2 }}",              
+            {{ end }}
+            {{ with .city }}
+            "addressLocality": "{{ . }}",              
+            {{ end }}
+            {{ with .state }}
+            "addressRegion": "{{ . }}",
+            {{ end }}
+            {{ with .zipCode }}
+            "postalCode": "{{ . }}",              
+            {{ end }}
+            "addressCountry": "US"
+          },
+          "url": "{{ .Site.BaseURL | absURL }}",
+          {{ with .phones }}
+            {{ range first 1 . }}
+              "telephone": "{{ .phone }}"       
+            {{ end }}
+          {{ end }}
+        }
+      </script>
+    {{ end }}
+  {{ end }}
 {{ end }}

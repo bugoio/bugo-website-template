@@ -1,0 +1,43 @@
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "{{ .Title }}",
+    "startDate": "{{ .Params.eventDate }}",
+    "endDate": "{{ .Params.expiryDate }}",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    {{ with .Params.location }}
+    "location": {
+      "@type": "Place",
+      "name": "{{ .name }}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{{ .address1 }} {{ with .address2 }}, {{ . }}{{end}}",
+        "addressLocality": "{{ .city }}",
+        "postalCode": "{{ .zipCode }}",
+        "addressRegion": "{{ .state }}",
+        "addressCountry": "US"
+      }
+    },
+    {{ else }}
+    {{ with .Params.registrationUrl }}
+    "location": {
+      "@type": "VirtualLocation",
+      "url": "{{ . }}"
+      },
+    {{ end }}
+    {{ end }}
+    {{ with .Params.images }}
+      "image": {{ . | jsonify }},      
+    {{ end }}
+    {{ with .Params.description }}
+      "description": "The Adventures of Kira and Morrison is coming to Snickertown in a can't miss performance.",
+    {{ end }}
+    "organizer": {
+      "@type": "Organization",
+      "name": "{{ .Site.Title }}",
+      "url": "{{ .Site.BaseURL }}"
+    }
+  }
+  </script>

@@ -3,7 +3,7 @@
   {{ $title := .title }}
   {{ with .youtubeUrl }}
     <div class="responsive-iframe">
-      <iframe class="lazy" title="{{ $title }}" width="560" height="315" data-src="{{ . }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
+      <iframe class="lazy"  width="560" height="315" data-src="{{ . }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
     </div>
   {{ end }}
   {{ with .columnContent }}

@@ -1,0 +1,15 @@
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "{{ .Site.Title }}",
+    "url": "{{ .Site.BaseURL | absURL | safeURL }}",
+    {{ with .Site.Data.organization.seoLogo }}
+    "logo": "{{ . | absURL | safeURL }}",
+    {{ end }}
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ .Site.BaseURL | absURL  | safeURL }}"
+    }
+  }
+</script>

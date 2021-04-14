@@ -1,0 +1,10 @@
+{{ $scratch := newScratch }}
+{{ $scratch.Set "count" .count }}
+{{ if .p1.Parent }}
+  {{ $count := add .count 1 }}
+  {{ $scratch.Set "count" (partial "getBreadcrumbCount" (dict "p1" .p1.Parent "p2" .p2 "count" $count))  }}
+{{ else if not .p1.IsHome }}
+  {{ $count := add .count 1 }}
+  {{ $scratch.Set "count" (partial "getBreadcrumbCount" (dict "p1" .p1.Site.Home "p2" .p2 "count" $count ))  }}
+{{ end }}
+{{ return $scratch.Get "count" }}

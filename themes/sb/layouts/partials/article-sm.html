@@ -1,0 +1,20 @@
+{{ $scratch := newScratch }}
+{{ with .Params.images }}
+{{ $scratch.Set "image" (index . 0)}}
+{{ else }}
+{{ $scratch.Set "image" .Site.Data.organization.defaultFeaturedImage }}
+{{ end }}
+
+<article class="">
+  {{ with  ($scratch.Get "image") }}
+    {{ if gt (len .) 1}}
+      {{ partial "components/thumbnail" . }}
+    {{ end }}
+  {{ end }}
+  <header>
+    {{ with .Date }}
+    <time>{{ .Format "January 2, 2006" }}</time>
+    {{ end }}
+    <span class="">{{ .Title | title }}</span><br/>
+  </header>
+</article>

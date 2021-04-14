@@ -6,19 +6,25 @@
 <main id="main" class="main-list" aria-label="Main Content" tabindex="0">
   {{ .Content }}
   <ul class="unstyled-list flex one">
-    {{ range .Pages }}
+    {{ range .Paginator.Pages }}
       {{ if ne .Params.layout "overview" }}
         <li>
-          <a href="{{ .Permalink }}" class="">
+          <a href="{{ .Permalink }}"   class="">
             {{ partial "article" . }}
-          </a>  
+          </a>
+          <hr/>
         </li>
       {{ end }}
     {{ end }}
   </ul>
+  {{ partial "components/pagination" . }}
 </main>
 {{ end }}
 
 {{ define "sidebar" }}
   {{ partial "aside" . }}
+{{ end }}
+
+{{ define "template" }}
+  {{ partial "show-template" (dict "Which" .Kind "Template" "layouts/news-and-results/page.html") }}
 {{ end }}

@@ -68,7 +68,7 @@
         {{ range . }}
           {{ if ne .Title "Overview" }}
             <div class="half third-800">
-              <a href="{{ .Permalink }}" class="">
+              <a href="{{ .Permalink | absURL }}"  class="">
                 <article class="card">
                   {{ with index .Params.images 0 }}
                     {{ partial "components/thumbnail" . }}        

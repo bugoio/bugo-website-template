@@ -1,0 +1,29 @@
+<picture>
+  {{ $imageExt := path.Ext .imgSrc.url }}
+  {{ if ne $imageExt ".svg"}}
+  {{ .imgSrc.dataSrcSet | safeHTML }}
+
+    <img
+      src="/images/blank.png"
+      {{ .imgSrc.dataSrcset | safeHTMLAttr }}
+      {{ .imgSrc.sizes | safeHTMLAttr }}
+      width="100%"
+      height="auto"
+      aria-hidden="false"
+      class="lazy"
+      role="presentation"
+      alt=""/>
+
+  {{ else }}
+    <img
+      src="/images/blank.png"
+      data-src="{{.imgSrc.url}}"
+      width="100%"
+      height="auto"
+      aria-hidden="false"
+      class="lazy"
+      role="presentation"
+      alt=""/>  
+
+  {{ end }}
+</picture>

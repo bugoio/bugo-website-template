@@ -1,0 +1,19 @@
+{{ $site := .Site }}
+{{ $news := where .Site.RegularPages "Section" .Site.Params.postsDirectory }}
+{{ $related := $news.Related . }}
+
+{{ with $related }}
+<div class="latest-posts">
+  <h3>Related News</h3>
+  <ul class="unstyled-list flex three">
+    {{ range first  $site.Params.asidePostsQty . }}
+    <li class="third">
+      <a href="{{ .Permalink | absURL }}" >
+        {{ partial "article-sm" . }}
+      </a></li>
+    {{ end }}  
+  </ul>
+</div>
+{{ else }}
+  {{ partial "latest-posts" . }}
+{{ end }}

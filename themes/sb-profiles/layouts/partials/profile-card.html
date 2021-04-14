@@ -1,0 +1,8 @@
+<div class="card profile-card">
+  <a href="{{ .Permalink  | absURL }}" >
+    {{ with .Params.images }}
+      {{ partial "components/thumbnail" (index . 0) }}
+    {{ end }}
+    {{ .Params.name.firstName }}{{ with .Params.name.middleName }} {{ . }}{{ end }}{{ with .Params.name.lastName }} {{ . }}{{ end }}
+  </a>
+</div>

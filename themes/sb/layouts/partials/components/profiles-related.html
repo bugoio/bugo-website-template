@@ -8,7 +8,7 @@
   <ul class="unstyled-list">
     {{ range first $qty (.ByParam "name.lastName") }}
     <li>
-      <a href="{{ .Permalink }}">
+      <a href="{{ .Permalink | absURL }}" >
         <article>
           {{ with .Params.images }}
             {{ partial "components/thumbnail" (index . 0) }}        

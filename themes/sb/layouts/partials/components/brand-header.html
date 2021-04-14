@@ -1,11 +1,14 @@
 {{ $home := "/" | absURL }}
 {{ $site := .Site }}
-<div id="brand-header" class="" aria-hidden="true">
-  <a href="{{ $home }}" tabindex="-1">
+<div id="brand-header" class="">
+  <a href="{{ $home | absURL }}">
+    <span class="sr-only">Home</span>
     {{ with .Site.Data.organization.headerLogo }}
-    {{ $alt := $site.Title }}
-    {{ $imgSrc := partial "getImgSrc" . }}
-    {{ partial "picture" (dict "img" . "imgSrc" $imgSrc "alt" $alt) }}
+    <div class="" aria-hidden="true">
+      {{ $alt := $site.Title }}
+      {{ $imgSrc := partial "getImgSrc" . }}
+      {{ partial "picture-decorative" (dict "img" . "imgSrc" $imgSrc "alt" $alt) }}  
+    </div>
     {{ else }}
       {{ .Site.Title | title }}
     {{ end }}

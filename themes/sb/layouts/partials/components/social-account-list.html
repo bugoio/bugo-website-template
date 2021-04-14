@@ -10,7 +10,7 @@
   {{ end }}
   {{ $name := $scratch.Get "name" }}
   <li>
-    <a href="{{ . }}" aria-label="{{ $scratch.Get "name" | title }}" target="new">
+    <a href="{{ . | absURL }}" name=" | title }}" target="new">
       {{ partial (printf `icons/%s` $name) }}
       <span class="sr-only">{{ $scratch.Get "name" | title }}</span>
     </a></li>

@@ -14,7 +14,7 @@
       {{ end }}
       {{ $img := partial "imgSrc" ($scratch.Get "image") }}
       <div>
-        <a href="{{ .Permalink }}">
+        <a href="{{ .Permalink | absURL }}" >
           <article class="card">
             {{ partial "components/thumbnail" ($scratch.Get "image") }}
             <header>

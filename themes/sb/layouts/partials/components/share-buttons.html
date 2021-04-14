@@ -11,60 +11,33 @@
     Share:
   </span>
   <!-- Twitter -->
-  <button class="share-button" data-sharer="twitter" data-title="{{ .Title }}" data-url="{{ .Permalink }}" aria-label="Share on Twitter">
+  <button class="share-button" data-sharer="twitter" data- data-url="{{ .Permalink }}" aria-label="Share on Twitter">
+      <span class="sr-only">Share on Twitter</span>
       {{ partial "icons/twitter" . }}
   </button>
-
   <!-- Facebook -->
   <button class="share-button" data-sharer="facebook" data-url="{{ .Permalink }}" aria-label="Share on Facebook">
+    <span class="sr-only">Share on Facebook</span>
     {{ partial "icons/facebook" }}
   </button>
-  {{/*  <a href="http://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="new" class="btn share-btn facebook" title="Share on Faecbook (Opens in a new window)" aria-label="Share on Faecbook (Opens in a new window)" tabindex="0">
-    {{ partial "icon" (slice "facebook-square" "icon-small")}}
-    <span class="sr-only">Share on Faecbook (Opens in a new window)</span>
-  </a>  */}}
-
   <!-- LinkedIn -->
   <button class="share-button" data-sharer="linkedin" data-url="{{ .Permalink }}" aria-label="Share on LinkedIn">
+      <span class="sr-only">Share on Linkedin</span>
       {{ partial "icons/linkedin" (slice "linkedin" "icon-small")}}
   </button>
-
-{{/*  <a href="http://www.linkedin.com/shareArticle?url={{ .Permalink }}&title={{ .Title  | urlize }}&summary={{ .Summary  }}&source={{ .Permalink | urlize }}" target="new" class="btn share-btn linkedin" title="Share on LinkedIn (Opens in a new window)" aria-label="Share on LinkedIn" tabindex="0">
-  {{ partial "icon" (slice "linkedin" "icon-small")}}
-  <span class="sr-only">Share on LinkedIn (Opens in a new window)</span>
-</a>  */}}
   <!-- Email -->
   <button
     class="share-button"
     data-sharer="email"
-    data-title="{{ .Title }}"
+    data-
     data-url="{{ .Permalink }}"
     data-subject="Hey! Check this out: {{ .Title }}"
     data-to="some@email.com"
     aria-label="Share by email"
   >
+  <span class="sr-only">Share by email</span>
     {{ partial "icons/envelope" (slice "envelope-square" "icon-small")}}
   </button>
-  {{/*  <a href="mailto:?subject={{ .Title | urlize }}&body={{ .Title }}%0A%0A{{ .Permalink | absURL }}%0A%0A{{ .Summary }}" target="new" class="btn share-btn email" title="Share by Email (Opens in a new window)" aria-label="Share by Email (Opens in a new window)" tabindex="0">
-      {{ partial "icon" (slice "envelope" "icon-small")}}
-      <span class="sr-only">Share by Email (Opens in a new window)</span>
-  </a>  */}}
-
-
-  <!-- <div class="share-modal">
-    <div class="share-window">
-      <iframe src="#" frameborder="0" class="share-iframe">
-
-      </iframe>
-    </div>
-  </div> -->
-  <div class="share-modal">
-    <div class="share-window">
-      <iframe src="#" frameborder="0" class="share-iframe">
-
-      </iframe>
-    </div>
-  </div>
 </div>
 <script>
   if(!sharer){

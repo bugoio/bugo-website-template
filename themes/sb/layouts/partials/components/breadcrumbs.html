@@ -1,10 +1,10 @@
 <div id="breadcrumbs">
   <div class="container">
     <nav aria-label="Breadcrumb">
-      <ol class="breadcrumb flex-list">
+      <div class="breadcrumb flex-list">
         {{ $siteTitle := "Home" }}
         {{ template "breadcrumbnav" (dict "p1" . "p2" . "siteTitle" $siteTitle ) }}
-      </ol>
+      </div>
     </nav>
   </div>
 </div>
@@ -15,7 +15,7 @@
   {{ else if not .p1.IsHome }}
     {{ template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 "siteTitle" .siteTitle )  }}
   {{ end }}
-  <li class="breadcrumb-item {{ if eq .p1 .p2 }}active{{ end }}">
-    <a href="{{ .p1.Permalink | relURL }}" {{ if eq .p1 .p2 }}aria-current="page"{{end}}>{{ if .p1.IsHome }}{{ .siteTitle }}{{ else }}{{ .p1.Title | title }}{{ end }}</a>
-  </li>
+  <div class="breadcrumb-item {{ if eq .p1 .p2 }}active{{ end }}">
+    <a href="{{ .p1.Permalink | absURL }}"  {{ if eq .p1 .p2 }}aria-current="page"{{end}}>{{ if .p1.IsHome }}{{ .siteTitle }}{{ else }}{{ .p1.Title | title }}{{ end }}</a>
+  </div>
 {{ end }}

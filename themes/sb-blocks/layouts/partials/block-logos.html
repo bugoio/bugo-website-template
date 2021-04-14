@@ -6,11 +6,11 @@
       {{ . | markdownify }}
     {{ end }}
     {{ $columnsClass := partial "getColumnsClass" .block.logos }}
-    <div class="logo-group flex about-section two {{ $columnsClass }}-600 align-center">
+    <div class="logo-group flex about-section three four-600 five-800 eight-1000 {{ $columnsClass }}-600 align-center">
       {{ range .block.logos }}
         {{ $alt := humanize (index (split (path.Base . ) ".") 0) }}
         {{ $imgSrc := partial "getImgSrcXs" . }}
-        <div>
+        <div class="">
           {{ partial "picture" (dict "imgSrc" $imgSrc "alt" $alt) }}
         </div>
       {{ end }}

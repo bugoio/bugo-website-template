@@ -1,6 +1,6 @@
 {{ define "response" }}
 [
-    {{ range $index, $e := .Data.Pages }}
+    {{ range $index, $e := .Data.Pages.ByWeight }}
     {{ if $index }}, {{ end }}{{ .Render "item" }}
     {{ end }}
 ]

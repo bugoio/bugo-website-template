@@ -4,7 +4,7 @@
       <li>
         <span class="contact-label">{{ $index | title}}:</span>
         {{ if eq $index "email" }}
-          <a href="mailto:{{ . }}">{{ . }}</a>
+          <a href="mailto:{{ . }}" >{{ . }}</a>
         {{ else }}
         {{ . }}
         {{ end }}

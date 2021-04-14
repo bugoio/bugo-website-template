@@ -1,5 +1,9 @@
 {{ if .Site.Menus.mobile }}
 <div id="mobile-nav" class="">
+  <a href="#"  class="close-button">
+    {{ partial "icons/angle-up" . }}
+    <span class="sr-only">Close</span>
+  </a>
   {{ partial "components/menuTree" (dict "context" . "location" "mobile" "menu" .Site.Menus.mobile ) }}
   <div class="container">
     {{ partial "forms/search-form-inline" . }}

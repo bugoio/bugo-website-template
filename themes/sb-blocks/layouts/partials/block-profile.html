@@ -21,17 +21,17 @@
         </h2>
         <ul class="contact-info unstyled-list flex">
           {{ with .Params.contactInfo.phone }}
-            <li><a href="tel:{{ . | anchorize }}">{{ partial "icons/phone" }} <span class="sr-only">{{ . }}</span></a></li>
+            <li><a href="tel:{{ . | anchorize }}" >{{ partial "icons/phone" }} <span class="sr-only">{{ . }}</span></a></li>
           {{ end }}
           {{ with .Params.contactInfo.mobile }}
-            <li><a href="tel:{{ . | anchorize }}">{{ partial "icons/mobile" }} <span class="sr-only">{{ . }}</span></a></li>
+            <li><a href="tel:{{ . | anchorize }}" >{{ partial "icons/mobile" }} <span class="sr-only">{{ . }}</span></a></li>
           {{ end }}
           {{ with .Params.contactInfo.email }}
-            <li><a href="mailto:{{ . }}">{{ partial "icons/envelope" }} <span class="sr-only">{{ . }}</span></a></li>
+            <li><a href="mailto:{{ . }}" >{{ partial "icons/envelope" }} <span class="sr-only">{{ . }}</span></a></li>
           {{ end }}
           {{ range .Params.contactInfo.socialAccounts }}
             {{ $url := urls.Parse . }}
-            <li><a href="{{ . }}">{{ partial ( printf "icons/%s.html" $url.Host ) . }} <span class="sr-only">{{ $url.Host }}</span></a></li>
+            <li><a href="{{ . }}" >{{ partial ( printf "icons/%s.html" $url.Host ) . }} <span class="sr-only">{{ $url.Host }}</span></a></li>
           {{ end }}
         </ul>
         <blockquote>
@@ -48,7 +48,7 @@
     </div>
     {{ with .Summary }}
       <div>
-        {{ . }} <a class="strong" href="{{ $page.Permalink }}">More about {{ $page.Title }}</a>
+        {{ . }} <a class="strong"  href="{{ $page.Permalink | absURL }}">More about {{ $page.Title }}</a>
       </div>
     {{ end }}
     {{ end }}

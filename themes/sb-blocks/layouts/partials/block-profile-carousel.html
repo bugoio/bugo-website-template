@@ -1,0 +1,32 @@
+{{ $id := partial "getBlockId" . }}
+<div id="block-{{ $id }}" {{partial "getBlockClass" . | safeHTMLAttr }}>
+  <div class="container">
+    {{ with .block.content }}
+      {{ . | markdownify }}
+    {{ end }}
+  </div>
+  <div id="profile-carousel-{{ $id }}" class="profile-carousel" data-api="{{ .block.profilesURL }}"></div>
+  <div class="summary-wrapper">
+    <div class="container">
+      <div class="profile-button-wrapper"><div class="container"></div></div>
+      {{/* this is populated by javascript */}}
+      <div id="summary-carousel-{{ $id }}" class="summary-carousel" data-api="{{ .block.profilesURL }}"></div>
+    </div>
+  </div>
+    <template id="profile-template">
+    <div class="profile-slide">
+      <div class="thumb-wrapper" tabindex="-1">
+        <div class="profile-thumb" tabindex="-1"></div>
+      </div>
+      <p class="profile-title" tabindex="-1"></p>
+    </div>
+  </template>
+  <template id="summary-template">
+    <div class="summary-slide">
+      <h2></h2>
+      <div class="profile-summary container"></div>
+      <a class="profile-button button bg-dark" href="">View Their Profile</a>
+    </div>
+  </template>
+</div>
+  

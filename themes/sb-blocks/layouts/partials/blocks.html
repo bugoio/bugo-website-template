@@ -1,6 +1,6 @@
 {{ $page := .Page }}
 {{ with .Params.contentBlocks }}
-  {{ range .}}
+  {{ range .blocks }}
     {{ $block := . }}
     {{ with .template }}
       {{ partial . ( dict "block" $block "page" $page ) }}     

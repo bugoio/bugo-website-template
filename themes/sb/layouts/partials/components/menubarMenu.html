@@ -4,9 +4,9 @@
 {{ $location := .location }}
 {{ $menuItem := .menuItem }}
 
-<div id="{{ .menuItem.Name | anchorize }}-menu" class="menu-level-{{ $scratch.Get "menuLevel" }} default" role="menu" aria-label="{{ .menuItem.Name | title }}">
+<div id="{{ .menuItem.Name | anchorize }}-menu" class="menu-level-{{ $scratch.Get "menuLevel" }} default">
     <!-- First Level uses Hugo menu system -->
-    <ul class="menu-list-level-{{ $scratch.Get "menuLevel" }}">
+    <ul class="menu-list-level-{{ $scratch.Get "menuLevel" }}" role="menu" aria-label="{{ .menuItem.Name | title }}">
       {{ $scratch.Set "menuLevel" ( add ( $scratch.Get "menuLevel" ) 1 ) }}
       <!-- Loop through menu items -->
       {{ range $menuItem.Page.Pages.ByWeight }}
@@ -14,7 +14,7 @@
       <li class="menu-list-item level-{{ $scratch.Get "menuLevel" }}" role="none">
         <a
           role="menuitem"
-          href="{{ partial "menuItemURL" . }}"
+          href="{{ partial "menuItemURL" . }}?"
           tabindex="0"
           {{ if and .Params.includeChildrenInMenu .Pages }}
           aria-haspopup="true"

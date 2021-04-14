@@ -1,0 +1,22 @@
+{{ define "hero" }}
+{{ end}}
+
+{{ define "main" }}
+  <main id="main" class="main-single" aria-label="Main Content" tabindex="0">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+    {{ partial "components/share-buttons.html" . }}
+  </main>
+{{ end }}
+
+{{ define "sidebar" }}
+  {{ partial "aside" . }}
+{{ end }}
+
+{{ define "structuredData" }}
+  {{ partial "structured/job-listing" . }}
+{{ end }}
+
+{{ define "template" }}
+  {{ partial "show-template" (dict "Which" .Kind "Template" "layouts/_default/job-listing.html") }}
+{{ end }}

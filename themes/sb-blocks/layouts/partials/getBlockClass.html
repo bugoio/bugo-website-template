@@ -14,7 +14,7 @@
   {{ $scratch.Set "full" "" }}
 {{ end }}
 
-{{/* with .block.bgColor }}
+{{ with .block.bgColor }}
   {{ $scratch.Set "class" (printf `%s bg-%s` ($scratch.Get "class") ( anchorize . ))}}
 {{ end }}
 
@@ -33,7 +33,5 @@
 {{ with .block.title }}
   {{ $scratch.Set "class" (printf "%s block-%s" ($scratch.Get "class") ( anchorize . ))}}
 {{ end }}
-
-{{ return printf `class="block %s"` ($scratch.Get "class") */}}
 
 {{ return printf `class="block %s bg-%s text-%s text-%s %s block-%s"` $layout $bg $textAlign $textColor ($scratch.Get "full") $title}}

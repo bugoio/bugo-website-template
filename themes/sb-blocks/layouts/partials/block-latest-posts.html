@@ -1,36 +1,27 @@
 {{ $seq := seq 3 }}
 
 {{ $id := partial "getBlockId" . }}
+{{ $postsDirectory := .page.Site.Params.postsDirectory }}
 <div id="block-{{ $id }}" {{partial "getBlockClass" . | safeHTMLAttr }}>
 
 {{/*<div id="block-{{ $id }}" class="block latest-posts bg-{{ $bg }} {{ if .block.fullWidth }}full-width{{end}}">*/}}
   <div class="wrapper container">
-    {{ $posts := sort ( where .page.Site.Pages "Section" "blog") "Date" "desc" }}
-    posts:{{ $posts }}
+    {{ $posts := sort ( where .page.Site.RegularPages "Section" $postsDirectory) "Date" "desc" }}
     {{ $qty := .block.qty }}
     {{ partial "block-title" .block }}
     {{ with $posts }}
     {{ $columnsClass := partial "getColumnsClass" $seq }}
-    <div class="posts-latest flex one {{ $columnsClass }}-600">
+    <div class="latest-posts flex one {{ $columnsClass }}-600">
       {{ range first $qty . }}
-        <a href="{{ .Permalink }}" aria-label="{{ .Title }}">
-          <article class="card">
-            {{ with .Params.images }}
-            {{ with index . 0 }}
-              {{ partial "components/thumbnail" . }}  
-            {{ end }}              
-            {{ end }}
-            <time><span>{{ dateFormat "January 2, 2006" .Date }}</span></time> - 
-            <span class="category">{{ with .Params.categories }}{{ index . 0 }}{{ else }}&nbsp;{{ end }}</span>
-            <header><span class="line-clamp-2">{{ .Title | title }}</span></header>
-          </article>
+        <a href="{{ .Permalink | absURL }}">
+          {{ partial "article" . }}
         </a>
       {{ end }}  
     </div>
     <div class="block-link flex {{ $columnsClass }} justify-center">
       <div class="text-center">
         <div></div>
-        <a class="button" href="/news">See all news articles</a>
+        <a class="button"  href="/{{ $postsDirectory }}">See all news articles</a>
       </div>
     </div>
     {{ end }}

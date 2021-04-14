@@ -1,0 +1,26 @@
+{{ $count := partial "getBreadcrumbCount" (dict "p1" . "p2" . "count" 1 ) }}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {{ template "breadcrumbnav-sd" (dict "p1" . "p2" . "siteTitle" .Site.Title "count" $count "position" $count) }}
+    ]
+  }
+</script>
+
+{{ define "breadcrumbnav-sd" }}
+  {{ if .p1.Parent }}
+    {{ $position := sub .position 1 }}
+    {{ template "breadcrumbnav-sd" (dict "p1" .p1.Parent "p2" .p2 "siteTitle" .siteTitle "count" .count "position" $position)  }}
+  {{ else if not .p1.IsHome }}
+    {{ $position := sub .position 1 }}
+    {{ template "breadcrumbnav-sd" (dict "p1" .p1.Site.Home "p2" .p2 "siteTitle" .siteTitle "count" .count "position" $position )  }}
+  {{ end }}
+  {
+    "@type": "ListItem",
+    "position": "{{.position}}",
+    "name": "{{ .p1.Title }}",
+    "item": "{{ .p1.Permalink | absURL }}"
+  }{{ if ne .position .count}},{{end}}
+{{ end }}

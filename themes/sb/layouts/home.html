@@ -15,7 +15,7 @@
         {{ $scratch.Set "image" $site.Data.organization.defaultHeroImage }}
       {{ end }}
       <li>
-        <a href="{{ .Permalink }}" class="">
+        <a href="{{ .Permalink | absURL }}"  class="">
           {{ partial "article" . }}
         </a>  
       </li>
